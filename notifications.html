@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus CBT - Notifications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/core.css">
+  <link rel="stylesheet" href="/css/component.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="container">
+    <div class="notifications-panel">
+      <div id="message" class="success-message" style="display: none;"></div>
+      
+      <a href="#" id="clearAllBtn" class="clear-btn" onclick="clearAllNotifications()" title="Clear All Notifications" style="display: none;">
+        <i class="fas fa-trash-alt"></i>
+      </a>
+      
+      <div class="notifications-header">
+        <h2><i class="fas fa-bell"></i> Notifications</h2>
+        <a href="#" id="markAllReadBtn" class="btn btn-small btn-primary" onclick="markAllRead()" style="display: none;">
+          <i class="fas fa-check"></i> Mark All Read
+        </a>
+      </div>
+
+      <div id="notificationsList" class="notifications-list">
+        <div class="empty-state">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading notifications...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const cleared = urlParams.get('cleared');
+    
+    if (cleared) {
+      document.getElementById('message').style.display = 'block';
+      document.getElementById('message').innerHTML = '<i class="fas fa-check-circle"></i> All notifications cleared!';
+    }
+    
+    async function loadNotifications() {
+      try {
+        const data = await api.get(API_ENDPOINTS.notifications);
+        
+        if (data.notifications.length === 0) {
+          document.getElementById('notificationsList').innerHTML = `
+            <div class="empty-state">
+              <i class="fas fa-bell-slash"></i>
+              <p>No notifications yet</p>
+            </div>
+          `;
+          document.getElementById('clearAllBtn').style.display = 'none';
+          document.getElementById('markAllReadBtn').style.display = 'none';
+          return;
+        }
+        
+        document.getElementById('clearAllBtn').style.display = 'block';
+        document.getElementById('markAllReadBtn').style.display = 'inline-block';
+        
+        let html = '';
+        data.notifications.forEach(notif => {
+          let link = '#';
+          let content = '';
+          
+          if (notif.type === 'follow' && notif.data.follower_id) {
+            link = `/view-profile?id=${notif.data.follower_id}&from=notifications`;
+            content = `<p><strong>${notif.data.follower_name}</strong> started following you</p>`;
+          } else if (notif.type === 'friend' && notif.data.user_id) {
+            link = `/view-profile?id=${notif.data.user_id}&from=notifications`;
+            content = `<p>You and <strong>${notif.data.user_name}</strong> are now friends!</p>`;
+          } else {
+            content = `<p>Unknown notification</p>`;
+          }
+          
+          const time = new Date(notif.created_at);
+          const timeStr = time.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + 
+                         ' at ' + time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+          
+          html += `
+            <a href="${link}" class="notification-item ${notif.read ? 'read' : 'unread'}">
+              <div class="notification-icon">
+                ${notif.type === 'follow' ? '<i class="fas fa-user-plus"></i>' : 
+                  notif.type === 'friend' ? '<i class="fas fa-handshake"></i>' : 
+                  '<i class="fas fa-bell"></i>'}
+              </div>
+              <div class="notification-content">
+                ${content}
+                <span class="notification-time">${timeStr}</span>
+              </div>
+              ${!notif.read ? `
+                <div class="mark-read" onclick="event.stopPropagation(); markRead(${notif.id})">
+                  <i class="fas fa-circle"></i>
+                </div>
+              ` : ''}
+            </a>
+          `;
+        });
+        
+        document.getElementById('notificationsList').innerHTML = html;
+        
+      } catch (error) {
+        document.getElementById('notificationsList').innerHTML = `
+          <div class="empty-state">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error loading notifications: ${error.message}</p>
+          </div>
+        `;
+      }
+    }
+    
+    async function markRead(id) {
+      try {
+        await api.get(API_ENDPOINTS.notifications, { action: 'mark_read', id });
+        loadNotifications(); // Reload
+      } catch (error) {
+        alert('Failed to mark notification as read');
+      }
+    }
+    
+    async function markAllRead() {
+      try {
+        await api.get(API_ENDPOINTS.notifications, { action: 'mark_all_read' });
+        loadNotifications(); // Reload
+      } catch (error) {
+        alert('Failed to mark all as read');
+      }
+    }
+    
+    async function clearAllNotifications() {
+      if (!confirm('Clear all notifications?')) return;
+      
+      try {
+        await api.get(API_ENDPOINTS.notifications, { action: 'clear_all' });
+        window.location.href = '/notifications?cleared=1';
+      } catch (error) {
+        alert('Failed to clear notifications');
+      }
+    }
+    
+    // Load navbar and notifications
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+        return loadNavbar();
+      })
+      .then(() => loadNotifications())
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

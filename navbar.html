@@ -1,0 +1,119 @@
+<div class="navbar">
+  <div class="nav-container">
+    <div class="logo" onclick="window.location.href='/'" style="cursor: pointer;">
+      <i class="fas fa-graduation-cap"></i> Venus CBT
+    </div>
+    
+    <div class="nav-links" id="navLinks">
+      <!-- Will be populated by JavaScript -->
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <div class="menu-dropdown" id="menuDropdown">
+      <!-- Will be populated by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<div class="icon-bar" id="iconBar">
+  <!-- Will be populated by JavaScript -->
+</div>
+
+<script>
+// Load navbar content based on login state
+async function loadNavbar() {
+  const navLinks = document.getElementById('navLinks');
+  const menuDropdown = document.getElementById('menuDropdown');
+  const iconBar = document.getElementById('iconBar');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  try {
+    // Try to get current user to check login state
+    const user = await api.get(API_ENDPOINTS.profile).catch(() => null);
+    const isLoggedIn = !!user;
+    
+    if (isLoggedIn) {
+      // Get unread counts
+      let unreadCount = 0;
+      let unreadNotifications = 0;
+      try {
+        const messages = await api.get(API_ENDPOINTS.messages);
+        const notifications = await api.get(API_ENDPOINTS.notifications);
+        unreadCount = messages?.unread_count || 0;
+        unreadNotifications = notifications?.unread_count || 0;
+      } catch (e) {}
+      
+      // Desktop nav links
+      navLinks.innerHTML = `
+        <a href="/profile" class="${currentPage === 'profile.html' ? 'active' : ''}">
+          <i class="fas fa-user"></i> Profile
+        </a>
+        <a href="/history" class="${currentPage === 'history.html' ? 'active' : ''}">
+          <i class="fas fa-history"></i> History
+        </a>
+        <a href="/settings" class="${currentPage === 'settings.html' ? 'active' : ''}">
+          <i class="fas fa-cog"></i> Settings
+        </a>
+        <a href="#" onclick="auth.logout(); return false" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      `;
+      
+      // Mobile menu
+      menuDropdown.innerHTML = `
+        <a href="/profile"><i class="fas fa-user"></i> User Profile</a>
+        <a href="/history"><i class="fas fa-history"></i> Test History</a>
+        <a href="/settings"><i class="fas fa-cog"></i> App Settings</a>
+        <a href="#" onclick="auth.logout(); return false" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      `;
+      
+      // Icon bar
+      iconBar.innerHTML = `
+        <a href="/" class="${currentPage === 'index.html' ? 'active' : ''}" title="Home">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="/select-test" class="${currentPage === 'select-test.html' ? 'active' : ''}" title="Practice">
+          <i class="fas fa-pencil-alt"></i>
+        </a>
+        <a href="/leaderboard" class="${currentPage === 'leaderboard.html' ? 'active' : ''}" title="Leaderboard">
+          <i class="fas fa-trophy"></i>
+        </a>
+        <a href="/messages" class="${currentPage === 'messages.html' ? 'active' : ''}" title="Messages">
+          <i class="fas fa-envelope"></i>
+          ${unreadCount > 0 ? `<span class="badge">${unreadCount}</span>` : ''}
+        </a>
+        <a href="/notifications" class="${currentPage === 'notifications.html' ? 'active' : ''}" title="Notifications">
+          <i class="fas fa-bell"></i>
+          ${unreadNotifications > 0 ? `<span class="badge">${unreadNotifications}</span>` : ''}
+        </a>
+      `;
+    } else {
+      // Guest view
+      navLinks.innerHTML = `
+        <a href="/register" class="${currentPage === 'register.html' ? 'active' : ''}">
+          <i class="fas fa-user-plus"></i> Register
+        </a>
+      `;
+      
+      menuDropdown.innerHTML = `
+        <a href="/"><i class="fas fa-home"></i> Home</a>
+        <a href="/register"><i class="fas fa-user-plus"></i> Register</a>
+      `;
+      
+      iconBar.innerHTML = ''; // Hide icon bar for guests
+    }
+  } catch (error) {
+    console.error('Failed to load navbar:', error);
+  }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', loadNavbar);
+</script>

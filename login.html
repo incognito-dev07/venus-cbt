@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus CBT - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/core.css">
+  <link rel="stylesheet" href="/css/component.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="container" style="position: relative; bottom: 30px">
+    <div class="form-box">
+      <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+            
+      <div id="error-message" class="error" style="display: none;"></div>
+      <div id="success-message" class="success" style="display: none;"></div>
+            
+      <form id="login-form">
+        <div class="form-group">
+          <label><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="email" required maxlength="255">
+        </div>
+                
+        <div class="form-group">
+          <label><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="password" required>
+        </div>
+                
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+      
+      <div class="divider">
+        <span>OR</span>
+      </div>
+      
+      <a href="#" onclick="window.location.href=API_ENDPOINTS.google" class="btn btn-google btn-block">
+        <i class="fab fa-google"></i> Sign in with Google
+      </a>
+            
+      <div class="footer-text">
+        <span style="font-weight: 500;">Don't have an account?</span><br>
+        <a href="/register" style="text-decoration: none;"><i class="fas fa-user-plus"></i> Register here</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Check for URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('registered')) {
+      document.getElementById('success-message').style.display = 'block';
+      document.getElementById('success-message').innerHTML = '<i class="fas fa-check-circle"></i> Registration successful! Please login.';
+    }
+    
+    if (urlParams.has('error')) {
+      const error = urlParams.get('error');
+      let errorText = 'An error occurred. Please try again.';
+      
+      switch(error) {
+        case 'google_access_denied':
+          errorText = 'Google sign-in was cancelled.';
+          break;
+        case 'google_invalid_state':
+          errorText = 'Security verification failed. Please try again.';
+          break;
+        case 'google_token_exchange':
+          errorText = 'Failed to connect to Google. Please try again.';
+          break;
+        case 'google_no_email':
+          errorText = 'Could not retrieve email from Google.';
+          break;
+        case 'google_auth_failed':
+          errorText = 'Google authentication failed. Please try again.';
+          break;
+      }
+      
+      document.getElementById('error-message').style.display = 'block';
+      document.getElementById('error-message').innerHTML = '<i class="fas fa-exclamation-circle"></i> ' + errorText;
+    }
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      try {
+        const result = await auth.login(email, password);
+        if (result.redirect) {
+          window.location.href = result.redirect;
+        }
+      } catch (error) {
+        document.getElementById('error-message').style.display = 'block';
+        document.getElementById('error-message').innerHTML = '<i class="fas fa-exclamation-circle"></i> ' + error.message;
+      }
+    });
+
+    // Load navbar
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+        return loadNavbar();
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+  
+  <script src="/js/script.js"></script>
+</body>
+</html>

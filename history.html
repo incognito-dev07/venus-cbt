@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus CBT - History</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/core.css">
+  <link rel="stylesheet" href="/css/component.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="container">
+    <div class="history-panel">
+      <div id="message" class="success-message" style="display: none;"></div>
+      
+      <div class="history-header">
+        <h2 id="pageTitle"><i class="fas fa-history"></i> Test History</h2>
+        <a href="#" id="clearHistoryBtn" class="clear-btn" style="display: none;" onclick="clearHistory()" title="Clear History">
+          <i class="fas fa-trash-alt"></i>
+        </a>
+      </div>
+
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const testId = urlParams.get('test_id');
+    const hidden = urlParams.get('hidden');
+    
+    if (hidden) {
+      document.getElementById('message').style.display = 'block';
+      document.getElementById('message').innerHTML = '<i class="fas fa-check-circle"></i> History cleared successfully!';
+    }
+    
+    async function loadHistory() {
+      try {
+        if (testId) {
+          // Load single test details
+          const data = await api.get(API_ENDPOINTS.history, { test_id: testId });
+          displayTestDetails(data.test);
+        } else {
+          // Load test list
+          const data = await api.get(API_ENDPOINTS.history);
+          displayTestList(data.tests);
+        }
+      } catch (error) {
+        document.getElementById('content').innerHTML = `
+          <div class="empty-state">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error loading history: ${error.message}</p>
+          </div>
+        `;
+      }
+    }
+    
+    function displayTestList(tests) {
+      const content = document.getElementById('content');
+      const clearBtn = document.getElementById('clearHistoryBtn');
+      
+      if (tests.length === 0) {
+        content.innerHTML = `
+          <div class="empty-state">
+            <i class="fas fa-history"></i>
+            <p>No test history yet</p><br>
+            <a href="/select-test" class="btn btn-primary">Take a Test</a>
+          </div>
+        `;
+        clearBtn.style.display = 'none';
+        return;
+      }
+      
+      clearBtn.style.display = 'block';
+      
+      let html = '<div class="tests-list">';
+      tests.forEach(test => {
+        const date = new Date(test.date_taken);
+        const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        
+        let scoreClass = 'text-danger';
+        if (test.percentage >= 70) scoreClass = 'text-success';
+        else if (test.percentage >= 50) scoreClass = 'text-warning';
+        
+        html += `
+          <a href="/history?test_id=${test.id}" class="test-item">
+            <div class="test-item-header">
+              <span class="course-badge">${test.course_id}</span>
+              <span class="test-date">${formattedDate}</span>
+            </div>
+            <div class="test-item-body">
+              <div class="test-score">
+                <span class="list-label">Score: </span>
+                <span class="score-value ${scoreClass}">${test.percentage}%</span>
+                <span class="score-detail">(${test.score}/${test.total})</span>
+              </div>
+            </div>
+          </a>
+        `;
+      });
+      html += '</div>';
+      
+      content.innerHTML = html;
+    }
+    
+    function displayTestDetails(test) {
+      document.getElementById('pageTitle').innerHTML = `
+        <a href="/history" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+        Test Review
+      `;
+      document.getElementById('clearHistoryBtn').style.display = 'none';
+      
+      const date = new Date(test.date_taken);
+      const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + 
+                           ' at ' + date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      
+      let questionsHtml = '';
+      test.questions.forEach((question, index) => {
+        const userAnswer = test.answers[index];
+        const isCorrect = (userAnswer === question.correct);
+        
+        questionsHtml += `
+          <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
+            <div class="review-question">
+              <span class="question-number">Q${index + 1}.</span>
+              ${question.question}
+            </div>
+            <div class="review-answers">
+              <div class="user-answer ${!isCorrect ? 'incorrect' : ''}">
+                <span class="label">Your answer:</span>
+                <span class="value ${isCorrect ? 'text-success' : 'text-danger'}">
+                  ${userAnswer !== null && userAnswer !== undefined ? 
+                    (question.options[userAnswer] || 'Not answered') : 
+                    'Not answered'}
+                </span>
+              </div>
+              ${!isCorrect ? `
+                <div class="correct-answer">
+                  <span class="label">Correct answer:</span>
+                  <span class="value text-success">
+                    ${question.options[question.correct]}
+                  </span>
+                </div>
+              ` : ''}
+              ${question.explanation ? `
+                <div class="explanation">
+                  <i class="fas fa-info-circle"></i>
+                  ${question.explanation}
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      });
+      
+      let scoreClass = 'text-danger';
+      if (test.percentage >= 70) scoreClass = 'text-success';
+      else if (test.percentage >= 50) scoreClass = 'text-warning';
+      
+      document.getElementById('content').innerHTML = `
+        <div class="test-details">
+          <div class="test-summary">
+            <div class="summary-item">
+              <span class="label">Course:</span>
+              <span class="value">${test.course_id}</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Date:</span>
+              <span class="value">${formattedDate}</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Score:</span>
+              <span class="value ${scoreClass}">${test.percentage}% (${test.score}/${test.total})</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Time:</span>
+              <span class="value">${Math.floor(test.time_taken / 60)}:${(test.time_taken % 60).toString().padStart(2, '0')}</span>
+            </div>
+          </div>
+
+          <div class="test-questions">
+            <h3>Questions Review</h3>
+            ${questionsHtml}
+          </div>
+        </div>
+      `;
+    }
+    
+    async function clearHistory() {
+      if (!confirm('Do you want to clear the test history?')) return;
+      
+      try {
+        await api.get(API_ENDPOINTS.history, { action: 'hide_history' });
+        window.location.href = '/history?hidden=1';
+      } catch (error) {
+        alert('Failed to clear history: ' + error.message);
+      }
+    }
+    
+    // Load navbar and history
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+        return loadNavbar();
+      })
+      .then(() => loadHistory())
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

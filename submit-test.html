@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus CBT - Test Results</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/core.css">
+  <link rel="stylesheet" href="/css/component.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="container">
+    <div class="result-card" id="resultCard">
+      <div class="empty-state">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading results...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadResults() {
+      try {
+        const data = await api.get(API_ENDPOINTS.submitTest);
+        const r = data.results;
+        
+        let resultClass = 'success';
+        let resultIcon = 'trophy';
+        
+        if (r.percentage < 50) {
+          resultClass = 'danger';
+          resultIcon = 'frown';
+        } else if (r.percentage < 70) {
+          resultClass = 'warning';
+          resultIcon = 'smile';
+        }
+        
+        let reviewHtml = '';
+        r.details.forEach((result, index) => {
+          reviewHtml += `
+            <div class="review-item ${result.is_correct ? 'correct' : 'incorrect'}">
+              <div class="review-question">
+                <span class="question-number">Q${index + 1}.</span>
+                ${result.question}
+              </div>
+              <div class="review-answers">
+                <div class="user-answer">
+                  <span class="label">Your answer:</span>
+                  <span class="value ${result.is_correct ? 'text-success' : 'text-danger'}">
+                    ${result.user_answer}
+                  </span>
+                </div>
+                ${!result.is_correct ? `
+                  <div class="correct-answer">
+                    <span class="label">Correct answer:</span>
+                    <span class="value text-success">
+                      ${result.correct_answer}
+                    </span>
+                  </div>
+                ` : ''}
+                <div class="explanation">
+                  <i class="fas fa-info-circle"></i>
+                  ${result.explanation}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        
+        document.getElementById('resultCard').innerHTML = `
+          <div class="result-header ${resultClass}">
+            <div class="result-icon">
+              <i class="fas fa-${resultIcon}"></i>
+            </div>
+            <div class="result-title">
+              <h2>Test Complete!</h2>
+              <div class="score-display">
+                <span class="score">${r.percentage}%</span>
+                <span class="score-detail">${r.score}/${r.total} correct</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-stats">
+            <div class="stat-item">
+              <i class="fas fa-book"></i>
+              <div class="stat-content">
+                <span class="stat-label">Course</span>
+                <span class="stat-value">${r.course.id}</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-clock"></i>
+              <div class="stat-content">
+                <span class="stat-label">Time Taken</span>
+                <span class="stat-value">${Math.floor(r.time_taken / 60)}:${(r.time_taken % 60).toString().padStart(2, '0')}</span>
+              </div>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-star"></i>
+              <div class="stat-content">
+                <span class="stat-label">Points Earned</span>
+                <span class="stat-value">${r.points_earned}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-actions">
+            <a href="/select-test" class="btn btn-primary">
+              <i class="fas fa-redo"></i> Take Another Test
+            </a>
+            <a href="/leaderboard" class="btn btn-primary">
+              <i class="fas fa-trophy"></i> View Leaderboard
+            </a>
+            <a href="/" class="btn btn-primary">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </div>
+
+          <div class="review-section">
+            <h3><i class="fas fa-search"></i> Review Answers</h3>
+            ${reviewHtml}
+          </div>
+        `;
+        
+      } catch (error) {
+        document.getElementById('resultCard').innerHTML = `
+          <div class="empty-state">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error loading results: ${error.message}</p>
+            <a href="/select-test" class="btn btn-primary">Back to Tests</a>
+          </div>
+        `;
+      }
+    }
+    
+    // Load navbar and results
+    fetch('/navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+        return loadNavbar();
+      })
+      .then(() => loadResults())
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
