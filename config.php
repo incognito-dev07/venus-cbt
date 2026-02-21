@@ -1,7 +1,16 @@
 <?php
 define('SITE_NAME', 'Venus CBT');
-define('COURSES_FILE', 'storage/courses.json');
-define('STUDY_NOTES_FILE', 'storage/study_notes.json');
+define('BASE_PATH', __DIR__);
+define('STORAGE_PATH', BASE_PATH . '/storage/');
+define('COURSES_FILE', STORAGE_PATH . 'courses.json');
+define('STUDY_NOTES_FILE', STORAGE_PATH . 'study_notes.json');
+
+// Detect if running on Vercel
+if (isset($_SERVER['VERCEL'])) {
+    define('IS_VERCEL', true);
+} else {
+    define('IS_VERCEL', false);
+}
 
 function getCourses() {
     if (!file_exists(COURSES_FILE)) return [];
@@ -22,11 +31,11 @@ function getCourse($course_id) {
 
 function getQuestionFile($course_id) {
     $files = [
-        'MTS101' => 'storage/mathematics.json',
-        'PHY101' => 'storage/physics.json',
-        'STA111' => 'storage/statistics.json',
-        'CSC101' => 'storage/computer.json',
-        'GNS103' => 'storage/literacy.json'
+        'MTS101' => STORAGE_PATH . 'mathematics.json',
+        'PHY101' => STORAGE_PATH . 'physics.json',
+        'STA111' => STORAGE_PATH . 'statistics.json',
+        'CSC101' => STORAGE_PATH . 'computer.json',
+        'GNS103' => STORAGE_PATH . 'literacy.json'
     ];
     return isset($files[$course_id]) ? $files[$course_id] : null;
 }
@@ -41,22 +50,19 @@ function getQuestions($course_id) {
     return isset($data[$course_id]) ? $data[$course_id] : [];
 }
 
-// New function for study notes
 function getStudyNotes() {
     if (!file_exists(STUDY_NOTES_FILE)) return [];
     $json = file_get_contents(STUDY_NOTES_FILE);
     return json_decode($json, true) ?: [];
 }
 
-function getStudyTopic($subject_id, $topic_id, $subtopic_id = null) {
-    $notes = getStudyNotes();
-    if (!isset($notes[$subject_id])) return null;
-    if (!isset($notes[$subject_id]['topics'][$topic_id])) return null;
-    
-    if ($subtopic_id) {
-        return $notes[$subject_id]['topics'][$topic_id]['subtopics'][$subtopic_id] ?? null;
+// For Vercel, ensure proper URL generation
+function base_url($path = '') {
+    if (IS_VERCEL) {
+        $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+        $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+        return $protocol . $host . '/' . ltrim($path, '/');
     }
-    
-    return $notes[$subject_id]['topics'][$topic_id];
+    return $path;
 }
 ?>
