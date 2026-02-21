@@ -1,10 +1,6 @@
-// Update this with your Termux IP address
-const API_BASE_URL = 'http://10.191.152.229:8000'; // CHANGE THIS TO YOUR TERMUX IP
+// Use your exact Termux IP
+const API_BASE_URL = 'http://10.191.152.229:8000';
 
-// For production with custom domain, you might use:
-// const API_BASE_URL = 'https://api.yourdomain.com';
-
-// Don't change anything below this line
 const API_ENDPOINTS = {
     login: `${API_BASE_URL}/api/login`,
     register: `${API_BASE_URL}/api/register`,
@@ -23,3 +19,7 @@ const API_ENDPOINTS = {
     testActions: `${API_BASE_URL}/api/test-actions`,
     upload: `${API_BASE_URL}/api/upload`
 };
+
+// Make sure it's available globally
+window.API_BASE_URL = API_BASE_URL;
+window.API_ENDPOINTS = API_ENDPOINTS;
