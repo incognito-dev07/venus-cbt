@@ -59,7 +59,6 @@
   .form-box,
   .profile-box,
   .settings-panel,
-  .leaderboard-panel,
   .select-test-panel,
   .notifications-panel,
   .history-panel {
@@ -175,25 +174,6 @@
     font-size: 0.8rem;
   }
 
-  .leaderboard-panel {
-    padding: 1rem 0.5rem;
-  }
-
-  .tab {
-    padding: 0.3rem 0.5rem;
-    font-size: 0.85rem;
-  }
-
-  .leaderboard-table th,
-  .leaderboard-table td {
-    padding: 0.5rem;
-    font-size: 0.85rem;
-  }
-
-  .rank {
-    width: 50px;
-  }
-
   .profile-image-wrapper {
     width: 120px;
     height: 120px;
@@ -272,67 +252,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-  }
-
-  .messages-panel {
-    padding: 1rem;
-  }
-
-  .panel-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .friend-avatar,
-  .conv-avatar {
-    width: 45px;
-    height: 45px;
-  }
-
-  .friend-avatar i,
-  .conv-avatar i {
-    font-size: 3.2rem;
-    line-height: 35px;
-  }
-
-  .conversation-item {
-    padding: 0.875rem;
-  }
-
-  .user-avatar-small {
-    width: 45px;
-    height: 45px;
-  }
-
-  .user-avatar-small i {
-    font-size: 2.7rem;
-    line-height: 45px;
-  }
-
-  .chat-fullscreen {
-    top: 50px;
-  }
-
-  .chat-header {
-    padding: 0.75rem;
-  }
-
-  .chat-avatar {
-    width: 45px;
-    height: 45px;
-  }
-
-  .chat-avatar i {
-    font-size: 3rem;
-    line-height: 40px;
-  }
-
-  .chat-name {
-    font-size: 1rem;
-  }
-
-  .btn-send {
-    width: 45px;
-    height: 45px;
   }
 
   .notifications-panel {
@@ -460,14 +379,6 @@
 
   .question-number {
     font-size: 1rem;
-  }
-
-  .mistake-item {
-    padding: 1rem;
-  }
-
-  .mistake-question {
-    font-size: 0.9rem;
   }
 }
 

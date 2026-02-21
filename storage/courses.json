@@ -1,0 +1,42 @@
+[
+  {
+    "id": "STA111",
+    "name": "Descriptive Statistics",
+    "description": "Mean, Median, Probability, and Distributions",
+    "icon": "fa-chart-bar",
+    "question_count": 20,
+    "time_limit": 900
+  },
+  {
+    "id": "GNS103",
+    "name": "Information Literacy",
+    "description": "Grammar, Comprehension, and Communication",
+    "icon": "fa-book",
+    "question_count": 20,
+    "time_limit": 600
+  },
+  {
+    "id": "PHY101",
+    "name": "General Physics",
+    "description": "Mechanics, Heat, and Optics basics",
+    "icon": "fa-flask",
+    "question_count": 20,
+    "time_limit": 900
+  },
+  {
+    "id": "MTS101",
+    "name": "Introductory Mathematics",
+    "description": "Algebra, Calculus, and Trigonometry fundamentals",
+    "icon": "fa-calculator",
+    "question_count": 20,
+    "time_limit": 900
+  },
+  {
+    "id": "CSC101",
+    "name": "Computing Science",
+    "description": "Programming basics and hardware fundamentals",
+    "icon": "fa-laptop-code",
+    "question_count": 20,
+    "time_limit": 600
+  }
+]

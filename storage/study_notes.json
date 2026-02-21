@@ -1,0 +1,68 @@
+{
+  "MTS101": {
+    "name": "Introductory Mathematics",
+    "icon": "fa-calculator",
+    "topics": {
+      "algebra": {
+        "name": "Algebra Fundamentals",
+        "subtopics": {
+          "linear_equations": {
+            "name": "Linear Equations",
+            "content": "<h4>Linear Equations</h4><p>An equation that makes a straight line when graphed. It has the form: <strong>ax + b = 0</strong> where a ≠ 0.</p><h5>Key Points:</h5><ul><li><mark>Standard form: ax + b = 0</mark></li><li>Solution: x = -b/a</li><li>Can have one solution, no solution, or infinite solutions</li><li>Graph is always a straight line</li></ul><h5>Example:</h5><p>Solve 2x + 4 = 0<br>2x = -4<br><strong>x = -2</strong></p>"
+          },
+          "quadratic_equations": {
+            "name": "Quadratic Equations",
+            "content": "<h4>Quadratic Equations</h4><p>An equation of the form <strong>ax² + bx + c = 0</strong> where a ≠ 0.</p><h5>Key Points:</h5><ul><li><mark>Standard form: ax² + bx + c = 0</mark></li><li>Solutions found using quadratic formula: x = [-b ± √(b² - 4ac)]/2a</li><li>Discriminant (b² - 4ac) determines nature of roots</li><li>Graph is a parabola</li></ul><h5>Example:</h5><p>Solve x² - 5x + 6 = 0<br>(x - 2)(x - 3) = 0<br><strong>x = 2 or x = 3</strong></p>"
+          }
+        }
+      },
+      "calculus": {
+        "name": "Calculus Basics",
+        "subtopics": {
+          "limits": {
+            "name": "Limits",
+            "content": "<h4>Limits</h4><p>The value that a function approaches as the input approaches some value.</p><h5>Key Points:</h5><ul><li><mark>Notation: lim(x→a) f(x) = L</mark></li><li>Left-hand limit and right-hand limit must be equal</li><li>Used to define continuity and derivatives</li></ul>"
+          }
+        }
+      }
+    }
+  },
+  "PHY101": {
+    "name": "General Physics",
+    "icon": "fa-flask",
+    "topics": {
+      "mechanics": {
+        "name": "Mechanics",
+        "subtopics": {
+          "newtons_laws": {
+            "name": "Newton's Laws of Motion",
+            "content": "<h4>Newton's Laws of Motion</h4><h5>First Law (Law of Inertia):</h5><p><mark>An object at rest stays at rest, and an object in motion stays in motion with the same speed and direction unless acted upon by an unbalanced force.</mark></p><h5>Second Law (F = ma):</h5><p><mark>Force equals mass times acceleration (F = ma)</mark></p><h5>Third Law (Action-Reaction):</h5><p><mark>For every action, there is an equal and opposite reaction.</mark></p>"
+          }
+        }
+      }
+    }
+  },
+  "STA111": {
+    "name": "Descriptive Statistics",
+    "icon": "fa-chart-bar",
+    "topics": {
+      "central_tendency": {
+        "name": "Measures of Central Tendency",
+        "subtopics": {
+          "mean": {
+            "name": "Mean (Average)",
+            "content": "<h4>Mean (Arithmetic Mean)</h4><p>The sum of all values divided by the number of values.</p><h5>Formula:</h5><p><mark>μ = (Σx)/n</mark> for population<br><mark>x̄ = (Σx)/n</mark> for sample</p><h5>Key Points:</h5><ul><li>Affected by outliers</li><li>Most common measure of central tendency</li><li>Used for interval and ratio data</li></ul>"
+          },
+          "median": {
+            "name": "Median",
+            "content": "<h4>Median</h4><p>The middle value when data is arranged in order.</p><h5>Key Points:</h5><ul><li><mark>Not affected by outliers</mark></li><li>For odd n: middle value</li><li>For even n: average of two middle values</li><li>Used for ordinal, interval, ratio data</li></ul>"
+          },
+          "mode": {
+            "name": "Mode",
+            "content": "<h4>Mode</h4><p>The most frequently occurring value.</p><h5>Key Points:</h5><ul><li><mark>Can have multiple modes (bimodal, multimodal)</mark></li><li>Only measure for nominal data</li><li>May not exist if all values unique</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

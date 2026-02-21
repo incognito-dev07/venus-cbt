@@ -1,0 +1,704 @@
+{
+  "CSC101": [
+    {
+      "id": 1,
+      "question": "What is a universal machine according to Turing?",
+      "options": ["A machine that can simulate any other machine", "A machine that never breaks down", "A machine that runs at universal speed", "A machine that works everywhere"],
+      "correct": 0,
+      "explanation": "A universal Turing machine can simulate any Turing machine"
+    },
+    {
+      "id": 2,
+      "question": "The Turing machine consists of:",
+      "options": ["CPU and memory only", "Tape, head, and finite control", "Input and output devices", "Keyboard and screen"],
+      "correct": 1,
+      "explanation": "Turing machine has an infinite tape, read/write head, and state control"
+    },
+    {
+      "id": 3,
+      "question": "Alan Turing is known as the father of:",
+      "options": ["Computer hardware", "Theoretical computer science", "Computer programming", "Computer networking"],
+      "correct": 1,
+      "explanation": "Turing founded theoretical computer science and AI"
+    },
+    {
+      "id": 4,
+      "question": "The Church-Turing thesis states that:",
+      "options": ["All computers are slow", "Everything computable is computable by Turing machine", "Computers think like humans", "Turing invented the computer"],
+      "correct": 1,
+      "explanation": "Any effectively computable function can be computed by Turing machine"
+    },
+    {
+      "id": 5,
+      "question": "A Turing machine can solve problems that are:",
+      "options": ["Decidable", "Undecidable", "Only arithmetic", "Only logical"],
+      "correct": 0,
+      "explanation": "Turing machines can solve decidable problems (halting problem is undecidable)"
+    },
+    {
+      "id": 6,
+      "question": "The halting problem is:",
+      "options": ["Decidable", "Undecidable", "Solvable", "Trivial"],
+      "correct": 1,
+      "explanation": "Turing proved no algorithm can determine if any program halts"
+    },
+    {
+      "id": 7,
+      "question": "Von Neumann architecture features:",
+      "options": ["Separate CPU and memory", "Stored-program concept", "No memory", "Only input/output"],
+      "correct": 1,
+      "explanation": "Von Neumann architecture stores both data and instructions in memory"
+    },
+    {
+      "id": 8,
+      "question": "The CPU consists of:",
+      "options": ["ALU and CU only", "ALU, CU, and registers", "Memory and ALU", "Input and output"],
+      "correct": 1,
+      "explanation": "CPU has Arithmetic Logic Unit, Control Unit, and registers"
+    },
+    {
+      "id": 9,
+      "question": "ALU performs:",
+      "options": ["Arithmetic operations only", "Logical operations only", "Both arithmetic and logical operations", "Control operations"],
+      "correct": 2,
+      "explanation": "ALU does arithmetic (add, subtract) and logical (AND, OR) operations"
+    },
+    {
+      "id": 10,
+      "question": "The control unit:",
+      "options": ["Performs calculations", "Directs operations of the processor", "Stores data", "Connects to peripherals"],
+      "correct": 1,
+      "explanation": "Control unit directs and coordinates computer operations"
+    },
+    {
+      "id": 11,
+      "question": "Registers are:",
+      "options": ["Main memory", "High-speed storage in CPU", "Secondary storage", "Cache memory"],
+      "correct": 1,
+      "explanation": "Registers are small, fast memory locations inside CPU"
+    },
+    {
+      "id": 12,
+      "question": "The Program Counter (PC) holds:",
+      "options": ["Current instruction", "Address of next instruction", "Data being processed", "Result of calculation"],
+      "correct": 1,
+      "explanation": "PC contains memory address of next instruction to execute"
+    },
+    {
+      "id": 13,
+      "question": "The Instruction Register (IR) holds:",
+      "options": ["Address of next instruction", "Current instruction being executed", "Data for ALU", "Result of operation"],
+      "correct": 1,
+      "explanation": "IR stores the current instruction being decoded/executed"
+    },
+    {
+      "id": 14,
+      "question": "The Accumulator is used for:",
+      "options": ["Storing addresses", "Storing intermediate results", "Counting instructions", "Holding program"],
+      "correct": 1,
+      "explanation": "Accumulator stores results of ALU operations"
+    },
+    {
+      "id": 15,
+      "question": "Memory Address Register (MAR) holds:",
+      "options": ["Data to be read/written", "Address of memory location to access", "Instruction to execute", "Program count"],
+      "correct": 1,
+      "explanation": "MAR contains the address for memory access"
+    },
+    {
+      "id": 16,
+      "question": "Memory Data Register (MDR) holds:",
+      "options": ["Memory address", "Data to be transferred to/from memory", "Instruction opcode", "Program counter value"],
+      "correct": 1,
+      "explanation": "MDR contains data being read from or written to memory"
+    },
+    {
+      "id": 17,
+      "question": "RAM is:",
+      "options": ["Read-only", "Volatile", "Permanent", "Slow"],
+      "correct": 1,
+      "explanation": "RAM (Random Access Memory) is volatile - loses data when power off"
+    },
+    {
+      "id": 18,
+      "question": "ROM is:",
+      "options": ["Volatile", "Read-only and non-volatile", "Writable", "Temporary"],
+      "correct": 1,
+      "explanation": "ROM (Read-Only Memory) retains data without power"
+    },
+    {
+      "id": 19,
+      "question": "Cache memory is:",
+      "options": ["Slower than RAM", "Faster than RAM", "Same speed as RAM", "Slower than hard disk"],
+      "correct": 1,
+      "explanation": "Cache is fast memory between CPU and RAM"
+    },
+    {
+      "id": 20,
+      "question": "The fetch-execute cycle includes:",
+      "options": ["Fetch, decode, execute", "Only fetch and execute", "Input, process, output", "Read, write, store"],
+      "correct": 0,
+      "explanation": "CPU fetches instruction, decodes it, then executes"
+    },
+    {
+      "id": 21,
+      "question": "An operating system is:",
+      "options": ["Application software", "System software", "Hardware", "Firmware"],
+      "correct": 1,
+      "explanation": "OS is system software managing hardware and software"
+    },
+    {
+      "id": 22,
+      "question": "Which is not an operating system?",
+      "options": ["Windows", "Linux", "macOS", "Microsoft Word"],
+      "correct": 3,
+      "explanation": "Microsoft Word is application software, not OS"
+    },
+    {
+      "id": 23,
+      "question": "The kernel of an OS:",
+      "options": ["Provides user interface", "Manages core system resources", "Runs applications", "Stores files"],
+      "correct": 1,
+      "explanation": "Kernel is the core managing memory, processes, devices"
+    },
+    {
+      "id": 24,
+      "question": "Multitasking means:",
+      "options": ["Running multiple programs simultaneously", "Using multiple CPUs", "Multiple users", "Multiple tasks sequentially"],
+      "correct": 0,
+      "explanation": "OS allows multiple programs to run concurrently"
+    },
+    {
+      "id": 25,
+      "question": "Memory management in OS handles:",
+      "options": ["File storage", "Allocation of RAM", "CPU scheduling", "Device drivers"],
+      "correct": 1,
+      "explanation": "Memory management allocates and tracks memory usage"
+    },
+    {
+      "id": 26,
+      "question": "Process scheduling determines:",
+      "options": ["Which process gets CPU time", "How much memory to allocate", "File access order", "Device priority"],
+      "correct": 0,
+      "explanation": "Scheduler decides which process runs next"
+    },
+    {
+      "id": 27,
+      "question": "A file system:",
+      "options": ["Organizes and stores files", "Manages CPU time", "Controls I/O devices", "Handles network"],
+      "correct": 0,
+      "explanation": "File system manages how files are stored and retrieved"
+    },
+    {
+      "id": 28,
+      "question": "Which is a single-user operating system?",
+      "options": ["Windows Server", "Linux", "MS-DOS", "Unix"],
+      "correct": 2,
+      "explanation": "MS-DOS was designed for one user at a time"
+    },
+    {
+      "id": 29,
+      "question": "A multi-user OS allows:",
+      "options": ["One program at a time", "Multiple users simultaneously", "Only one user", "No users"],
+      "correct": 1,
+      "explanation": "Multi-user OS supports multiple concurrent users"
+    },
+    {
+      "id": 30,
+      "question": "Device drivers are:",
+      "options": ["Hardware devices", "Software to control hardware", "Applications", "Utilities"],
+      "correct": 1,
+      "explanation": "Drivers enable OS to communicate with hardware"
+    },
+    {
+      "id": 31,
+      "question": "Bits are:",
+      "options": ["Binary digits (0 or 1)", "Bytes of data", "Characters", "Numbers"],
+      "correct": 0,
+      "explanation": "Bit is the smallest unit of data, either 0 or 1"
+    },
+    {
+      "id": 32,
+      "question": "A byte consists of:",
+      "options": ["2 bits", "4 bits", "8 bits", "16 bits"],
+      "correct": 2,
+      "explanation": "1 byte = 8 bits"
+    },
+    {
+      "id": 33,
+      "question": "1 kilobyte (KB) equals:",
+      "options": ["1000 bytes", "1024 bytes", "1000 bits", "1024 bits"],
+      "correct": 1,
+      "explanation": "1 KB = 2¹⁰ = 1024 bytes"
+    },
+    {
+      "id": 34,
+      "question": "1 megabyte (MB) equals:",
+      "options": ["1024 KB", "1000 KB", "1024 bytes", "1 million bytes"],
+      "correct": 0,
+      "explanation": "1 MB = 1024 KB = 1,048,576 bytes"
+    },
+    {
+      "id": 35,
+      "question": "Binary number 1011 in decimal is:",
+      "options": ["11", "12", "10", "13"],
+      "correct": 0,
+      "explanation": "1×8 + 0×4 + 1×2 + 1×1 = 8 + 0 + 2 + 1 = 11"
+    },
+    {
+      "id": 36,
+      "question": "Decimal 13 in binary is:",
+      "options": ["1101", "1011", "1110", "1100"],
+      "correct": 0,
+      "explanation": "13 = 8+4+1 = 1101 in binary"
+    },
+    {
+      "id": 37,
+      "question": "Hexadecimal number A in decimal is:",
+      "options": ["10", "11", "12", "9"],
+      "correct": 0,
+      "explanation": "A in hex = 10 in decimal"
+    },
+    {
+      "id": 38,
+      "question": "Hexadecimal F in decimal is:",
+      "options": ["15", "16", "14", "17"],
+      "correct": 0,
+      "explanation": "F in hex = 15 in decimal"
+    },
+    {
+      "id": 39,
+      "question": "Binary 1111 in hexadecimal is:",
+      "options": ["F", "E", "15", "16"],
+      "correct": 0,
+      "explanation": "1111₂ = 15₁₀ = F₁₆"
+    },
+    {
+      "id": 40,
+      "question": "The two's complement of 0101 is:",
+      "options": ["1010", "1011", "1100", "1001"],
+      "correct": 1,
+      "explanation": "Invert bits (1010) then add 1 → 1011"
+    },
+    {
+      "id": 41,
+      "question": "In two's complement, the most significant bit represents:",
+      "options": ["Magnitude", "Sign", "Fraction", "Exponent"],
+      "correct": 1,
+      "explanation": "MSB is sign bit (0 positive, 1 negative)"
+    },
+    {
+      "id": 42,
+      "question": "ASCII code uses how many bits?",
+      "options": ["7 bits", "8 bits", "16 bits", "32 bits"],
+      "correct": 0,
+      "explanation": "Standard ASCII uses 7 bits (128 characters)"
+    },
+    {
+      "id": 43,
+      "question": "Extended ASCII uses:",
+      "options": ["7 bits", "8 bits", "16 bits", "24 bits"],
+      "correct": 1,
+      "explanation": "Extended ASCII uses 8 bits (256 characters)"
+    },
+    {
+      "id": 44,
+      "question": "Unicode uses up to:",
+      "options": ["8 bits", "16 bits", "32 bits", "64 bits"],
+      "correct": 2,
+      "explanation": "Unicode can use up to 32 bits for characters"
+    },
+    {
+      "id": 45,
+      "question": "AND operation: 1 AND 1 =",
+      "options": ["0", "1", "2", "10"],
+      "correct": 1,
+      "explanation": "Logical AND: 1 only when both inputs are 1"
+    },
+    {
+      "id": 46,
+      "question": "OR operation: 0 OR 1 =",
+      "options": ["0", "1", "2", "10"],
+      "correct": 1,
+      "explanation": "Logical OR: 1 if at least one input is 1"
+    },
+    {
+      "id": 47,
+      "question": "XOR operation: 1 XOR 1 =",
+      "options": ["0", "1", "2", "10"],
+      "correct": 0,
+      "explanation": "XOR: 1 when inputs differ, 0 when same"
+    },
+    {
+      "id": 48,
+      "question": "NOT operation on 0 gives:",
+      "options": ["0", "1", "Error", "10"],
+      "correct": 1,
+      "explanation": "NOT inverts: NOT 0 = 1"
+    },
+    {
+      "id": 49,
+      "question": "Adding binary 1 + 1 gives:",
+      "options": ["0 with carry 1", "1 with carry 1", "0 with carry 0", "1 with carry 0"],
+      "correct": 0,
+      "explanation": "1+1 = 0, carry 1 (like decimal 1+1=2, write 0 carry 1)"
+    },
+    {
+      "id": 50,
+      "question": "Binary addition: 101 + 011 =",
+      "options": ["1000", "1001", "1010", "1100"],
+      "correct": 0,
+      "explanation": "101 + 011 = 1000 (5 + 3 = 8)"
+    },
+    {
+      "id": 51,
+      "question": "Problem solving first step is:",
+      "options": ["Coding", "Testing", "Understanding the problem", "Debugging"],
+      "correct": 2,
+      "explanation": "Understand the problem before attempting solution"
+    },
+    {
+      "id": 52,
+      "question": "An algorithm is:",
+      "options": ["A programming language", "Step-by-step procedure", "Computer hardware", "Data structure"],
+      "correct": 1,
+      "explanation": "Algorithm is a finite sequence of instructions"
+    },
+    {
+      "id": 53,
+      "question": "Pseudocode is:",
+      "options": ["Actual code", "Human-readable algorithm description", "Machine language", "Binary code"],
+      "correct": 1,
+      "explanation": "Pseudocode uses natural language to describe algorithm"
+    },
+    {
+      "id": 54,
+      "question": "A flowchart uses:",
+      "options": ["Only text", "Symbols to represent steps", "Numbers only", "Binary code"],
+      "correct": 1,
+      "explanation": "Flowcharts use symbols for different operations"
+    },
+    {
+      "id": 55,
+      "question": "In flowchart, an oval represents:",
+      "options": ["Process", "Decision", "Start/End", "Input/Output"],
+      "correct": 2,
+      "explanation": "Terminal symbols (oval) mark start and end"
+    },
+    {
+      "id": 56,
+      "question": "In flowchart, a rectangle represents:",
+      "options": ["Process/calculation", "Decision", "Input/Output", "Connector"],
+      "correct": 0,
+      "explanation": "Rectangle indicates processing step"
+    },
+    {
+      "id": 57,
+      "question": "In flowchart, a diamond represents:",
+      "options": ["Process", "Decision", "Start/End", "Input/Output"],
+      "correct": 1,
+      "explanation": "Diamond indicates decision/branch point"
+    },
+    {
+      "id": 58,
+      "question": "In flowchart, a parallelogram represents:",
+      "options": ["Process", "Decision", "Start/End", "Input/Output"],
+      "correct": 3,
+      "explanation": "Parallelogram for input or output operations"
+    },
+    {
+      "id": 59,
+      "question": "Sequence structure executes:",
+      "options": ["Statements in order", "Statements conditionally", "Statements repeatedly", "Random statements"],
+      "correct": 0,
+      "explanation": "Sequence executes one after another"
+    },
+    {
+      "id": 60,
+      "question": "Selection structure is also called:",
+      "options": ["Loop", "If-then-else", "Sequence", "Array"],
+      "correct": 1,
+      "explanation": "Selection makes decisions (if/else)"
+    },
+    {
+      "id": 61,
+      "question": "Repetition structure is also called:",
+      "options": ["Loop", "If-then", "Sequence", "Branch"],
+      "correct": 0,
+      "explanation": "Repetition (iteration) repeats statements"
+    },
+    {
+      "id": 62,
+      "question": "A while loop continues while condition is:",
+      "options": ["False", "True", "Zero", "Undefined"],
+      "correct": 1,
+      "explanation": "While loop executes as long as condition is true"
+    },
+    {
+      "id": 63,
+      "question": "A for loop is typically used when:",
+      "options": ["Number of iterations is known", "Condition is complex", "No iterations needed", "Only once"],
+      "correct": 0,
+      "explanation": "For loop is convenient for counted iterations"
+    },
+    {
+      "id": 64,
+      "question": "A programming language is:",
+      "options": ["Hardware", "Formal language for instructions", "Natural language", "Computer component"],
+      "correct": 1,
+      "explanation": "Programming language communicates instructions to computer"
+    },
+    {
+      "id": 65,
+      "question": "Machine language uses:",
+      "options": ["English words", "Binary code", "Symbols", "Mnemonics"],
+      "correct": 1,
+      "explanation": "Machine language is binary (0s and 1s)"
+    },
+    {
+      "id": 66,
+      "question": "Assembly language uses:",
+      "options": ["Binary", "Mnemonics", "English sentences", "Numbers"],
+      "correct": 1,
+      "explanation": "Assembly uses mnemonics like ADD, MOV"
+    },
+    {
+      "id": 67,
+      "question": "High-level languages are:",
+      "options": ["Closer to human language", "Binary only", "Machine-dependent", "Hard to learn"],
+      "correct": 0,
+      "explanation": "High-level languages (Python, Java) are more human-readable"
+    },
+    {
+      "id": 68,
+      "question": "A compiler:",
+      "options": ["Interprets code line by line", "Translates entire program at once", "Runs code directly", "Debug code"],
+      "correct": 1,
+      "explanation": "Compiler translates whole program to machine code"
+    },
+    {
+      "id": 69,
+      "question": "An interpreter:",
+      "options": ["Translates entire program", "Executes line by line", "Creates executable", "Optimizes code"],
+      "correct": 1,
+      "explanation": "Interpreter executes code line by line"
+    },
+    {
+      "id": 70,
+      "question": "Which is a compiled language?",
+      "options": ["Python", "JavaScript", "C++", "HTML"],
+      "correct": 2,
+      "explanation": "C++ is typically compiled, Python/JS interpreted"
+    },
+    {
+      "id": 71,
+      "question": "Which is an interpreted language?",
+      "options": ["C", "C++", "Java", "Python"],
+      "correct": 3,
+      "explanation": "Python is interpreted (though compiles to bytecode)"
+    },
+    {
+      "id": 72,
+      "question": "Syntax error occurs when:",
+      "options": ["Program logic is wrong", "Grammar rules violated", "Program crashes", "Wrong output"],
+      "correct": 1,
+      "explanation": "Syntax errors violate language grammar rules"
+    },
+    {
+      "id": 73,
+      "question": "Runtime error occurs:",
+      "options": ["During compilation", "During program execution", "Before execution", "Never"],
+      "correct": 1,
+      "explanation": "Runtime errors happen while program runs"
+    },
+    {
+      "id": 74,
+      "question": "Logic error means:",
+      "options": ["Program crashes", "Wrong output but runs", "Syntax mistake", "No error"],
+      "correct": 1,
+      "explanation": "Logic errors give incorrect results but program runs"
+    },
+    {
+      "id": 75,
+      "question": "Debugging is:",
+      "options": ["Writing code", "Finding and fixing errors", "Running program", "Compiling"],
+      "correct": 1,
+      "explanation": "Debugging removes bugs from programs"
+    },
+    {
+      "id": 76,
+      "question": "A variable is:",
+      "options": ["Constant value", "Storage location with name", "Function", "Operator"],
+      "correct": 1,
+      "explanation": "Variable stores data that can change"
+    },
+    {
+      "id": 77,
+      "question": "Data type defines:",
+      "options": ["Variable name", "Kind of data stored", "Memory location", "Operator"],
+      "correct": 1,
+      "explanation": "Data type specifies what kind of values variable holds"
+    },
+    {
+      "id": 78,
+      "question": "int data type stores:",
+      "options": ["Decimal numbers", "Whole numbers", "Characters", "True/False"],
+      "correct": 1,
+      "explanation": "Integer (int) stores whole numbers"
+    },
+    {
+      "id": 79,
+      "question": "float data type stores:",
+      "options": ["Whole numbers", "Decimal numbers", "Characters", "Boolean"],
+      "correct": 1,
+      "explanation": "Float stores floating-point (decimal) numbers"
+    },
+    {
+      "id": 80,
+      "question": "char data type stores:",
+      "options": ["Numbers", "Single character", "String", "Boolean"],
+      "correct": 1,
+      "explanation": "Char stores a single character"
+    },
+    {
+      "id": 81,
+      "question": "Boolean data type stores:",
+      "options": ["Numbers", "True/False", "Characters", "Strings"],
+      "correct": 1,
+      "explanation": "Boolean has two values: true and false"
+    },
+    {
+      "id": 82,
+      "question": "An array is:",
+      "options": ["Single value", "Collection of same-type elements", "Function", "Loop"],
+      "correct": 1,
+      "explanation": "Array stores multiple values of same type"
+    },
+    {
+      "id": 83,
+      "question": "Array index typically starts at:",
+      "options": ["1", "0", "-1", "Any number"],
+      "correct": 1,
+      "explanation": "Most languages use zero-based indexing"
+    },
+    {
+      "id": 84,
+      "question": "A function is:",
+      "options": ["Reusable code block", "Variable", "Loop", "Operator"],
+      "correct": 0,
+      "explanation": "Function encapsulates code for reuse"
+    },
+    {
+      "id": 85,
+      "question": "Parameter is:",
+      "options": ["Function result", "Input to function", "Function name", "Return type"],
+      "correct": 1,
+      "explanation": "Parameters are values passed to functions"
+    },
+    {
+      "id": 86,
+      "question": "Return value is:",
+      "options": ["Function input", "Function output", "Function name", "Parameter"],
+      "correct": 1,
+      "explanation": "Return value is what function sends back"
+    },
+    {
+      "id": 87,
+      "question": "Recursion is when:",
+      "options": ["Function calls itself", "Program loops", "Program ends", "Error occurs"],
+      "correct": 0,
+      "explanation": "Recursive function calls itself"
+    },
+    {
+      "id": 88,
+      "question": "Operator precedence determines:",
+      "options": ["Order of operation evaluation", "Variable names", "Function order", "Loop order"],
+      "correct": 0,
+      "explanation": "Precedence decides which operation executes first"
+    },
+    {
+      "id": 89,
+      "question": "Modulus operator (%) gives:",
+      "options": ["Division result", "Remainder", "Multiplication", "Subtraction"],
+      "correct": 1,
+      "explanation": "Modulus returns remainder of division"
+    },
+    {
+      "id": 90,
+      "question": "7 % 3 equals:",
+      "options": ["2", "1", "3", "0"],
+      "correct": 1,
+      "explanation": "7 divided by 3 gives remainder 1"
+    },
+    {
+      "id": 91,
+      "question": "A compiler translates to:",
+      "options": ["Source code", "Object code", "Pseudocode", "Flowchart"],
+      "correct": 1,
+      "explanation": "Compiler produces object/machine code"
+    },
+    {
+      "id": 92,
+      "question": "Linked list is a:",
+      "options": ["Data structure", "Programming language", "Compiler", "Operating system"],
+      "correct": 0,
+      "explanation": "Linked list is a linear data structure"
+    },
+    {
+      "id": 93,
+      "question": "Stack uses:",
+      "options": ["FIFO", "LIFO", "Random access", "Priority"],
+      "correct": 1,
+      "explanation": "Stack is Last-In-First-Out (LIFO)"
+    },
+    {
+      "id": 94,
+      "question": "Queue uses:",
+      "options": ["LIFO", "FIFO", "Random", "Priority"],
+      "correct": 1,
+      "explanation": "Queue is First-In-First-Out (FIFO)"
+    },
+    {
+      "id": 95,
+      "question": "Binary tree each node has at most:",
+      "options": ["1 child", "2 children", "3 children", "Unlimited"],
+      "correct": 1,
+      "explanation": "Binary tree nodes have ≤ 2 children"
+    },
+    {
+      "id": 96,
+      "question": "Sorting algorithm arranges data:",
+      "options": ["Randomly", "In order", "Reverse", "Any order"],
+      "correct": 1,
+      "explanation": "Sorting puts data in ascending/descending order"
+    },
+    {
+      "id": 97,
+      "question": "Bubble sort complexity is:",
+      "options": ["O(n)", "O(n²)", "O(log n)", "O(n log n)"],
+      "correct": 1,
+      "explanation": "Bubble sort has O(n²) time complexity"
+    },
+    {
+      "id": 98,
+      "question": "Binary search requires:",
+      "options": ["Unsorted array", "Sorted array", "Linked list", "Queue"],
+      "correct": 1,
+      "explanation": "Binary search works on sorted arrays"
+    },
+    {
+      "id": 99,
+      "question": "Binary search complexity is:",
+      "options": ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+      "correct": 1,
+      "explanation": "Binary search has O(log n) time"
+    },
+    {
+      "id": 100,
+      "question": "Time complexity measures:",
+      "options": ["Memory used", "Execution time growth", "Lines of code", "Disk space"],
+      "correct": 1,
+      "explanation": "Time complexity describes how runtime grows with input"
+    }
+  ]
+}
