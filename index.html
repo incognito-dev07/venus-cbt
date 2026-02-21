@@ -49,43 +49,66 @@
   </div>
 
   <script>
-    async function loadHomePage() {
-      try {
-        const user = await api.get(API_ENDPOINTS.profile).catch(() => null);
-        const isLoggedIn = !!user;
+async function loadHomePage() {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3000);
+    
+    const response = await fetch(API_ENDPOINTS.profile, {
+      signal: controller.signal,
+      credentials: 'include',
+      mode: 'cors'
+    });
+    
+    clearTimeout(timeoutId);
+    
+    const welcomeMsg = document.getElementById('welcome-message');
+    const actionBtns = document.getElementById('action-buttons');
+    
+    if (response.ok) {
+      const data = await response.json();
+      if (data.success) {
+        welcomeMsg.style.display = 'block';
+        welcomeMsg.innerHTML = `<p>Welcome back, <strong>${data.user.username}</strong>!</p>`;
         
-        const welcomeMsg = document.getElementById('welcome-message');
-        const actionBtns = document.getElementById('action-buttons');
-        
-        if (isLoggedIn) {
-          welcomeMsg.style.display = 'block';
-          welcomeMsg.innerHTML = `<p>Welcome back, <strong>${user.user.username}</strong>!</p>`;
-          
-          actionBtns.innerHTML = `
-            <a href="/select-test" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Take a Test</a>
-            <a href="/profile" class="btn btn-primary"><i class="fas fa-user"></i> My Profile</a>
-          `;
-        } else {
-          actionBtns.innerHTML = `
-            <a href="/login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
-            <a href="/register" class="btn btn-primary"><i class="fas fa-user-plus"></i> Create Account</a>
-          `;
-        }
-      } catch (error) {
-        console.error('Failed to load home page:', error);
+        actionBtns.innerHTML = `
+          <a href="/select-test" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Take a Test</a>
+          <a href="/profile" class="btn btn-primary"><i class="fas fa-user"></i> My Profile</a>
+        `;
+        return;
       }
     }
+    
+    // Show guest buttons
+    welcomeMsg.style.display = 'none';
+    actionBtns.innerHTML = `
+      <a href="/login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="/register" class="btn btn-primary"><i class="fas fa-user-plus"></i> Create Account</a>
+    `;
+    
+  } catch (error) {
+    console.log('Guest mode:', error);
+    document.getElementById('welcome-message').style.display = 'none';
+    document.getElementById('action-buttons').innerHTML = `
+      <a href="/login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="/register" class="btn btn-primary"><i class="fas fa-user-plus"></i> Create Account</a>
+    `;
+  }
+}
 
-    // Load navbar and content
-    fetch('/navbar.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('navbar-placeholder').innerHTML = html;
-        return loadNavbar();
-      })
-      .then(() => loadHomePage())
-      .catch(error => console.error('Error loading navbar:', error));
-  </script>
+// Load navbar and content
+fetch('/navbar.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('navbar-placeholder').innerHTML = html;
+    // Small delay to ensure navbar scripts run
+    setTimeout(() => {
+      if (typeof loadNavbar === 'function') loadNavbar();
+      loadHomePage();
+    }, 100);
+  })
+  .catch(error => console.error('Error loading navbar:', error));
+    </script>
   
   <script src="/js/script.js"></script>
 </body>
