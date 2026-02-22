@@ -230,98 +230,28 @@ const TestManager = {
     },
     
     checkAchievements: function(testResult) {
-        const achievements = StorageManager.getAchievements();
-        const profile = StorageManager.getProfile();
-        const tests = StorageManager.getTests();
-        let newAchievements = [];
-        
-        // Check milestone achievements
-        achievements.available.forEach(achievement => {
-            if (achievement.type === 'milestone') {
-                let progress = tests.length;
-                if (progress >= achievement.requirement) {
-                    const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
-                    if (!alreadyEarned) {
-                        const earned = {
-                            id: achievement.id,
-                            name: achievement.name,
-                            description: achievement.description,
-                            icon: achievement.icon,
-                            earnedAt: new Date().toISOString()
-                        };
-                        achievements.earned.push(earned);
-                        newAchievements.push(earned);
-                        if (typeof NotificationManager !== 'undefined') {
-                            NotificationManager.addAchievementNotification(earned);
-                        }
-                    }
+    const achievements = StorageManager.getAchievements();
+    const profile = StorageManager.getProfile();
+    const tests = StorageManager.getTests();
+    let newAchievements = [];
+    
+    // Track achievement progress
+    const progressMap = {};
+    
+    // Check milestone achievements
+    achievements.available.forEach(achievement => {
+        if (achievement.type === 'milestone') {
+            let progress = tests.length;
+            
+            // Track progress for notifications
+            if (progress < achievement.requirement) {
+                const remaining = achievement.requirement - progress;
+                if (remaining <= 3 && remaining > 0) {
+                    progressMap[achievement.name] = remaining;
                 }
             }
             
-            if (achievement.type === 'performance') {
-                if (achievement.id === 'perfect_score' && testResult.percentage === 100) {
-                    const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
-                    if (!alreadyEarned) {
-                        const earned = {
-                            id: achievement.id,
-                            name: achievement.name,
-                            description: achievement.description,
-                            icon: achievement.icon,
-                            earnedAt: new Date().toISOString()
-                        };
-                        achievements.earned.push(earned);
-                        newAchievements.push(earned);
-                        if (typeof NotificationManager !== 'undefined') {
-                            NotificationManager.addAchievementNotification(earned);
-                        }
-                    }
-                }
-                
-                if (achievement.id === 'high_achiever' && testResult.percentage >= 90) {
-                    const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
-                    if (!alreadyEarned) {
-                        const earned = {
-                            id: achievement.id,
-                            name: achievement.name,
-                            description: achievement.description,
-                            icon: achievement.icon,
-                            earnedAt: new Date().toISOString()
-                        };
-                        achievements.earned.push(earned);
-                        newAchievements.push(earned);
-                        if (typeof NotificationManager !== 'undefined') {
-                            NotificationManager.addAchievementNotification(earned);
-                        }
-                    }
-                }
-                
-                if (achievement.id === 'scholar' && tests.length >= 5) {
-                    const avgScore = profile.stats.averageScore;
-                    if (avgScore >= 80) {
-                        const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
-                        if (!alreadyEarned) {
-                            const earned = {
-                                id: achievement.id,
-                                name: achievement.name,
-                                description: achievement.description,
-                                icon: achievement.icon,
-                                earnedAt: new Date().toISOString()
-                            };
-                            achievements.earned.push(earned);
-                            newAchievements.push(earned);
-                            if (typeof NotificationManager !== 'undefined') {
-                                NotificationManager.addAchievementNotification(earned);
-                            }
-                        }
-                    }
-                }
-            }
-        });
-        
-        // Check streak achievements
-        const streak = profile.stats.currentStreak;
-        achievements.available.forEach(achievement => {
-            if (achievement.type === 'streak' && streak >= achievement.requirement) {
+            if (progress >= achievement.requirement) {
                 const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
                 if (!alreadyEarned) {
                     const earned = {
@@ -333,14 +263,115 @@ const TestManager = {
                     };
                     achievements.earned.push(earned);
                     newAchievements.push(earned);
-                    if (typeof NotificationManager !== 'undefined') {
-                        NotificationManager.addAchievementNotification(earned);
+                }
+            }
+        }
+        
+        // Performance achievements
+        if (achievement.type === 'performance') {
+            if (achievement.id === 'perfect_score' && testResult.percentage === 100) {
+                const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
+                if (!alreadyEarned) {
+                    const earned = {
+                        id: achievement.id,
+                        name: achievement.name,
+                        description: achievement.description,
+                        icon: achievement.icon,
+                        earnedAt: new Date().toISOString()
+                    };
+                    achievements.earned.push(earned);
+                    newAchievements.push(earned);
+                }
+            }
+            
+            if (achievement.id === 'high_achiever' && testResult.percentage >= 90) {
+                const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
+                if (!alreadyEarned) {
+                    const earned = {
+                        id: achievement.id,
+                        name: achievement.name,
+                        description: achievement.description,
+                        icon: achievement.icon,
+                        earnedAt: new Date().toISOString()
+                    };
+                    achievements.earned.push(earned);
+                    newAchievements.push(earned);
+                }
+            }
+            
+            if (achievement.id === 'scholar' && tests.length >= 5) {
+                const avgScore = profile.stats.averageScore;
+                if (avgScore >= 80) {
+                    const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
+                    if (!alreadyEarned) {
+                        const earned = {
+                            id: achievement.id,
+                            name: achievement.name,
+                            description: achievement.description,
+                            icon: achievement.icon,
+                            earnedAt: new Date().toISOString()
+                        };
+                        achievements.earned.push(earned);
+                        newAchievements.push(earned);
                     }
                 }
             }
-        });
+        }
+    });
+    
+    // Check streak achievements
+    const streak = profile.stats.currentStreak;
+    achievements.available.forEach(achievement => {
+        if (achievement.type === 'streak' && streak >= achievement.requirement) {
+            const alreadyEarned = achievements.earned.some(a => a.id === achievement.id);
+            if (!alreadyEarned) {
+                const earned = {
+                    id: achievement.id,
+                    name: achievement.name,
+                    description: achievement.description,
+                    icon: achievement.icon,
+                    earnedAt: new Date().toISOString()
+                };
+                achievements.earned.push(earned);
+                newAchievements.push(earned);
+            }
+        }
+    });
+    
+    StorageManager.saveAchievements(achievements);
+    
+    // Send notifications for new achievements
+    newAchievements.forEach(achievement => {
+        if (typeof NotificationManager !== 'undefined') {
+            NotificationManager.addAchievementNotification(achievement);
+        }
+    });
+    
+    // Send progress notifications
+    Object.entries(progressMap).forEach(([achievementName, remaining]) => {
+        if (typeof NotificationManager !== 'undefined') {
+            NotificationManager.addAchievementProgressNotification(achievementName, remaining);
+        }
+    });
+    
+    // Milestone notifications
+    if (typeof NotificationManager !== 'undefined') {
+        checkMilestoneNotifications(tests.length);
         
-        StorageManager.saveAchievements(achievements);
+        // Perfect score notification
+        if (testResult.percentage === 100) {
+            NotificationManager.addPerfectScoreNotification(testResult.courseName, testResult.score);
+        }
+        
+        // Check weak subjects
+        checkWeakSubjects();
+        
+        // Check review reminders
+        checkReviewReminders();
+        
+        // Check performance trends
+        checkPerformanceTrends();
+      }
     },
     
     confirmExit: function() {

@@ -19,14 +19,12 @@ require_once 'config.php';
     <div class="notifications-panel">
       <div class="notifications-header">
         <h2><i class="fas fa-bell"></i> Notifications</h2>
-        <div>
-          <button class="btn btn-small btn-primary" onclick="NotificationManager.markAllAsRead()" id="markAllReadBtn" style="display: none;">
+          <button class="btn btn-primary btn-small" onclick="NotificationManager.markAllAsRead()" id="markAllReadBtn" style="display: none;">
             <i class="fas fa-check"></i> Mark All Read
           </button>
-          <button class="btn btn-small btn-danger" onclick="NotificationManager.clearAll()" id="clearAllBtn" style="display: none; margin-left: 0.5rem;">
-            <i class="fas fa-trash-alt"></i> Clear All
+          <button class="btn btn-small btn-danger clear-btn" onclick="NotificationManager.clearAll()" id="clearAllBtn" style="display: none; margin-left: 0.5rem;">
+            <i class="fas fa-trash-alt"></i>
           </button>
-        </div>
       </div>
 
       <div class="notifications-list" id="notificationsList">

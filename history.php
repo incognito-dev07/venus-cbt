@@ -33,7 +33,7 @@ require_once 'config.php';
         <!-- Test details view (hidden by default) -->
         <div id="testDetailsContainer" style="display: none;">
           <button class="back-btn" onclick="HistoryManager.showList()">
-            <i class="fas fa-arrow-left"></i> Back to History
+            <i class="fas fa-arrow-left"></i> Back
           </button>
           <div id="testDetailsContent"></div>
         </div>

@@ -76,6 +76,27 @@ const StudyManager = {
     }
   },
   
+  // Add this function to StudyManager
+notifyNewContent: function(subjectId, topicId) {
+    const subject = this.notes[subjectId];
+    if (!subject) return;
+    
+    const topic = subject.topics[topicId];
+    if (!topic) return;
+    
+    // Check if this is new content (based on localStorage)
+    const viewedTopics = JSON.parse(localStorage.getItem('venus_viewed_topics') || '{}');
+    const topicKey = `${subjectId}_${topicId}`;
+    
+    if (!viewedTopics[topicKey]) {
+        if (typeof NotificationManager !== 'undefined') {
+            NotificationManager.addNewContentNotification(subject.name, topic.name);
+        }
+        viewedTopics[topicKey] = true;
+        localStorage.setItem('venus_viewed_topics', JSON.stringify(viewedTopics));
+    }
+},
+  
   // ===== LOAD TOPIC INTO STUDY VIEW =====
   loadTopic: function(subjectId, topicId, subtopicId, subjectName, topicName, subtopicName) {
     // Get content from notes
@@ -346,8 +367,8 @@ const StudyManager = {
     // Add to beginning
     this.recentTopics.unshift(topic);
     
-    // Keep only last 3
-    if (this.recentTopics.length > 3) {
+    // Keep only last 2
+    if (this.recentTopics.length > 2) {
       this.recentTopics.pop();
     }
     

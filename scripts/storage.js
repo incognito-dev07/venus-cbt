@@ -172,11 +172,11 @@ const StorageManager = {
     if (!profile) return 0;
     
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Normalize to start of day
+    today.setHours(0, 0, 0, 0);
     
     const lastActive = profile.lastActive ? new Date(profile.lastActive) : null;
+    const oldStreak = profile.stats?.currentStreak || 0;
     
-    // Initialize stats if not exists
     if (!profile.stats) {
         profile.stats = {
             totalTests: 0,
@@ -190,41 +190,36 @@ const StorageManager = {
     }
     
     if (lastActive) {
-        // Reset hours to compare dates only
         lastActive.setHours(0, 0, 0, 0);
-        
-        // Calculate difference in days
         const diffTime = today.getTime() - lastActive.getTime();
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
         
         if (diffDays === 1) {
-            // Consecutive day - increase streak
             profile.stats.currentStreak++;
+            // Notify streak saved
+            if (typeof NotificationManager !== 'undefined') {
+                NotificationManager.addStreakSavedNotification(profile.stats.currentStreak);
+            }
         } else if (diffDays > 1) {
-            // Missed a day - reset streak to 1 (today's activity)
+            // Streak lost - notify
+            if (oldStreak > 0 && typeof NotificationManager !== 'undefined') {
+                NotificationManager.addStreakLostNotification(oldStreak);
+            }
             profile.stats.currentStreak = 1;
-        } else if (diffDays === 0) {
-            // Already active today, keep streak as is
-            // Don't change
         }
     } else {
-        // First activity ever
         profile.stats.currentStreak = 1;
     }
     
-    // Update longest streak if current is higher
     if (profile.stats.currentStreak > profile.stats.longestStreak) {
         profile.stats.longestStreak = profile.stats.currentStreak;
     }
     
-    // Update last active
     profile.lastActive = new Date().toISOString();
-    
-    // Save profile
     this.saveProfile(profile);
     
     return profile.stats.currentStreak;
-    },    
+    }, 
     clearAllData: function() {
         localStorage.removeItem('venus_profile');
         localStorage.removeItem('venus_tests');
