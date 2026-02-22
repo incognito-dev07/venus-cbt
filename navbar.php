@@ -14,13 +14,6 @@ $theme = $_COOKIE['theme'] ?? 'dark';
     body.has-offline-banner {
       padding-bottom: 50px;
     }
-    /* PWA mode adjustments */
-    body.pwa-mode {
-      padding-top: 70px;
-    }
-    body.pwa-mode .navbar {
-      padding-top: env(safe-area-inset-top);
-    }
   </style>
 </head>
 <body class="<?php echo $theme === 'light' ? 'light-mode' : ''; ?>">
@@ -77,24 +70,10 @@ $theme = $_COOKIE['theme'] ?? 'dark';
   </a>
 </div>
 
-<!-- PWA Install Button - Shows when app is installable -->
-<div id="pwaInstallContainer" style="display: none;">
-  <div class="pwa-install-banner">
-    <div class="pwa-install-content">
-      <i class="fas fa-download"></i>
-      <span>Install Venus CBT on your device</span>
-    </div>
-    <div class="pwa-install-actions">
-      <button class="btn btn-small btn-primary" id="pwaInstallBtn">Install</button>
-      <button class="btn-icon" id="pwaCloseBtn"><i class="fas fa-times"></i></button>
-    </div>
-  </div>
-</div>
-
 <!-- Offline Warning - Sticky to bottom -->
 <div id="offlineWarning" class="offline-warning" style="display: none;">
   <i class="fas fa-wifi-slash"></i>
-  <span>You're offline - Study materials still available</span>
+  <span>You're offline - Check your connection</span>
 </div>
 
 <script>
@@ -138,74 +117,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// ========== PWA Installation ==========
-let deferredPrompt;
-const pwaInstallContainer = document.getElementById('pwaInstallContainer');
-const pwaInstallBtn = document.getElementById('pwaInstallBtn');
-const pwaCloseBtn = document.getElementById('pwaCloseBtn');
-
-// Check if app is already installed
-window.addEventListener('appinstalled', () => {
-  console.log('PWA was installed');
-  pwaInstallContainer.style.display = 'none';
-  localStorage.removeItem('pwa_install_dismissed');
-});
-
-// Before install prompt
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  
-  // Don't show if already installed or if we've hidden it before
-  if (!localStorage.getItem('pwa_install_dismissed') && 
-      !window.matchMedia('(display-mode: standalone)').matches) {
-    pwaInstallContainer.style.display = 'block';
-  }
-});
-
-// Install button click
-if (pwaInstallBtn) {
-  pwaInstallBtn.addEventListener('click', async () => {
-    if (!deferredPrompt) return;
-    
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log(`Install outcome: ${outcome}`);
-    
-    deferredPrompt = null;
-    pwaInstallContainer.style.display = 'none';
-    
-    if (outcome === 'accepted') {
-      localStorage.removeItem('pwa_install_dismissed');
-    }
-  });
-}
-
-// Close/dismiss install banner
-if (pwaCloseBtn) {
-  pwaCloseBtn.addEventListener('click', () => {
-    pwaInstallContainer.style.display = 'none';
-    localStorage.setItem('pwa_install_dismissed', 'true');
-    // Expire after 7 days
-    setTimeout(() => {
-      localStorage.removeItem('pwa_install_dismissed');
-    }, 7 * 24 * 60 * 60 * 1000);
-  });
-}
-
-// ========== Service Worker Registration ==========
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js')
-      .then(registration => {
-        console.log('ServiceWorker registered:', registration.scope);
-      })
-      .catch(error => {
-        console.log('ServiceWorker registration failed:', error);
-      });
-  });
-}
-
 // ========== Online/Offline Detection ==========
 const offlineWarning = document.getElementById('offlineWarning');
 
@@ -223,13 +134,6 @@ window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 updateOnlineStatus();
 
-// ========== PWA Mode Detection ==========
-if (window.matchMedia('(display-mode: standalone)').matches) {
-  console.log('Running as installed PWA');
-  document.body.classList.add('pwa-mode');
-  pwaInstallContainer.style.display = 'none';
-}
-
 // ========== Update Notification Badge ==========
 function updateNotificationBadge() {
   if (typeof StorageManager !== 'undefined' && StorageManager.updateNotificationBadge) {
@@ -239,75 +143,11 @@ function updateNotificationBadge() {
 
 // Check every 30 seconds
 setInterval(updateNotificationBadge, 30000);
+
 </script>
 
-<!-- Add PWA styles -->
+<!-- Offline Warning Styles -->
 <style>
-/* PWA Install Banner */
-.pwa-install-banner {
-  position: fixed;
-  bottom: 70px;
-  left: 10px;
-  right: 10px;
-  background: var(--accent-primary);
-  color: white;
-  padding: 12px 16px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  z-index: 9999;
-  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
-  animation: slideUp 0.3s ease;
-}
-
-.pwa-install-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-}
-
-.pwa-install-content i {
-  font-size: 1.2rem;
-}
-
-.pwa-install-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pwa-install-actions .btn {
-  background: white;
-  color: var(--accent-primary);
-  font-weight: 600;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.pwa-install-actions .btn-icon {
-  background: rgba(255,255,255,0.2);
-  color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.pwa-install-actions .btn-icon i {
-  font-size: 0.9rem;
-}
-
-/* Offline Warning - Sticky Bottom */
 .offline-warning {
   position: fixed;
   bottom: 0;
@@ -329,40 +169,10 @@ setInterval(updateNotificationBadge, 30000);
   font-size: 1rem;
 }
 
-/* Animation */
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .pwa-install-banner {
-    bottom: 60px;
-    left: 8px;
-    right: 8px;
-    padding: 10px 12px;
-  }
-  
-  .pwa-install-content {
-    font-size: 0.8rem;
-  }
-}
-
 /* Safe area for notched phones */
 @supports (padding: max(0px)) {
   .offline-warning {
     padding-bottom: max(12px, env(safe-area-inset-bottom));
-  }
-  
-  .pwa-install-banner {
-    bottom: max(70px, calc(env(safe-area-inset-bottom) + 60px));
   }
 }
 </style>
