@@ -2,18 +2,32 @@
 $current_page = basename($_SERVER['PHP_SELF']);
 $theme = $_COOKIE['theme'] ?? 'dark';
 ?>
-<!-- No DOCTYPE or html/head/body tags here - just the navbar content -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: var(--bg-primary);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Space for offline banner */
+    body.has-offline-banner {
+      padding-bottom: 50px;
+    }
+  </style>
+</head>
+<body class="<?php echo $theme === 'light' ? 'light-mode' : ''; ?>">
 <div class="navbar">
   <div class="nav-container">
-    <div class="logo" onclick="window.location.href='/api/index.php'" style="cursor: pointer;">
+    <div class="logo" onclick="window.location.href='index.php'" style="cursor: pointer;">
       <i class="fas fa-graduation-cap"></i> Venus CBT
     </div>
     
     <div class="nav-links">
-      <a href="/api/profile.php" class="<?php echo $current_page == 'profile.php' ? 'active' : ''; ?>">
+      <a href="profile.php" class="<?php echo $current_page == 'profile.php' ? 'active' : ''; ?>">
         <i class="fas fa-user"></i> Profile
       </a>
-      <a href="/api/settings.php" class="<?php echo $current_page == 'settings.php' ? 'active' : ''; ?>">
+      <a href="settings.php" class="<?php echo $current_page == 'settings.php' ? 'active' : ''; ?>">
         <i class="fas fa-cog"></i> Settings
       </a>
       <a href="#" onclick="return logout()" class="logout-btn">
@@ -28,8 +42,8 @@ $theme = $_COOKIE['theme'] ?? 'dark';
     </div>
     
     <div class="menu-dropdown" id="menuDropdown">
-      <a href="/api/profile.php"><i class="fas fa-user"></i> User Profile</a>
-      <a href="/api/settings.php"><i class="fas fa-cog"></i> App Settings</a>
+      <a href="profile.php"><i class="fas fa-user"></i> User Profile</a>
+      <a href="settings.php"><i class="fas fa-cog"></i> App Settings</a>
       <a href="#" onclick="return logout()" class="logout-btn">
         <i class="fas fa-sign-out-alt"></i> Exit
       </a>
@@ -38,19 +52,19 @@ $theme = $_COOKIE['theme'] ?? 'dark';
 </div>
 
 <div class="icon-bar">
-  <a href="/api/index.php" class="<?php echo $current_page == 'index.php' ? 'active' : ''; ?>" title="Home">
+  <a href="index.php" class="<?php echo $current_page == 'index.php' ? 'active' : ''; ?>" title="Home">
     <i class="fas fa-home"></i>
   </a>
-  <a href="/api/study.php" class="<?php echo $current_page == 'study.php' ? 'active' : ''; ?>" title="Study">
+  <a href="study.php" class="<?php echo $current_page == 'study.php' ? 'active' : ''; ?>" title="Study">
     <i class="fas fa-book-open"></i>
   </a>
-  <a href="/api/select-test.php" class="<?php echo $current_page == 'select-test.php' ? 'active' : ''; ?>" title="Practice">
+  <a href="select-test.php" class="<?php echo $current_page == 'select-test.php' ? 'active' : ''; ?>" title="Practice">
     <i class="fas fa-pencil-alt"></i>
   </a>
-  <a href="/api/history.php" class="<?php echo $current_page == 'history.php' ? 'active' : ''; ?>" title="History">
+  <a href="history.php" class="<?php echo $current_page == 'history.php' ? 'active' : ''; ?>" title="History">
     <i class="fas fa-history"></i>
   </a>
-  <a href="/api/notifications.php" class="<?php echo $current_page == 'notifications.php' ? 'active' : ''; ?>" title="Notifications" id="notificationIcon">
+  <a href="notifications.php" class="<?php echo $current_page == 'notifications.php' ? 'active' : ''; ?>" title="Notifications" id="notificationIcon">
     <i class="fas fa-bell"></i>
     <span class="badge" id="notificationBadge" style="display: none;">0</span>
   </a>
@@ -61,17 +75,6 @@ $theme = $_COOKIE['theme'] ?? 'dark';
   <i class="fas fa-wifi-slash"></i>
   <span>You're offline - Check your connection</span>
 </div>
-
-<style>
-  body {
-    background: var(--bg-primary);
-    transition: background-color 0.3s, color 0.3s;
-  }
-  /* Space for offline banner */
-  body.has-offline-banner {
-    padding-bottom: 50px;
-  }
-</style>
 
 <script>
 function getCookie(name) {
@@ -91,7 +94,7 @@ function getCookie(name) {
 
 function logout() {
   if (confirm('Exit application? Your data will remain saved.')) {
-    window.location.href = '/api/index.php';
+    window.location.href = 'index.php';
   }
   return false;
 }
@@ -140,7 +143,6 @@ function updateNotificationBadge() {
 
 // Check every 30 seconds
 setInterval(updateNotificationBadge, 30000);
-
 </script>
 
 <!-- Offline Warning Styles -->

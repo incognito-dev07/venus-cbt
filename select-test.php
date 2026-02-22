@@ -7,10 +7,10 @@ $courses = getCourses();
 <head>
   <title>Venus CBT - Select Test</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/public/styles/core.css">
-  <link rel="stylesheet" href="/public/styles/component.css">
-  <link rel="stylesheet" href="/public/styles/pages.css">
-  <link rel="stylesheet" href="/public/styles/responsive.css">
+  <link rel="stylesheet" href="styles/core.css">
+  <link rel="stylesheet" href="styles/component.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/responsive.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 </head>
 <body>
@@ -44,6 +44,6 @@ $courses = getCourses();
     </div>
   </div>
 
-  <script src="/public/scripts/utilities.js"></script>
+  <script src="scripts/utilities.js"></script>
 </body>
 </html>

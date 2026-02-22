@@ -1,37 +1,30 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.6.1"
-    }
-  },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.php"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/public/storage/(.*)\\.json$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
+      "src": "*.php",
+      "use": "@vercel/php"
     },
     {
-      "source": "/public/(.*)\\.(css|js)$",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "src": "storage/*.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "scripts/*.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)\\.(css|js|json)$",
+      "dest": "/$1.$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1.php"
     }
   ]
 }
