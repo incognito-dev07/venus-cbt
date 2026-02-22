@@ -1,30 +1,14 @@
 {
-  "builds": [
-    {
-      "src": "*.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "storage/*.json",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "styles/*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "scripts/*.js",
-      "use": "@vercel/static"
+  "version": 2,
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.6.1"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/(.*)\\.(css|js|json)$",
-      "dest": "/$1.$2"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1.php"
+      "source": "/(.*)",
+      "destination": "/$1.php"
     }
   ]
 }
