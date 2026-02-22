@@ -1,18 +1,18 @@
 {
   "functions": {
-    "*.php": {
+    "api/*.php": {
       "runtime": "vercel-php@0.6.1"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.php"
+      "destination": "/api/index.php"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)\\.json$",
+      "source": "/public/storage/(.*)\\.json$",
       "headers": [
         {
           "key": "Content-Type",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(css|js)$",
+      "source": "/public/(.*)\\.(css|js)$",
       "headers": [
         {
           "key": "Cache-Control",
