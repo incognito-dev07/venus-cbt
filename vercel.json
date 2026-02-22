@@ -1,14 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "*.php",
-      "use": "@now/php"
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.7.3"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/(.*)",
+      "source": "/(.*)",
       "destination": "/$1.php"
     }
   ]
