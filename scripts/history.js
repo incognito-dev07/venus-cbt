@@ -11,6 +11,8 @@ const HistoryManager = {
         const emptyState = document.getElementById('emptyState');
         const clearBtn = document.getElementById('clearHistoryBtn');
         
+        if (!listContainer) return;
+        
         if (this.tests.length === 0) {
             listContainer.innerHTML = '';
             if (emptyState) emptyState.style.display = 'block';
@@ -23,11 +25,12 @@ const HistoryManager = {
         
         let html = '<div class="tests-list">';
         
+        // Sort by date, newest first
         this.tests.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(test => {
             const scoreClass = test.percentage >= 70 ? 'text-success' : (test.percentage >= 50 ? 'text-warning' : 'text-danger');
             
             html += `
-                <a href="#" class="test-item" onclick="HistoryManager.viewTest('${test.id}'); return false;">
+                <div class="test-item" onclick="HistoryManager.viewTest('${test.id}')">
                     <div class="test-item-header">
                         <span class="course-badge">${test.courseId}</span>
                         <span class="test-date">${Utils.formatDate(test.date)}</span>
@@ -39,7 +42,7 @@ const HistoryManager = {
                             <span class="score-detail">(${test.score}/${test.total})</span>
                         </div>
                     </div>
-                </a>
+                </div>
             `;
         });
         
@@ -51,15 +54,20 @@ const HistoryManager = {
         const test = this.tests.find(t => t.id === testId);
         if (!test) return;
         
-        document.getElementById('testsListContainer').style.display = 'none';
-        document.getElementById('testDetailsContainer').style.display = 'block';
-        document.getElementById('clearHistoryBtn').style.display = 'none';
+        const listContainer = document.getElementById('testsListContainer');
+        const detailsContainer = document.getElementById('testDetailsContainer');
+        const clearBtn = document.getElementById('clearHistoryBtn');
+        
+        if (listContainer) listContainer.style.display = 'none';
+        if (detailsContainer) detailsContainer.style.display = 'block';
+        if (clearBtn) clearBtn.style.display = 'none';
         
         this.renderTestDetails(test);
     },
     
     renderTestDetails: function(test) {
         const container = document.getElementById('testDetailsContent');
+        if (!container) return;
         
         let html = `
             <div class="test-details">
@@ -71,6 +79,16 @@ const HistoryManager = {
                     <div class="summary-item">
                         <span class="label">Date:</span>
                         <span class="value">${Utils.formatDateTime(test.date)}</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Score:</span>
+                        <span class="value ${test.percentage >= 70 ? 'text-success' : (test.percentage >= 50 ? 'text-warning' : 'text-danger')}">
+                            ${test.percentage}% (${test.score}/${test.total})
+                        </span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Time:</span>
+                        <span class="value">${Utils.formatTime(test.timeTaken)}</span>
                     </div>
                 </div>
 
@@ -89,10 +107,10 @@ const HistoryManager = {
                         ${q.question}
                     </div>
                     <div class="review-answers">
-                        <div class="user-answer ${!isCorrect ? 'incorrect' : ''}">
+                        <div class="user-answer">
                             <span class="label">Your answer:</span>
                             <span class="value ${isCorrect ? 'text-success' : 'text-danger'}">
-                                ${userAnswer !== null ? q.options[userAnswer] : 'Not answered'}
+                                ${userAnswer !== null && q.options[userAnswer] ? q.options[userAnswer] : 'Not answered'}
                             </span>
                         </div>
                         ${!isCorrect ? `
@@ -103,7 +121,7 @@ const HistoryManager = {
                         ` : ''}
                         <div class="explanation">
                             <i class="fas fa-info-circle"></i>
-                            ${q.explanation}
+                            ${q.explanation || 'No explanation available'}
                         </div>
                     </div>
                 </div>
@@ -115,9 +133,13 @@ const HistoryManager = {
     },
     
     showList: function() {
-        document.getElementById('testsListContainer').style.display = 'block';
-        document.getElementById('testDetailsContainer').style.display = 'none';
-        document.getElementById('clearHistoryBtn').style.display = this.tests.length > 0 ? 'inline-block' : 'none';
+        const listContainer = document.getElementById('testsListContainer');
+        const detailsContainer = document.getElementById('testDetailsContainer');
+        const clearBtn = document.getElementById('clearHistoryBtn');
+        
+        if (listContainer) listContainer.style.display = 'block';
+        if (detailsContainer) detailsContainer.style.display = 'none';
+        if (clearBtn) clearBtn.style.display = this.tests.length > 0 ? 'inline-block' : 'none';
     },
     
     clearHistory: function() {

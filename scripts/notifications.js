@@ -38,11 +38,12 @@ const NotificationManager = {
     
     renderNotificationItem: function(notification) {
         const statusClass = notification.read ? 'read' : 'unread';
+        const icon = notification.icon || 'fa-bell';
         
         return `
-            <div class="notification-item ${statusClass}" data-id="${notification.id}">
+            <div class="notification-item ${statusClass}" data-id="${notification.id}" onclick="NotificationManager.markAsRead('${notification.id}')">
                 <div class="notification-icon">
-                    <i class="fas ${notification.icon || 'fa-bell'}"></i>
+                    <i class="fas ${icon}"></i>
                 </div>
                 <div class="notification-content">
                     <p><strong>${notification.title}</strong></p>
@@ -50,7 +51,7 @@ const NotificationManager = {
                     <span class="notification-time">${Utils.formatDateTime(notification.createdAt)}</span>
                 </div>
                 ${!notification.read ? `
-                    <div class="mark-read" onclick="NotificationManager.markAsRead('${notification.id}')">
+                    <div class="mark-read">
                         <i class="fas fa-circle"></i>
                     </div>
                 ` : ''}
@@ -77,7 +78,6 @@ const NotificationManager = {
     
     // ===== NOTIFICATION TYPES =====
     
-    // 1. Achievement Notifications (Fixed)
     addAchievementNotification: function(achievement) {
         StorageManager.addNotification({
             type: 'achievement_earned',
@@ -87,7 +87,6 @@ const NotificationManager = {
         });
     },
     
-    // Achievement Progress Notifications
     addAchievementProgressNotification: function(achievementName, remainingTests) {
         StorageManager.addNotification({
             type: 'achievement_progress',
@@ -97,7 +96,6 @@ const NotificationManager = {
         });
     },
     
-    // 2. Streak Notifications
     addStreakReminder: function(currentStreak) {
         StorageManager.addNotification({
             type: 'streak_reminder',
@@ -125,7 +123,6 @@ const NotificationManager = {
         });
     },
     
-    // 3. Milestone Notifications
     addMilestoneNotification: function(testCount) {
         let message, icon;
         
@@ -145,7 +142,7 @@ const NotificationManager = {
             message = "You've completed 50 tests! You're a legend!";
             icon = 'fa-star';
         } else {
-            return; // Only notify at specific milestones
+            return;
         }
         
         StorageManager.addNotification({
@@ -165,7 +162,6 @@ const NotificationManager = {
         });
     },
     
-    // 4. Daily/Weekly Reminders
     addMorningReminder: function() {
         StorageManager.addNotification({
             type: 'reminder',
@@ -216,7 +212,6 @@ const NotificationManager = {
         }
     },
     
-    // 5. Performance Alerts
     addPerformanceAlert: function(prevAvgScore, newAvgScore, subject) {
         if (newAvgScore < prevAvgScore - 10) {
             StorageManager.addNotification({
@@ -235,7 +230,6 @@ const NotificationManager = {
         }
     },
     
-    // 6. Study Recommendations
     addWeakSubjectNotification: function(subjectName, score) {
         StorageManager.addNotification({
             type: 'recommendation',
@@ -254,17 +248,7 @@ const NotificationManager = {
         });
     },
     
-    // 7. Study Material Updates
-    addNewContentNotification: function(subjectName, topicName) {
-        StorageManager.addNotification({
-            type: 'content',
-            title: 'New Study Notes!',
-            message: `New ${subjectName} topic added: ${topicName}`,
-            icon: 'fa-plus-circle'
-        });
-    },
-    
-    addStudyTipNotification: function(tip) {
+    addStudyTipNotification: function() {
         const tips = [
             'Remember to eliminate wrong answers first',
             'Take short breaks between subjects',
@@ -286,7 +270,6 @@ const NotificationManager = {
     // ===== REMINDER SYSTEM =====
     
     setupReminders: function() {
-        // Check every hour
         setInterval(() => this.checkDailyReminders(), 3600000);
     },
     
@@ -297,19 +280,16 @@ const NotificationManager = {
         const lastReminderDate = localStorage.getItem('venus_last_reminder_date');
         const today = now.toDateString();
         
-        // Morning reminder (9 AM)
         if (hours === 9 && minutes < 10 && lastReminderDate !== today) {
             this.addMorningReminder();
             localStorage.setItem('venus_last_reminder_date', today);
         }
         
-        // Evening reminder (8 PM)
         if (hours === 20 && minutes < 10 && lastReminderDate !== today) {
             this.addEveningReminder();
             localStorage.setItem('venus_last_reminder_date', today);
         }
         
-        // Weekly report (Sunday at 6 PM)
         if (now.getDay() === 0 && hours === 18 && minutes < 10) {
             const lastWeekReport = localStorage.getItem('venus_last_week_report');
             const thisWeek = this.getWeekNumber(now);
@@ -320,7 +300,6 @@ const NotificationManager = {
             }
         }
         
-        // Random study tip (every 3 days)
         const lastTipDate = localStorage.getItem('venus_last_tip_date');
         const daysSinceTip = lastTipDate ? Math.floor((now - new Date(lastTipDate)) / (1000 * 60 * 60 * 24)) : 999;
         

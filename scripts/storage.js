@@ -1,62 +1,78 @@
 const StorageManager = {
     init: function() {
-    // Initialize user profile if not exists
-    if (!localStorage.getItem('venus_profile')) {
-        const defaultProfile = {
-            username: 'Learner',
-            bio: 'Welcome to my profile!',
-            avatar: null,
-            createdAt: new Date().toISOString(),
-            lastActive: null, // Start as null, will be set on first activity
-            stats: {
-                totalTests: 0,
-                averageScore: 0,
-                bestScore: 0,
-                bestCourse: null,
-                currentStreak: 0,
-                longestStreak: 0,
-                lastTestDate: null
-            }
-        };
-        localStorage.setItem('venus_profile', JSON.stringify(defaultProfile));
-    } else {
-        // Ensure existing profiles have all required fields
-        const profile = this.getProfile();
-        let needsUpdate = false;
-        
-        if (!profile.stats) {
-            profile.stats = {
-                totalTests: 0,
-                averageScore: 0,
-                bestScore: 0,
-                bestCourse: null,
-                currentStreak: 0,
-                longestStreak: 0,
-                lastTestDate: null
+        // Initialize user profile if not exists
+        if (!localStorage.getItem('venus_profile')) {
+            const defaultProfile = {
+                username: 'Learner',
+                bio: 'Welcome to my profile!',
+                avatar: null,
+                createdAt: new Date().toISOString(),
+                lastActive: null,
+                stats: {
+                    totalTests: 0,
+                    averageScore: 0,
+                    bestScore: 0,
+                    bestCourse: 'N/A',
+                    currentStreak: 0,
+                    longestStreak: 0,
+                    lastTestDate: null
+                },
+                settings: {
+                    theme: 'dark'
+                }
             };
-            needsUpdate = true;
+            localStorage.setItem('venus_profile', JSON.stringify(defaultProfile));
+        } else {
+            // Ensure existing profiles have all required fields
+            const profile = this.getProfile();
+            let needsUpdate = false;
+            
+            if (!profile.stats) {
+                profile.stats = {
+                    totalTests: 0,
+                    averageScore: 0,
+                    bestScore: 0,
+                    bestCourse: 'N/A',
+                    currentStreak: 0,
+                    longestStreak: 0,
+                    lastTestDate: null
+                };
+                needsUpdate = true;
+            }
+            
+            if (profile.lastActive === undefined) {
+                profile.lastActive = null;
+                needsUpdate = true;
+            }
+            
+            if (!profile.settings) {
+                profile.settings = { theme: 'dark' };
+                needsUpdate = true;
+            }
+            
+            if (needsUpdate) {
+                this.saveProfile(profile);
+            }
         }
         
-        if (profile.lastActive === undefined) {
-            profile.lastActive = null;
-            needsUpdate = true;
+        // Initialize notifications if not exists
+        if (!localStorage.getItem('venus_notifications')) {
+            localStorage.setItem('venus_notifications', JSON.stringify([]));
         }
         
-        if (needsUpdate) {
-            this.saveProfile(profile);
+        // Initialize achievements if not exists
+        if (!localStorage.getItem('venus_achievements')) {
+            this.initAchievements();
         }
-    }
+        
+        // Initialize tests if not exists
+        if (!localStorage.getItem('venus_tests')) {
+            localStorage.setItem('venus_tests', JSON.stringify([]));
+        }
+        
+        this.updateNotificationBadge();
+    },
     
-    // Initialize notifications if not exists
-    if (!localStorage.getItem('venus_notifications')) {
-        localStorage.setItem('venus_notifications', JSON.stringify([]));
-    }
-    
-    // Initialize achievements if not exists
-    if (!localStorage.getItem('venus_achievements')) {
-        this.initAchievements();
-    }
-},    
     initAchievements: function() {
         const achievements = {
             earned: [],
@@ -105,6 +121,7 @@ const StorageManager = {
     
     saveNotifications: function(notifications) {
         localStorage.setItem('venus_notifications', JSON.stringify(notifications));
+        this.updateNotificationBadge();
     },
     
     addNotification: function(notification) {
@@ -113,8 +130,13 @@ const StorageManager = {
         notification.read = false;
         notification.createdAt = new Date().toISOString();
         notifications.unshift(notification);
+        
+        // Keep only last 50 notifications
+        if (notifications.length > 50) {
+            notifications.pop();
+        }
+        
         this.saveNotifications(notifications);
-        this.updateNotificationBadge();
         return notification;
     },
     
@@ -125,14 +147,12 @@ const StorageManager = {
             notifications[index].read = true;
             this.saveNotifications(notifications);
         }
-        this.updateNotificationBadge();
     },
     
     markAllNotificationsAsRead: function() {
         const notifications = this.getNotifications();
         notifications.forEach(n => n.read = true);
         this.saveNotifications(notifications);
-        this.updateNotificationBadge();
     },
     
     clearAllNotifications: function() {
@@ -168,64 +188,72 @@ const StorageManager = {
     },
     
     checkAndUpdateStreak: function() {
-    const profile = this.getProfile();
-    if (!profile) return 0;
-    
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    
-    const lastActive = profile.lastActive ? new Date(profile.lastActive) : null;
-    const oldStreak = profile.stats?.currentStreak || 0;
-    
-    if (!profile.stats) {
-        profile.stats = {
-            totalTests: 0,
-            averageScore: 0,
-            bestScore: 0,
-            bestCourse: null,
-            currentStreak: 0,
-            longestStreak: 0,
-            lastTestDate: null
-        };
-    }
-    
-    if (lastActive) {
-        lastActive.setHours(0, 0, 0, 0);
-        const diffTime = today.getTime() - lastActive.getTime();
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const profile = this.getProfile();
+        if (!profile) return 0;
         
-        if (diffDays === 1) {
-            profile.stats.currentStreak++;
-            // Notify streak saved
-            if (typeof NotificationManager !== 'undefined') {
-                NotificationManager.addStreakSavedNotification(profile.stats.currentStreak);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        const lastActive = profile.lastActive ? new Date(profile.lastActive) : null;
+        const oldStreak = profile.stats?.currentStreak || 0;
+        
+        if (!profile.stats) {
+            profile.stats = {
+                totalTests: 0,
+                averageScore: 0,
+                bestScore: 0,
+                bestCourse: null,
+                currentStreak: 0,
+                longestStreak: 0,
+                lastTestDate: null
+            };
+        }
+        
+        if (lastActive) {
+            lastActive.setHours(0, 0, 0, 0);
+            const diffTime = today.getTime() - lastActive.getTime();
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 1) {
+                profile.stats.currentStreak++;
+                // Notify streak saved
+                if (typeof NotificationManager !== 'undefined') {
+                    NotificationManager.addStreakSavedNotification(profile.stats.currentStreak);
+                }
+            } else if (diffDays > 1) {
+                // Streak lost - notify
+                if (oldStreak > 0 && typeof NotificationManager !== 'undefined') {
+                    NotificationManager.addStreakLostNotification(oldStreak);
+                }
+                profile.stats.currentStreak = 1;
             }
-        } else if (diffDays > 1) {
-            // Streak lost - notify
-            if (oldStreak > 0 && typeof NotificationManager !== 'undefined') {
-                NotificationManager.addStreakLostNotification(oldStreak);
-            }
+        } else {
             profile.stats.currentStreak = 1;
         }
-    } else {
-        profile.stats.currentStreak = 1;
-    }
+        
+        if (profile.stats.currentStreak > profile.stats.longestStreak) {
+            profile.stats.longestStreak = profile.stats.currentStreak;
+        }
+        
+        profile.lastActive = new Date().toISOString();
+        this.saveProfile(profile);
+        
+        return profile.stats.currentStreak;
+    },
     
-    if (profile.stats.currentStreak > profile.stats.longestStreak) {
-        profile.stats.longestStreak = profile.stats.currentStreak;
-    }
-    
-    profile.lastActive = new Date().toISOString();
-    this.saveProfile(profile);
-    
-    return profile.stats.currentStreak;
-    }, 
     clearAllData: function() {
-        localStorage.removeItem('venus_profile');
-        localStorage.removeItem('venus_tests');
-        localStorage.removeItem('venus_notifications');
-        localStorage.removeItem('venus_achievements');
-        this.init();
+        if (confirm('WARNING: This will delete all your data including profile, test history, and achievements. This cannot be undone. Continue?')) {
+            localStorage.removeItem('venus_profile');
+            localStorage.removeItem('venus_tests');
+            localStorage.removeItem('venus_notifications');
+            localStorage.removeItem('venus_achievements');
+            localStorage.removeItem('venus_study_bookmarks');
+            localStorage.removeItem('venus_study_recent');
+            localStorage.removeItem('venus_viewed_topics');
+            this.init();
+            return true;
+        }
+        return false;
     }
 };
 

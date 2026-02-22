@@ -5,8 +5,9 @@ const SettingsManager = {
     
     loadCurrentUsername: function() {
         const profile = StorageManager.getProfile();
-        if (profile) {
-            document.getElementById('currentUsername').value = profile.username;
+        const currentUsername = document.getElementById('currentUsername');
+        if (profile && currentUsername) {
+            currentUsername.value = profile.username;
         }
     },
     
@@ -37,9 +38,12 @@ const SettingsManager = {
         profile.username = newUsername;
         StorageManager.saveProfile(profile);
         
-        document.getElementById('currentUsername').value = newUsername;
-        document.getElementById('newUsername').value = '';
+        const currentUsername = document.getElementById('currentUsername');
+        if (currentUsername) {
+            currentUsername.value = newUsername;
+        }
         
+        document.getElementById('newUsername').value = '';
         Utils.showMessage('Username updated successfully!', 'success');
     },
     
@@ -51,8 +55,8 @@ const SettingsManager = {
     },
     
     clearAllData: function() {
-        if (confirm('WARNING: This will delete all your data including profile, test history, and achievements. This cannot be undone. Continue?')) {
-            StorageManager.clearAllData();
+        const confirmed = StorageManager.clearAllData();
+        if (confirmed) {
             Utils.showMessage('All data cleared! The page will refresh.', 'success');
             setTimeout(() => window.location.reload(), 2000);
         }

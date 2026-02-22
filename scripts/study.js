@@ -5,15 +5,17 @@ const StudyManager = {
   currentTopic: null,
   
   init: function(studyNotes) {
+    console.log('StudyManager initializing with notes:', studyNotes);
     this.notes = studyNotes;
     this.loadBookmarks();
     this.loadRecent();
-    this.setupEventListeners();
+    this.renderSubjects();
     this.setupSearch();
     this.updateBookmarkCount();
+    this.setupEventDelegation();
   },
   
-  setupEventListeners: function() {
+  setupEventDelegation: function() {
     // Use event delegation for subtopic items
     document.addEventListener('click', (e) => {
       const subtopicItem = e.target.closest('.subtopic-item');
@@ -29,6 +31,8 @@ const StudyManager = {
         const topicName = subtopicItem.dataset.topicName;
         const subtopicName = subtopicItem.dataset.subtopicName;
         
+        console.log('Subtopic clicked:', { subjectId, topicId, subtopicId });
+        
         if (subjectId && topicId && subtopicId) {
           this.loadTopic(subjectId, topicId, subtopicId, subjectName, topicName, subtopicName);
         }
@@ -43,8 +47,82 @@ const StudyManager = {
     });
   },
   
-  // ===== NAVIGATION =====
+  renderSubjects: function() {
+    const container = document.getElementById('subjectsAccordion');
+    if (!container) {
+      console.error('Subjects accordion container not found');
+      return;
+    }
+    
+    if (!this.notes) {
+      console.error('No study notes available');
+      container.innerHTML = '<div class="error" style="text-align: center; padding: 2rem;"><i class="fas fa-exclamation-circle"></i> Failed to load study materials</div>';
+      return;
+    }
+    
+    console.log('Rendering subjects:', Object.keys(this.notes));
+    let html = '';
+    
+    for (const subjectId in this.notes) {
+      const subject = this.notes[subjectId];
+      
+      html += `
+        <div class="subject-block" data-subject="${subjectId}">
+          <div class="subject-header" onclick="StudyManager.toggleSubject('${subjectId}')">
+            <div class="subject-title">
+              <div class="subject-icon">
+                <i class="fas ${subject.icon}"></i>
+              </div>
+              <div>
+                <h3>${this.escapeHtml(subject.name)}</h3>
+                <span class="topic-count">${Object.keys(subject.topics).length} topics</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-down arrow-icon" id="arrow-${subjectId}"></i>
+          </div>
+
+          <div class="topics-wrapper" id="topics-${subjectId}" style="display: none;">`;
+      
+      for (const topicId in subject.topics) {
+        const topic = subject.topics[topicId];
+        
+        html += `
+          <div class="topic-header" onclick="StudyManager.toggleTopic('${subjectId}', '${topicId}', event)">
+            <span><i class="fas fa-folder"></i> ${this.escapeHtml(topic.name)}</span>
+            <i class="fas fa-chevron-right topic-arrow" id="topic-arrow-${subjectId}-${topicId}"></i>
+          </div>
+
+          <div class="subtopics-wrapper" id="subtopics-${subjectId}-${topicId}" style="display: none;">`;
+        
+        for (const subtopicId in topic.subtopics) {
+          const subtopic = topic.subtopics[subtopicId];
+          
+          html += `
+            <div class="subtopic-item" 
+                 data-subject="${subjectId}" 
+                 data-topic="${topicId}" 
+                 data-subtopic="${subtopicId}"
+                 data-subject-name="${this.escapeHtml(subject.name)}"
+                 data-topic-name="${this.escapeHtml(topic.name)}"
+                 data-subtopic-name="${this.escapeHtml(subtopic.name)}">
+              <i class="fas fa-file-alt"></i>
+              <span>${this.escapeHtml(subtopic.name)}</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>`;
+        }
+        
+        html += `</div>`;
+      }
+      
+      html += `</div></div>`;
+    }
+    
+    container.innerHTML = html;
+    console.log('Subjects rendered successfully');
+  },
+  
   toggleSubject: function(subjectId) {
+    console.log('Toggling subject:', subjectId);
     const subjectBlock = document.querySelector(`[data-subject="${subjectId}"]`);
     const topicsDiv = document.getElementById(`topics-${subjectId}`);
     
@@ -61,6 +139,7 @@ const StudyManager = {
   
   toggleTopic: function(subjectId, topicId, event) {
     if (event) event.stopPropagation();
+    console.log('Toggling topic:', subjectId, topicId);
     
     const subtopicsDiv = document.getElementById(`subtopics-${subjectId}-${topicId}`);
     const topicHeader = event?.currentTarget;
@@ -76,38 +155,31 @@ const StudyManager = {
     }
   },
   
-  // Add this function to StudyManager
-notifyNewContent: function(subjectId, topicId) {
-    const subject = this.notes[subjectId];
-    if (!subject) return;
-    
-    const topic = subject.topics[topicId];
-    if (!topic) return;
-    
-    // Check if this is new content (based on localStorage)
-    const viewedTopics = JSON.parse(localStorage.getItem('venus_viewed_topics') || '{}');
-    const topicKey = `${subjectId}_${topicId}`;
-    
-    if (!viewedTopics[topicKey]) {
-        if (typeof NotificationManager !== 'undefined') {
-            NotificationManager.addNewContentNotification(subject.name, topic.name);
-        }
-        viewedTopics[topicKey] = true;
-        localStorage.setItem('venus_viewed_topics', JSON.stringify(viewedTopics));
-    }
-},
-  
-  // ===== LOAD TOPIC INTO STUDY VIEW =====
   loadTopic: function(subjectId, topicId, subtopicId, subjectName, topicName, subtopicName) {
-    // Get content from notes
+    console.log('Loading topic:', { subjectId, topicId, subtopicId });
+    
+    if (!this.notes) {
+      console.error('No study notes available');
+      return;
+    }
+    
     const subject = this.notes[subjectId];
-    if (!subject) return;
+    if (!subject) {
+      console.error('Subject not found:', subjectId);
+      return;
+    }
     
     const topic = subject.topics[topicId];
-    if (!topic) return;
+    if (!topic) {
+      console.error('Topic not found:', topicId);
+      return;
+    }
     
     const subtopic = topic.subtopics[subtopicId];
-    if (!subtopic) return;
+    if (!subtopic) {
+      console.error('Subtopic not found:', subtopicId);
+      return;
+    }
     
     this.currentTopic = {
       subjectId, topicId, subtopicId,
@@ -117,42 +189,55 @@ notifyNewContent: function(subjectId, topicId) {
       content: subtopic.content
     };
     
-    // Add to recent (max 3)
     this.addToRecent(this.currentTopic);
     
     // Switch views
-    document.getElementById('browseView').style.display = 'none';
-    document.getElementById('studyView').style.display = 'flex';
+    const browseView = document.getElementById('browseView');
+    const studyView = document.getElementById('studyView');
     
-    // Update breadcrumb (format: Subject > Topic >)
-    document.getElementById('breadcrumbSubject').textContent = this.currentTopic.subjectName;
-    document.getElementById('breadcrumbTopic').textContent = this.currentTopic.topicName;
+    if (browseView) browseView.style.display = 'none';
+    if (studyView) studyView.style.display = 'flex';
+    
+    // Update breadcrumb
+    const breadcrumbSubject = document.getElementById('breadcrumbSubject');
+    const breadcrumbTopic = document.getElementById('breadcrumbTopic');
+    
+    if (breadcrumbSubject) breadcrumbSubject.textContent = this.currentTopic.subjectName;
+    if (breadcrumbTopic) breadcrumbTopic.textContent = this.currentTopic.topicName;
     
     // Load content
-    document.getElementById('studyContent').innerHTML = `
-      <div class="mobile-content">
-        <h1>${this.currentTopic.subtopicName}</h1>
-        ${subtopic.content}
-      </div>
-    `;
+    const studyContent = document.getElementById('studyContent');
+    if (studyContent) {
+      studyContent.innerHTML = `
+        <div class="mobile-content">
+          <h1>${this.escapeHtml(this.currentTopic.subtopicName)}</h1>
+          ${subtopic.content}
+        </div>
+      `;
+    }
     
-    // Update bookmark button
     this.updateBookmarkButton();
-    
-    // Hide search results
     this.hideSearchResults();
   },
   
   backToBrowse: function() {
-    document.getElementById('browseView').style.display = 'block';
-    document.getElementById('studyView').style.display = 'none';
+    console.log('Returning to browse view');
+    const browseView = document.getElementById('browseView');
+    const studyView = document.getElementById('studyView');
+    
+    if (browseView) browseView.style.display = 'block';
+    if (studyView) studyView.style.display = 'none';
     this.currentTopic = null;
   },
   
-  // ===== SEARCH =====
   setupSearch: function() {
     const searchInput = document.getElementById('mobileSearch');
-    if (!searchInput) return;
+    if (!searchInput) {
+      console.error('Search input not found');
+      return;
+    }
+    
+    console.log('Setting up search');
     
     searchInput.addEventListener('input', (e) => {
       const query = e.target.value.trim();
@@ -172,6 +257,8 @@ notifyNewContent: function(subjectId, topicId) {
   },
   
   performSearch: function(query) {
+    if (!this.notes) return;
+    
     const results = [];
     const searchTerm = query.toLowerCase();
     
@@ -209,10 +296,10 @@ notifyNewContent: function(subjectId, topicId) {
     let html = '';
     results.forEach(result => {
       html += `
-        <div class="search-result-item" onclick="StudyManager.loadTopic('${result.subjectId}', '${result.topicId}', '${result.subtopicId}', '${result.subjectName}', '${result.topicName}', '${result.subtopicName}')">
-          <div class="subject">${result.subjectName}</div>
-          <div class="title">${result.subtopicName}</div>
-          <div class="path">${result.topicName}</div>
+        <div class="search-result-item" onclick="StudyManager.loadTopic('${result.subjectId}', '${result.topicId}', '${result.subtopicId}', '${this.escapeHtml(result.subjectName)}', '${this.escapeHtml(result.topicName)}', '${this.escapeHtml(result.subtopicName)}')">
+          <div class="subject">${this.escapeHtml(result.subjectName)}</div>
+          <div class="title">${this.escapeHtml(result.subtopicName)}</div>
+          <div class="path">${this.escapeHtml(result.topicName)}</div>
         </div>
       `;
     });
@@ -228,7 +315,6 @@ notifyNewContent: function(subjectId, topicId) {
     }
   },
   
-  // ===== BOOKMARKS =====
   toggleBookmark: function() {
     if (!this.currentTopic) return;
     
@@ -266,13 +352,8 @@ notifyNewContent: function(subjectId, topicId) {
       b.subtopicId === this.currentTopic.subtopicId
     );
     
-    if (exists) {
-      btn.innerHTML = '<i class="fas fa-bookmark"></i>';
-      btn.classList.add('bookmarked');
-    } else {
-      btn.innerHTML = '<i class="far fa-bookmark"></i>';
-      btn.classList.remove('bookmarked');
-    }
+    btn.innerHTML = exists ? '<i class="fas fa-bookmark"></i>' : '<i class="far fa-bookmark"></i>';
+    btn.classList.toggle('bookmarked', exists);
   },
   
   loadBookmarks: function() {
@@ -280,7 +361,9 @@ notifyNewContent: function(subjectId, topicId) {
     if (saved) {
       try {
         this.bookmarks = JSON.parse(saved);
+        console.log('Loaded bookmarks:', this.bookmarks.length);
       } catch (e) {
+        console.error('Error loading bookmarks:', e);
         this.bookmarks = [];
       }
     }
@@ -291,7 +374,7 @@ notifyNewContent: function(subjectId, topicId) {
   },
   
   updateBookmarkCount: function() {
-    const badges = document.querySelectorAll('#mobileBookmarkCount, .bookmarks-count');
+    const badges = document.querySelectorAll('#mobileBookmarkCount');
     badges.forEach(badge => {
       if (badge) {
         badge.textContent = this.bookmarks.length;
@@ -318,12 +401,12 @@ notifyNewContent: function(subjectId, topicId) {
     
     let html = '<h3><i class="fas fa-bookmark"></i> Your Bookmarks</h3>';
     
-    this.bookmarks.forEach((bookmark, index) => {
+    this.bookmarks.sort((a, b) => new Date(b.bookmarkedAt) - new Date(a.bookmarkedAt)).forEach((bookmark, index) => {
       html += `
         <div class="bookmark-item">
-          <div class="bookmark-info" onclick="StudyManager.loadTopic('${bookmark.subjectId}', '${bookmark.topicId}', '${bookmark.subtopicId}', '${bookmark.subjectName}', '${bookmark.topicName}', '${bookmark.subtopicName}'); document.querySelectorAll('.modal-overlay, .bookmarks-modal').forEach(el => el.remove());">
-            <div class="bookmark-subject">${bookmark.subjectName}</div>
-            <div class="bookmark-title">${bookmark.topicName} > ${bookmark.subtopicName}</div>
+          <div class="bookmark-info" onclick="StudyManager.loadTopic('${bookmark.subjectId}', '${bookmark.topicId}', '${bookmark.subtopicId}', '${this.escapeHtml(bookmark.subjectName)}', '${this.escapeHtml(bookmark.topicName)}', '${this.escapeHtml(bookmark.subtopicName)}'); document.querySelectorAll('.modal-overlay, .bookmarks-modal').forEach(el => el.remove());">
+            <div class="bookmark-subject">${this.escapeHtml(bookmark.subjectName)}</div>
+            <div class="bookmark-title">${this.escapeHtml(bookmark.topicName)} > ${this.escapeHtml(bookmark.subtopicName)}</div>
           </div>
           <button class="action-btn" onclick="event.stopPropagation(); StudyManager.removeBookmark(${index});">
             <i class="fas fa-trash"></i>
@@ -353,7 +436,6 @@ notifyNewContent: function(subjectId, topicId) {
     }
   },
   
-  // ===== RECENT TOPICS (Max 3) =====
   addToRecent: function(topic) {
     if (!topic) return;
     
@@ -381,8 +463,10 @@ notifyNewContent: function(subjectId, topicId) {
     if (saved) {
       try {
         this.recentTopics = JSON.parse(saved);
+        console.log('Loaded recent topics:', this.recentTopics.length);
         this.updateRecentList();
       } catch (e) {
+        console.error('Error loading recent:', e);
         this.recentTopics = [];
       }
     }
@@ -409,9 +493,9 @@ notifyNewContent: function(subjectId, topicId) {
     let html = '';
     this.recentTopics.forEach(topic => {
       html += `
-        <div class="recent-item" onclick="StudyManager.loadTopic('${topic.subjectId}', '${topic.topicId}', '${topic.subtopicId}', '${topic.subjectName}', '${topic.topicName}', '${topic.subtopicName}')">
-          <div class="subject">${topic.subjectName}</div>
-          <div class="topic">${topic.topicName} > ${topic.subtopicName}</div>
+        <div class="recent-item" onclick="StudyManager.loadTopic('${topic.subjectId}', '${topic.topicId}', '${topic.subtopicId}', '${this.escapeHtml(topic.subjectName)}', '${this.escapeHtml(topic.topicName)}', '${this.escapeHtml(topic.subtopicName)}')">
+          <div class="subject">${this.escapeHtml(topic.subjectName)}</div>
+          <div class="topic">${this.escapeHtml(topic.topicName)} > ${this.escapeHtml(topic.subtopicName)}</div>
         </div>
       `;
     });
@@ -419,12 +503,14 @@ notifyNewContent: function(subjectId, topicId) {
     list.innerHTML = html;
   },
   
-  // ===== PDF DOWNLOAD =====
   downloadPDF: function() {
     if (!this.currentTopic) return;
     
     const element = document.querySelector('.mobile-content');
-    if (!element) return;
+    if (!element || typeof html2pdf === 'undefined') {
+      alert('PDF download is not available');
+      return;
+    }
     
     const filename = `${this.currentTopic.subjectName}_${this.currentTopic.subtopicName}.pdf`.replace(/\s+/g, '_');
     
@@ -437,7 +523,6 @@ notifyNewContent: function(subjectId, topicId) {
     }).save();
   },
   
-  // ===== SHARE =====
   shareTopic: function() {
     if (!this.currentTopic) return;
     
@@ -449,10 +534,10 @@ notifyNewContent: function(subjectId, topicId) {
       }).catch(() => {});
     } else {
       navigator.clipboard.writeText(this.currentTopic.subtopicName);
+      alert('Topic name copied to clipboard!');
     }
   },
   
-  // ===== UTILITIES =====
   scrollToTop: function() {
     const content = document.querySelector('.study-content');
     if (content) {
@@ -461,15 +546,15 @@ notifyNewContent: function(subjectId, topicId) {
         behavior: 'smooth'
       });
     }
+  },
+  
+  escapeHtml: function(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
   }
 };
 
 // Make StudyManager globally available
 window.StudyManager = StudyManager;
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof studyNotes !== 'undefined') {
-    StudyManager.init(studyNotes);
-  }
-});
