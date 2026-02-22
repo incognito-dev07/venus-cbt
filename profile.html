@@ -1,7 +1,3 @@
-<?php
-require_once 'config.php';
-$courses = getCourses();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +10,6 @@ $courses = getCourses();
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 </head>
 <body>
-  <?php include 'navbar.php'; ?>
-
   <div class="container">
     <div class="profile-box">
       <h2><i class="fas fa-user-circle"></i> My Profile</h2>
@@ -136,14 +130,14 @@ $courses = getCourses();
           <div class="no-achievements">
             <i class="fas fa-medal"></i>
             <p>Complete tests to earn achievements!</p><br>
-            <a href="select-test.php" class="btn btn-primary btn-small">Start a Test</a>
+            <a href="select-test.html" class="btn btn-primary btn-small">Start a Test</a>
           </div>
         </div>
       </div>
             
       <div class="btn-group">
-        <a href="history.php" class="btn btn-primary"><i class="fas fa-history"></i> History</a>
-        <a href="index.php" class="btn btn-primary"><i class="fas fa-home"></i> Home</a>
+        <a href="history.html" class="btn btn-primary"><i class="fas fa-history"></i> History</a>
+        <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Home</a>
       </div>
     </div>
   </div>
@@ -152,39 +146,8 @@ $courses = getCourses();
   <script src="scripts/storage.js"></script>
   <script src="scripts/history.js"></script>
   <script src="scripts/profile.js"></script>
+  <script src="scripts/index.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      ProfileManager.init();
-      
-      // Initialize bio character counter
-      const bioInput = document.getElementById('bioInput');
-      const bioCharCount = document.getElementById('bioCharCount');
-      
-      if (bioInput) {
-        // Load current bio into textarea when form is opened
-        const currentBio = document.getElementById('bioDisplay').textContent;
-        if (currentBio && currentBio !== 'No bio yet') {
-          bioInput.value = currentBio;
-          bioCharCount.textContent = currentBio.length;
-        }
-        
-        // Add character counter
-        bioInput.addEventListener('input', function(e) {
-          const count = e.target.value.length;
-          bioCharCount.textContent = count;
-          
-          // Change color when approaching limit
-          if (count >= 110) {
-            bioCharCount.style.color = 'var(--accent-danger)';
-          } else if (count >= 90) {
-            bioCharCount.style.color = '#f59e0b';
-          } else {
-            bioCharCount.style.color = 'var(--text-secondary)';
-          }
-        });
-      }
-    });
-
     function toggleBioForm() {
       const bioForm = document.getElementById('bioForm');
       const bioInput = document.getElementById('bioInput');
@@ -192,7 +155,6 @@ $courses = getCourses();
       
       if (bioForm.style.display === 'none') {
         bioForm.style.display = 'block';
-        // Load current bio into textarea
         if (currentBio && currentBio !== 'No bio yet') {
           bioInput.value = currentBio;
           document.getElementById('bioCharCount').textContent = currentBio.length;

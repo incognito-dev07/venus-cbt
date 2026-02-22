@@ -1,32 +1,12 @@
-<?php
-require_once 'config.php';
-
-if (!isset($_GET['course'])) {
-  header("Location: select-test.php");
-  exit();
-}
-
-$course_id = $_GET['course'];
-$course = getCourse($course_id);
-
-if (!$course) {
-  header("Location: select-test.php");
-  exit();
-}
-
-$all_questions = getQuestions($course_id);
-shuffle($all_questions);
-$questions = array_slice($all_questions, 0, 20);
-?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Venus CBT - Taking Test: <?php echo $course['id']; ?></title>
+  <title>Venus CBT - Taking Test</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/public/styles/core.css">
-  <link rel="stylesheet" href="/public/styles/component.css">
-  <link rel="stylesheet" href="/public/styles/pages.css">
-  <link rel="stylesheet" href="/public/styles/responsive.css">
+  <link rel="stylesheet" href="styles/core.css">
+  <link rel="stylesheet" href="styles/component.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/responsive.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   <style>
@@ -39,8 +19,6 @@ $questions = array_slice($all_questions, 0, 20);
   </style>
 </head>
 <body>
-  <?php include 'navbar.php'; ?>
-
   <div class="test-container">
     <div class="timer-bar">
       <button class="exit-test-btn" id="exitTestBtn">
@@ -48,7 +26,7 @@ $questions = array_slice($all_questions, 0, 20);
       </button>
       <div class="timer-info">
         <i class="fas fa-clock"></i>
-        <span id="timer"><?php echo gmdate("i:s", $course['time_limit']); ?></span>
+        <span id="timer">00:00</span>
       </div>
     </div>
 
@@ -98,20 +76,9 @@ $questions = array_slice($all_questions, 0, 20);
     </div>
   </div>
 
-  <script>
-    const testData = {
-      course: <?php echo json_encode($course); ?>,
-      questions: <?php echo json_encode($questions); ?>,
-      timeLimit: <?php echo $course['time_limit']; ?>
-    };
-  </script>
-  <script src="/public/scripts/utilities.js"></script>
-  <script src="/public/scripts/storage.js"></script>
-  <script src="/public/scripts/test.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      TestManager.init(testData);
-    });
-  </script>
+  <script src="scripts/utilities.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/test.js"></script>
 </body>
 </html>

@@ -1,7 +1,3 @@
-<?php
-require_once 'config.php';
-$current_theme = $_COOKIE['theme'] ?? 'dark';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +9,7 @@ $current_theme = $_COOKIE['theme'] ?? 'dark';
   <link rel="stylesheet" href="styles/responsive.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="<?php echo $current_theme === 'light' ? 'light-mode' : ''; ?>">
-  <?php include 'navbar.php'; ?>
-  
+<body>
   <div class="container">
     <div class="settings-panel">
       <h2><i class="fas fa-cog"></i> Settings</h2>
@@ -42,13 +36,13 @@ $current_theme = $_COOKIE['theme'] ?? 'dark';
         <div class="theme-toggle">
           <span class="theme-label"><i class="fas fa-moon"></i> Dark mode:</span>
           <label class="switch">
-            <input type="checkbox" id="themeSwitch" <?php echo $current_theme === 'light' ? 'checked' : ''; ?>>
+            <input type="checkbox" id="themeSwitch">
             <span class="slider round"></span>
           </label>
           <div class="theme-status">
-            <span class="theme-on <?php echo $current_theme === 'dark' ? 'active' : ''; ?>">On</span>
+            <span class="theme-on active">On</span>
             <span class="theme-separator">/</span>
-            <span class="theme-off <?php echo $current_theme === 'light' ? 'active' : ''; ?>">Off</span>
+            <span class="theme-off">Off</span>
           </div>
         </div>
       </div>
@@ -61,20 +55,17 @@ $current_theme = $_COOKIE['theme'] ?? 'dark';
       </div>
 
       <div class="btn-group">
-        <a href="profile.php" class="btn btn-primary"><i class="fas fa-user"></i> View Profile</a>
-        <a href="index.php" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+        <a href="profile.html" class="btn btn-primary"><i class="fas fa-user"></i> View Profile</a>
+        <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
       </div>
     </div>
   </div>
   
-<script src="scripts/utilities.js"></script>
+  <script src="scripts/utilities.js"></script>
   <script src="scripts/storage.js"></script>
   <script src="scripts/settings.js"></script>
+  <script src="scripts/index.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      SettingsManager.init();
-    });
-
     document.getElementById('themeSwitch')?.addEventListener('change', function(e) {
       const isLightMode = this.checked;
       const theme = isLightMode ? 'light' : 'dark';
