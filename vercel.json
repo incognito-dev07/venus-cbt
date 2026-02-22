@@ -6,6 +6,34 @@
   },
   "routes": [
     {
+      "src": "/",
+      "dest": "/index.php"
+    },
+    {
+      "src": "/study",
+      "dest": "/study.php"
+    },
+    {
+      "src": "/profile",
+      "dest": "/profile.php"
+    },
+    {
+      "src": "/settings",
+      "dest": "/settings.php"
+    },
+    {
+      "src": "/history",
+      "dest": "/history.php"
+    },
+    {
+      "src": "/notifications",
+      "dest": "/notifications.php"
+    },
+    {
+      "src": "/test/(.*)",
+      "dest": "/take-test.php?course=$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     }
