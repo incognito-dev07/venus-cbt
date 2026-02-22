@@ -14,6 +14,13 @@ $theme = $_COOKIE['theme'] ?? 'dark';
     body.has-offline-banner {
       padding-bottom: 50px;
     }
+    /* PWA mode adjustments */
+    body.pwa-mode {
+      padding-top: 70px;
+    }
+    body.pwa-mode .navbar {
+      padding-top: env(safe-area-inset-top);
+    }
   </style>
 </head>
 <body class="<?php echo $theme === 'light' ? 'light-mode' : ''; ?>">
@@ -75,7 +82,7 @@ $theme = $_COOKIE['theme'] ?? 'dark';
   <div class="pwa-install-banner">
     <div class="pwa-install-content">
       <i class="fas fa-download"></i>
-      <span>Install Venus CBT for offline access</span>
+      <span>Install Venus CBT on your device</span>
     </div>
     <div class="pwa-install-actions">
       <button class="btn btn-small btn-primary" id="pwaInstallBtn">Install</button>
@@ -87,7 +94,7 @@ $theme = $_COOKIE['theme'] ?? 'dark';
 <!-- Offline Warning - Sticky to bottom -->
 <div id="offlineWarning" class="offline-warning" style="display: none;">
   <i class="fas fa-wifi-slash"></i>
-  <span>You're offline - Using cached content</span>
+  <span>You're offline - Study materials still available</span>
 </div>
 
 <script>
@@ -141,6 +148,7 @@ const pwaCloseBtn = document.getElementById('pwaCloseBtn');
 window.addEventListener('appinstalled', () => {
   console.log('PWA was installed');
   pwaInstallContainer.style.display = 'none';
+  localStorage.removeItem('pwa_install_dismissed');
 });
 
 // Before install prompt
@@ -149,36 +157,41 @@ window.addEventListener('beforeinstallprompt', (e) => {
   deferredPrompt = e;
   
   // Don't show if already installed or if we've hidden it before
-  if (!localStorage.getItem('pwa_install_dismissed')) {
+  if (!localStorage.getItem('pwa_install_dismissed') && 
+      !window.matchMedia('(display-mode: standalone)').matches) {
     pwaInstallContainer.style.display = 'block';
   }
 });
 
 // Install button click
-pwaInstallBtn?.addEventListener('click', async () => {
-  if (!deferredPrompt) return;
-  
-  deferredPrompt.prompt();
-  const { outcome } = await deferredPrompt.userChoice;
-  console.log(`Install outcome: ${outcome}`);
-  
-  deferredPrompt = null;
-  pwaInstallContainer.style.display = 'none';
-  
-  if (outcome === 'accepted') {
-    localStorage.removeItem('pwa_install_dismissed');
-  }
-});
+if (pwaInstallBtn) {
+  pwaInstallBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`Install outcome: ${outcome}`);
+    
+    deferredPrompt = null;
+    pwaInstallContainer.style.display = 'none';
+    
+    if (outcome === 'accepted') {
+      localStorage.removeItem('pwa_install_dismissed');
+    }
+  });
+}
 
 // Close/dismiss install banner
-pwaCloseBtn?.addEventListener('click', () => {
-  pwaInstallContainer.style.display = 'none';
-  localStorage.setItem('pwa_install_dismissed', 'true');
-  // Expire after 7 days
-  setTimeout(() => {
-    localStorage.removeItem('pwa_install_dismissed');
-  }, 7 * 24 * 60 * 60 * 1000);
-});
+if (pwaCloseBtn) {
+  pwaCloseBtn.addEventListener('click', () => {
+    pwaInstallContainer.style.display = 'none';
+    localStorage.setItem('pwa_install_dismissed', 'true');
+    // Expire after 7 days
+    setTimeout(() => {
+      localStorage.removeItem('pwa_install_dismissed');
+    }, 7 * 24 * 60 * 60 * 1000);
+  });
+}
 
 // ========== Service Worker Registration ==========
 if ('serviceWorker' in navigator) {
@@ -186,14 +199,6 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
       .then(registration => {
         console.log('ServiceWorker registered:', registration.scope);
-        
-        // Check for updates
-        registration.update();
-        
-        // Set up periodic sync if supported
-        if ('periodicSync' in registration) {
-          // Request periodic sync for content updates
-        }
       })
       .catch(error => {
         console.log('ServiceWorker registration failed:', error);
@@ -216,22 +221,18 @@ function updateOnlineStatus() {
 
 window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
-
-// Check initial status
 updateOnlineStatus();
 
 // ========== PWA Mode Detection ==========
 if (window.matchMedia('(display-mode: standalone)').matches) {
   console.log('Running as installed PWA');
   document.body.classList.add('pwa-mode');
-  
-  // Hide install banner if in PWA mode
   pwaInstallContainer.style.display = 'none';
 }
 
 // ========== Update Notification Badge ==========
 function updateNotificationBadge() {
-  if (typeof StorageManager !== 'undefined') {
+  if (typeof StorageManager !== 'undefined' && StorageManager.updateNotificationBadge) {
     StorageManager.updateNotificationBadge();
   }
 }
@@ -284,6 +285,9 @@ setInterval(updateNotificationBadge, 30000);
   font-weight: 600;
   padding: 6px 12px;
   font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .pwa-install-actions .btn-icon {
@@ -292,6 +296,15 @@ setInterval(updateNotificationBadge, 30000);
   width: 32px;
   height: 32px;
   border-radius: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pwa-install-actions .btn-icon i {
+  font-size: 0.9rem;
 }
 
 /* Offline Warning - Sticky Bottom */
