@@ -86,10 +86,6 @@ const HistoryManager = {
                             ${test.percentage}% (${test.score}/${test.total})
                         </span>
                     </div>
-                    <div class="summary-item">
-                        <span class="label">Time:</span>
-                        <span class="value">${Utils.formatTime(test.timeTaken)}</span>
-                    </div>
                 </div>
 
                 <div class="test-questions">

@@ -9,7 +9,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "scripts/*.js",
+      "src": "scripts*.js",
       "use": "@vercel/static"
     },
     {

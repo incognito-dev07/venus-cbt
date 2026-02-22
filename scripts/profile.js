@@ -85,9 +85,6 @@ const ProfileManager = {
                         <h4>${achievement.name}</h4>
                     </div>
                     <p>${achievement.description}</p>
-                    <small style="color: var(--text-secondary); font-size: 0.7rem; margin-top: 0.5rem;">
-                        Earned: ${Utils.formatDate(achievement.earnedAt)}
-                    </small>
                 </div>
             `;
         });
