@@ -1,0 +1,59 @@
+{
+  "STA111": {
+    "name": "Descriptive Statistics",
+    "icon": "fa-chart-bar",
+    "topics": {
+      "central_tendency": {
+        "name": "Measures of Central Tendency",
+        "subtopics": {
+          "mean": {
+            "name": "Mean (Average)",
+            "content": "<h4>Mean (Arithmetic Mean)</h4><p>The sum of all values divided by the number of values.</p><h5>Formula:</h5><p><mark>μ = (Σx)/n</mark> for population<br><mark>x̄ = (Σx)/n</mark> for sample</p><h5>Key Points:</h5><ul><li>Affected by outliers</li><li>Most common measure of central tendency</li><li>Used for interval and ratio data</li></ul><h5>Example:</h5><p>Data: 4, 8, 6, 5, 3<br>Mean = (4+8+6+5+3)/5 = 26/5 = <strong>5.2</strong></p>"
+          },
+          "median": {
+            "name": "Median",
+            "content": "<h4>Median</h4><p>The middle value when data is arranged in order.</p><h5>Key Points:</h5><ul><li><mark>Not affected by outliers</mark></li><li>For odd n: middle value</li><li>For even n: average of two middle values</li><li>Used for ordinal, interval, ratio data</li></ul><h5>Example (odd):</h5><p>Data: 3, 5, 7, 9, 11<br>Median = <strong>7</strong></p><h5>Example (even):</h5><p>Data: 2, 4, 6, 8<br>Median = (4+6)/2 = <strong>5</strong></p>"
+          },
+          "mode": {
+            "name": "Mode",
+            "content": "<h4>Mode</h4><p>The most frequently occurring value.</p><h5>Key Points:</h5><ul><li><mark>Can have multiple modes (bimodal, multimodal)</mark></li><li>Only measure for nominal data</li><li>May not exist if all values unique</li></ul><h5>Example:</h5><p>Data: 2, 3, 3, 3, 5, 7, 7, 9<br>Mode = <strong>3</strong> (appears 3 times)</p>"
+          }
+        }
+      },
+      "dispersion": {
+        "name": "Measures of Dispersion",
+        "subtopics": {
+          "range": {
+            "name": "Range",
+            "content": "<h4>Range</h4><p>The difference between maximum and minimum values.</p><h5>Formula:</h5><p><mark>Range = Maximum - Minimum</mark></p><h5>Key Points:</h5><ul><li>Simple to calculate</li><li>Affected by outliers</li><li>Only uses two values</li></ul>"
+          },
+          "variance": {
+            "name": "Variance",
+            "content": "<h4>Variance</h4><p>Average of squared deviations from the mean.</p><h5>Formulas:</h5><p><mark>σ² = Σ(x - μ)²/N</mark> (population)</p><p><mark>s² = Σ(x - x̄)²/(n-1)</mark> (sample)</p><h5>Key Points:</h5><ul><li>Measures spread of data</li><li>Square of standard deviation</li><li>Always non-negative</li></ul>"
+          },
+          "standard_deviation": {
+            "name": "Standard Deviation",
+            "content": "<h4>Standard Deviation</h4><p>Square root of variance.</p><h5>Formulas:</h5><p><mark>σ = √[Σ(x - μ)²/N]</mark> (population)</p><p><mark>s = √[Σ(x - x̄)²/(n-1)]</mark> (sample)</p><h5>Key Points:</h5><ul><li>Most common measure of spread</li><li>Same units as original data</li><li>68-95-99.7 rule for normal distributions</li></ul>"
+          }
+        }
+      },
+      "probability": {
+        "name": "Basic Probability",
+        "subtopics": {
+          "basic_concepts": {
+            "name": "Probability Fundamentals",
+            "content": "<h4>Basic Probability</h4><h5>Definition:</h5><p><mark>P(Event) = (Favorable outcomes)/(Total possible outcomes)</mark></p><h5>Rules:</h5><ul><li>0 ≤ P(E) ≤ 1</li><li>P(not E) = 1 - P(E)</li><li>Sum of all probabilities = 1</li></ul>"
+          },
+          "addition_rule": {
+            "name": "Addition Rule",
+            "content": "<h4>Addition Rule of Probability</h4><h5>For Mutually Exclusive Events:</h5><p><mark>P(A or B) = P(A) + P(B)</mark></p><h5>For Non-Mutually Exclusive Events:</h5><p><mark>P(A or B) = P(A) + P(B) - P(A and B)</mark></p>"
+          },
+          "multiplication_rule": {
+            "name": "Multiplication Rule",
+            "content": "<h4>Multiplication Rule of Probability</h4><h5>For Independent Events:</h5><p><mark>P(A and B) = P(A) × P(B)</mark></p><h5>For Dependent Events:</h5><p><mark>P(A and B) = P(A) × P(B|A)</mark></p>"
+          }
+        }
+      }
+    }
+  }
+}

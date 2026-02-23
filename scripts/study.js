@@ -65,17 +65,18 @@ const StudyManager = {
     
     for (const subjectId in this.notes) {
       const subject = this.notes[subjectId];
+      if (!subject) continue;
       
       html += `
         <div class="subject-block" data-subject="${subjectId}">
           <div class="subject-header" onclick="StudyManager.toggleSubject('${subjectId}')">
             <div class="subject-title">
               <div class="subject-icon">
-                <i class="fas ${subject.icon}"></i>
+                <i class="fas ${subject.icon || 'fa-book'}"></i>
               </div>
               <div>
                 <h3>${this.escapeHtml(subject.name)}</h3>
-                <span class="topic-count">${Object.keys(subject.topics).length} topics</span>
+                <span class="topic-count">${Object.keys(subject.topics || {}).length} topics</span>
               </div>
             </div>
             <i class="fas fa-chevron-down arrow-icon" id="arrow-${subjectId}"></i>
@@ -264,8 +265,12 @@ const StudyManager = {
     
     for (const subjectId in this.notes) {
       const subject = this.notes[subjectId];
+      if (!subject || !subject.topics) continue;
+      
       for (const topicId in subject.topics) {
         const topic = subject.topics[topicId];
+        if (!topic || !topic.subtopics) continue;
+        
         for (const subtopicId in topic.subtopics) {
           const subtopic = topic.subtopics[subtopicId];
           

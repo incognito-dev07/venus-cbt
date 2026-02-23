@@ -57,10 +57,8 @@
   }
 
   .form-box,
-  .profile-box,
   .settings-panel,
   .select-test-panel,
-  .notifications-panel,
   .history-panel {
     padding: 1rem;
   }
@@ -129,11 +127,6 @@
     font-size: 0.8rem;
   }
 
-  .achievements-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem;
-  }
-
   .courses-grid {
     grid-template-columns: 1fr !important;
     gap: 1rem;
@@ -174,47 +167,6 @@
     font-size: 0.8rem;
   }
 
-  .profile-image-wrapper {
-    width: 120px;
-    height: 120px;
-  }
-
-  .profile-image,
-  .default-avatar {
-    width: 120px;
-    height: 120px;
-  }
-
-  .default-avatar i {
-    font-size: 3rem;
-  }
-
-  .profile-username h3 {
-    font-size: 1.3rem;
-  }
-
-  .profile-stats {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .info-item {
-    padding: 0.75rem;
-  }
-
-  .profile-actions {
-    flex-direction: column;
-  }
-
-  .profile-actions .btn {
-    width: 100%;
-  }
-
-  .profile-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .history-header {
     flex-direction: column;
     gap: 0.75rem;
@@ -252,38 +204,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-  }
-
-  .notifications-panel {
-    padding: 1rem;
-  }
-
-  .clear-btn {
-    top: 1.5rem;
-    right: 1rem;
-  }
-
-  .notifications-header {
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: flex-start;
-  }
-
-  .notification-item {
-    padding: 0.75rem;
-  }
-
-  .notification-icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .notification-icon i {
-    font-size: 1rem;
-  }
-
-  .notification-content p {
-    font-size: 0.85rem;
   }
 
   .result-card {
@@ -331,11 +251,6 @@
 
   .timer-bar {
     padding: 0.5rem 1rem;
-  }
-
-  .timer-info {
-    font-size: 1rem;
-    padding: 0.3rem 0.8rem;
   }
 
   .exit-test-btn {
@@ -404,10 +319,6 @@
     text-align: left;
   }
 
-  .achievements-grid {
-    grid-template-columns: 1fr !important;
-  }
-
   .course-meta {
     flex-direction: column;
     align-items: center;
@@ -441,17 +352,6 @@
 
   .stat-value {
     font-size: 1.1rem;
-  }
-
-  .notification-item {
-    flex-wrap: wrap;
-  }
-
-  .mark-read {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    background: var(--bg-tertiary);
   }
 }
 

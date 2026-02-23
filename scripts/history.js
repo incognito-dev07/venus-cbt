@@ -74,7 +74,7 @@ const HistoryManager = {
                 <div class="test-summary">
                     <div class="summary-item">
                         <span class="label">Course:</span>
-                        <span class="value">${test.courseId} - ${test.courseName}</span>
+                        <span class="value">${test.courseName}</span>
                     </div>
                     <div class="summary-item">
                         <span class="label">Date:</span>
@@ -141,6 +141,17 @@ const HistoryManager = {
     clearHistory: function() {
         if (confirm('Clear all test history? This cannot be undone.')) {
             localStorage.setItem('venus_tests', JSON.stringify([]));
+            
+            // Reset stats in settings
+            const settings = StorageManager.getSettings();
+            settings.stats = {
+                totalTests: 0,
+                averageScore: 0,
+                bestScore: 0,
+                bestCourse: 'N/A'
+            };
+            StorageManager.saveSettings(settings);
+            
             this.tests = [];
             this.renderList();
             this.showList();

@@ -1,0 +1,34 @@
+{
+  "GNS103": {
+    "name": "Information Literacy",
+    "icon": "fa-book",
+    "topics": {
+      "grammar": {
+        "name": "English Grammar",
+        "subtopics": {
+          "parts_of_speech": {
+            "name": "Parts of Speech",
+            "content": "<h4>Parts of Speech</h4><h5>Eight Main Parts:</h5><ul><li><mark>Noun: Person, place, thing (cat, city)</mark></li><li><mark>Pronoun: Replaces noun (he, she, it)</mark></li><li><mark>Verb: Action or state (run, is)</mark></li><li>Adjective: Describes noun (beautiful, tall)</li><li>Adverb: Describes verb (quickly, very)</li><li>Preposition: Shows relationship (in, on, at)</li><li>Conjunction: Connects words (and, but)</li><li>Interjection: Exclamation (wow, ouch)</li></ul>"
+          },
+          "tenses": {
+            "name": "Verb Tenses",
+            "content": "<h4>English Verb Tenses</h4><h5>Simple Tenses:</h5><ul><li>Present: I walk</li><li>Past: I walked</li><li>Future: I will walk</li></ul><h5>Continuous Tenses:</h5><ul><li>Present: I am walking</li><li>Past: I was walking</li><li>Future: I will be walking</li></ul>"
+          }
+        }
+      },
+      "comprehension": {
+        "name": "Reading Comprehension",
+        "subtopics": {
+          "main_idea": {
+            "name": "Finding Main Idea",
+            "content": "<h4>Identifying Main Ideas</h4><h5>Tips:</h5><ul><li>Read the first and last sentences of paragraphs</li><li>Look for repeated words/phrases</li><li>Ask: 'What is this mostly about?'</li><li>Supporting details give examples or evidence</li></ul>"
+          },
+          "inference": {
+            "name": "Making Inferences",
+            "content": "<h4>Drawing Conclusions</h4><p>Reading between the lines - understanding what's implied but not directly stated.</p><h5>Tips:</h5><ul><li>Use context clues</li><li>Connect to prior knowledge</li><li>Consider character actions and dialogue</li><li>Look for cause and effect</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

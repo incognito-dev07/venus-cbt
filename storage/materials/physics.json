@@ -1,0 +1,51 @@
+{
+  "PHY101": {
+    "name": "General Physics",
+    "icon": "fa-flask",
+    "topics": {
+      "mechanics": {
+        "name": "Mechanics",
+        "subtopics": {
+          "newtons_laws": {
+            "name": "Newton's Laws of Motion",
+            "content": "<h4>Newton's Laws of Motion</h4><h5>First Law (Law of Inertia):</h5><p><mark>An object at rest stays at rest, and an object in motion stays in motion with the same speed and direction unless acted upon by an unbalanced force.</mark></p><h5>Second Law (F = ma):</h5><p><mark>Force equals mass times acceleration (F = ma)</mark></p><h5>Third Law (Action-Reaction):</h5><p><mark>For every action, there is an equal and opposite reaction.</mark></p><h5>Applications:</h5><ul><li>Car safety features (seatbelts, airbags)</li><li>Rocket propulsion</li><li>Walking (push backward, ground pushes forward)</li></ul>"
+          },
+          "kinematics": {
+            "name": "Kinematics",
+            "content": "<h4>Kinematics Equations</h4><p>Motion without considering forces.</p><h5>Key Equations:</h5><ul><li><mark>v = u + at</mark></li><li><mark>s = ut + ½at²</mark></li><li><mark>v² = u² + 2as</mark></li></ul><p>Where: u = initial velocity, v = final velocity, a = acceleration, t = time, s = displacement</p>"
+          },
+          "work_energy": {
+            "name": "Work and Energy",
+            "content": "<h4>Work-Energy Theorem</h4><h5>Work:</h5><p><mark>W = F × d × cos θ</mark> (Force × displacement × angle between them)</p><h5>Kinetic Energy:</h5><p><mark>KE = ½mv²</mark></p><h5>Potential Energy:</h5><p><mark>PE = mgh</mark> (gravitational)</p><h5>Conservation of Energy:</h5><p>Total energy remains constant: KE₁ + PE₁ = KE₂ + PE₂</p>"
+          }
+        }
+      },
+      "waves": {
+        "name": "Waves and Oscillations",
+        "subtopics": {
+          "wave_properties": {
+            "name": "Wave Properties",
+            "content": "<h4>Wave Characteristics</h4><h5>Key Terms:</h5><ul><li><mark>Wavelength (λ): Distance between crests</mark></li><li><mark>Frequency (f): Number of waves per second</mark></li><li><mark>Amplitude: Height of wave</mark></li><li>Velocity: v = fλ</li></ul><h5>Types:</h5><ul><li>Transverse: Particles move perpendicular (light waves)</li><li>Longitudinal: Particles move parallel (sound waves)</li></ul>"
+          },
+          "sound": {
+            "name": "Sound Waves",
+            "content": "<h4>Sound Physics</h4><h5>Properties:</h5><ul><li>Speed in air: ~343 m/s at 20°C</li><li>Loudness: Related to amplitude</li><li>Pitch: Related to frequency</li></ul><h5>Doppler Effect:</h5><p>Change in frequency due to relative motion between source and observer.</p>"
+          }
+        }
+      },
+      "optics": {
+        "name": "Optics",
+        "subtopics": {
+          "reflection": {
+            "name": "Reflection",
+            "content": "<h4>Laws of Reflection</h4><p><mark>Angle of incidence = Angle of reflection</mark></p><h5>Types:</h5><ul><li>Specular: Smooth surfaces (mirrors)</li><li>Diffuse: Rough surfaces (paper)</li></ul><h5>Mirror Equation:</h5><p>1/f = 1/u + 1/v where f = focal length, u = object distance, v = image distance</p>"
+          },
+          "refraction": {
+            "name": "Refraction",
+            "content": "<h4>Snell's Law</h4><p><mark>n₁sin θ₁ = n₂sin θ₂</mark></p><h5>Key Concepts:</h5><ul><li>Refractive index: n = c/v (speed in vacuum/speed in medium)</li><li>Total internal reflection occurs when angle > critical angle</li><li>Applications: Lenses, prisms, fiber optics</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

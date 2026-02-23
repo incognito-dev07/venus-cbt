@@ -1,0 +1,59 @@
+{
+  "MTS101": {
+    "name": "Introductory Mathematics",
+    "icon": "fa-calculator",
+    "topics": {
+      "algebra": {
+        "name": "Algebra Fundamentals",
+        "subtopics": {
+          "linear_equations": {
+            "name": "Linear Equations",
+            "content": "<h4>Linear Equations</h4><p>An equation that makes a straight line when graphed. It has the form: <strong>ax + b = 0</strong> where a ≠ 0.</p><h5>Key Points:</h5><ul><li><mark>Standard form: ax + b = 0</mark></li><li>Solution: x = -b/a</li><li>Can have one solution, no solution, or infinite solutions</li><li>Graph is always a straight line</li></ul><h5>Example:</h5><p>Solve 2x + 4 = 0<br>2x = -4<br><strong>x = -2</strong></p><h5>Practice Problems:</h5><ol><li>3x + 9 = 0</li><li>5x - 15 = 0</li><li>2x + 7 = 3x - 2</li></ol>"
+          },
+          "quadratic_equations": {
+            "name": "Quadratic Equations",
+            "content": "<h4>Quadratic Equations</h4><p>An equation of the form <strong>ax² + bx + c = 0</strong> where a ≠ 0.</p><h5>Key Points:</h5><ul><li><mark>Standard form: ax² + bx + c = 0</mark></li><li>Solutions found using quadratic formula: x = [-b ± √(b² - 4ac)]/2a</li><li>Discriminant (b² - 4ac) determines nature of roots</li><li>Graph is a parabola</li></ul><h5>Example:</h5><p>Solve x² - 5x + 6 = 0<br>(x - 2)(x - 3) = 0<br><strong>x = 2 or x = 3</strong></p><h5>Discriminant Rules:</h5><ul><li>If b² - 4ac > 0: Two real roots</li><li>If b² - 4ac = 0: One real root (repeated)</li><li>If b² - 4ac < 0: No real roots (complex)</li></ul>"
+          },
+          "inequalities": {
+            "name": "Inequalities",
+            "content": "<h4>Inequalities</h4><p>Mathematical expressions involving <, >, ≤, or ≥.</p><h5>Key Rules:</h5><ul><li><mark>Adding/subtracting same number preserves inequality</mark></li><li><mark>Multiplying/dividing by negative number FLIPS the inequality</mark></li></ul><h5>Examples:</h5><p>Solve 2x + 3 > 7<br>2x > 4<br><strong>x > 2</strong></p><p>Solve -3x < 12<br><strong>x > -4</strong> (flipped when dividing by -3)</p>"
+          },
+          "polynomials": {
+            "name": "Polynomials",
+            "content": "<h4>Polynomials</h4><p>Expressions with variables and coefficients using operations +, -, ×.</p><h5>Key Terms:</h5><ul><li><mark>Degree: Highest power of variable</mark></li><li>Coefficient: Number multiplied by variable</li><li>Constant term: Term with no variable</li></ul><h5>Operations:</h5><p><strong>Addition:</strong> (2x² + 3x) + (4x² - 2x) = 6x² + x</p><p><strong>Multiplication:</strong> (x + 2)(x + 3) = x² + 5x + 6</p>"
+          }
+        }
+      },
+      "calculus": {
+        "name": "Calculus Basics",
+        "subtopics": {
+          "limits": {
+            "name": "Limits",
+            "content": "<h4>Limits</h4><p>The value that a function approaches as the input approaches some value.</p><h5>Key Points:</h5><ul><li><mark>Notation: lim(x→a) f(x) = L</mark></li><li>Left-hand limit and right-hand limit must be equal</li><li>Used to define continuity and derivatives</li></ul><h5>Common Limits:</h5><ul><li>lim(x→0) sin x / x = 1</li><li>lim(x→∞) 1/x = 0</li></ul>"
+          },
+          "derivatives": {
+            "name": "Derivatives",
+            "content": "<h4>Derivatives</h4><p>Measures the rate of change of a function.</p><h5>Key Rules:</h5><ul><li><mark>Power Rule: d/dx(xⁿ) = nxⁿ⁻¹</mark></li><li>Constant Rule: d/dx(c) = 0</li><li>Sum Rule: d/dx(f + g) = f' + g'</li></ul><h5>Examples:</h5><p>d/dx(x³) = 3x²</p><p>d/dx(5x²) = 10x</p>"
+          },
+          "integration": {
+            "name": "Integration",
+            "content": "<h4>Integration</h4><p>The reverse process of differentiation.</p><h5>Key Rules:</h5><ul><li><mark>Power Rule: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C, n ≠ -1</mark></li><li>∫1/x dx = ln|x| + C</li><li>∫eˣ dx = eˣ + C</li></ul><h5>Definite Integrals:</h5><p>∫ₐᵇ f(x) dx = F(b) - F(a), where F is antiderivative</p>"
+          }
+        }
+      },
+      "trigonometry": {
+        "name": "Trigonometry",
+        "subtopics": {
+          "basic_ratios": {
+            "name": "Basic Trigonometric Ratios",
+            "content": "<h4>Trigonometric Ratios</h4><p>Relations between angles and sides of right triangles.</p><h5>Definitions:</h5><ul><li><mark>sin θ = opposite/hypotenuse</mark></li><li><mark>cos θ = adjacent/hypotenuse</mark></li><li><mark>tan θ = opposite/adjacent</mark></li></ul><h5>Reciprocal Ratios:</h5><ul><li>csc θ = 1/sin θ</li><li>sec θ = 1/cos θ</li><li>cot θ = 1/tan θ</li></ul>"
+          },
+          "identities": {
+            "name": "Trigonometric Identities",
+            "content": "<h4>Important Identities</h4><h5>Pythagorean Identities:</h5><ul><li><mark>sin²θ + cos²θ = 1</mark></li><li>1 + tan²θ = sec²θ</li><li>1 + cot²θ = csc²θ</li></ul><h5>Double Angle:</h5><ul><li>sin 2θ = 2 sin θ cos θ</li><li>cos 2θ = cos²θ - sin²θ</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}

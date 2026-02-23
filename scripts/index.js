@@ -3,8 +3,6 @@ const App = {
     init: function() {
         this.loadNavbar();
         this.loadPageData();
-        StorageManager.init();
-        this.updateNotificationBadgePeriodically();
     },
 
     loadNavbar: function() {
@@ -42,11 +40,11 @@ const App = {
     },
 
     setupNavbarEventListeners: function() {
-        // Setup logout buttons
+        // Setup exit button
         document.querySelectorAll('.logout-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.logout();
+                this.exit();
             });
         });
 
@@ -76,8 +74,8 @@ const App = {
         }
     },
 
-    logout: function() {
-        if (confirm('Exit application? Your data will remain saved.')) {
+    exit: function() {
+        if (confirm('Exit application?')) {
             window.location.href = 'index.html';
         }
     },
@@ -93,8 +91,8 @@ const App = {
     },
 
     initTheme: function() {
-        const theme = this.getCookie('theme') || 'dark';
-        if (theme === 'light') {
+        const settings = StorageManager.getSettings();
+        if (settings.theme === 'light') {
             document.body.classList.add('light-mode');
         }
     },
@@ -118,33 +116,13 @@ const App = {
         updateOnlineStatus();
     },
 
-    updateNotificationBadgePeriodically: function() {
-        // Update every 30 seconds
-        setInterval(() => {
-            if (typeof StorageManager !== 'undefined' && StorageManager.updateNotificationBadge) {
-                StorageManager.updateNotificationBadge();
-            }
-        }, 30000);
-    },
-
-    getCookie: function(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    },
-
     loadPageData: function() {
         const page = window.location.pathname.split('/').pop() || 'index.html';
         
-        if (page === 'profile.html') {
-            this.loadProfilePage();
-        } else if (page === 'settings.html') {
-            this.loadSettingsPage();
+        if (page === 'user.html') {
+            this.loadUserPage();
         } else if (page === 'history.html') {
             this.loadHistoryPage();
-        } else if (page === 'notifications.html') {
-            this.loadNotificationsPage();
         } else if (page === 'study.html') {
             this.loadStudyPage();
         } else if (page === 'select-test.html') {
@@ -158,100 +136,12 @@ const App = {
         }
     },
 
-    loadProfilePage: function() {
-        // Wait for DOM and navbar to be ready
+    loadUserPage: function() {
         setTimeout(() => {
-            if (typeof ProfileManager !== 'undefined') {
-                ProfileManager.init();
-                this.setupProfileEventListeners();
+            if (typeof UserManager !== 'undefined') {
+                UserManager.init();
             }
         }, 100);
-    },
-
-    setupProfileEventListeners: function() {
-        const bioInput = document.getElementById('bioInput');
-        const bioCharCount = document.getElementById('bioCharCount');
-        
-        if (bioInput && bioCharCount) {
-            bioInput.addEventListener('input', function(e) {
-                const count = e.target.value.length;
-                bioCharCount.textContent = count;
-                
-                if (count >= 110) {
-                    bioCharCount.style.color = 'var(--accent-danger)';
-                } else if (count >= 90) {
-                    bioCharCount.style.color = '#f59e0b';
-                } else {
-                    bioCharCount.style.color = 'var(--text-secondary)';
-                }
-            });
-        }
-
-        const imageInput = document.getElementById('profileImageInput');
-        if (imageInput) {
-            imageInput.addEventListener('change', function(e) {
-                if (this.files && this.files[0]) {
-                    if (this.files[0].size > 5 * 1024 * 1024) {
-                        Utils.showMessage('Image size must be less than 5MB!', 'error');
-                        this.value = '';
-                        return;
-                    }
-                    
-                    if (!this.files[0].type.match('image.*')) {
-                        Utils.showMessage('Only image files are allowed!', 'error');
-                        this.value = '';
-                        return;
-                    }
-                    
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        ProfileManager.updateAvatar(e.target.result);
-                    };
-                    reader.readAsDataURL(this.files[0]);
-                }
-            });
-        }
-    },
-
-    loadSettingsPage: function() {
-        setTimeout(() => {
-            if (typeof SettingsManager !== 'undefined') {
-                SettingsManager.init();
-                this.setupSettingsEventListeners();
-            }
-        }, 100);
-    },
-
-    setupSettingsEventListeners: function() {
-        const themeSwitch = document.getElementById('themeSwitch');
-        if (themeSwitch) {
-            // Set initial state
-            const theme = this.getCookie('theme') || 'dark';
-            themeSwitch.checked = theme === 'light';
-            
-            themeSwitch.addEventListener('change', function(e) {
-                const isLightMode = this.checked;
-                const theme = isLightMode ? 'light' : 'dark';
-                
-                const themeOn = document.querySelector('.theme-on');
-                const themeOff = document.querySelector('.theme-off');
-                
-                if (themeOn) themeOn.classList.toggle('active', !isLightMode);
-                if (themeOff) themeOff.classList.toggle('active', isLightMode);
-                
-                if (isLightMode) {
-                    document.body.classList.add('light-mode');
-                } else {
-                    document.body.classList.remove('light-mode');
-                }
-                
-                const date = new Date();
-                date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
-                document.cookie = `theme=${theme}; path=/; expires=${date.toUTCString()}; SameSite=Lax`;
-                
-                SettingsManager.saveTheme(theme);
-            });
-        }
     },
 
     loadHistoryPage: function() {
@@ -262,51 +152,64 @@ const App = {
         }, 100);
     },
 
-    loadNotificationsPage: function() {
-        setTimeout(() => {
-            if (typeof NotificationManager !== 'undefined') {
-                NotificationManager.init();
-            }
-        }, 100);
+    loadStudyPage: function() {
+        console.log('Loading study page...');
+        
+        const container = document.getElementById('subjectsAccordion');
+        if (container) {
+            container.innerHTML = '<div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--text-secondary);"><i class="fas fa-spinner fa-spin"></i> Loading study materials...</div>';
+        }
+        
+        // Load all study material files
+        const subjects = ['MTS101', 'PHY101', 'STA111', 'CSC101', 'GNS103'];
+        const promises = subjects.map(subjectId => 
+            fetch(`storage/materials/${this.getMaterialFileName(subjectId)}`)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Failed to load ${subjectId}`);
+                    return response.json();
+                })
+                .catch(error => {
+                    console.error(`Error loading ${subjectId}:`, error);
+                    return null;
+                })
+        );
+        
+        Promise.all(promises)
+            .then(results => {
+                const studyNotes = {};
+                results.forEach((data, index) => {
+                    if (data) {
+                        const subjectId = subjects[index];
+                        studyNotes[subjectId] = data[subjectId];
+                    }
+                });
+                
+                console.log('Study notes loaded successfully');
+                window.studyNotes = studyNotes;
+                
+                setTimeout(() => {
+                    if (typeof StudyManager !== 'undefined') {
+                        StudyManager.init(studyNotes);
+                    }
+                }, 100);
+            })
+            .catch(error => {
+                console.error('Error loading study notes:', error);
+                if (container) {
+                    container.innerHTML = '<div class="error" style="text-align: center; padding: 2rem; color: var(--accent-danger);"><i class="fas fa-exclamation-circle"></i> Failed to load study materials. Please refresh the page.</div>';
+                }
+            });
     },
 
-    loadStudyPage: function() {
-    console.log('Loading study page...');
-    
-    // Show loading state
-    const container = document.getElementById('subjectsAccordion');
-    if (container) {
-        container.innerHTML = '<div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--text-secondary);"><i class="fas fa-spinner fa-spin"></i> Loading study materials...</div>';
-    }
-    
-    // Fetch study notes
-    fetch('storage/study_notes.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(notes => {
-            console.log('Study notes loaded successfully:', notes);
-            window.studyNotes = notes;
-            
-            // Initialize StudyManager after a short delay to ensure DOM is ready
-            setTimeout(() => {
-                if (typeof StudyManager !== 'undefined') {
-                    StudyManager.init(notes);
-                } else {
-                    console.error('StudyManager not defined');
-                }
-            }, 100);
-        })
-        .catch(error => {
-            console.error('Error loading study notes:', error);
-            if (container) {
-                container.innerHTML = '<div class="error" style="text-align: center; padding: 2rem; color: var(--accent-danger);"><i class="fas fa-exclamation-circle"></i> Failed to load study materials. Please refresh the page.</div>';
-            }
-            Utils.showMessage('Failed to load study materials', 'error');
-        });
+    getMaterialFileName: function(subjectId) {
+        const files = {
+            'MTS101': 'mathematics.json',
+            'PHY101': 'physics.json',
+            'STA111': 'statistics.json',
+            'CSC101': 'computer.json',
+            'GNS103': 'literacy.json'
+        };
+        return files[subjectId] || subjectId.toLowerCase() + '.json';
     },
 
     loadSelectTestPage: function() {
@@ -318,7 +221,6 @@ const App = {
             })
             .catch(error => {
                 console.error('Error loading courses:', error);
-                Utils.showMessage('Failed to load courses', 'error');
             });
     },
 
@@ -364,14 +266,12 @@ const App = {
         ]).then(([courses, questions]) => {
             const course = courses.find(c => c.id === courseId);
             if (!course || !questions || questions.length === 0) {
-                Utils.showMessage('Failed to load test questions', 'error');
                 setTimeout(() => {
                     window.location.href = 'select-test.html';
                 }, 2000);
                 return;
             }
 
-            // Shuffle and take first 20 questions
             const shuffled = [...questions].sort(() => Math.random() - 0.5);
             const testQuestions = shuffled.slice(0, 20);
 
@@ -388,17 +288,16 @@ const App = {
             }, 100);
         }).catch(error => {
             console.error('Error loading test:', error);
-            Utils.showMessage('Failed to load test', 'error');
         });
     },
 
     loadQuestions: function(courseId) {
         const files = {
-            'MTS101': 'storage/mathematics.json',
-            'PHY101': 'storage/physics.json',
-            'STA111': 'storage/statistics.json',
-            'CSC101': 'storage/computer.json',
-            'GNS103': 'storage/literacy.json'
+            'MTS101': 'storage/questions/mathematics.json',
+            'PHY101': 'storage/questions/physics.json',
+            'STA111': 'storage/questions/statistics.json',
+            'CSC101': 'storage/questions/computer.json',
+            'GNS103': 'storage/questions/literacy.json'
         };
 
         const file = files[courseId];
@@ -425,13 +324,7 @@ const App = {
     },
 
     loadHomePage: function() {
-        setTimeout(() => {
-            const profile = StorageManager.getProfile();
-            const displayUsername = document.getElementById('displayUsername');
-            if (displayUsername) {
-                displayUsername.textContent = profile.username;
-            }
-        }, 200);
+        // No username to display, just show welcome message
     },
 
     escapeHtml: function(text) {

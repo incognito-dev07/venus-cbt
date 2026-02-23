@@ -1,0 +1,38 @@
+{
+  "CSC101": {
+    "name": "Computing Science",
+    "icon": "fa-laptop-code",
+    "topics": {
+      "programming_basics": {
+        "name": "Programming Fundamentals",
+        "subtopics": {
+          "variables": {
+            "name": "Variables and Data Types",
+            "content": "<h4>Variables and Data Types</h4><h5>Common Data Types:</h5><ul><li><mark>Integer: Whole numbers (int)</mark></li><li><mark>Float: Decimal numbers</mark></li><li><mark>String: Text (str)</mark></li><li>Boolean: True/False (bool)</li></ul><h5>Variable Rules:</h5><ul><li>Must start with letter or underscore</li><li>Case-sensitive</li><li>Cannot use reserved keywords</li></ul>"
+          },
+          "control_structures": {
+            "name": "Control Structures",
+            "content": "<h4>Control Flow</h4><h5>Conditional Statements:</h5><pre>if condition:    # If statement\n    # code here\nelif condition:  # Else if\n    # code here\nelse:            # Else\n    # code here</pre><h5>Loops:</h5><pre># For loop\nfor i in range(5):\n    print(i)\n\n# While loop\nwhile condition:\n    # code here</pre>"
+          },
+          "functions": {
+            "name": "Functions",
+            "content": "<h4>Functions</h4><p>Reusable blocks of code.</p><h5>Syntax:</h5><pre>def function_name(parameters):\n    # code here\n    return value</pre><h5>Example:</h5><pre>def add(a, b):\n    return a + b\n\nresult = add(5, 3)  # result = 8</pre>"
+          }
+        }
+      },
+      "data_structures": {
+        "name": "Data Structures",
+        "subtopics": {
+          "arrays": {
+            "name": "Arrays/Lists",
+            "content": "<h4>Arrays and Lists</h4><p>Ordered collections of elements.</p><h5>Operations:</h5><ul><li>Access: list[index]</li><li>Add: list.append(item)</li><li>Remove: list.remove(item)</li><li>Length: len(list)</li></ul>"
+          },
+          "stacks_queues": {
+            "name": "Stacks and Queues",
+            "content": "<h4>Stacks (LIFO)</h4><p>Last In, First Out. Like a stack of plates.</p><ul><li>push: Add to top</li><li>pop: Remove from top</li></ul><h4>Queues (FIFO)</h4><p>First In, First Out. Like a line of people.</p><ul><li>enqueue: Add to back</li><li>dequeue: Remove from front</li></ul>"
+          }
+        }
+      }
+    }
+  }
+}
