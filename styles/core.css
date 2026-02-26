@@ -1,21 +1,21 @@
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --bg-tertiary: #2a2a2a;
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --accent-primary: #9d4edd;
-  --accent-hover: #9d4edd;
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #121216;
+  --bg-tertiary: #1a1a22;
+  --text-primary: #f0eaff;
+  --text-secondary: #a89fc0;
+  --accent-primary: #9d63d5;
+  --accent-hover: #9d63d5;
   --accent-success: #10b981;
   --accent-danger: #ef4444;
-  --border-color: #333333;
-  --input-bg: #2a2a2a;
-  --input-border: #404040;
+  --border-color: #2a2733;
+  --input-bg: #1a1a22;
+  --input-border: #343040;
   --shadow-color: rgba(0, 0, 0, 0.5);
-  --card-bg: #1a1a1a;
-  --hover-bg: #333333;
+  --card-bg: #121216;
+  --hover-bg: #252230;
   --button-text: #ffffff;
-  --button-primary: #6b21a5;
+  --button-primary: #7b3fb0;
 }
 
 body.light-mode {
