@@ -3,10 +3,11 @@
 <head>
   <title>Venus CBT - Taking Test</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/core.css">
-  <link rel="stylesheet" href="styles/component.css">
-  <link rel="stylesheet" href="styles/pages.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="../styles/core.css">
+  <link rel="stylesheet" href="../styles/component.css">
+  <link rel="stylesheet" href="../styles/pages.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../storage/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   <style>
@@ -37,6 +38,8 @@
             <span class="question-number" id="questionNumber">1.</span>
             <h3 id="questionText">Loading...</h3>
           </div>
+          
+          <!-- Topic indicator removed -->
           
           <div class="options-grid" id="optionsContainer"></div>
 
@@ -76,9 +79,10 @@
     </div>
   </div>
 
-  <script src="scripts/utilities.js"></script>
-  <script src="scripts/storage.js"></script>
-  <script src="scripts/index.js"></script>
-  <script src="scripts/test.js"></script>
+  <!-- Load utilities first, then storage, then test manager LAST -->
+  <script src="../scripts/utilities.js"></script>
+  <script src="../scripts/storage.js"></script>
+  <script src="../scripts/test.js"></script>
+  <script src="../scripts/index.js"></script>
 </body>
 </html>

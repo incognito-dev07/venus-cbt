@@ -19,22 +19,23 @@
 }
 
 body.light-mode {
-  --bg-primary: #f0f2f5;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #e9ecef;
-  --text-primary: #2c3e50;
-  --text-secondary: #5a6c7e;
-  --accent-primary: #7c3aed;
-  --accent-hover: #8b5cf6;
-  --accent-success: #10b981;
-  --accent-danger: #ef4444;
-  --border-color: #d1d9e6;
-  --input-bg: #ffffff;
-  --input-border: #cbd5e1;
-  --shadow-color: rgba(0, 0, 0, 0.03);
-  --card-bg: #ffffff;
-  --hover-bg: #e9ecef;
+  --bg-primary: #e3dbeb;
+  --bg-secondary: #f1ebf8;
+  --bg-tertiary: #d9cee6;
+  --text-primary: #221b2c;
+  --text-secondary: #4a3f57;
+  --accent-primary: #8b5cf6;
+  --accent-hover: #9d63d5;
+  --accent-success: #059669;
+  --accent-danger: #dc2626;
+  --border-color: #c4b5d9;
+  --input-bg: #f5f0fa;
+  --input-border: #b8a5d2;
+  --shadow-color: rgba(75, 50, 120, 0.12);
+  --card-bg: #f1ebf8;
+  --hover-bg: #e2d7f0;
   --button-text: #ffffff;
+  --button-primary: #7b3fb0;
 }
 
 * {
@@ -307,12 +308,18 @@ body {
 
 .first-message {
   margin-bottom: 2rem;
+  border-radius: 8px;
 }
 
 .welcome-message {
-  border-radius: 8px;
+  font-size: 0.5rem;
+  border-radius: 5px;
   margin-bottom: 2rem;
   color: var(--text-primary);
+  margin: 0 0.5rem;
+  padding: 0.75rem;
+  border-top: 0.2px solid var(--accent-primary);
+  border-bottom: 0.5px solid var(--accent-primary);
 }
 
 /* Features */
@@ -345,6 +352,7 @@ body {
 .feature:hover {
   transform: translateY(-4px);
   border-color: var(--accent-primary);
+  box-shadow: 0 5px 10px rgba(157, 78, 221, 0.15);
 }
 
 .feature i {
@@ -661,4 +669,16 @@ textarea:focus {
 
 .empty-state p {
   margin-bottom: 0.5rem;
+}
+
+
+.container,
+.profile-panel,
+.settings-panel,
+.history-panel,
+.select-test-panel,
+.study-app,
+.test-container,
+.result-card {
+  animation: fadeIn 0.3s ease-in-out;
 }

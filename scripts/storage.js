@@ -3,7 +3,8 @@ const StorageManager = {
         // Initialize user settings if not exists
         if (!localStorage.getItem('venus_settings')) {
             const defaultSettings = {
-                theme: 'dark'
+                theme: 'dark',
+                fontSize: 'medium'
             };
             localStorage.setItem('venus_settings', JSON.stringify(defaultSettings));
         }
@@ -16,11 +17,32 @@ const StorageManager = {
     
     getSettings: function() {
         const settings = localStorage.getItem('venus_settings');
-        return settings ? JSON.parse(settings) : { theme: 'dark' };
+        return settings ? JSON.parse(settings) : { 
+            theme: 'dark',
+            fontSize: 'medium'
+        };
     },
     
     saveSettings: function(settings) {
         localStorage.setItem('venus_settings', JSON.stringify(settings));
+        
+        // When settings change, update the font size immediately
+        this.applyFontSizeToHtml(settings.fontSize);
+    },
+    
+    applyFontSizeToHtml: function(size) {
+        const fontSize = size || this.getSettings().fontSize || 'medium';
+        
+        // Remove existing classes
+        document.documentElement.classList.remove('font-size-small', 'font-size-medium', 'font-size-large');
+        
+        // Add new class
+        document.documentElement.classList.add(`font-size-${fontSize}`);
+        
+        // Also set inline style as backup
+        document.documentElement.style.fontSize = 
+            fontSize === 'small' ? '14px' : 
+            fontSize === 'large' ? '18px' : '16px';
     },
     
     getTests: function() {
@@ -84,7 +106,7 @@ const StorageManager = {
         if (confirm('WARNING: This will delete all your test history. This cannot be undone. Continue?')) {
             localStorage.removeItem('venus_tests');
             
-            // Reset stats but keep theme
+            // Reset stats but keep theme and other settings
             const settings = this.getSettings();
             settings.stats = {
                 totalTests: 0,
@@ -102,3 +124,9 @@ const StorageManager = {
 
 // Initialize on load
 StorageManager.init();
+
+// Apply font size on page load (but the inline script already did it)
+document.addEventListener('DOMContentLoaded', function() {
+    const settings = StorageManager.getSettings();
+    StorageManager.applyFontSizeToHtml(settings.fontSize);
+});

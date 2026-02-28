@@ -2,703 +2,4735 @@
   "GNS103": [
     {
       "id": 1,
-      "question": "A library is defined as:",
-      "options": ["A bookshop", "A collection of information resources", "A computer lab", "A study hall"],
-      "correct": 1,
-      "explanation": "Library is organized collection of information sources"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A newspaper is a publication that is issued:",
+      "options": [
+        "Monthly",
+        "Annually",
+        "Daily or Weekly",
+        "Biannually"
+      ],
+      "correct": 2,
+      "explanation": "Newspapers are issued daily or weekly."
     },
     {
       "id": 2,
-      "question": "The first known library was in:",
-      "options": ["Egypt", "Greece", "Mesopotamia", "Rome"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The word library is from a:",
+      "options": [
+        "German word",
+        "French word",
+        "Latin word",
+        "Indonesian word"
+      ],
       "correct": 2,
-      "explanation": "Library of Ashurbanipal in Nineveh, Mesopotamia (7th century BCE)"
+      "explanation": "The word library comes from the Latin word 'liber' meaning book."
     },
     {
       "id": 3,
-      "question": "The Library of Alexandria was in:",
-      "options": ["Greece", "Egypt", "Rome", "Persia"],
-      "correct": 1,
-      "explanation": "Library of Alexandria was in ancient Egypt"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The word liber means:",
+      "options": [
+        "Book",
+        "Library",
+        "Literature",
+        "All of the above"
+      ],
+      "correct": 0,
+      "explanation": "Liber is Latin for book."
     },
     {
       "id": 4,
-      "question": "A public library is funded by:",
-      "options": ["Private donors", "Taxes and public funds", "Users only", "Book sales"],
-      "correct": 1,
-      "explanation": "Public libraries are government-funded for community use"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "National Libraries are also known as:",
+      "options": [
+        "Virtual libraries",
+        "Special libraries",
+        "Depository libraries",
+        "Archival libraries"
+      ],
+      "correct": 2,
+      "explanation": "National libraries serve as depositories for all publications in a country."
     },
     {
       "id": 5,
-      "question": "An academic library serves:",
-      "options": ["General public", "Students and faculty", "Children only", "Businesses"],
-      "correct": 1,
-      "explanation": "Academic libraries support educational institutions"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "FUTA library is an example of:",
+      "options": [
+        "School library",
+        "Public library",
+        "Special library",
+        "Academic library"
+      ],
+      "correct": 3,
+      "explanation": "FUTA Library is an academic library serving a university."
     },
     {
       "id": 6,
-      "question": "School libraries are found in:",
-      "options": ["Universities", "Primary and secondary schools", "Public parks", "Shopping malls"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The library that acts as national information bank is:",
+      "options": [
+        "Public library",
+        "National library",
+        "National Institute of Information",
+        "All of the above"
+      ],
       "correct": 1,
-      "explanation": "School libraries serve K-12 students"
+      "explanation": "The National Library serves as the national information bank."
     },
     {
       "id": 7,
-      "question": "Special libraries serve:",
-      "options": ["General public", "Specific organizations or fields", "Children only", "All ages"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A place where we have large number of historical records is called:",
+      "options": [
+        "Public library",
+        "Archive",
+        "National library",
+        "School library"
+      ],
       "correct": 1,
-      "explanation": "Special libraries serve corporations, hospitals, law firms"
+      "explanation": "Archives house historical records and documents."
     },
     {
       "id": 8,
-      "question": "National libraries preserve:",
-      "options": ["Only fiction", "A country's published heritage", "International books", "Magazines only"],
-      "correct": 1,
-      "explanation": "National libraries collect and preserve a nation's publications"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A library without wall is called:",
+      "options": [
+        "Digital library",
+        "Electronic library",
+        "Virtual library",
+        "Public library"
+      ],
+      "correct": 2,
+      "explanation": "A virtual library has no physical walls and is accessed online."
     },
     {
       "id": 9,
-      "question": "An archive primarily contains:",
-      "options": ["Books", "Historical records and documents", "Magazines", "Videos"],
-      "correct": 1,
-      "explanation": "Archives preserve historical and organizational records"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A library that is attached to industrial or corporate organizations is:",
+      "options": [
+        "Private library",
+        "Public library",
+        "Special library",
+        "All of the above"
+      ],
+      "correct": 2,
+      "explanation": "Special libraries serve specific organizations with specialized collections."
     },
     {
       "id": 10,
-      "question": "A digital library provides:",
-      "options": ["Only printed books", "Electronic resources online", "Audio only", "Video only"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A library that is attached to post primary institutions is:",
+      "options": [
+        "Academic library",
+        "School library",
+        "Public library",
+        "Special library"
+      ],
       "correct": 1,
-      "explanation": "Digital libraries offer electronic/digitized materials"
+      "explanation": "School libraries serve primary and secondary schools."
     },
     {
       "id": 11,
-      "question": "Library organization involves:",
-      "options": ["Arranging resources systematically", "Selling books", "Hiring staff", "Building construction"],
-      "correct": 0,
-      "explanation": "Organization makes resources findable and accessible"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Selective dissemination of information is a typical library service performed mostly in the library:",
+      "options": [
+        "Public",
+        "Special",
+        "Private",
+        "Digital"
+      ],
+      "correct": 1,
+      "explanation": "SDI is common in special and academic libraries for researchers."
     },
     {
       "id": 12,
-      "question": "Cataloging is the process of:",
-      "options": ["Buying books", "Creating metadata for resources", "Shelving books", "Repairing books"],
-      "correct": 1,
-      "explanation": "Cataloging creates descriptions for library materials"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "International Institute of Tropical Agriculture Library, Ibadan is an example of:",
+      "options": [
+        "Private library",
+        "Virtual library",
+        "Special library",
+        "Academic library"
+      ],
+      "correct": 2,
+      "explanation": "IITA Library is a special library serving agricultural research."
     },
     {
       "id": 13,
-      "question": "Classification arranges materials by:",
-      "options": ["Random order", "Subject or topic", "Purchase date", "Size"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A library set up according to owner's subject interest is:",
+      "options": [
+        "Personal library",
+        "Private library",
+        "Special library",
+        "Virtual library"
+      ],
       "correct": 1,
-      "explanation": "Classification groups similar subjects together"
+      "explanation": "Private libraries are owned by individuals based on their interests."
     },
     {
       "id": 14,
-      "question": "Dewey Decimal Classification (DDC) uses:",
-      "options": ["Letters", "Numbers", "Colors", "Symbols"],
-      "correct": 1,
-      "explanation": "DDC uses numbers (000-999) for subjects"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The following are types of library except:",
+      "options": [
+        "National libraries",
+        "Public libraries",
+        "Private libraries",
+        "Education libraries"
+      ],
+      "correct": 3,
+      "explanation": "Education libraries is not a standard library type."
     },
     {
       "id": 15,
-      "question": "Library of Congress Classification (LCC) uses:",
-      "options": ["Numbers only", "Letters and numbers", "Colors", "Symbols"],
-      "correct": 1,
-      "explanation": "LCC uses letters for classes, numbers for subclasses"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Libraries owned by an individual are:",
+      "options": [
+        "School libraries",
+        "National libraries",
+        "Secondary libraries",
+        "Private libraries"
+      ],
+      "correct": 3,
+      "explanation": "Private libraries are owned by individuals."
     },
     {
       "id": 16,
-      "question": "The 800s in Dewey represent:",
-      "options": ["Science", "Literature", "History", "Philosophy"],
-      "correct": 1,
-      "explanation": "800-899 is Literature in DDC"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The library assigns International Standard Book Number:",
+      "options": [
+        "Private library",
+        "School library",
+        "National library",
+        "Archive library"
+      ],
+      "correct": 2,
+      "explanation": "National libraries assign ISBNs to publications."
     },
     {
       "id": 17,
-      "question": "The 900s in Dewey represent:",
-      "options": ["Science", "Literature", "History and geography", "Religion"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The _____ is actively involved in inter-library lending schemes in a country:",
+      "options": [
+        "State governments",
+        "Library of Congress",
+        "National Library",
+        "American library"
+      ],
       "correct": 2,
-      "explanation": "900-999 is History and Geography"
+      "explanation": "National libraries coordinate inter-library lending."
     },
     {
       "id": 18,
-      "question": "A library catalog is:",
-      "options": ["List of all books", "List of all resources with locations", "Staff directory", "Building map"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The library type that has collection for all categories of users is:",
+      "options": [
+        "Private library",
+        "Public library",
+        "School library",
+        "Academic library"
+      ],
       "correct": 1,
-      "explanation": "Catalog shows what library has and where to find it"
+      "explanation": "Public libraries serve all categories of users in a community."
     },
     {
       "id": 19,
-      "question": "OPAC stands for:",
-      "options": ["Online Public Access Catalog", "Open Public Archive Collection", "Organized Print and Copy", "Official Publishing and Cataloging"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "FUTA Library was opened to users on:",
+      "options": [
+        "1983",
+        "1993",
+        "1981",
+        "2003"
+      ],
       "correct": 0,
-      "explanation": "OPAC is the online library catalog system"
+      "explanation": "FUTA Library was opened to users in 1983."
     },
     {
       "id": 20,
-      "question": "Shelf arrangement follows:",
-      "options": ["Random order", "Call numbers", "Book size", "Publisher"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The library found in the Federal University of Technology was relocated to the present site in:",
+      "options": [
+        "March 2006",
+        "April 2006",
+        "1982",
+        "1983"
+      ],
       "correct": 1,
-      "explanation": "Books arranged by call number (classification + author)"
+      "explanation": "FUTA Library was relocated to its present site in April 2006."
     },
     {
       "id": 21,
-      "question": "Reference resources include:",
-      "options": ["Novels", "Encyclopedias and dictionaries", "Biographies", "Poetry"],
-      "correct": 1,
-      "explanation": "Reference works provide quick facts and overviews"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "What is the name of FUTA Library?",
+      "options": [
+        "Albert Illemobade Library",
+        "Albert Macaulay Library",
+        "Albert Daramola Library",
+        "Futa Resources Library"
+      ],
+      "correct": 0,
+      "explanation": "FUTA Library is named Albert Illemobade Library."
     },
     {
       "id": 22,
-      "question": "An encyclopedia provides:",
-      "options": ["In-depth articles on topics", "Word definitions", "Maps", "Biographies only"],
-      "correct": 0,
-      "explanation": "Encyclopedias have comprehensive articles on various subjects"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Ondo State Library Board is an example of:",
+      "options": [
+        "Archives",
+        "State library",
+        "National library",
+        "Public Library"
+      ],
+      "correct": 3,
+      "explanation": "Ondo State Library Board is a public library."
     },
     {
       "id": 23,
-      "question": "A dictionary defines:",
-      "options": ["Words and their meanings", "Places", "People", "Events"],
-      "correct": 0,
-      "explanation": "Dictionaries explain word meanings, pronunciation, usage"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The type of library that serves undergraduates, graduate students, researchers and faculty is called:",
+      "options": [
+        "Document center",
+        "Academic library",
+        "National library",
+        "Archives"
+      ],
+      "correct": 1,
+      "explanation": "Academic libraries serve the academic community."
     },
     {
       "id": 24,
-      "question": "An almanac contains:",
-      "options": ["Fiction stories", "Annual data and statistics", "Word definitions", "Historical essays"],
-      "correct": 1,
-      "explanation": "Almanacs provide yearly updates on facts and figures"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The library that issues ISSN and ISBN is the:",
+      "options": [
+        "Document center",
+        "Academic library",
+        "National library",
+        "Archives"
+      ],
+      "correct": 2,
+      "explanation": "National libraries issue ISSN and ISBN."
     },
     {
       "id": 25,
-      "question": "An atlas is a collection of:",
-      "options": ["Maps", "Biographies", "Statistics", "Poems"],
-      "correct": 0,
-      "explanation": "Atlases contain maps and geographic information"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The Federal University of Technology Akure has its library called as:",
+      "options": [
+        "Special Library",
+        "Academic Library",
+        "School Library",
+        "Research Library"
+      ],
+      "correct": 1,
+      "explanation": "FUTA Library is an academic library."
     },
     {
       "id": 26,
-      "question": "A directory lists:",
-      "options": ["People or organizations with contact info", "Books only", "Events", "Definitions"],
-      "correct": 0,
-      "explanation": "Directories provide names, addresses, contact details"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The university library of FUTA has been renamed to:",
+      "options": [
+        "Francis Idibye Library",
+        "Albert Illemobade Library",
+        "Peter Kolawole Library",
+        "FUTA Central Library"
+      ],
+      "correct": 1,
+      "explanation": "FUTA Library is named Albert Illemobade Library."
     },
     {
       "id": 27,
-      "question": "A biographical dictionary contains:",
-      "options": ["Word definitions", "Information about people's lives", "Maps", "Statistics"],
-      "correct": 1,
-      "explanation": "Biographical sources provide life stories of individuals"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Libraries found in the Central Bank of Nigeria, Nigerian Institute of International Affairs and Shell Development Company are:",
+      "options": [
+        "Academic Libraries",
+        "School Libraries",
+        "Special Libraries",
+        "Company Libraries"
+      ],
+      "correct": 2,
+      "explanation": "These are special libraries serving specific organizations."
     },
     {
       "id": 28,
-      "question": "A yearbook covers:",
-      "options": ["Events of past year", "Future predictions", "Fiction", "Poetry"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The place and organ that houses and is responsible for the collection and preservation of public and historic resources for use of the public and researchers is called:",
+      "options": [
+        "Archives",
+        "Information Centres",
+        "Libraries",
+        "Bookshops"
+      ],
       "correct": 0,
-      "explanation": "Yearbooks summarize events and developments of the year"
+      "explanation": "Archives preserve historical and public records."
     },
     {
       "id": 29,
-      "question": "A handbook provides:",
-      "options": ["In-depth research", "Brief facts and instructions", "Long essays", "Fiction"],
-      "correct": 1,
-      "explanation": "Handbooks are concise reference for specific topics"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The National Library of Nigeria was established in:",
+      "options": [
+        "1925",
+        "1960",
+        "1964",
+        "1971"
+      ],
+      "correct": 3,
+      "explanation": "The National Library of Nigeria was established in 1971."
     },
     {
       "id": 30,
-      "question": "A manual gives:",
-      "options": ["Instructions on how to do something", "Theoretical discussions", "Historical accounts", "Biographies"],
-      "correct": 0,
-      "explanation": "Manuals provide practical guidance and procedures"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "_____ is the type of library responsible for collection of legal deposit in Nigeria:",
+      "options": [
+        "Special library",
+        "Public library",
+        "National library",
+        "Government library"
+      ],
+      "correct": 2,
+      "explanation": "The National Library is responsible for legal deposit."
     },
     {
       "id": 31,
-      "question": "A serial is a publication:",
-      "options": ["Published once", "Published in successive parts", "Never published", "Only online"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "An institution saddled with the responsibility of acquisition, processing and preservation of records of enduring value is called:",
+      "options": [
+        "Library",
+        "Archive",
+        "Documentation Centre",
+        "Museum"
+      ],
       "correct": 1,
-      "explanation": "Serials continue indefinitely (journals, magazines)"
+      "explanation": "Archives preserve records of enduring value."
     },
     {
       "id": 32,
-      "question": "A periodical is issued:",
-      "options": ["Irregularly", "At regular intervals", "Once only", "Never"],
-      "correct": 1,
-      "explanation": "Periodicals appear regularly (daily, weekly, monthly)"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Albert Illemobade Library FUTA is an example of:",
+      "options": [
+        "School Libraries",
+        "University Libraries",
+        "Academic Libraries",
+        "Research Libraries"
+      ],
+      "correct": 2,
+      "explanation": "FUTA Library is an academic library."
     },
     {
       "id": 33,
-      "question": "A journal contains:",
-      "options": ["News articles", "Scholarly research articles", "Advertisements", "Fiction"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The library of the Federal Institute of Industrial Research Oshodi (FIIRO) is an example of:",
+      "options": [
+        "Institute library",
+        "Special library",
+        "Public library",
+        "Private library"
+      ],
       "correct": 1,
-      "explanation": "Academic journals publish peer-reviewed research"
+      "explanation": "FIIRO Library is a special library serving industrial research."
     },
     {
       "id": 34,
-      "question": "A magazine targets:",
-      "options": ["Researchers only", "General audience", "Children only", "Academics"],
-      "correct": 1,
-      "explanation": "Magazines are for general readership, popular topics"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The female cloakroom of the university library when entry is at:",
+      "options": [
+        "Left hand side",
+        "Right hand side",
+        "At the Centre",
+        "Back of the porter's lodge"
+      ],
+      "correct": 0,
+      "explanation": "The female cloakroom entry is at the left hand side."
     },
     {
       "id": 35,
-      "question": "A newsletter is usually:",
-      "options": ["Long and detailed", "Short, focused on organization news", "Scholarly", "Fictional"],
-      "correct": 1,
-      "explanation": "Newsletters brief members/organizations on current news"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The acquisition of knowledge and skill using electronic technologies with internet-based course ware and wide range networks is called:",
+      "options": [
+        "E-Learning",
+        "Group learning",
+        "Distance learning",
+        "Project learning"
+      ],
+      "correct": 0,
+      "explanation": "E-Learning uses electronic technologies for education."
     },
     {
       "id": 36,
-      "question": "ISSN stands for:",
-      "options": ["International Standard Serial Number", "International Serial System Number", "Index of Serials", "Integrated Serial Network"],
-      "correct": 0,
-      "explanation": "ISSN uniquely identifies serial publications"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A place where Artefacts materials are organised, kept and made available on requested:",
+      "options": [
+        "Library",
+        "Archive",
+        "Zoology",
+        "Museum"
+      ],
+      "correct": 3,
+      "explanation": "Museums preserve and display artefacts."
     },
     {
       "id": 37,
-      "question": "Electronic resources include:",
-      "options": ["Print books only", "Databases, e-books, e-journals", "Newspapers only", "Maps only"],
-      "correct": 1,
-      "explanation": "E-resources are digital information sources"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A unique feature of a special library is:",
+      "options": [
+        "It serve all categories of users",
+        "It extends its lending to all users",
+        "Its collection cut across all disciplines",
+        "It serves only the employees of the organization"
+      ],
+      "correct": 3,
+      "explanation": "Special libraries serve only employees of their parent organization."
     },
     {
       "id": 38,
-      "question": "An e-book is:",
-      "options": ["Printed book", "Electronic version of a book", "Audio recording", "Video"],
-      "correct": 1,
-      "explanation": "E-books are books in digital format"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A system designed to acquire printed and non-printed information materials, organized and interpret with the aim of providing information to users in solving their information related problems is referred to as:",
+      "options": [
+        "Collection development",
+        "Research",
+        "Library",
+        "Catalogue"
+      ],
+      "correct": 2,
+      "explanation": "A library is a system for acquiring, organizing, and providing information."
     },
     {
       "id": 39,
-      "question": "An e-journal is:",
-      "options": ["Print journal", "Journal published electronically", "Magazine", "Newspaper"],
-      "correct": 1,
-      "explanation": "E-journals are digital versions of academic journals"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "A library owned by an individual is an example of a:",
+      "options": [
+        "Personal library",
+        "School library",
+        "Private library",
+        "Individual library"
+      ],
+      "correct": 2,
+      "explanation": "A private library is owned by an individual."
     },
     {
       "id": 40,
-      "question": "A database organizes:",
-      "options": ["Physical books", "Structured data for search and retrieval", "Only videos", "Only audio"],
-      "correct": 1,
-      "explanation": "Databases allow systematic searching of information"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "_____ are example of an academic libraries:",
+      "options": [
+        "University libraries, college of education libraries and polytechnics libraries",
+        "College libraries, schools libraries",
+        "Polytechnics libraries, college of education libraries and private libraries",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Academic libraries serve tertiary institutions."
     },
     {
       "id": 41,
-      "question": "Academic writing is:",
-      "options": ["Informal and casual", "Formal, structured, evidence-based", "Fictional", "Personal opinion"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "All of the following are types of library EXCEPT:",
+      "options": [
+        "Academic Libraries",
+        "National Archives",
+        "National Libraries",
+        "School libraries"
+      ],
       "correct": 1,
-      "explanation": "Academic writing follows formal conventions and uses evidence"
+      "explanation": "National Archives is not a library type."
     },
     {
       "id": 42,
-      "question": "A thesis statement:",
-      "options": ["Ends the paper", "States main argument", "Lists references", "Introduces topic"],
-      "correct": 1,
-      "explanation": "Thesis presents the central claim or argument"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "All of these EXCEPT one is not an information sources:",
+      "options": [
+        "Primary information sources",
+        "Secondary information sources",
+        "Tertiary information sources",
+        "Universal information sources"
+      ],
+      "correct": 3,
+      "explanation": "Universal information sources is not a standard category."
     },
     {
       "id": 43,
-      "question": "Plagiarism is:",
-      "options": ["Citing sources", "Using others' work without credit", "Paraphrasing", "Summarizing"],
-      "correct": 1,
-      "explanation": "Plagiarism is academic dishonesty - using others' work as own"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Any library can be categorized using:",
+      "options": [
+        "Ownership",
+        "Users served",
+        "Type of collection",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Libraries are categorized by ownership, users, and collection type."
     },
     {
       "id": 44,
-      "question": "Citation gives:",
-      "options": ["Credit to sources", "Summary of paper", "Author biography", "Publisher info"],
-      "correct": 0,
-      "explanation": "Citations acknowledge sources used in research"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Types of library can depend on the following except:",
+      "options": [
+        "Types of services rendered to users",
+        "Types of collections in the library",
+        "Types of users",
+        "Gender of the user"
+      ],
+      "correct": 3,
+      "explanation": "Gender of users does not determine library type."
     },
     {
       "id": 45,
-      "question": "APA style is used in:",
-      "options": ["Humanities", "Social sciences", "Literature", "Arts"],
-      "correct": 1,
-      "explanation": "APA (American Psychological Association) used in social sciences"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "All these are functions of library except:",
+      "options": [
+        "Provision of seating and reading facilities",
+        "Provision of reference services",
+        "Keeping of academic records of students",
+        "Provision of users education"
+      ],
+      "correct": 2,
+      "explanation": "Libraries do not keep academic records of students."
     },
     {
       "id": 46,
-      "question": "MLA style is used in:",
-      "options": ["Sciences", "Humanities and literature", "Psychology", "Business"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Opening and closing hours of the University Library, FUTA are:",
+      "options": [
+        "9.00am and 10.00pm respectively",
+        "8.00am and 10.00pm respectively",
+        "8.00am and 4.00pm respectively",
+        "8.00am and 5.00pm respectively"
+      ],
       "correct": 1,
-      "explanation": "MLA (Modern Language Association) used in humanities"
+      "explanation": "FUTA Library opens from 8.00am to 10.00pm."
     },
     {
       "id": 47,
-      "question": "Chicago style is common in:",
-      "options": ["Sciences", "History and some humanities", "Psychology", "Medicine"],
-      "correct": 1,
-      "explanation": "Chicago Manual of Style used in history and publishing"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Albert Illemobade Library has a publication titled:",
+      "options": [
+        "Guide to the Library 2014-2018",
+        "Guide to the University Library: 2014-2017",
+        "Guide to the Library 2013-2014",
+        "Guide to the Library to Albert Illemobade Library"
+      ],
+      "correct": 0,
+      "explanation": "FUTA Library publishes 'Guide to the Library 2014-2018'."
     },
     {
       "id": 48,
-      "question": "A bibliography lists:",
-      "options": ["Only books read", "All sources consulted", "Only cited sources", "Future readings"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "FUTA Institutional Repository include all publications collected from inception of the:",
+      "options": [
+        "University Library and kept in one database",
+        "University and kept in one database",
+        "School and kept in one database",
+        "None of the above"
+      ],
       "correct": 1,
-      "explanation": "Bibliography includes all sources used for research"
+      "explanation": "FUTA Institutional Repository contains university publications."
     },
     {
       "id": 49,
-      "question": "References list includes:",
-      "options": ["All sources read", "Only sources cited in text", "Recommended readings", "Unrelated sources"],
-      "correct": 1,
-      "explanation": "References only include works actually cited"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Media Resources Centres refer to modern:",
+      "options": [
+        "Academic libraries",
+        "Special and research libraries",
+        "Public libraries",
+        "School libraries"
+      ],
+      "correct": 3,
+      "explanation": "Media Resources Centres are modern school libraries."
     },
     {
       "id": 50,
-      "question": "Peer review means:",
-      "options": ["Author reviews own work", "Experts evaluate before publication", "Editor only reviews", "Public reviews"],
-      "correct": 1,
-      "explanation": "Peer review ensures quality through expert evaluation"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "An archive is a place housing large number of:",
+      "options": [
+        "Publications",
+        "Electronic information",
+        "Historical records",
+        "Records of publications"
+      ],
+      "correct": 2,
+      "explanation": "Archives house historical records."
     },
     {
       "id": 51,
-      "question": "Information literacy is:",
-      "options": ["Reading quickly", "Ability to find, evaluate, use information", "Memorizing facts", "Writing skills"],
-      "correct": 1,
-      "explanation": "Information literacy involves critical information skills"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "By AD 1543 anatomical drawings were in use in the University of:",
+      "options": [
+        "Sweden",
+        "California",
+        "Padua",
+        "Constantinople"
+      ],
+      "correct": 2,
+      "explanation": "Anatomical drawings were used at the University of Padua in 1543."
     },
     {
       "id": 52,
-      "question": "Primary sources are:",
-      "options": ["Second-hand accounts", "Original materials", "Textbooks", "Encyclopedias"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The 'Medium is the message' was declared by:",
+      "options": [
+        "Marshall Mulan",
+        "Marshall McLuhan",
+        "Marshall McCawgraw",
+        "Marshall McPherson"
+      ],
       "correct": 1,
-      "explanation": "Primary sources are firsthand evidence (diaries, original research)"
+      "explanation": "Marshall McLuhan coined the phrase 'The medium is the message'."
     },
     {
       "id": 53,
-      "question": "Secondary sources:",
-      "options": ["Original research", "Interpret or analyze primary sources", "Firsthand accounts", "Raw data"],
-      "correct": 1,
-      "explanation": "Secondary sources discuss primary sources"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Non-print resources can be categorized into:",
+      "options": [
+        "Audio and visual resources",
+        "Audio, Visual, electronic resources and hard copies",
+        "Audio, visual and electronic resources",
+        "A-V and their hard copies"
+      ],
+      "correct": 2,
+      "explanation": "Non-print resources include audio, visual, and electronic resources."
     },
     {
       "id": 54,
-      "question": "A scholarly source is:",
-      "options": ["Written by journalists", "Peer-reviewed and academic", "Popular magazine", "Blog post"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "iPod is a mobile device and portable digital player useful for accessing:",
+      "options": [
+        "Video file formats",
+        "Audio file formats",
+        "Written file formats",
+        "Any file formats"
+      ],
       "correct": 1,
-      "explanation": "Scholarly sources are academic and peer-reviewed"
+      "explanation": "iPod is primarily used for audio file formats."
     },
     {
       "id": 55,
-      "question": "Boolean operators include:",
-      "options": ["AND, OR, NOT", "Plus, minus, times", "Add, subtract", "If, then, else"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "Podcasts as digitized files can be accessed with the:",
+      "options": [
+        "Website",
+        "Email",
+        "Video format",
+        "Audio format"
+      ],
       "correct": 0,
-      "explanation": "Boolean operators connect search terms logically"
+      "explanation": "Podcasts can be accessed through websites."
     },
     {
       "id": 56,
-      "question": "Using AND in search:",
-      "options": ["Broadens search", "Narrows search", "Has no effect", "Removes terms"],
-      "correct": 1,
-      "explanation": "AND requires all terms, narrowing results"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "One aspect of information literacy is:",
+      "options": [
+        "Cultural literacy",
+        "Building literacy",
+        "Music literacy",
+        "Trading literacy"
+      ],
+      "correct": 0,
+      "explanation": "Cultural literacy is an aspect of information literacy."
     },
     {
       "id": 57,
-      "question": "Using OR in search:",
-      "options": ["Narrows search", "Broadens search", "Excludes terms", "Exact match"],
-      "correct": 1,
-      "explanation": "OR includes any term, broadening results"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "One of the following is a primary source of information:",
+      "options": [
+        "Book",
+        "Reviews",
+        "Patents",
+        "Databases"
+      ],
+      "correct": 2,
+      "explanation": "Patents are primary sources of information."
     },
     {
       "id": 58,
-      "question": "Using NOT in search:",
-      "options": ["Includes term", "Excludes term", "Broadens", "Has no effect"],
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "The largest and most detailed of all encyclopedias is called:",
+      "options": [
+        "World Bank Encyclopedia",
+        "Encyclopedia Britannica",
+        "New Age Encyclopedia",
+        "Encyclopedia of physics"
+      ],
       "correct": 1,
-      "explanation": "NOT excludes unwanted terms"
+      "explanation": "Encyclopedia Britannica is the largest and most detailed encyclopedia."
     },
     {
       "id": 59,
-      "question": "Truncation symbol (*) finds:",
-      "options": ["Exact word", "Word variations", "No results", "Synonyms"],
-      "correct": 1,
-      "explanation": "Truncation finds different endings (comput* finds computer, computing)"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "When a source of information is all about a person's life history authored by self it is called:",
+      "options": [
+        "Biography",
+        "Bibliography",
+        "Autobiography",
+        "Encyclopedia"
+      ],
+      "correct": 2,
+      "explanation": "An autobiography is written by the person about themselves."
     },
     {
       "id": 60,
-      "question": "Phrase searching uses:",
-      "options": ["Parentheses", "Quotation marks", "Asterisk", "Question mark"],
-      "correct": 1,
-      "explanation": "Quotes find exact phrase (\"climate change\")"
+      "topic": "library_concepts",
+      "topicName": "Library Concepts and Types",
+      "question": "To have reduced photographic images of printed pages and make it possible to house much more materials, the library needs:",
+      "options": [
+        "Computers",
+        "Softwares",
+        "Books",
+        "Microforms"
+      ],
+      "correct": 3,
+      "explanation": "Microforms store reduced images of printed pages."
     },
     {
       "id": 61,
-      "question": "Call number helps you:",
-      "options": ["Buy a book", "Locate item on shelf", "Renew book", "Return book"],
-      "correct": 1,
-      "explanation": "Call number is the book's address in library"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Which unit in the library is responsible for the processing of books?",
+      "options": [
+        "Serial unit",
+        "Circulation unit",
+        "Reference unit",
+        "Cataloguing and Classification unit"
+      ],
+      "correct": 3,
+      "explanation": "Cataloguing and Classification unit processes and organizes books."
     },
     {
       "id": 62,
-      "question": "ISBN identifies:",
-      "options": ["Serials", "Books", "Articles", "Websites"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Users normally keep their personal belongings when entering the Library in the:",
+      "options": [
+        "Porters unit",
+        "Cloak room",
+        "Security room",
+        "Circulation desk"
+      ],
       "correct": 1,
-      "explanation": "International Standard Book Number uniquely identifies books"
+      "explanation": "Users keep belongings in the cloak room."
     },
     {
       "id": 63,
-      "question": "DOI (Digital Object Identifier) is:",
-      "options": ["Book number", "Persistent link to digital content", "Library code", "Author ID"],
-      "correct": 1,
-      "explanation": "DOI provides permanent link to online content"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The index consulted by library staff to locate serial materials is:",
+      "options": [
+        "Kardex",
+        "Catalogue",
+        "Library card",
+        "OPAC"
+      ],
+      "correct": 0,
+      "explanation": "Kardex is a specialized catalogue for serial collections."
     },
     {
       "id": 64,
-      "question": "Interlibrary loan allows:",
-      "options": ["Buying books", "Borrowing from other libraries", "Selling books", "Donating books"],
-      "correct": 1,
-      "explanation": "ILL gets materials not in your library"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The maximum number of books that undergraduate can borrow in the library is:",
+      "options": [
+        "Five",
+        "Three",
+        "Four",
+        "Two"
+      ],
+      "correct": 3,
+      "explanation": "Undergraduates can borrow a maximum of 2 books."
     },
     {
       "id": 65,
-      "question": "A thesaurus provides:",
-      "options": ["Definitions", "Synonyms and antonyms", "Pronunciations", "Etymology"],
-      "correct": 1,
-      "explanation": "Thesaurus lists words with similar/opposite meanings"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Charging and discharging are performed in _____ unit of the library:",
+      "options": [
+        "Reference",
+        "Acquisition",
+        "Serial",
+        "Circulation"
+      ],
+      "correct": 3,
+      "explanation": "Circulation unit handles charging and discharging of books."
     },
     {
       "id": 66,
-      "question": "A gazetteer is a geographical:",
-      "options": ["Dictionary", "Map collection", "Biography", "History book"],
-      "correct": 0,
-      "explanation": "Gazetteer lists places with information"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "A book borrowed by undergraduate will be for a period of:",
+      "options": [
+        "Three weeks",
+        "Four weeks",
+        "Two weeks",
+        "One week"
+      ],
+      "correct": 2,
+      "explanation": "Undergraduates can borrow books for two weeks."
     },
     {
       "id": 67,
-      "question": "Abstract of an article:",
-      "options": ["Full text", "Summary", "References", "Conclusion"],
-      "correct": 1,
-      "explanation": "Abstract summarizes the article's content"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The followings are ways of acquiring materials in the library except:",
+      "options": [
+        "Purchase",
+        "Gift",
+        "Exchange",
+        "Binding"
+      ],
+      "correct": 3,
+      "explanation": "Binding is not a method of acquisition, it's preservation."
     },
     {
       "id": 68,
-      "question": "Open access means:",
-      "options": ["Paid subscription", "Free online access", "Print only", "Library use only"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The retrieval tool used to locate books on shelves in the library is:",
+      "options": [
+        "Library card",
+        "Catalogue",
+        "Kardex",
+        "School identity card"
+      ],
       "correct": 1,
-      "explanation": "Open access is freely available online"
+      "explanation": "The catalogue is used to locate books on shelves."
     },
     {
       "id": 69,
-      "question": "In-text citation appears:",
-      "options": ["At end of paper", "Within the body of text", "On cover", "In index"],
-      "correct": 1,
-      "explanation": "In-text citations mark sources within the text"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All these are allowed in the library for users except:",
+      "options": [
+        "Borrowing of books",
+        "Using of catalogue",
+        "Returning consulted books on shelves",
+        "Rendering reservation services"
+      ],
+      "correct": 2,
+      "explanation": "Users should not return books to shelves; library staff do shelving."
     },
     {
       "id": 70,
-      "question": "Footnote appears at:",
-      "options": ["End of chapter", "Bottom of page", "End of book", "Beginning"],
-      "correct": 1,
-      "explanation": "Footnotes are at page bottom, endnotes at chapter/book end"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "A book will have at least _____ numbers of catalogue:",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correct": 2,
+      "explanation": "A book has at least three catalogue entries: author, title, subject."
     },
     {
       "id": 71,
-      "question": "A literature review:",
-      "options": ["Summarizes one book", "Reviews existing research on topic", "Lists books to read", "Critiques one article"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Registration of users in the library takes place at:",
+      "options": [
+        "Porters unit",
+        "Circulation unit",
+        "ICT unit",
+        "Serial unit"
+      ],
       "correct": 1,
-      "explanation": "Literature review surveys scholarly sources on a topic"
+      "explanation": "User registration occurs at the circulation unit."
     },
     {
       "id": 72,
-      "question": "A research question:",
-      "options": ["Answers everything", "Guides the research", "Is the conclusion", "Lists sources"],
-      "correct": 1,
-      "explanation": "Research question focuses the study"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "User education comprises all of the following except:",
+      "options": [
+        "Reference service",
+        "Library tour",
+        "Display and exhibition",
+        "Library orientation"
+      ],
+      "correct": 0,
+      "explanation": "Reference service is a service, not a form of user education."
     },
     {
       "id": 73,
-      "question": "Hypothesis is:",
-      "options": ["Proven fact", "Testable prediction", "Research question", "Conclusion"],
-      "correct": 1,
-      "explanation": "Hypothesis is an educated guess to test"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "A systematic arrangement or list of bibliographic information is called:",
+      "options": [
+        "Catalogue",
+        "Year book",
+        "Manual",
+        "Textbook"
+      ],
+      "correct": 0,
+      "explanation": "A catalogue is a systematic list of bibliographic information."
     },
     {
       "id": 74,
-      "question": "Methodology describes:",
-      "options": ["Results", "How research was conducted", "Literature review", "Conclusion"],
-      "correct": 1,
-      "explanation": "Methodology explains research methods used"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "A routine task performed in the acquisitions unit is:",
+      "options": [
+        "Accessioning",
+        "Labelling",
+        "Cataloguing",
+        "Filing"
+      ],
+      "correct": 0,
+      "explanation": "Accessioning is a routine task in the acquisitions unit."
     },
     {
       "id": 75,
-      "question": "Quantitative research uses:",
-      "options": ["Numerical data and statistics", "Interviews", "Observations", "Text analysis"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Providing information on where to get specific information materials is part of the function of _____ unit:",
+      "options": [
+        "Reference",
+        "Circulation",
+        "Current awareness",
+        "Reprographic"
+      ],
       "correct": 0,
-      "explanation": "Quantitative research deals with numbers and measurements"
+      "explanation": "Reference unit provides guidance on locating information."
     },
     {
       "id": 76,
-      "question": "Qualitative research uses:",
-      "options": ["Statistical analysis", "Non-numerical data (words, observations)", "Experiments", "Surveys only"],
-      "correct": 1,
-      "explanation": "Qualitative research explores meanings and experiences"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The unit mainly stocks postgraduate dissertations and undergraduate projects:",
+      "options": [
+        "Publications and Repository Unit",
+        "Collection Development unit",
+        "Acquisition Unit",
+        "Bequest"
+      ],
+      "correct": 0,
+      "explanation": "Publications and Repository Unit houses theses and projects."
     },
     {
       "id": 77,
-      "question": "A case study examines:",
-      "options": ["Large population", "Single case in depth", "Statistical trends", "Experiments"],
-      "correct": 1,
-      "explanation": "Case study deeply investigates one person/group/event"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "_____ is the unit where users are registered:",
+      "options": [
+        "Circulation unit",
+        "Porters' unit",
+        "Security unit",
+        "Reference unit"
+      ],
+      "correct": 0,
+      "explanation": "Circulation unit handles user registration."
     },
     {
       "id": 78,
-      "question": "Survey research uses:",
-      "options": ["Questionnaires", "Laboratory experiments", "Field observations", "Document analysis"],
-      "correct": 0,
-      "explanation": "Surveys collect data through questions"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "_____ unit is responsible for maintaining security in the library:",
+      "options": [
+        "Multimedia unit",
+        "Serial unit",
+        "Cataloguing and classification unit",
+        "Porters' unit"
+      ],
+      "correct": 3,
+      "explanation": "Porters' unit maintains security in the library."
     },
     {
       "id": 79,
-      "question": "Sampling in research:",
-      "options": ["Studies everyone", "Selects part of population", "Ignores data", "Creates data"],
-      "correct": 1,
-      "explanation": "Sampling selects subset to represent whole"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The _____ is the major method of acquiring resources in the Library:",
+      "options": [
+        "Gift/donations",
+        "Inter-library loan",
+        "Purchase",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Libraries acquire materials through purchase, gifts, and inter-library loan."
     },
     {
       "id": 80,
-      "question": "Random sample means:",
-      "options": ["Any selection", "Equal chance of selection", "Convenience", "Purposive"],
-      "correct": 1,
-      "explanation": "Random sampling gives everyone equal opportunity"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "_____ takes place when a library exchanges some of its materials for the ones it lacks with another library that would have need for them:",
+      "options": [
+        "Library Exchange / systems",
+        "Permanent /arrangement",
+        "Library exchange/ exchanges",
+        "Borrowing/Exchange"
+      ],
+      "correct": 2,
+      "explanation": "Library exchange involves swapping materials between libraries."
     },
     {
       "id": 81,
-      "question": "Copyright protects:",
-      "options": ["Ideas", "Original creative works", "Facts", "Data"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Which of the following departments has among its responsibilities the selection and accessioning of information resources bought by or donated to the library?",
+      "options": [
+        "Circulation Unit",
+        "Acquisition Unit",
+        "Reference Unit",
+        "Serials Unit"
+      ],
       "correct": 1,
-      "explanation": "Copyright covers expression, not ideas"
+      "explanation": "Acquisition Unit handles selection and accessioning of resources."
     },
     {
       "id": 82,
-      "question": "Fair use allows:",
-      "options": ["Unlimited copying", "Limited use for education/research", "Selling copies", "Modifying work"],
-      "correct": 1,
-      "explanation": "Fair use permits limited use without permission"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Cards in a catalogue cabinet are arranged:",
+      "options": [
+        "Chronologically",
+        "Serially",
+        "Alphabetically",
+        "Numerically"
+      ],
+      "correct": 2,
+      "explanation": "Catalogue cards are arranged alphabetically."
     },
     {
       "id": 83,
-      "question": "Public domain means:",
-      "options": ["Copyrighted", "Free to use without permission", "Need license", "Restricted"],
-      "correct": 1,
-      "explanation": "Public domain works are not copyrighted"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "One of the following is a reason why books may be found in the reserved collection:",
+      "options": [
+        "Books are reference materials",
+        "Books are a gift to the library",
+        "Books are recommended by teaching staff",
+        "Books are in bad condition"
+      ],
+      "correct": 2,
+      "explanation": "Books recommended by teaching staff may be placed on reserve."
     },
     {
       "id": 84,
-      "question": "Creative Commons licenses:",
-      "options": ["All rights reserved", "Some rights reserved", "No rights", "Full copyright"],
-      "correct": 1,
-      "explanation": "Creative Commons allows flexible sharing"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Services offered by the reference department include all except:",
+      "options": [
+        "Answering reference questions",
+        "Current awareness services",
+        "Referral services",
+        "Binding of library materials"
+      ],
+      "correct": 3,
+      "explanation": "Binding is not a reference service."
     },
     {
       "id": 85,
-      "question": "Censorship in libraries:",
-      "options": ["Removing materials", "Selecting materials", "Organizing materials", "Cataloging"],
-      "correct": 0,
-      "explanation": "Censorship removes or restricts access to materials"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Which of these is not a library service:",
+      "options": [
+        "Reprography",
+        "Selective Dissemination of Information",
+        "Book selling",
+        "Current Awareness Services"
+      ],
+      "correct": 2,
+      "explanation": "Libraries do not sell books; book selling is not a library service."
     },
     {
       "id": 86,
-      "question": "Intellectual freedom means:",
-      "options": ["Freedom to read and access information", "Freedom to write only", "Freedom to publish", "Freedom to buy"],
-      "correct": 0,
-      "explanation": "Intellectual freedom supports free access to ideas"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The primary motive of organizing library materials is to facilitate one of the following:",
+      "options": [
+        "Building up library catalogue",
+        "Effective circulation operation",
+        "Accessibility and retrieval of library resources",
+        "Effective reference services"
+      ],
+      "correct": 2,
+      "explanation": "Organization facilitates accessibility and retrieval of resources."
     },
     {
       "id": 87,
-      "question": "A library mission statement:",
-      "options": ["Lists books", "Defines purpose and goals", "Hours of operation", "Staff names"],
-      "correct": 1,
-      "explanation": "Mission states library's reason for existence"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All except one is not a function of a library catalogue:",
+      "options": [
+        "It assists users to locate a new book written by a familiar author",
+        "It helps users to locate books on a particular subject area",
+        "It shows the series of a work on a subject",
+        "It is durable and user-friendly"
+      ],
+      "correct": 3,
+      "explanation": "Durability is not a primary function of a catalogue."
     },
     {
       "id": 88,
-      "question": "Collection development is:",
-      "options": ["Selling books", "Selecting and acquiring materials", "Repairing books", "Cataloging"],
-      "correct": 1,
-      "explanation": "Collection development builds library collections"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "An uncommon situation which the library prepare against its occurrence is:",
+      "options": [
+        "Theft",
+        "Bequeath",
+        "Weeding",
+        "Flood and fire"
+      ],
+      "correct": 3,
+      "explanation": "Libraries prepare for disasters like flood and fire."
     },
     {
       "id": 89,
-      "question": "Weeding removes:",
-      "options": ["Popular books", "Outdated/unused materials", "New books", "Reference books"],
-      "correct": 1,
-      "explanation": "Weeding keeps collection current and useful"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "Constant changing of titles is one of the problems of:",
+      "options": [
+        "Clippings",
+        "Abstracts",
+        "Serials",
+        "Audio-visual"
+      ],
+      "correct": 2,
+      "explanation": "Serials often change titles, causing problems."
     },
     {
       "id": 90,
-      "question": "Preservation in libraries:",
-      "options": ["Buying new books", "Protecting materials from deterioration", "Selling books", "Cataloging"],
-      "correct": 1,
-      "explanation": "Preservation extends life of library materials"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "_____ directs users to the exact location of a book on the shelf:",
+      "options": [
+        "Accession number",
+        "Entry Heading",
+        "Catalogue",
+        "Call marks"
+      ],
+      "correct": 3,
+      "explanation": "Call marks direct users to the exact shelf location."
     },
     {
       "id": 91,
-      "question": "A library consortium is:",
-      "options": ["Library building", "Group of cooperating libraries", "Library catalog", "Library staff"],
-      "correct": 1,
-      "explanation": "Consortia share resources and collaborate"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The information required for ordering and cataloguing of books include all EXCEPT one of these:",
+      "options": [
+        "ISBN",
+        "Author",
+        "Accession number",
+        "Title"
+      ],
+      "correct": 2,
+      "explanation": "Accession number is assigned after acquisition, not for ordering."
     },
     {
       "id": 92,
-      "question": "Reference interview is:",
-      "options": ["Job interview", "Conversation to understand user needs", "Interview for library school", "Book discussion"],
-      "correct": 1,
-      "explanation": "Reference interview clarifies what user really needs"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "A process in which all bibliographic information of a particular book are listed in a definite pattern is called:",
+      "options": [
+        "Collection development",
+        "Title entry",
+        "Added entries",
+        "Bibliographic description"
+      ],
+      "correct": 3,
+      "explanation": "Bibliographic description lists book information in a definite pattern."
     },
     {
       "id": 93,
-      "question": "Ready reference questions are:",
-      "options": ["Complex research", "Quick factual answers", "Long essays", "Book reviews"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "The Routines in the circulation units in the library is to enable _____ make the best use of the library:",
+      "options": [
+        "Porters",
+        "Users",
+        "Technician",
+        "Professionals"
+      ],
       "correct": 1,
-      "explanation": "Ready reference finds brief, specific facts"
+      "explanation": "Circulation routines enable users to make best use of the library."
     },
     {
       "id": 94,
-      "question": "Subject headings describe:",
-      "options": ["Author names", "What resource is about", "Publisher", "Date"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All except one is not a social media site:",
+      "options": [
+        "Whatsapp",
+        "OPAC",
+        "Facebook",
+        "Twitter"
+      ],
       "correct": 1,
-      "explanation": "Subject headings indicate content topics"
+      "explanation": "OPAC is a library catalogue, not social media."
     },
     {
       "id": 95,
-      "question": "LCSH stands for:",
-      "options": ["Library of Congress Subject Headings", "Library Catalog System Help", "Local Classification System", "Library Circulation System"],
-      "correct": 0,
-      "explanation": "LCSH is standard subject vocabulary"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All of the following are types of library catalogue EXCEPT:",
+      "options": [
+        "Dictionary Catalogue",
+        "Union Catalogue",
+        "Divided Catalogue",
+        "Card Catalogue"
+      ],
+      "correct": 3,
+      "explanation": "Card catalogue is a format, not a type of catalogue arrangement."
     },
     {
       "id": 96,
-      "question": "MARC records are used for:",
-      "options": ["Book checkout", "Machine-readable cataloging", "Shelving books", "Reference questions"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All except one is not a Bibliographic details of an information material:",
+      "options": [
+        "Author",
+        "OPAC",
+        "Title",
+        "Publisher"
+      ],
       "correct": 1,
-      "explanation": "MARC is format for bibliographic data"
+      "explanation": "OPAC is a retrieval tool, not a bibliographic detail."
     },
     {
       "id": 97,
-      "question": "RFID in libraries helps with:",
-      "options": ["Reading books", "Tracking and security", "Cataloging", "Reference"],
-      "correct": 1,
-      "explanation": "RFID tags help with inventory and security"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All of the following are Printed collections EXCEPT:",
+      "options": [
+        "Dictionaries",
+        "Encyclopaedias",
+        "Textbooks",
+        "E-Resources"
+      ],
+      "correct": 3,
+      "explanation": "E-Resources are electronic, not printed."
     },
     {
       "id": 98,
-      "question": "A library's annual report:",
-      "options": ["Daily news", "Yearly activities and statistics", "Book reviews", "Staff salaries"],
-      "correct": 1,
-      "explanation": "Annual report summarizes library's year"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All EXCEPT one is not a classification scheme used in the library:",
+      "options": [
+        "DDC",
+        "UDC",
+        "OPAC",
+        "LC"
+      ],
+      "correct": 2,
+      "explanation": "OPAC is a catalogue, not a classification scheme."
     },
     {
       "id": 99,
-      "question": "Information ethics deals with:",
-      "options": ["Computer programming", "Moral issues in information use", "Book binding", "Catalog rules"],
-      "correct": 1,
-      "explanation": "Information ethics covers privacy, access, intellectual property"
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "_____ is the library software used in FUTA library:",
+      "options": [
+        "CDS/ISIS",
+        "Alice for window",
+        "SLAM",
+        "GLASS"
+      ],
+      "correct": 2,
+      "explanation": "SLAM is the library software used in FUTA Library."
     },
     {
       "id": 100,
-      "question": "The right to information is:",
-      "options": ["Not important", "Fundamental human right", "Only for scholars", "Only online"],
+      "topic": "library_organization",
+      "topicName": "Library Organization and Units",
+      "question": "All EXCEPT one is not a storage devices in a computer system:",
+      "options": [
+        "Portable hard disks",
+        "Floppy Disk",
+        "SLAM Disc",
+        "CD-DVDs"
+      ],
+      "correct": 2,
+      "explanation": "SLAM is software, not a storage device."
+    },
+    {
+      "id": 101,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "The Reference unit houses reference materials that are:",
+      "options": [
+        "Meant only for consultation",
+        "Meant for borrowing",
+        "For binding",
+        "For reserve"
+      ],
+      "correct": 0,
+      "explanation": "Reference materials are for consultation only, not borrowing."
+    },
+    {
+      "id": 102,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ are reference materials that give general background information on a topic:",
+      "options": [
+        "Dictionaries",
+        "Directories",
+        "Encyclopedia",
+        "Index"
+      ],
+      "correct": 2,
+      "explanation": "Encyclopedias provide general background information."
+    },
+    {
+      "id": 103,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ is an example of a general encyclopedia:",
+      "options": [
+        "Encyclopedia of Biology",
+        "Encyclopedia Britannica",
+        "Encyclopedia of Agriculture",
+        "Encyclopedia of Forestry"
+      ],
       "correct": 1,
-      "explanation": "Access to information is recognized as human right"
+      "explanation": "Encyclopedia Britannica is a general encyclopedia."
+    },
+    {
+      "id": 104,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ provide basic data and statistics on topics such as education, health etc and published annually:",
+      "options": [
+        "Abstracts",
+        "Indexes",
+        "Yearbooks",
+        "Handbooks"
+      ],
+      "correct": 2,
+      "explanation": "Yearbooks provide annual data and statistics."
+    },
+    {
+      "id": 105,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Bibliography refers to:",
+      "options": [
+        "A list of works compiled on some common organizing principle",
+        "A book containing lists of names of residents, businesses organizations etc",
+        "A book of language providing meanings, spellings etc",
+        "Material that gives general background information on a topic"
+      ],
+      "correct": 0,
+      "explanation": "Bibliography is a list of works on a common principle."
+    },
+    {
+      "id": 106,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Travel guide is an example of:",
+      "options": [
+        "Biographical reference source",
+        "Geographical reference source",
+        "Literature search tool",
+        "Basic background reference source"
+      ],
+      "correct": 1,
+      "explanation": "Travel guides are geographical reference sources."
+    },
+    {
+      "id": 107,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "A term used for some geographical reference sources is:",
+      "options": [
+        "Cartographic sources",
+        "Maps and Atlases",
+        "Locational gazetteers",
+        "Bibliographies"
+      ],
+      "correct": 0,
+      "explanation": "Cartographic sources are geographical reference sources."
+    },
+    {
+      "id": 108,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Reference sources that provide information on individuals are called:",
+      "options": [
+        "Fact ready reference sources",
+        "Background reference sources",
+        "Biographical reference sources",
+        "Literature search tools"
+      ],
+      "correct": 2,
+      "explanation": "Biographical sources provide information on individuals."
+    },
+    {
+      "id": 109,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Who is who is an example of:",
+      "options": [
+        "Literature search tool",
+        "Geographical tool",
+        "Fact ready tool",
+        "Biographical tool"
+      ],
+      "correct": 3,
+      "explanation": "Who's Who is a biographical reference source."
+    },
+    {
+      "id": 110,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "The reference source that contains synonyms and antonyms with alternate words is called:",
+      "options": [
+        "Lexicon",
+        "Thesaurus",
+        "Dictionary",
+        "Special purpose dictionary"
+      ],
+      "correct": 1,
+      "explanation": "A thesaurus provides synonyms and antonyms."
+    },
+    {
+      "id": 111,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ is an example of a fact/ready reference resource:",
+      "options": [
+        "Directories",
+        "Abstract",
+        "Bibliography",
+        "Thesauri"
+      ],
+      "correct": 0,
+      "explanation": "Directories are fact/ready reference resources."
+    },
+    {
+      "id": 112,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ is an annual information material containing mostly statistical information on various topics:",
+      "options": [
+        "Encyclopedia",
+        "Directory",
+        "Yearbook",
+        "Gazetteer"
+      ],
+      "correct": 2,
+      "explanation": "Yearbooks contain annual statistical information."
+    },
+    {
+      "id": 113,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ is an example of a literature search tool:",
+      "options": [
+        "Map",
+        "Bibliography",
+        "Handbook",
+        "Dictionary"
+      ],
+      "correct": 1,
+      "explanation": "Bibliography is a literature search tool."
+    },
+    {
+      "id": 114,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ is a geographical dictionary:",
+      "options": [
+        "Gazette",
+        "Thesaurus",
+        "Bibliography",
+        "Gazetteer"
+      ],
+      "correct": 3,
+      "explanation": "A gazetteer is a geographical dictionary."
+    },
+    {
+      "id": 115,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "One of the following is not a type of index:",
+      "options": [
+        "Book index",
+        "Alphabetical index",
+        "Author index",
+        "Numerical index"
+      ],
+      "correct": 3,
+      "explanation": "Numerical index is not a standard type of index."
+    },
+    {
+      "id": 116,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Encyclopedias can be located in _____ unit of the library:",
+      "options": [
+        "Reference Unit",
+        "Circulation Unit",
+        "Bindery Unit",
+        "Cataloguing Unit"
+      ],
+      "correct": 0,
+      "explanation": "Encyclopedias are in the reference unit."
+    },
+    {
+      "id": 117,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "A basic reference collection is made up of all EXCEPT:",
+      "options": [
+        "Dictionaries",
+        "Encyclopedias",
+        "Textbooks",
+        "Gazetteers"
+      ],
+      "correct": 2,
+      "explanation": "Textbooks are not reference materials."
+    },
+    {
+      "id": 118,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Nigeria who's who is an example of a:",
+      "options": [
+        "Background reference source",
+        "Fact/ready reference source",
+        "Biographical reference source",
+        "Geographical reference source"
+      ],
+      "correct": 2,
+      "explanation": "Who's Who is a biographical reference source."
+    },
+    {
+      "id": 119,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Encyclopedia Britannica and Encyclopedia Americana are examples of:",
+      "options": [
+        "Subject encyclopedia",
+        "Special encyclopedia",
+        "Juvenile encyclopedia",
+        "General encyclopedia"
+      ],
+      "correct": 3,
+      "explanation": "Both are general encyclopedias."
+    },
+    {
+      "id": 120,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Which of these options is odd:",
+      "options": [
+        "Atlas",
+        "Map",
+        "Gazetteer",
+        "Manual"
+      ],
+      "correct": 3,
+      "explanation": "Manual is not a geographical source like the others."
+    },
+    {
+      "id": 121,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Oxford English dictionary is a:",
+      "options": [
+        "General dictionary",
+        "Special dictionary",
+        "Dual purpose dictionary",
+        "Lexicon"
+      ],
+      "correct": 0,
+      "explanation": "Oxford English Dictionary is a general dictionary."
+    },
+    {
+      "id": 122,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "The following are subject dictionaries except:",
+      "options": [
+        "Dictionary of geology",
+        "Longman Contemporary English Dictionary",
+        "Dictionary of geography",
+        "Dictionary of African Culture"
+      ],
+      "correct": 1,
+      "explanation": "Longman is a general dictionary, not subject-specific."
+    },
+    {
+      "id": 123,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "All but one of these resources is available in the Multimedia Unit:",
+      "options": [
+        "Microform",
+        "Video",
+        "Cassette",
+        "Gazette"
+      ],
+      "correct": 3,
+      "explanation": "Gazette is not a multimedia resource."
+    },
+    {
+      "id": 124,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Which of these options is odd:",
+      "options": [
+        "Television",
+        "Map",
+        "Chart",
+        "Picture"
+      ],
+      "correct": 0,
+      "explanation": "Television is electronic, while others are non-electronic visuals."
+    },
+    {
+      "id": 125,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Which of these resources can be classified as primary information resources:",
+      "options": [
+        "Dictionaries",
+        "Textbooks",
+        "Theses and dissertations",
+        "Handbooks"
+      ],
+      "correct": 2,
+      "explanation": "Theses and dissertations are primary sources."
+    },
+    {
+      "id": 126,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "A typical example of an index is:",
+      "options": [
+        "Serial collection",
+        "Book title",
+        "Library Catalogue",
+        "Glossary found in a book"
+      ],
+      "correct": 2,
+      "explanation": "Library catalogue is a type of index."
+    },
+    {
+      "id": 127,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "One of the following is a subject reference book:",
+      "options": [
+        "Encyclopedia Americana",
+        "Biographical reference sources",
+        "Encyclopedia Britannica",
+        "Dictionary of Proverbs"
+      ],
+      "correct": 3,
+      "explanation": "Dictionary of Proverbs is a subject reference book."
+    },
+    {
+      "id": 128,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Publications that give brief and concise information about the content of document especially scientific journals is known as:",
+      "options": [
+        "Bibliographies",
+        "Abstracts",
+        "Handbooks",
+        "Indexes"
+      ],
+      "correct": 1,
+      "explanation": "Abstracts provide brief summaries of documents."
+    },
+    {
+      "id": 129,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Graphic information about the vegetation, relief and population of Ghana can be found in:",
+      "options": [
+        "Biographical References",
+        "Serial publications",
+        "Atlases",
+        "Directories"
+      ],
+      "correct": 2,
+      "explanation": "Atlases contain graphic geographical information."
+    },
+    {
+      "id": 130,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Sketches about important personalities in the world can be obtained from:",
+      "options": [
+        "Directories",
+        "Biographical references",
+        "Geographic dictionaries",
+        "Newspapers"
+      ],
+      "correct": 1,
+      "explanation": "Biographical references contain information about personalities."
+    },
+    {
+      "id": 131,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "List of universities and Higher institutions in West Africa is an example of:",
+      "options": [
+        "Dictionaries",
+        "Geographic source",
+        "Encyclopedia",
+        "Directories"
+      ],
+      "correct": 3,
+      "explanation": "Directories list organizations and institutions."
+    },
+    {
+      "id": 132,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "Which of these would be good for providing background information on a topic:",
+      "options": [
+        "Encyclopedia Americana",
+        "Gazetteer",
+        "Journal of Contemporary Water Research",
+        "FUTA Yellow pages"
+      ],
+      "correct": 0,
+      "explanation": "Encyclopedias provide background information."
+    },
+    {
+      "id": 133,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find facts and statistics about a country, I would need to search in:",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 2,
+      "explanation": "Almanacs contain facts and statistics."
+    },
+    {
+      "id": 134,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find if 'shroud' is a noun, adverb, adjective etc:",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 1,
+      "explanation": "Dictionaries provide word classifications."
+    },
+    {
+      "id": 135,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find a long detailed description of the United States of America:",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 0,
+      "explanation": "Encyclopedias provide detailed descriptions of countries."
+    },
+    {
+      "id": 136,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find the locations of cities, states and river:",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 3,
+      "explanation": "Atlases contain maps showing locations."
+    },
+    {
+      "id": 137,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find last year's winners of the academy awards:",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 2,
+      "explanation": "Almanacs contain annual event information."
+    },
+    {
+      "id": 138,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find the longitude and latitude of Lagos, Nigeria:",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 3,
+      "explanation": "Atlases contain geographical coordinates."
+    },
+    {
+      "id": 139,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "To find how to pronounce the word 'Cygnet':",
+      "options": [
+        "Encyclopedia",
+        "Dictionary",
+        "Almanac",
+        "Atlas"
+      ],
+      "correct": 1,
+      "explanation": "Dictionaries provide pronunciation guides."
+    },
+    {
+      "id": 140,
+      "topic": "reference_sources",
+      "topicName": "Reference Sources and Services",
+      "question": "_____ is a collection of maps:",
+      "options": [
+        "Gazetteer",
+        "Atlas",
+        "Gazette",
+        "None of the above"
+      ],
+      "correct": 1,
+      "explanation": "An atlas is a collection of maps."
+    },
+    {
+      "id": 141,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Most serials especially journals are acquired through:",
+      "options": [
+        "Donation",
+        "Subscription",
+        "Exchange",
+        "Interlibrary loan"
+      ],
+      "correct": 1,
+      "explanation": "Serials are usually acquired through subscription."
+    },
+    {
+      "id": 142,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of the factors that affect the production and acquisition of serials is:",
+      "options": [
+        "Constant change of serials title",
+        "Serials colour",
+        "Low cost",
+        "Lack of readership"
+      ],
+      "correct": 0,
+      "explanation": "Constant title changes affect serial production and acquisition."
+    },
+    {
+      "id": 143,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "A major advantage of Electronic Serials is that:",
+      "options": [
+        "They can also be accessed from outside the library",
+        "They are cheaper",
+        "On-line articles are difficult to access",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Electronic serials can be accessed remotely from anywhere."
+    },
+    {
+      "id": 144,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "The following are advantages of using Non-print resources except:",
+      "options": [
+        "Aid retention",
+        "Preservation",
+        "Group instruction",
+        "Erratic power supply"
+      ],
+      "correct": 3,
+      "explanation": "Erratic power supply is a disadvantage, not an advantage."
+    },
+    {
+      "id": 145,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of the following is not part of audio-visual resources:",
+      "options": [
+        "Television",
+        "Video recordings",
+        "Digital media",
+        "World Atlas"
+      ],
+      "correct": 3,
+      "explanation": "World Atlas is a print/geographic resource, not audio-visual."
+    },
+    {
+      "id": 146,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Books as the oldest forms of printed media include the following sub types except:",
+      "options": [
+        "Monographs",
+        "Textbooks",
+        "Reference books",
+        "Realia"
+      ],
+      "correct": 3,
+      "explanation": "Realia are real objects, not printed media."
+    },
+    {
+      "id": 147,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Cartographic materials are also known as:",
+      "options": [
+        "Maps",
+        "Audio-visual materials",
+        "Objects",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Cartographic materials are maps and related geographical items."
+    },
+    {
+      "id": 148,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Transparency is an example of _____ form of recording knowledge:",
+      "options": [
+        "Print",
+        "Non-print",
+        "Both a and b",
+        "None of the above"
+      ],
+      "correct": 1,
+      "explanation": "Transparency is a non-print form of recording knowledge."
+    },
+    {
+      "id": 149,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Advantages of non-prints include the followings except:",
+      "options": [
+        "They aid retention",
+        "Group instruction",
+        "Preservation",
+        "Technology obsolescence"
+      ],
+      "correct": 3,
+      "explanation": "Technology obsolescence is a disadvantage of non-print resources."
+    },
+    {
+      "id": 150,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "A journal can be found in _____ unit of a library:",
+      "options": [
+        "Circulation",
+        "Reference",
+        "Serial",
+        "Porters"
+      ],
+      "correct": 2,
+      "explanation": "Journals are kept in the serials unit."
+    },
+    {
+      "id": 151,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "ISSN means:",
+      "options": [
+        "International Standard Book Number",
+        "International Standard Serial Number",
+        "International Standard Subject Number",
+        "International Standard Sequence Number"
+      ],
+      "correct": 1,
+      "explanation": "ISSN stands for International Standard Serial Number."
+    },
+    {
+      "id": 152,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "An information material published in successive parts and intended to continue indefinitely is called:",
+      "options": [
+        "A serial",
+        "A magazine",
+        "A periodical",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Serials, magazines, and periodicals all fit this definition."
+    },
+    {
+      "id": 153,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "_____ is not a characteristic of serials:",
+      "options": [
+        "It is dynamic",
+        "It contains International Standard Book Number",
+        "It dwells on specialized subjects",
+        "It is written by experts"
+      ],
+      "correct": 1,
+      "explanation": "Serials have ISSN, not ISBN."
+    },
+    {
+      "id": 154,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "An information material containing between five and forty-eight pages is known as:",
+      "options": [
+        "Monograph",
+        "Pamphlet",
+        "Bulletin",
+        "Book"
+      ],
+      "correct": 1,
+      "explanation": "A pamphlet contains 5-48 pages."
+    },
+    {
+      "id": 155,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "_____ is an example of a miniature storage medium:",
+      "options": [
+        "CD-ROM",
+        "Compact disk",
+        "Memory card",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explanation": "Memory card is a miniature storage medium."
+    },
+    {
+      "id": 156,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "A publication issued in successive parts at regular or irregular intervals, intended to be continued indefinitely are:",
+      "options": [
+        "Reference materials",
+        "Serials",
+        "Journals",
+        "Documents"
+      ],
+      "correct": 1,
+      "explanation": "Serials are publications issued in successive parts indefinitely."
+    },
+    {
+      "id": 157,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Which of these resources is the odd one out?",
+      "options": [
+        "Journals",
+        "Newsletters",
+        "Newspapers",
+        "Dictionaries"
+      ],
+      "correct": 3,
+      "explanation": "Dictionaries are reference materials, not serials."
+    },
+    {
+      "id": 158,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Which of these resources are published as volumes and issues/numbers, possess ISSN and contain articles?",
+      "options": [
+        "Newspaper",
+        "Encyclopaedia",
+        "Dictionary",
+        "Memo"
+      ],
+      "correct": 0,
+      "explanation": "Newspapers are serials with ISSN."
+    },
+    {
+      "id": 159,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "The Punch is a:",
+      "options": [
+        "Weekly journal",
+        "Newsletter",
+        "Daily journal",
+        "Daily newspaper"
+      ],
+      "correct": 3,
+      "explanation": "The Punch is a daily newspaper."
+    },
+    {
+      "id": 160,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Guardian newspaper belongs to the class of materials called:",
+      "options": [
+        "Textbooks",
+        "Serials",
+        "Journals",
+        "Newsletters"
+      ],
+      "correct": 1,
+      "explanation": "Newspapers are serials."
+    },
+    {
+      "id": 161,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "All of the following are reference materials except:",
+      "options": [
+        "Dictionaries",
+        "Biographies",
+        "Serials",
+        "Yearbook"
+      ],
+      "correct": 2,
+      "explanation": "Serials are not reference materials."
+    },
+    {
+      "id": 162,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Periodicals are identified by a number referred to as:",
+      "options": [
+        "ISSN",
+        "ISBN",
+        "ISSM",
+        "DDC"
+      ],
+      "correct": 0,
+      "explanation": "Periodicals are identified by ISSN."
+    },
+    {
+      "id": 163,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "A distinguishing factor of a Journal is its:",
+      "options": [
+        "Volume and issue numbers",
+        "Volume and serial numbers",
+        "Volume and book numbers",
+        "Volume, serial and book numbers"
+      ],
+      "correct": 0,
+      "explanation": "Journals are distinguished by volume and issue numbers."
+    },
+    {
+      "id": 164,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Personal Digital Assistant can be used to organize one's:",
+      "options": [
+        "Company's appointments, tasks, address lists telephone information",
+        "Ones business or personal schedules, calendar, addresses and book information",
+        "Institution's corporate overall information",
+        "Students' overall information while in their institutions of learning"
+      ],
+      "correct": 1,
+      "explanation": "PDA helps organize personal schedules and information."
+    },
+    {
+      "id": 165,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Which one of the following is an odd-man-out?",
+      "options": [
+        "Basic background references sources",
+        "Fact or ready reference sources",
+        "Literature search tools",
+        "Geomorphological references sources"
+      ],
+      "correct": 3,
+      "explanation": "Geomorphological is too specific; others are general categories."
+    },
+    {
+      "id": 166,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of the following is not an audio visual material:",
+      "options": [
+        "Filmstrips",
+        "Motion pictures",
+        "Monographs",
+        "Transparencies"
+      ],
+      "correct": 2,
+      "explanation": "Monographs are print materials."
+    },
+    {
+      "id": 167,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "All except one of these library materials is a serial publication:",
+      "options": [
+        "Magazine",
+        "Scientific journal",
+        "Atlas",
+        "Newsletter"
+      ],
+      "correct": 2,
+      "explanation": "Atlas is a book, not a serial."
+    },
+    {
+      "id": 168,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of these library materials is a primary source of information:",
+      "options": [
+        "Bibliographies",
+        "Scientific Journals",
+        "Abstracts",
+        "Indexes"
+      ],
+      "correct": 1,
+      "explanation": "Scientific journals contain primary research."
+    },
+    {
+      "id": 169,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Kardex is a specialise catalogue use for:",
+      "options": [
+        "Serial collection",
+        "Reference Collection",
+        "Books",
+        "Scientific Journals"
+      ],
+      "correct": 0,
+      "explanation": "Kardex is used for serial collections."
+    },
+    {
+      "id": 170,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "All these are characteristics of serials except:",
+      "options": [
+        "They have ISSN",
+        "They are often acquired through subscription",
+        "The content in each volume differs from another",
+        "They are not published successively"
+      ],
+      "correct": 3,
+      "explanation": "Serials are published successively by definition."
+    },
+    {
+      "id": 171,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Advantages of using electronic serials include these except:",
+      "options": [
+        "E-serials are easy to read and revise",
+        "They can be easily manipulated",
+        "They cannot be access within library",
+        "They can be accessed by many users at the same time"
+      ],
+      "correct": 2,
+      "explanation": "E-serials can be accessed within the library too."
+    },
+    {
+      "id": 172,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "All of the following are types of audio-visual materials EXCEPT:",
+      "options": [
+        "Realia",
+        "MicroFilm",
+        "Slide",
+        "Furniture"
+      ],
+      "correct": 3,
+      "explanation": "Furniture is not an audio-visual material."
+    },
+    {
+      "id": 173,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "All EXCEPT one are reference materials that gives geographical information to users:",
+      "options": [
+        "Travellers guide",
+        "Maps",
+        "Atlas",
+        "Encyclopaedia"
+      ],
+      "correct": 3,
+      "explanation": "Encyclopaedia is not primarily a geographical source."
+    },
+    {
+      "id": 174,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "All EXCEPT one are types periodical information materials in the library:",
+      "options": [
+        "Library users manuals",
+        "Journals",
+        "Magazines",
+        "Newspapers"
+      ],
+      "correct": 0,
+      "explanation": "Library users manuals are not periodicals."
+    },
+    {
+      "id": 175,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of the common features of a dictionary catalogue is:",
+      "options": [
+        "Entries are made under author",
+        "Entries are made under subject",
+        "Entries are interfiled in alphabetical sequence",
+        "Entries are made under title"
+      ],
+      "correct": 2,
+      "explanation": "Dictionary catalogue interfiles all entries alphabetically."
+    },
+    {
+      "id": 176,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of the filing methods in the library is:",
+      "options": [
+        "Word by word",
+        "Letter by word",
+        "Word by letter",
+        "Letter by initial alphabet"
+      ],
+      "correct": 0,
+      "explanation": "Word by word is a filing method."
+    },
+    {
+      "id": 177,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Journals are preferred for research because:",
+      "options": [
+        "They contain outdated information",
+        "They contain up-to-date information of a technical nature",
+        "They contain popular information",
+        "They contain general information for public consumption"
+      ],
+      "correct": 1,
+      "explanation": "Journals provide current, technical research information."
+    },
+    {
+      "id": 178,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Information in journals have all of the following characteristics except:",
+      "options": [
+        "Technical information",
+        "Factual information",
+        "Information of general interest",
+        "Research findings"
+      ],
+      "correct": 2,
+      "explanation": "Journals contain technical, not general interest information."
+    },
+    {
+      "id": 179,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Most scholarly journals are published by:",
+      "options": [
+        "Newspaper houses",
+        "Internet and the World Wide Web",
+        "NGOs",
+        "Academic institutions and professional bodies"
+      ],
+      "correct": 3,
+      "explanation": "Scholarly journals are published by academic institutions and professional bodies."
+    },
+    {
+      "id": 180,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "'Popular' articles for general readership can be found in:",
+      "options": [
+        "Journals",
+        "Government documents",
+        "Conference proceedings",
+        "Magazines"
+      ],
+      "correct": 3,
+      "explanation": "Magazines contain popular articles for general readership."
+    },
+    {
+      "id": 181,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Which of these is a subject encyclopedia?",
+      "options": [
+        "Encyclopedia Americana",
+        "Encyclopedia of Genetic engineering",
+        "Encyclopedia Britannica",
+        "Wikipedia"
+      ],
+      "correct": 1,
+      "explanation": "Encyclopedia of Genetic Engineering is a subject encyclopedia."
+    },
+    {
+      "id": 182,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "One of this is common to Magazines, Journals and Newspapers:",
+      "options": [
+        "Chapters",
+        "ISBN",
+        "New Edition",
+        "Volume and/or Issue Number"
+      ],
+      "correct": 3,
+      "explanation": "Serial publications have volume and issue numbers."
+    },
+    {
+      "id": 183,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "You have been asked to find articles that discuss a political issue currently being debated in the media. What type of source should you look for?",
+      "options": [
+        "Daily newspaper",
+        "Encyclopedia",
+        "Textbook",
+        "Scholarly journals"
+      ],
+      "correct": 0,
+      "explanation": "Daily newspapers cover current political issues."
+    },
+    {
+      "id": 184,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Journal articles can be found in all of the following places except:",
+      "options": [
+        "Scholarly Databases like EBSCOHost",
+        "Serials Unit",
+        "General Reading Room",
+        "The Internet (WWW)"
+      ],
+      "correct": 2,
+      "explanation": "General Reading Room typically houses books, not journals."
+    },
+    {
+      "id": 185,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "The display of newly acquired information materials in the library is an example of:",
+      "options": [
+        "Reference service",
+        "Current awareness service",
+        "Selective dissemination of information",
+        "Reprographic service"
+      ],
+      "correct": 1,
+      "explanation": "Display of new materials is a current awareness service."
+    },
+    {
+      "id": 186,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "_____ is an example of a graphic material:",
+      "options": [
+        "Motion picture",
+        "Slide",
+        "Still picture",
+        "Chart"
+      ],
+      "correct": 3,
+      "explanation": "Chart is a graphic material."
+    },
+    {
+      "id": 187,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "A book is an information material containing _____ pages:",
+      "options": [
+        "Less than 48 pages",
+        "49 pages and above",
+        "50 pages and above",
+        "Less than 49 pages"
+      ],
+      "correct": 1,
+      "explanation": "A book contains 49 pages or more."
+    },
+    {
+      "id": 188,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "_____ is an example of an audio-visual material:",
+      "options": [
+        "Still picture",
+        "Realia",
+        "Slides",
+        "Television"
+      ],
+      "correct": 3,
+      "explanation": "Television is an audio-visual material."
+    },
+    {
+      "id": 189,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "_____ are good source of primary information:",
+      "options": [
+        "Journals",
+        "Volume",
+        "Books",
+        "Methods of acquiring series"
+      ],
+      "correct": 0,
+      "explanation": "Journals are primary sources of information."
+    },
+    {
+      "id": 190,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "To identify a serial, it must have:",
+      "options": [
+        "Volume and serial numbers",
+        "Volume and book numbers",
+        "Volume, serial and book numbers",
+        "Volume and issue numbers"
+      ],
+      "correct": 3,
+      "explanation": "Serials are identified by volume and issue numbers."
+    },
+    {
+      "id": 191,
+      "topic": "serials",
+      "topicName": "Serials and Non-Print Resources",
+      "question": "Another name given to yearbook is:",
+      "options": [
+        "Annual",
+        "Gazetteers",
+        "Handbooks",
+        "Books of the year"
+      ],
+      "correct": 0,
+      "explanation": "Yearbooks are also called annuals."
+    },
+    {
+      "id": 192,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The skills combined in locating and retrieving information is called:",
+      "options": [
+        "Information literacy",
+        "Information process",
+        "Information awareness",
+        "Information protocol"
+      ],
+      "correct": 0,
+      "explanation": "Information literacy involves skills for locating and retrieving information."
+    },
+    {
+      "id": 193,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Physical parts of a book consist of the following except:",
+      "options": [
+        "Dust jacket",
+        "Binding",
+        "Publisher",
+        "Spine"
+      ],
+      "correct": 2,
+      "explanation": "Publisher is a bibliographic element, not a physical part."
+    },
+    {
+      "id": 194,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Binding is:",
+      "options": [
+        "That part of a book which holds the printed sheets together",
+        "The edge of the book that holds the printed sheets together",
+        "What contains the intellectual information",
+        "A blank leaf found at the beginning and end of a book"
+      ],
+      "correct": 0,
+      "explanation": "Binding holds the printed sheets together."
+    },
+    {
+      "id": 195,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Copyright page is also known as:",
+      "options": [
+        "Fly leaf",
+        "Preface",
+        "Title page",
+        "Verso page"
+      ],
+      "correct": 3,
+      "explanation": "The copyright page is the verso page."
+    },
+    {
+      "id": 196,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The unique 10 or 13 digit identification number assigned to editions of books by the publisher is:",
+      "options": [
+        "Accession number",
+        "ISBN",
+        "ISSN",
+        "Call number"
+      ],
+      "correct": 1,
+      "explanation": "ISBN identifies book editions."
+    },
+    {
+      "id": 197,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The call number or location number is combination of:",
+      "options": [
+        "Subject number and Author number",
+        "Subject number and Accession number",
+        "Volume number and Issue number",
+        "Subject number and ISBN"
+      ],
+      "correct": 0,
+      "explanation": "Call number combines subject number and author number."
+    },
+    {
+      "id": 198,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "A running number carried by each library book indicating when it was acquired into the collection of the library is called:",
+      "options": [
+        "International Standard Book Number",
+        "Call number",
+        "Volume and issue number",
+        "Accession Number"
+      ],
+      "correct": 3,
+      "explanation": "Accession number indicates when a book was acquired."
+    },
+    {
+      "id": 199,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The name of the Federal University of Technology, Akure Library is:",
+      "options": [
+        "FUTA Library",
+        "The Library",
+        "Albert Illemobade Library",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explanation": "FUTA Library is named Albert Illemobade Library."
+    },
+    {
+      "id": 200,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "To evaluate a website, factors to be considered include all but:",
+      "options": [
+        "Time of download",
+        "Authority",
+        "Currency",
+        "Name of organization/institution the website is affiliated to"
+      ],
+      "correct": 2,
+      "explanation": "Currency is a factor to consider, not an exception."
+    },
+    {
+      "id": 201,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "When classifying a book, one can get information about the nature, purpose and scope of the book from its:",
+      "options": [
+        "Dedication",
+        "Preface",
+        "Acknowledgement",
+        "Title page"
+      ],
+      "correct": 1,
+      "explanation": "The preface explains the nature, purpose, and scope of the book."
+    },
+    {
+      "id": 202,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Classification schemes include the following except:",
+      "options": [
+        "Library of Congress",
+        "Dewey decimal Classification",
+        "Bloom's Taxonomy Classification",
+        "Universal Decimal Classification"
+      ],
+      "correct": 2,
+      "explanation": "Bloom's Taxonomy is for educational objectives, not library classification."
+    },
+    {
+      "id": 203,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Collation in a typical catalogue card entry gives information such as:",
+      "options": [
+        "Books length",
+        "Notation about maps or illustrations",
+        "Pagination",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Collation includes pagination, illustrations, and size."
+    },
+    {
+      "id": 204,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Information literacy involves the abilities that require a person to:",
+      "options": [
+        "Identify when a particular information is needed",
+        "Have the ability to locate the needed information",
+        "Use effectively and efficiently the information",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Information literacy includes all these abilities."
+    },
+    {
+      "id": 205,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Collections in a Reference Unit can be identified by an acronym known as:",
+      "options": [
+        "FEF",
+        "REF",
+        "JOU",
+        "BRD"
+      ],
+      "correct": 1,
+      "explanation": "REF identifies reference collections."
+    },
+    {
+      "id": 206,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "GNS 103: Information Retrieval course is designed by university to achieve all of the following except:",
+      "options": [
+        "Make librarian out of the students",
+        "Inculcate information skills in the students so that they can become life long learners",
+        "Teach students the importance of information to their academic pursuit",
+        "Develop research skills in students"
+      ],
+      "correct": 0,
+      "explanation": "The course aims to develop information skills, not make students librarians."
+    },
+    {
+      "id": 207,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "A user of University Library Federal University of Technology Akure intending to use the Library of Adekunle Ajasin University Library must:",
+      "options": [
+        "Present his/her university ID card",
+        "Library Card",
+        "Letter from his/her HOD",
+        "Letter of introduction from his library"
+      ],
+      "correct": 3,
+      "explanation": "A letter of introduction from the home library is required."
+    },
+    {
+      "id": 208,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "One of the following statement is not true about library catalogue:",
+      "options": [
+        "Library catalogue contains list of all the library materials in the library",
+        "Catalogue is to keep records of all the materials in the library for posterity",
+        "To serve as search tool for retrieving information material available in the library without wasting their time",
+        "Library catalogue gives information about author, title and subject to enhance quick retrieval of information materials"
+      ],
+      "correct": 1,
+      "explanation": "Catalogue is for retrieval, not just posterity."
+    },
+    {
+      "id": 209,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "All but one of the following reasons is not associated with copyright date:",
+      "options": [
+        "To ascertain the year the book is published",
+        "To ascertain the recency of the publication",
+        "It serves as selection criteria for selection of book to be acquired",
+        "To know when copyright date expires"
+      ],
+      "correct": 3,
+      "explanation": "Copyright date doesn't indicate expiry; it's the publication year."
+    },
+    {
+      "id": 210,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "_____ is the Classification Scheme adopted by the University Library Federal University of Technology, Akure for organisation of their materials:",
+      "options": [
+        "Dewey Decimal Classification Scheme (DDC)",
+        "Universal Decimal Classification Scheme (UDC)",
+        "Library of Congress Classification Scheme (LC)",
+        "Colon Classification"
+      ],
+      "correct": 2,
+      "explanation": "FUTA Library uses Library of Congress Classification."
+    },
+    {
+      "id": 211,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Which of the following statement is not true about social media as information service delivery media:",
+      "options": [
+        "Sharing news update",
+        "Information tracking and monitoring",
+        "Disseminating pornographic information",
+        "Execution of campaigns"
+      ],
+      "correct": 2,
+      "explanation": "Social media should not be used for disseminating pornographic information."
+    },
+    {
+      "id": 212,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "One of these services is not rendered by the university library Federal University of Technology Akure:",
+      "options": [
+        "Compilation of bibliography",
+        "Current awareness services",
+        "Services to physically challenge",
+        "User education"
+      ],
+      "correct": 2,
+      "explanation": "Services to physically challenged may not be available at FUTA Library."
+    },
+    {
+      "id": 213,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Theses and dissertations are _____ sources of information:",
+      "options": [
+        "Secondary",
+        "Tertiary",
+        "Primary",
+        "B and C"
+      ],
+      "correct": 2,
+      "explanation": "Theses and dissertations are primary sources."
+    },
+    {
+      "id": 214,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "'Fair use' in copyrighted works is:",
+      "options": [
+        "To allow researcher to make use of part of work for academic purpose only",
+        "Allow researchers to copy the whole work for academic purposes only",
+        "A and B",
+        "To allow the work be used for any purpose without authorization"
+      ],
+      "correct": 0,
+      "explanation": "Fair use allows limited use for academic purposes."
+    },
+    {
+      "id": 215,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The acronym OPAC means:",
+      "options": [
+        "Online Public Awareness Card",
+        "Online Public Awareness Catalogue",
+        "Online Private Access Catalogue",
+        "Online Public Access Catalogue"
+      ],
+      "correct": 3,
+      "explanation": "OPAC stands for Online Public Access Catalogue."
+    },
+    {
+      "id": 216,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "All these are allowed in the library except:",
+      "options": [
+        "Borrowing of books",
+        "Access to internet services",
+        "Renewal of lost card",
+        "Group discussion among readers"
+      ],
+      "correct": 3,
+      "explanation": "Group discussion is not allowed in the library."
+    },
+    {
+      "id": 217,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "All these are forms of damage to library books except:",
+      "options": [
+        "Mutilation",
+        "Binding of library books",
+        "Tearing of library books",
+        "Defacing of library books"
+      ],
+      "correct": 1,
+      "explanation": "Binding is preservation, not damage."
+    },
+    {
+      "id": 218,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The type of library catalogue is:",
+      "options": [
+        "Title catalogue",
+        "Author catalogue",
+        "Subject catalogue",
+        "Divided catalogue"
+      ],
+      "correct": 3,
+      "explanation": "Divided catalogue is a type of catalogue arrangement."
+    },
+    {
+      "id": 219,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The classification scheme used in FUTA library is:",
+      "options": [
+        "Universal decimal scheme",
+        "Dewey decimal scheme",
+        "Library of congress scheme",
+        "International library scheme"
+      ],
+      "correct": 2,
+      "explanation": "FUTA Library uses Library of Congress Classification."
+    },
+    {
+      "id": 220,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The acronym 'http' means:",
+      "options": [
+        "Hypertext transfer protocol",
+        "Hypertext transmission protocol",
+        "Hypertext tutor protocol",
+        "Hypertext transfer procedure"
+      ],
+      "correct": 0,
+      "explanation": "HTTP stands for Hypertext Transfer Protocol."
+    },
+    {
+      "id": 221,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "All these are search engines except:",
+      "options": [
+        "Hyper",
+        "Hotbot",
+        "Google",
+        "Excite"
+      ],
+      "correct": 0,
+      "explanation": "Hyper is not a search engine."
+    },
+    {
+      "id": 222,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "All these are browsers except:",
+      "options": [
+        "Mozilla",
+        "Fire fox",
+        "Opera mini",
+        "Exposure"
+      ],
+      "correct": 3,
+      "explanation": "Exposure is not a web browser."
+    },
+    {
+      "id": 223,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "In library of congress classification scheme 'R' represents:",
+      "options": [
+        "Religion",
+        "Medicine",
+        "Social Science",
+        "Fine arts"
+      ],
+      "correct": 1,
+      "explanation": "R represents Medicine in LC classification."
+    },
+    {
+      "id": 224,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "A number 86-013575 on a catalogue card represents:",
+      "options": [
+        "Call mark",
+        "No tuition number",
+        "Accession number",
+        "Author's number"
+      ],
+      "correct": 2,
+      "explanation": "This format typically represents an accession number."
+    },
+    {
+      "id": 225,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Factors to be considered when evaluating internet materials include these except:",
+      "options": [
+        "Credibility",
+        "Objectivity",
+        "Price",
+        "Support"
+      ],
+      "correct": 2,
+      "explanation": "Price is not a factor in evaluating internet materials."
+    },
+    {
+      "id": 226,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "'www' represents in ICT word:",
+      "options": [
+        "Wide world web",
+        "Web world wide",
+        "World web wide",
+        "World wide web"
+      ],
+      "correct": 3,
+      "explanation": "WWW stands for World Wide Web."
+    },
+    {
+      "id": 227,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The supplementary information that may be useful to a reader is:",
+      "options": [
+        "Appendices",
+        "Conclusion",
+        "Table of contents",
+        "Title page"
+      ],
+      "correct": 0,
+      "explanation": "Appendices contain supplementary information."
+    },
+    {
+      "id": 228,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "A reader can use the university library only if he/she has:",
+      "options": [
+        "Formally registered in the library",
+        "Formally given admission by the university",
+        "Formally matriculated in the university",
+        "Formally introduced as a FUTA student"
+      ],
+      "correct": 0,
+      "explanation": "Library registration is required to use the library."
+    },
+    {
+      "id": 229,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "_____ is not a type of library catalogue:",
+      "options": [
+        "Card catalogue",
+        "Classified catalogue",
+        "Divided catalogue",
+        "Union catalogue"
+      ],
+      "correct": 0,
+      "explanation": "Card catalogue is a format, not a type."
+    },
+    {
+      "id": 230,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "_____ is an example of an internet service:",
+      "options": [
+        "E-mail",
+        "Mailing list",
+        "File transfer protocol",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All are internet services."
+    },
+    {
+      "id": 231,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "One of the following is a service performed in the library:",
+      "options": [
+        "Current awareness service",
+        "Bibliography service",
+        "Document delivery",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Current awareness service is a library service."
+    },
+    {
+      "id": 232,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Internet telephony allows voice calls using:",
+      "options": [
+        "Laptop",
+        "Infinix phone",
+        "Desktop computer",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Internet telephony works on all internet-enabled devices."
+    },
+    {
+      "id": 233,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Web log is another name for:",
+      "options": [
+        "Newsgroup",
+        "E-mail",
+        "Internet protocol",
+        "Blog"
+      ],
+      "correct": 3,
+      "explanation": "Web log is shortened to blog."
+    },
+    {
+      "id": 234,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "One of the following is not a function of a library catalogue:",
+      "options": [
+        "It identifies the work of editors only",
+        "It gives index to the library collection",
+        "It shows the library's holding",
+        "It describes the materials in the library"
+      ],
+      "correct": 0,
+      "explanation": "Catalogue identifies more than just editors' works."
+    },
+    {
+      "id": 235,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "_____ is one of the greatest offence in the library:",
+      "options": [
+        "Reading",
+        "Eating",
+        "Writing",
+        "Studying"
+      ],
+      "correct": 1,
+      "explanation": "Eating is a serious offence in the library."
+    },
+    {
+      "id": 236,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "_____ and _____ are one of the routine duties of a librarian:",
+      "options": [
+        "Shelving and shelf-reading",
+        "Reading in the library",
+        "Writing",
+        "Eating"
+      ],
+      "correct": 0,
+      "explanation": "Shelving and shelf-reading are routine librarian duties."
+    },
+    {
+      "id": 237,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The act of impacting library instructional skills and use to students is called:",
+      "options": [
+        "Library operations",
+        "Library guide",
+        "Users Education",
+        "Extension services"
+      ],
+      "correct": 2,
+      "explanation": "User education teaches library skills to users."
+    },
+    {
+      "id": 238,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "A process in which all bibliographic information and other related information about any book are accessed through computer terminal is called:",
+      "options": [
+        "Public access catalogue",
+        "Machine catalogue",
+        "Colour classification scheme",
+        "Online public access catalogue"
+      ],
+      "correct": 3,
+      "explanation": "OPAC provides computer access to bibliographic information."
+    },
+    {
+      "id": 239,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The commonest classification scheme used in most academic library is:",
+      "options": [
+        "BLISS classification scheme",
+        "Dewey decimal classification scheme",
+        "Library of congress classification scheme",
+        "Colon classification scheme"
+      ],
+      "correct": 2,
+      "explanation": "LC is common in academic libraries."
+    },
+    {
+      "id": 240,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "As general good preservation practices for library materials that are in poor state, the library staff has the obligation to:",
+      "options": [
+        "Withdraw them for repair",
+        "Benefit from information literacy on proper handlings of books",
+        "Purchase back-up types of electronic library materials",
+        "Allow the materials to gather dust"
+      ],
+      "correct": 0,
+      "explanation": "Damaged materials should be withdrawn for repair."
+    },
+    {
+      "id": 241,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "As part of specific rules for the library, the library user who loses any library material will pay the cost of the material plus administrative charge of:",
+      "options": [
+        "20%",
+        "30%",
+        "15%",
+        "25%"
+      ],
+      "correct": 2,
+      "explanation": "Lost materials incur 15% administrative charge."
+    },
+    {
+      "id": 242,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The internet telephony is voice over:",
+      "options": [
+        "Internet software",
+        "Internet search engine",
+        "Internet browser",
+        "Internet protocol"
+      ],
+      "correct": 3,
+      "explanation": "Voice over Internet Protocol (VoIP)."
+    },
+    {
+      "id": 243,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The checklist for research evaluation include all except:",
+      "options": [
+        "Credibility",
+        "Injectibility",
+        "Objectivity",
+        "Accuracy"
+      ],
+      "correct": 1,
+      "explanation": "Injectibility is not a research evaluation criterion."
+    },
+    {
+      "id": 244,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "When a researcher cites an electronic source he/she should have a copy of the material because:",
+      "options": [
+        "Internet-based materials are short-lived on the web",
+        "Internet-based materials are short",
+        "Internet can be affected by power outage",
+        "The author of the material may not be known"
+      ],
+      "correct": 0,
+      "explanation": "Web content may disappear, so keep copies."
+    },
+    {
+      "id": 245,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The Library of Congress Classification Scheme is divided into _____ main classes:",
+      "options": [
+        "30",
+        "10",
+        "21",
+        "15"
+      ],
+      "correct": 2,
+      "explanation": "LC has 21 main classes."
+    },
+    {
+      "id": 246,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The Dewey Decimal Classification Scheme is used mainly by _____ libraries:",
+      "options": [
+        "Small libraries",
+        "Public and University libraries only",
+        "University libraries only",
+        "Very large libraries"
+      ],
+      "correct": 0,
+      "explanation": "DDC is used mainly by small libraries."
+    },
+    {
+      "id": 247,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The International Standard Book Number is assigned by the:",
+      "options": [
+        "National library",
+        "School library",
+        "Academic library",
+        "Research and public libraries"
+      ],
+      "correct": 0,
+      "explanation": "National libraries assign ISBNs."
+    },
+    {
+      "id": 248,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Some methods of acquiring information resources in the library are:",
+      "options": [
+        "Purchase",
+        "Bequest",
+        "Library exchange",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All are methods of acquisition."
+    },
+    {
+      "id": 249,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The Dust jacket contains the:",
+      "options": [
+        "Blurb",
+        "Binding",
+        "Spine",
+        "Fly leaf"
+      ],
+      "correct": 0,
+      "explanation": "The dust jacket contains the blurb."
+    },
+    {
+      "id": 250,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "In order to connect professional and develop better relationships, the social media that can be used include:",
+      "options": [
+        "Twitter",
+        "Instagram",
+        "Google+",
+        "Facebook"
+      ],
+      "correct": 3,
+      "explanation": "Facebook can be used for professional networking."
+    },
+    {
+      "id": 251,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "To share information of professional interest and career experiences, it is better to use:",
+      "options": [
+        "Google+",
+        "Twitter",
+        "LinkedIn",
+        "YouTube"
+      ],
+      "correct": 2,
+      "explanation": "LinkedIn is for professional networking."
+    },
+    {
+      "id": 252,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Some disadvantages of the use of social media are:",
+      "options": [
+        "Facilitating deception",
+        "Defamatory content",
+        "Subjective norms",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All are disadvantages of social media."
+    },
+    {
+      "id": 253,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "File transfer protocol an internet standard permits on the internet the sharing of _____ with other computers:",
+      "options": [
+        "Videos",
+        "Files",
+        "Sound",
+        "Textual messages"
+      ],
+      "correct": 1,
+      "explanation": "FTP allows file sharing."
+    },
+    {
+      "id": 254,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "A library with manual and electronic catalogues is an example of one that uses:",
+      "options": [
+        "Hybrid catalogue",
+        "Electronic catalogues",
+        "Manual catalogue",
+        "MARC and OPAC"
+      ],
+      "correct": 0,
+      "explanation": "Hybrid catalogue combines manual and electronic."
+    },
+    {
+      "id": 255,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Added entries can be used in locating publication by the provision of:",
+      "options": [
+        "Title, subject, author, translator, compiler and publisher",
+        "Title, subject, author, and printer",
+        "Title, subject, author, compiler and press",
+        "Title, subject, author, publisher, printer and press"
+      ],
+      "correct": 0,
+      "explanation": "Added entries include these access points."
+    },
+    {
+      "id": 256,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Call number is:",
+      "options": [
+        "Numeric",
+        "Alphanumeric",
+        "Words only",
+        "Pictorial only"
+      ],
+      "correct": 1,
+      "explanation": "Call numbers are alphanumeric."
+    },
+    {
+      "id": 257,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "The unique number assigned to any book showing when it was acquired is called:",
+      "options": [
+        "Accession number",
+        "Subject number",
+        "Location number",
+        "International Standard Book Number"
+      ],
+      "correct": 0,
+      "explanation": "Accession number shows acquisition order."
+    },
+    {
+      "id": 258,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Information on the publisher of a book, place and date of publication is known as:",
+      "options": [
+        "Collation",
+        "Author entry",
+        "Series entry",
+        "Imprint"
+      ],
+      "correct": 3,
+      "explanation": "Imprint contains publisher, place, and date."
+    },
+    {
+      "id": 259,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Information on a book's length and size as well as notations about maps or illustrations is called:",
+      "options": [
+        "Author's entry",
+        "Series entry",
+        "Collation",
+        "Imprint"
+      ],
+      "correct": 2,
+      "explanation": "Collation describes physical characteristics."
+    },
+    {
+      "id": 260,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Date of copyright, name of copyright holder, book's number, library of congress catalogue number, previous editions, printers name can all be found on the:",
+      "options": [
+        "Copyright page",
+        "Title page",
+        "Preface",
+        "Foreword"
+      ],
+      "correct": 0,
+      "explanation": "Copyright page contains all this information."
+    },
+    {
+      "id": 261,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "Sources of information when listed and arranged in an alphabetical order can be referred to as:",
+      "options": [
+        "Biography",
+        "Bibliography",
+        "antibiography",
+        "References"
+      ],
+      "correct": 1,
+      "explanation": "Bibliography is an alphabetical list of sources."
+    },
+    {
+      "id": 262,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "An additional explanations and elaboration not essential to a text is known as:",
+      "options": [
+        "Appendix",
+        "Glossary",
+        "Index",
+        "List of illustrations"
+      ],
+      "correct": 0,
+      "explanation": "Appendix contains supplementary material."
+    },
+    {
+      "id": 263,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "In the Dewey Decimal System, 300 represents:",
+      "options": [
+        "Language",
+        "Social sciences",
+        "The Arts",
+        "Pure Sciences"
+      ],
+      "correct": 1,
+      "explanation": "300 represents Social Sciences in DDC."
+    },
+    {
+      "id": 264,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "In the Library of Congress system, V stands for:",
+      "options": [
+        "Natural Science",
+        "Political science",
+        "Education",
+        "Law"
+      ],
+      "correct": 0,
+      "explanation": "V represents Naval Science."
+    },
+    {
+      "id": 265,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "_____ represents social sciences in the Library of Congress System:",
+      "options": [
+        "A",
+        "H",
+        "S",
+        "T"
+      ],
+      "correct": 1,
+      "explanation": "H represents Social Sciences in LC."
+    },
+    {
+      "id": 266,
+      "topic": "information_literacy_skills",
+      "topicName": "Information Literacy Skills",
+      "question": "MARC can be used only by:",
+      "options": [
+        "One library",
+        "Three libraries",
+        "Many libraries",
+        "City libraries"
+      ],
+      "correct": 2,
+      "explanation": "MARC can be used by many libraries."
+    },
+    {
+      "id": 267,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "A good report should have one of the following:",
+      "options": [
+        "References",
+        "Referees",
+        "Dust jacket",
+        "Monograph"
+      ],
+      "correct": 0,
+      "explanation": "A good report should have references."
+    },
+    {
+      "id": 268,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "When citing for scholarly publications one of the following is not required:",
+      "options": [
+        "Place of publication",
+        "Bibliography",
+        "Publisher's name",
+        "Author's name"
+      ],
+      "correct": 1,
+      "explanation": "Bibliography is the list, not required in every citation."
+    },
+    {
+      "id": 269,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "A good report basically has the following section EXCEPT one:",
+      "options": [
+        "Flyer",
+        "Title",
+        "Table of contents",
+        "Introduction"
+      ],
+      "correct": 0,
+      "explanation": "Flyer is not a section of a report."
+    },
+    {
+      "id": 270,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "All EXCEPT one are sources of information in a report writing:",
+      "options": [
+        "The library",
+        "Bookshop",
+        "Bibliographies",
+        "Catalogue"
+      ],
+      "correct": 1,
+      "explanation": "Bookshop is a place to buy, not a source."
+    },
+    {
+      "id": 271,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of the following best describes Information literacy?",
+      "options": [
+        "The ability to read",
+        "The ability to use computer",
+        "The ability to reference",
+        "The ability to define an information need and satisfy it"
+      ],
+      "correct": 3,
+      "explanation": "Information literacy is defining and satisfying information needs."
+    },
+    {
+      "id": 272,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "To find ALL books a library has on Cost analysis, one needs to consult the:",
+      "options": [
+        "Subject catalogue",
+        "Author catalogue",
+        "Universal catalogue",
+        "Title catalogue"
+      ],
+      "correct": 0,
+      "explanation": "Subject catalogue lists books by subject."
+    },
+    {
+      "id": 273,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "To find materials on the shelf in the library, one would need to use:",
+      "options": [
+        "The call number",
+        "The shelf number",
+        "The ISBN number",
+        "The title"
+      ],
+      "correct": 0,
+      "explanation": "Call number directs to shelf location."
+    },
+    {
+      "id": 274,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which is not true about scholarly journals?",
+      "options": [
+        "The articles usually have citations and references",
+        "Their articles are often peer-reviewed",
+        "The information is usually technical in nature",
+        "The articles are usually authored by journalists"
+      ],
+      "correct": 3,
+      "explanation": "Scholarly journals are authored by experts, not journalists."
+    },
+    {
+      "id": 275,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of this is NOT part of a citation?",
+      "options": [
+        "Author",
+        "Title",
+        "Date of publication",
+        "Call number"
+      ],
+      "correct": 3,
+      "explanation": "Call number is for shelf location, not citation."
+    },
+    {
+      "id": 276,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "A common reference style used by students is:",
+      "options": [
+        "ATA",
+        "CMA",
+        "APA",
+        "TAA"
+      ],
+      "correct": 2,
+      "explanation": "APA is a common citation style."
+    },
+    {
+      "id": 277,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "An article abstract is:",
+      "options": [
+        "The full text of an article",
+        "Information about where the article can be found",
+        "A summary of the article",
+        "The cost of the article"
+      ],
+      "correct": 2,
+      "explanation": "An abstract summarizes the article."
+    },
+    {
+      "id": 278,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of the following would not be considered a primary source material?",
+      "options": [
+        "A 1975 newspaper on the political situation of Nigeria",
+        "A report from a study about students use of Social media",
+        "An article in a journal about the effectiveness of a nutritional supplement",
+        "A chapter in a course book that discusses information literacy"
+      ],
+      "correct": 3,
+      "explanation": "A course book chapter is a secondary source."
+    },
+    {
+      "id": 279,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Using call numbers, books are arranged on the shelves based on:",
+      "options": [
+        "Author",
+        "Title",
+        "Year of publication",
+        "Subject"
+      ],
+      "correct": 3,
+      "explanation": "Call numbers arrange books by subject."
+    },
+    {
+      "id": 280,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Plagiarism is:",
+      "options": [
+        "Including other people's ideas in your write-up",
+        "Using someone's ideas in your paper but not crediting the source",
+        "Acknowledging the source of any information cited",
+        "Including only primary sources in your write-up"
+      ],
+      "correct": 1,
+      "explanation": "Plagiarism is using others' work without credit."
+    },
+    {
+      "id": 281,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of the following should be the least important consideration when developing a topic for your assignment?",
+      "options": [
+        "It meets the requirement of the assignment",
+        "It will be interesting to you and your readers",
+        "It supports your personal values",
+        "Enough high quality sources are available"
+      ],
+      "correct": 2,
+      "explanation": "Personal values are least important in topic selection."
+    },
+    {
+      "id": 282,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Miniature mobile storage media are flash drives, memory cards, USB and smart cards:",
+      "options": [
+        "Yes",
+        "No",
+        "Yes and No",
+        "Yes or No"
+      ],
+      "correct": 0,
+      "explanation": "These are all miniature storage media."
+    },
+    {
+      "id": 283,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "_____ treat specific subjects like agriculture, medicine etc:",
+      "options": [
+        "General Encyclopedia",
+        "Subject encyclopedia",
+        "Encyclopedia Americana",
+        "Dictionaries"
+      ],
+      "correct": 1,
+      "explanation": "Subject encyclopedias focus on specific fields."
+    },
+    {
+      "id": 284,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of the following statements is true:",
+      "options": [
+        "Only experts can publish Web pages",
+        "An author's motivations can impact the information that he/she publishes on the Web",
+        "Websites don't have authors",
+        "Web site authors are unbiased"
+      ],
+      "correct": 1,
+      "explanation": "Author motivations affect web content."
+    },
+    {
+      "id": 285,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The URL address: http://www.epa.gov/climatechange shows that the website:",
+      "options": [
+        "Is published by an educational institution",
+        "Is trying to sell something",
+        "Is used for public awareness",
+        "Is published by a government agency"
+      ],
+      "correct": 3,
+      "explanation": ".gov indicates a government website."
+    },
+    {
+      "id": 286,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The URL address: http://ui.edu.ng/content/centres-excellence shows that the website:",
+      "options": [
+        "Is published by an educational institution",
+        "Is trying to sell something",
+        "Is used for public awareness",
+        "Is published by a government agency"
+      ],
+      "correct": 0,
+      "explanation": ".edu indicates an educational institution."
+    },
+    {
+      "id": 287,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of the following is not a reason to cite your sources?",
+      "options": [
+        "They lend authority to your work",
+        "They let readers retrieve sources that you have cited",
+        "They give credit to the cited sources",
+        "They increase the grade of the author"
+      ],
+      "correct": 3,
+      "explanation": "Citing sources doesn't automatically increase grade."
+    },
+    {
+      "id": 288,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the following is a subject reference book:",
+      "options": [
+        "Encyclopedia Americana",
+        "Biographical reference sources",
+        "Encyclopedia Britannica",
+        "Dictionary of Proverbs"
+      ],
+      "correct": 3,
+      "explanation": "Dictionary of Proverbs is a subject reference book."
+    },
+    {
+      "id": 289,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the ways of acquiring information in the library is:",
+      "options": [
+        "Seeking for information",
+        "Bequest",
+        "Passing information round",
+        "Borrowing"
+      ],
+      "correct": 1,
+      "explanation": "Bequest is a method of acquisition."
+    },
+    {
+      "id": 290,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The reference unit is a place in the library where the following materials except one are organised for consultation:",
+      "options": [
+        "Dictionary",
+        "Annuals",
+        "Journals",
+        "Encyclopedia"
+      ],
+      "correct": 2,
+      "explanation": "Journals are in serials unit, not reference."
+    },
+    {
+      "id": 291,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Word entries are arranged alphabetically in the following materials except:",
+      "options": [
+        "Reference sources",
+        "Dictionaries",
+        "Directories",
+        "None of the above"
+      ],
+      "correct": 3,
+      "explanation": "All are arranged alphabetically."
+    },
+    {
+      "id": 292,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "These sources provide basic data and statistics on topics such as education, health, sports, personalities or professions and are usually published annually:",
+      "options": [
+        "Almanacs and yearbooks",
+        "Handbooks, manuals and guides",
+        "Literature search reference sources",
+        "Abstracts"
+      ],
+      "correct": 0,
+      "explanation": "Almanacs and yearbooks provide annual statistics."
+    },
+    {
+      "id": 293,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "_____ is a list of the books of a specific author, publisher or on a specific subject:",
+      "options": [
+        "Periodical index",
+        "Bibliography",
+        "Citation index",
+        "Book index"
+      ],
+      "correct": 1,
+      "explanation": "Bibliography lists books on specific criteria."
+    },
+    {
+      "id": 294,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Geographical sources are also known as cartographic sources:",
+      "options": [
+        "Yes",
+        "No",
+        "Yes or No",
+        "Yes and No"
+      ],
+      "correct": 0,
+      "explanation": "Geographical sources are also called cartographic sources."
+    },
+    {
+      "id": 295,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Works on a single subject or aspect of a subject are called:",
+      "options": [
+        "Monographs",
+        "Textbooks",
+        "Reference books",
+        "Pamphlets"
+      ],
+      "correct": 0,
+      "explanation": "Monographs are works on a single subject."
+    },
+    {
+      "id": 296,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "These resources appeal strictly to the sense of sight except:",
+      "options": [
+        "Graphic materials",
+        "Cartographic materials or maps",
+        "Objects",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All appeal to sight only."
+    },
+    {
+      "id": 297,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "These information resources combine the qualities of sight and sound appear in one media:",
+      "options": [
+        "Television",
+        "Graphics",
+        "Books and Radio",
+        "Microform"
+      ],
+      "correct": 0,
+      "explanation": "Television combines sight and sound."
+    },
+    {
+      "id": 298,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "What are the four steps involved in report writing?",
+      "options": [
+        "Plan, think, write and revise",
+        "Revise, plan, think, write",
+        "Think, plan, write and revise",
+        "Write, plan, revise and think"
+      ],
+      "correct": 2,
+      "explanation": "Report writing steps: Think, plan, write, revise."
+    },
+    {
+      "id": 299,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "What is an executive summary used for in a report?",
+      "options": [
+        "To grab the attention of the reader",
+        "To keep the summary brief",
+        "To discourage further reading of the main report",
+        "To reduce the number of the pages of the report"
+      ],
+      "correct": 0,
+      "explanation": "Executive summary grabs reader attention."
+    },
+    {
+      "id": 300,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The sections in a report are arranged in this order:",
+      "options": [
+        "Body of report, Introduction, title page, conclusion, table of contents",
+        "Table of contents, title page, conclusion, Introduction, body of report",
+        "Title page, abstract, introduction, body of report, conclusion, references",
+        "Title page, abstract, body of report, conclusion, references, introduction"
+      ],
+      "correct": 2,
+      "explanation": "This is the standard report structure."
+    },
+    {
+      "id": 301,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "In report writing, recommendations are based on:",
+      "options": [
+        "Findings",
+        "Conclusion",
+        "Introduction",
+        "Title page"
+      ],
+      "correct": 0,
+      "explanation": "Recommendations are based on findings."
+    },
+    {
+      "id": 302,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "In APA style, in-text citation consists of:",
+      "options": [
+        "Author and year of publication",
+        "Publisher and year of publication",
+        "Author and cost",
+        "Year of publication and publisher"
+      ],
+      "correct": 0,
+      "explanation": "APA in-text citation uses author and year."
+    },
+    {
+      "id": 303,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Each source listed in the reference list must be cited in the:",
+      "options": [
+        "Text",
+        "Table of contents",
+        "Abstract",
+        "Conclusion"
+      ],
+      "correct": 0,
+      "explanation": "All references must be cited in the text."
+    },
+    {
+      "id": 304,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Which of the following is the correct APA Reference list entry?",
+      "options": [
+        "Reese G. (2000). Database Programming with JDBC and Java. Beijing: O'Reilly Media",
+        "Reese G. Database Programming with JDBC and Java. Beijing: O'Reilly Media (2000)",
+        "Database Programming with JDBC and Java. Beijing: O'Reilly Media. Reese G. (2000)",
+        "Reese G. (2000). Beijing: O'Reilly Media. Database Programming with JDBC and Java"
+      ],
+      "correct": 0,
+      "explanation": "This follows APA format: Author (Year). Title. Place: Publisher."
+    },
+    {
+      "id": 305,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "In the University Library, one can use SLAM to identify all of the following except:",
+      "options": [
+        "The number of books on a specific subject",
+        "The availability of a particular title",
+        "The books published by a particular author",
+        "The librarian who classified the book"
+      ],
+      "correct": 3,
+      "explanation": "SLAM doesn't identify who classified the book."
+    },
+    {
+      "id": 306,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The least important factor to consider when evaluating an informational website for use in a research paper is:",
+      "options": [
+        "Authority",
+        "Accuracy",
+        "Currency",
+        "Font size"
+      ],
+      "correct": 3,
+      "explanation": "Font size is not a critical evaluation factor."
+    },
+    {
+      "id": 307,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the following is a primary source of information:",
+      "options": [
+        "Book",
+        "Reviews",
+        "Patents",
+        "Databases"
+      ],
+      "correct": 2,
+      "explanation": "Patents are primary sources."
+    },
+    {
+      "id": 308,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "An Act of parliament is an example of:",
+      "options": [
+        "Reference material",
+        "Monographs",
+        "Government publications",
+        "Serial publication"
+      ],
+      "correct": 2,
+      "explanation": "Acts of parliament are government publications."
+    },
+    {
+      "id": 309,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the following library materials is a primary source of information:",
+      "options": [
+        "Bibliographies",
+        "Scientific Journals",
+        "Abstracts",
+        "Indexes"
+      ],
+      "correct": 1,
+      "explanation": "Scientific journals contain primary research."
+    },
+    {
+      "id": 310,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Thesis and dissertations are _____ sources of information:",
+      "options": [
+        "Secondary",
+        "Tertiary",
+        "Primary",
+        "b and c"
+      ],
+      "correct": 2,
+      "explanation": "Theses and dissertations are primary sources."
+    },
+    {
+      "id": 311,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Education is not only an instrument of social change but viewed as:",
+      "options": [
+        "An investment in the national development",
+        "Schools and other institutions",
+        "Education in modern societies",
+        "Necessary for the health and shelter"
+      ],
+      "correct": 0,
+      "explanation": "Education is an investment in national development."
+    },
+    {
+      "id": 312,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Secondary information sources are:",
+      "options": [
+        "Created from primary materials interpreting original material",
+        "Photographs and drama",
+        "Created from articles in journals",
+        "From reviews and textbooks"
+      ],
+      "correct": 0,
+      "explanation": "Secondary sources interpret primary sources."
+    },
+    {
+      "id": 313,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The term study skill is used for:",
+      "options": [
+        "General approaches to learning skills for specific courses of study",
+        "Theoretical works on the subject",
+        "Retention of lists of information",
+        "Efficient note-taking"
+      ],
+      "correct": 0,
+      "explanation": "Study skills are approaches to learning."
+    },
+    {
+      "id": 314,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the following is the role of the library resources in education:",
+      "options": [
+        "Library enables the individual to obtain spiritual inspiration",
+        "Existing literacy institutions",
+        "Provide educators with access to relevant curriculum",
+        "All of the above"
+      ],
+      "correct": 2,
+      "explanation": "Libraries provide educators access to curriculum materials."
+    },
+    {
+      "id": 315,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Among other things, study skills include mnemonics which help in:",
+      "options": [
+        "Retention of information",
+        "Effective reading",
+        "Concentration techniques",
+        "All of the above"
+      ],
+      "correct": 0,
+      "explanation": "Mnemonics aid information retention."
+    },
+    {
+      "id": 316,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "GNS 103: Information Retrieval course is designed by university to achieve all of the following except:",
+      "options": [
+        "Make librarian out of the students",
+        "Inculcate information skills in the students",
+        "Teach students the importance of information",
+        "Develop research skills in students"
+      ],
+      "correct": 0,
+      "explanation": "The course aims to develop skills, not make librarians."
+    },
+    {
+      "id": 317,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The following are the features of books except:",
+      "options": [
+        "Chapter",
+        "Edition",
+        "Volume number",
+        "Preface"
+      ],
+      "correct": 2,
+      "explanation": "Volume number is for serials, not books."
+    },
+    {
+      "id": 318,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "A bulletin issued periodically to a group of defined individuals of a society, business or organization is known as:",
+      "options": [
+        "Newspaper",
+        "Newsletter",
+        "News item",
+        "Journals"
+      ],
+      "correct": 1,
+      "explanation": "Newsletters are issued to specific groups."
+    },
+    {
+      "id": 319,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Current Awareness Services include all the following except:",
+      "options": [
+        "Selective Dissemination of Information",
+        "Publication of Current Contents",
+        "New Arrivals Lists",
+        "Translation Services"
+      ],
+      "correct": 3,
+      "explanation": "Translation services are not current awareness services."
+    },
+    {
+      "id": 320,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "With advancing technologies, OPAC, MARC and others, library users can be in the world:",
+      "options": [
+        "No one",
+        "Any one",
+        "FUTA Students",
+        "Local"
+      ],
+      "correct": 1,
+      "explanation": "Anyone can access library resources online."
+    },
+    {
+      "id": 321,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Libraries found in primary and secondary schools are classified as:",
+      "options": [
+        "Academic Libraries",
+        "School Libraries",
+        "Schools' Libraries",
+        "Private Libraries"
+      ],
+      "correct": 1,
+      "explanation": "Primary and secondary schools have school libraries."
+    },
+    {
+      "id": 322,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Gazetteer can be located at which of these sections of the library:",
+      "options": [
+        "Serials Unit",
+        "General reading Room",
+        "Reference Unit",
+        "Government Documents"
+      ],
+      "correct": 3,
+      "explanation": "Gazetteers are often in government documents section."
+    },
+    {
+      "id": 323,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "In the Dewey Decimal Classification, 300 stands for:",
+      "options": [
+        "Technology",
+        "Languages",
+        "Social sciences",
+        "Generalities"
+      ],
+      "correct": 2,
+      "explanation": "300 represents Social Sciences in DDC."
+    },
+    {
+      "id": 324,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Names and addresses of women organizations in Nigeria can be found in:",
+      "options": [
+        "Dictionaries",
+        "Encyclopaedia",
+        "Directory",
+        "Travel guide"
+      ],
+      "correct": 2,
+      "explanation": "Directories list organizations and addresses."
+    },
+    {
+      "id": 325,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The age, qualifications and experience of Mohammad Buhari could best be found in:",
+      "options": [
+        "Who's Who",
+        "Directory",
+        "Gazetteer",
+        "Who was Who"
+      ],
+      "correct": 0,
+      "explanation": "Who's Who contains biographical information on living persons."
+    },
+    {
+      "id": 326,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Undergraduate project can be obtained from:",
+      "options": [
+        "Main Library",
+        "Document unit",
+        "General Reading Room",
+        "School Library"
+      ],
+      "correct": 1,
+      "explanation": "Undergraduate projects are in the documents unit."
+    },
+    {
+      "id": 327,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The prefix 'J' is a class mark that represents library materials under:",
+      "options": [
+        "Political science",
+        "Social science",
+        "Science",
+        "Military science"
+      ],
+      "correct": 0,
+      "explanation": "J represents Political Science in LC classification."
+    },
+    {
+      "id": 328,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Information materials on technology are classified under:",
+      "options": [
+        "S",
+        "T",
+        "Q",
+        "R"
+      ],
+      "correct": 1,
+      "explanation": "T represents Technology in LC classification."
+    },
+    {
+      "id": 329,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "A paper designed to cover a published book is called:",
+      "options": [
+        "Dust jacket",
+        "Paper cover",
+        "Fly leaf",
+        "Spine"
+      ],
+      "correct": 0,
+      "explanation": "Dust jacket covers a published book."
+    },
+    {
+      "id": 330,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the following is not a service performed in academic libraries:",
+      "options": [
+        "User education",
+        "Reprographic service",
+        "Bindery service",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explanation": "Bindery service may not be in all academic libraries."
+    },
+    {
+      "id": 331,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Another name for information literacy is:",
+      "options": [
+        "Information retrieval",
+        "Information science",
+        "Library science",
+        "Information technology"
+      ],
+      "correct": 0,
+      "explanation": "Information literacy is also called information retrieval."
+    },
+    {
+      "id": 332,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The following are aspects of information literacy except:",
+      "options": [
+        "Media literacy",
+        "Computer literacy",
+        "Numerical literacy",
+        "Print sources of information"
+      ],
+      "correct": 3,
+      "explanation": "Print sources are formats, not an aspect of literacy."
+    },
+    {
+      "id": 333,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "One of the following is a bibliographic part of a book:",
+      "options": [
+        "Title",
+        "Text",
+        "Binding",
+        "Dust jacket"
+      ],
+      "correct": 0,
+      "explanation": "Title is a bibliographic element."
+    },
+    {
+      "id": 334,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "_____ is a physical part of a book:",
+      "options": [
+        "Table of contents",
+        "Half title page",
+        "Verso page",
+        "Book Cover"
+      ],
+      "correct": 3,
+      "explanation": "Book cover is a physical part."
+    },
+    {
+      "id": 335,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "Another term for real object is:",
+      "options": [
+        "Realia",
+        "Objects",
+        "Artifacts",
+        "Models"
+      ],
+      "correct": 0,
+      "explanation": "Realia are real objects."
+    },
+    {
+      "id": 336,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "An information resource containing list of names of residents or organisations in a place is known as:",
+      "options": [
+        "Directory",
+        "Gazetteer",
+        "Yearbook",
+        "Handbook"
+      ],
+      "correct": 0,
+      "explanation": "Directories list names and addresses."
+    },
+    {
+      "id": 337,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "An information resource published in successive parts and contains information is called a:",
+      "options": [
+        "Serial",
+        "Periodical",
+        "Journal",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All terms refer to publications in successive parts."
+    },
+    {
+      "id": 338,
+      "topic": "report_writing",
+      "topicName": "Report Writing",
+      "question": "The Porters' Unit among other things:",
+      "options": [
+        "See to the security of all library materials",
+        "Check people as they come into the library and go out of the library",
+        "Maintain order in the library",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Porters perform all these security functions."
     }
   ]
 }

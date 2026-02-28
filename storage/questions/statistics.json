@@ -2,703 +2,4469 @@
   "STA111": [
     {
       "id": 1,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "Statistics is the science of:",
-      "options": ["Collecting data", "Analyzing data", "Interpreting data", "All of the above"],
+      "options": [
+        "Collecting data",
+        "Analyzing data",
+        "Interpreting data",
+        "All of the above"
+      ],
       "correct": 3,
-      "explanation": "Statistics involves collection, analysis, and interpretation of data"
+      "explanation": "Statistics involves collection, analysis, and interpretation of data."
     },
     {
       "id": 2,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "Data that can be counted is called:",
-      "options": ["Qualitative data", "Quantitative data", "Continuous data", "Categorical data"],
+      "options": [
+        "Qualitative data",
+        "Quantitative data",
+        "Continuous data",
+        "Categorical data"
+      ],
       "correct": 1,
-      "explanation": "Quantitative data represents amounts or counts"
+      "explanation": "Quantitative data represents amounts or counts."
     },
     {
       "id": 3,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "Which of the following is an example of qualitative data?",
-      "options": ["Height of students", "Weight of babies", "Eye color of students", "Temperature in degrees"],
+      "options": [
+        "Height of students",
+        "Weight of babies",
+        "Eye color of students",
+        "Temperature in degrees"
+      ],
       "correct": 2,
-      "explanation": "Eye color is a category, not a numerical measurement"
+      "explanation": "Eye color is a category, not a numerical measurement."
     },
     {
       "id": 4,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "Primary data is collected:",
-      "options": ["By someone else", "From published sources", "First-hand by the investigator", "From the internet"],
+      "options": [
+        "By someone else",
+        "From published sources",
+        "First-hand by the investigator",
+        "From the internet"
+      ],
       "correct": 2,
-      "explanation": "Primary data is collected directly from the source"
+      "explanation": "Primary data is collected directly from the source."
     },
     {
       "id": 5,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "Secondary data refers to data that:",
-      "options": ["Has been collected by others", "Is less important", "Is numerical only", "Is always accurate"],
+      "options": [
+        "Has been collected by others",
+        "Is less important",
+        "Is numerical only",
+        "Is always accurate"
+      ],
       "correct": 0,
-      "explanation": "Secondary data is already collected and published by others"
+      "explanation": "Secondary data is already collected and published by others."
     },
     {
       "id": 6,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "A population in statistics refers to:",
-      "options": ["A large group of people", "The entire group of interest", "A sample of the group", "A subset of the group"],
+      "options": [
+        "A large group of people",
+        "The entire group of interest",
+        "A sample of the group",
+        "A subset of the group"
+      ],
       "correct": 1,
-      "explanation": "Population includes all members of the group being studied"
+      "explanation": "Population includes all members of the group being studied."
     },
     {
       "id": 7,
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
       "question": "A sample is:",
-      "options": ["The entire population", "A subset of the population", "Always representative", "Larger than the population"],
+      "options": [
+        "The entire population",
+        "A subset of the population",
+        "Always representative",
+        "Larger than the population"
+      ],
       "correct": 1,
-      "explanation": "A sample is a part of the population selected for study"
+      "explanation": "A sample is a part of the population selected for study."
     },
     {
       "id": 8,
-      "question": "Which sampling method gives every member an equal chance?",
-      "options": ["Stratified sampling", "Cluster sampling", "Simple random sampling", "Systematic sampling"],
-      "correct": 2,
-      "explanation": "Simple random sampling ensures equal probability of selection"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A parameter is a numerical value that describes:",
+      "options": [
+        "A sample",
+        "A population",
+        "A variable",
+        "A statistic"
+      ],
+      "correct": 1,
+      "explanation": "Parameter describes a characteristic of a population."
     },
     {
       "id": 9,
-      "question": "In stratified sampling, the population is divided into:",
-      "options": ["Clusters", "Strata", "Groups of equal size", "Random samples"],
-      "correct": 1,
-      "explanation": "Strata are homogeneous subgroups"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A statistic is a numerical value that describes:",
+      "options": [
+        "A sample",
+        "A population",
+        "A parameter",
+        "A census"
+      ],
+      "correct": 0,
+      "explanation": "A statistic describes a characteristic of a sample."
     },
     {
       "id": 10,
-      "question": "Convenience sampling is:",
-      "options": ["Always reliable", "Biased", "Random", "The best method"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A census collects data from:",
+      "options": [
+        "A sample",
+        "Every member of the population",
+        "Only males",
+        "Only females"
+      ],
       "correct": 1,
-      "explanation": "Convenience sampling often introduces bias"
+      "explanation": "A census includes every member of the population."
     },
     {
       "id": 11,
-      "question": "A frequency distribution shows:",
-      "options": ["How often each value occurs", "The total of all values", "The average value", "The middle value"],
-      "correct": 0,
-      "explanation": "Frequency distribution displays counts of each value or class"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Descriptive statistics involves:",
+      "options": [
+        "Drawing conclusions about populations",
+        "Organizing and summarizing data",
+        "Testing hypotheses",
+        "Making predictions"
+      ],
+      "correct": 1,
+      "explanation": "Descriptive statistics organizes and summarizes data."
     },
     {
       "id": 12,
-      "question": "Class interval refers to:",
-      "options": ["The number of classes", "The width of each class", "The midpoint of class", "The frequency of class"],
-      "correct": 1,
-      "explanation": "Class interval is the range covered by each class"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Inferential statistics involves:",
+      "options": [
+        "Drawing conclusions about populations from samples",
+        "Creating tables and charts",
+        "Calculating mean and median",
+        "Collecting data"
+      ],
+      "correct": 0,
+      "explanation": "Inferential statistics draws conclusions about populations based on samples."
     },
     {
       "id": 13,
-      "question": "Class mark is the:",
-      "options": ["Lower class limit", "Upper class limit", "Midpoint of class interval", "Frequency of class"],
-      "correct": 2,
-      "explanation": "Class mark = (lower limit + upper limit)/2"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A variable is:",
+      "options": [
+        "A constant value",
+        "A characteristic that can assume different values",
+        "A type of data",
+        "A statistical measure"
+      ],
+      "correct": 1,
+      "explanation": "A variable can take different values for different individuals."
     },
     {
       "id": 14,
-      "question": "A histogram uses:",
-      "options": ["Bars with gaps", "Bars without gaps", "Pie slices", "Line segments"],
-      "correct": 1,
-      "explanation": "Histogram bars touch each other for continuous data"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which level of measurement has a true zero point?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 3,
+      "explanation": "Ratio scale has a true zero point (e.g., height, weight)."
     },
     {
       "id": 15,
-      "question": "A bar chart is suitable for:",
-      "options": ["Continuous data", "Discrete or categorical data", "Time series", "Cumulative frequencies"],
-      "correct": 1,
-      "explanation": "Bar charts represent discrete categories"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Temperature in Celsius is an example of which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 2,
+      "explanation": "Celsius has equal intervals but no true zero (0°C doesn't mean no temperature)."
     },
     {
       "id": 16,
-      "question": "A pie chart shows:",
-      "options": ["Trends over time", "Proportions of a whole", "Frequency distribution", "Correlation"],
-      "correct": 1,
-      "explanation": "Pie chart displays parts of a whole (percentages)"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Gender (male/female) is an example of which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 0,
+      "explanation": "Gender is nominal - categories with no order."
     },
     {
       "id": 17,
-      "question": "Frequency polygon is drawn by joining:",
-      "options": ["Top of bars", "Class marks with frequencies", "Cumulative frequencies", "Midpoints of histogram bars"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Educational level (primary, secondary, tertiary) is an example of which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
       "correct": 1,
-      "explanation": "Points are class marks (midpoints) against frequencies"
+      "explanation": "Educational level has natural order but unequal intervals."
     },
     {
       "id": 18,
-      "question": "Ogive is a graph of:",
-      "options": ["Frequency distribution", "Cumulative frequency distribution", "Relative frequency", "Percentage distribution"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A random variable that can take a countable number of distinct values is called:",
+      "options": [
+        "Continuous",
+        "Discrete",
+        "Categorical",
+        "Ordinal"
+      ],
       "correct": 1,
-      "explanation": "Ogive shows cumulative frequencies"
+      "explanation": "Discrete random variables have countable values."
     },
     {
       "id": 19,
-      "question": "Stem-and-leaf display preserves:",
-      "options": ["Only the shape", "Only the summary", "Original data values", "Only frequencies"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which of the following is an example of a continuous random variable?",
+      "options": [
+        "Number of students in a class",
+        "Number of cars in a parking lot",
+        "Height of students",
+        "Number of defective items"
+      ],
       "correct": 2,
-      "explanation": "Stem-and-leaf shows all individual data points"
+      "explanation": "Height can take any value within a range."
     },
     {
       "id": 20,
-      "question": "A frequency table with too many classes may:",
-      "options": ["Simplify data", "Hide patterns", "Show too much detail", "Be more accurate"],
-      "correct": 1,
-      "explanation": "Too many classes can obscure the overall pattern"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which of the following is an example of a discrete random variable?",
+      "options": [
+        "Weight of babies",
+        "Temperature",
+        "Number of children in a family",
+        "Time taken to run a race"
+      ],
+      "correct": 2,
+      "explanation": "Number of children is countable and discrete."
     },
     {
       "id": 21,
-      "question": "The arithmetic mean of 5, 10, 15, 20, 25 is:",
-      "options": ["10", "12", "15", "18"],
-      "correct": 2,
-      "explanation": "Sum = 75, divided by 5 = 15"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Data collected through questionnaires are examples of:",
+      "options": [
+        "Primary data",
+        "Secondary data",
+        "Published data",
+        "Census data"
+      ],
+      "correct": 0,
+      "explanation": "Questionnaires collect primary data directly from respondents."
     },
     {
       "id": 22,
-      "question": "Median of 3, 7, 9, 12, 15 is:",
-      "options": ["7", "9", "12", "10"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Data obtained from the National Bureau of Statistics are examples of:",
+      "options": [
+        "Primary data",
+        "Secondary data",
+        "Experimental data",
+        "Survey data"
+      ],
       "correct": 1,
-      "explanation": "Middle value when arranged: 9"
+      "explanation": "Published statistics are secondary data."
     },
     {
       "id": 23,
-      "question": "Mode of 2, 3, 3, 4, 5, 5, 5, 6 is:",
-      "options": ["3", "4", "5", "6"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The method of data collection where the investigator watches and records without interacting is called:",
+      "options": [
+        "Interviewing",
+        "Questionnaire",
+        "Direct observation",
+        "Experiment"
+      ],
       "correct": 2,
-      "explanation": "5 appears most frequently (3 times)"
+      "explanation": "Direct observation involves watching and recording without interaction."
     },
     {
       "id": 24,
-      "question": "For a symmetrical distribution, mean, median, and mode are:",
-      "options": ["Different", "Equal", "Mean > median", "Mode > mean"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The process of selecting a subset from a population is called:",
+      "options": [
+        "Census",
+        "Sampling",
+        "Tabulation",
+        "Classification"
+      ],
       "correct": 1,
-      "explanation": "In symmetrical distribution, all three are equal"
+      "explanation": "Sampling selects a subset from a population."
     },
     {
       "id": 25,
-      "question": "For a positively skewed distribution:",
-      "options": ["Mean > Median > Mode", "Mode > Median > Mean", "Mean = Median = Mode", "Median > Mean > Mode"],
-      "correct": 0,
-      "explanation": "Positive skew has tail on right: mean > median > mode"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "In statistics, the plural sense refers to:",
+      "options": [
+        "Statistical methods",
+        "Numerical facts",
+        "Data analysis",
+        "Probability"
+      ],
+      "correct": 1,
+      "explanation": "In plural sense, statistics means numerical facts or data."
     },
     {
       "id": 26,
-      "question": "The weighted mean is used when:",
-      "options": ["All values equal", "Values have different importance", "Data is skewed", "Sample is small"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "In statistics, the singular sense refers to:",
+      "options": [
+        "Numerical facts",
+        "Statistical methods",
+        "Data collection",
+        "Population figures"
+      ],
       "correct": 1,
-      "explanation": "Weights reflect relative importance of values"
+      "explanation": "In singular sense, statistics means statistical methods."
     },
     {
       "id": 27,
-      "question": "Geometric mean is useful for:",
-      "options": ["Growth rates", "Normal distributions", "Categorical data", "Outliers"],
-      "correct": 0,
-      "explanation": "Geometric mean is used for rates of change and ratios"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which of the following is NOT an application of statistics?",
+      "options": [
+        "Business forecasting",
+        "Medical research",
+        "Literary criticism",
+        "Quality control"
+      ],
+      "correct": 2,
+      "explanation": "Literary criticism rarely uses statistical methods."
     },
     {
       "id": 28,
-      "question": "Harmonic mean is appropriate for:",
-      "options": ["Averages of rates", "Averages of prices", "Averages of temperatures", "All data types"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main purpose of statistics is to:",
+      "options": [
+        "Make decisions under uncertainty",
+        "Prove theories",
+        "Collect all possible data",
+        "Eliminate errors"
+      ],
       "correct": 0,
-      "explanation": "Harmonic mean is used for rates like speed"
+      "explanation": "Statistics helps make informed decisions under uncertainty."
     },
     {
       "id": 29,
-      "question": "If each value is increased by 5, the mean:",
-      "options": ["Increases by 5", "Decreases by 5", "Remains same", "Multiplied by 5"],
-      "correct": 0,
-      "explanation": "Adding constant to all values adds constant to mean"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The nominal scale of measurement deals with:",
+      "options": [
+        "Ordered categories",
+        "Equal intervals",
+        "Named categories only",
+        "True zero point"
+      ],
+      "correct": 2,
+      "explanation": "Nominal scale only names categories with no order."
     },
     {
       "id": 30,
-      "question": "If each value is multiplied by 3, the mean:",
-      "options": ["Increases by 3", "Multiplied by 3", "Remains same", "Squared"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The ordinal scale of measurement deals with:",
+      "options": [
+        "Named categories only",
+        "Ordered categories",
+        "Equal intervals",
+        "True zero"
+      ],
       "correct": 1,
-      "explanation": "Multiplying all values multiplies the mean"
+      "explanation": "Ordinal scale has ordered categories."
     },
     {
       "id": 31,
-      "question": "Quartiles divide data into how many parts?",
-      "options": ["2", "3", "4", "5"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The interval scale of measurement has:",
+      "options": [
+        "Named categories only",
+        "Ordered categories",
+        "Equal intervals but no true zero",
+        "True zero point"
+      ],
       "correct": 2,
-      "explanation": "Quartiles divide data into 4 equal parts"
+      "explanation": "Interval scale has equal intervals but no true zero."
     },
     {
       "id": 32,
-      "question": "The first quartile (Q1) corresponds to:",
-      "options": ["25th percentile", "50th percentile", "75th percentile", "100th percentile"],
-      "correct": 0,
-      "explanation": "Q1 is the 25th percentile"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The ratio scale of measurement has:",
+      "options": [
+        "Named categories only",
+        "Ordered categories",
+        "Equal intervals",
+        "True zero point"
+      ],
+      "correct": 3,
+      "explanation": "Ratio scale has a true zero point."
     },
     {
       "id": 33,
-      "question": "The median is the:",
-      "options": ["25th percentile", "50th percentile", "75th percentile", "100th percentile"],
-      "correct": 1,
-      "explanation": "Median is the 50th percentile"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "IQ scores are measured on which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 2,
+      "explanation": "IQ scores have equal intervals but no true zero."
     },
     {
       "id": 34,
-      "question": "The third quartile (Q3) corresponds to:",
-      "options": ["25th percentile", "50th percentile", "75th percentile", "100th percentile"],
-      "correct": 2,
-      "explanation": "Q3 is the 75th percentile"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Marital status (single, married, divorced) is measured on which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 0,
+      "explanation": "Marital status is nominal - categories with no order."
     },
     {
       "id": 35,
-      "question": "Interquartile range (IQR) is:",
-      "options": ["Q3 - Q1", "Q2 - Q1", "Q3 - Q2", "Max - Min"],
-      "correct": 0,
-      "explanation": "IQR = Q3 - Q1, measures middle 50% spread"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Letter grades (A, B, C, D, F) are measured on which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 1,
+      "explanation": "Letter grades have order but unequal intervals."
     },
     {
       "id": 36,
-      "question": "Deciles divide data into how many parts?",
-      "options": ["4", "5", "10", "100"],
-      "correct": 2,
-      "explanation": "Deciles divide into 10 equal parts"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Income in naira is measured on which scale?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 3,
+      "explanation": "Income has a true zero point (zero income means no money)."
     },
     {
       "id": 37,
-      "question": "Percentiles divide data into how many parts?",
-      "options": ["10", "25", "50", "100"],
-      "correct": 3,
-      "explanation": "Percentiles divide into 100 equal parts"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A random variable is:",
+      "options": [
+        "A fixed number",
+        "A variable whose value is determined by chance",
+        "A constant",
+        "A parameter"
+      ],
+      "correct": 1,
+      "explanation": "A random variable's value depends on random outcomes."
     },
     {
       "id": 38,
-      "question": "The 90th percentile means:",
-      "options": ["90% of data is below this value", "10% of data is below", "90% of data is above", "None of these"],
-      "correct": 0,
-      "explanation": "90th percentile has 90% of data below it"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which of the following is NOT a method of primary data collection?",
+      "options": [
+        "Questionnaire",
+        "Interview",
+        "Direct observation",
+        "Published report"
+      ],
+      "correct": 3,
+      "explanation": "Published reports are secondary data sources."
     },
     {
       "id": 39,
-      "question": "Range is defined as:",
-      "options": ["Largest value - Smallest value", "Average of extremes", "Sum of all values", "Middle value"],
-      "correct": 0,
-      "explanation": "Range = Maximum - Minimum"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main advantage of primary data is:",
+      "options": [
+        "Low cost",
+        "Quick to collect",
+        "Collected for specific purpose",
+        "Already available"
+      ],
+      "correct": 2,
+      "explanation": "Primary data is collected for a specific research purpose."
     },
     {
       "id": 40,
-      "question": "Variance measures:",
-      "options": ["Central tendency", "Spread around the mean", "Shape of distribution", "Peakedness"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main advantage of secondary data is:",
+      "options": [
+        "More accurate",
+        "Less expensive and time-saving",
+        "Always up-to-date",
+        "Collected for specific purpose"
+      ],
       "correct": 1,
-      "explanation": "Variance measures average squared deviation from mean"
+      "explanation": "Secondary data saves time and money as it already exists."
     },
     {
       "id": 41,
-      "question": "Standard deviation is the:",
-      "options": ["Square of variance", "Square root of variance", "Reciprocal of variance", "Mean of squared deviations"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "In an interview method of data collection, the interviewer:",
+      "options": [
+        "Sends questions by mail",
+        "Asks questions face-to-face",
+        "Observes from a distance",
+        "Collects published data"
+      ],
       "correct": 1,
-      "explanation": "Standard deviation = √variance"
+      "explanation": "Interview involves face-to-face questioning."
     },
     {
       "id": 42,
-      "question": "If all values are identical, variance is:",
-      "options": ["1", "0", "Infinite", "Undefined"],
-      "correct": 1,
-      "explanation": "No variation means variance = 0"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A questionnaire is most effective when:",
+      "options": [
+        "Questions are complex",
+        "Respondents are illiterate",
+        "Questions are clear and simple",
+        "It is very long"
+      ],
+      "correct": 2,
+      "explanation": "Clear and simple questions yield better responses."
     },
     {
       "id": 43,
-      "question": "Coefficient of variation is:",
-      "options": ["Standard deviation/Mean × 100%", "Mean/Standard deviation", "Variance/Mean", "Range/Mean"],
-      "correct": 0,
-      "explanation": "CV = (σ/μ) × 100% for relative variability"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The first step in any statistical investigation is:",
+      "options": [
+        "Data analysis",
+        "Data collection",
+        "Defining the problem",
+        "Drawing conclusions"
+      ],
+      "correct": 2,
+      "explanation": "Clearly defining the problem comes first."
     },
     {
       "id": 44,
-      "question": "For data 2, 4, 6, 8, 10, the variance is:",
-      "options": ["8", "10", "2.83", "40"],
-      "correct": 0,
-      "explanation": "Mean=6, deviations squared: 16+4+0+4+16=40, variance=40/5=8"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The last step in a statistical investigation is:",
+      "options": [
+        "Data collection",
+        "Data analysis",
+        "Drawing conclusions",
+        "Problem definition"
+      ],
+      "correct": 2,
+      "explanation": "Drawing conclusions is the final step."
     },
     {
       "id": 45,
-      "question": "Standard deviation of above data is approximately:",
-      "options": ["2.83", "3.16", "2", "4"],
-      "correct": 0,
-      "explanation": "√8 ≈ 2.83"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which of the following is NOT a characteristic of a good questionnaire?",
+      "options": [
+        "Clear questions",
+        "Leading questions",
+        "Logical order",
+        "Brief and concise"
+      ],
+      "correct": 1,
+      "explanation": "Leading questions bias responses and should be avoided."
     },
     {
       "id": 46,
-      "question": "If variance is 16, standard deviation is:",
-      "options": ["4", "8", "256", "2"],
-      "correct": 0,
-      "explanation": "σ = √16 = 4"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Observation method is most suitable for studying:",
+      "options": [
+        "Opinions",
+        "Attitudes",
+        "Behavior",
+        "Beliefs"
+      ],
+      "correct": 2,
+      "explanation": "Observation is good for studying actual behavior."
     },
     {
       "id": 47,
-      "question": "Adding a constant to all values:",
-      "options": ["Changes variance", "Doesn't change variance", "Multiplies variance", "Squares variance"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Government publications like census reports are examples of:",
+      "options": [
+        "Primary data",
+        "Secondary data",
+        "Experimental data",
+        "Survey data"
+      ],
       "correct": 1,
-      "explanation": "Variance is unaffected by adding constant"
+      "explanation": "Government publications are secondary data sources."
     },
     {
       "id": 48,
-      "question": "Multiplying all values by constant k:",
-      "options": ["Variance multiplied by k", "Variance multiplied by k²", "Variance unchanged", "Variance divided by k"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Data collected from an experiment is called:",
+      "options": [
+        "Observational data",
+        "Experimental data",
+        "Secondary data",
+        "Published data"
+      ],
       "correct": 1,
-      "explanation": "Var(kX) = k²Var(X)"
+      "explanation": "Experimental data comes from controlled experiments."
     },
     {
       "id": 49,
-      "question": "Mean deviation is:",
-      "options": ["Average of absolute deviations", "Average of squared deviations", "Square root of variance", "Range/2"],
-      "correct": 0,
-      "explanation": "Mean deviation = Σ|x - μ|/n"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A variable that can be measured numerically is called:",
+      "options": [
+        "Qualitative variable",
+        "Quantitative variable",
+        "Categorical variable",
+        "Ordinal variable"
+      ],
+      "correct": 1,
+      "explanation": "Quantitative variables have numerical values."
     },
     {
       "id": 50,
-      "question": "Which measure is most affected by outliers?",
-      "options": ["Median", "Mode", "Mean", "Interquartile range"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A variable that cannot be measured numerically is called:",
+      "options": [
+        "Quantitative variable",
+        "Continuous variable",
+        "Qualitative variable",
+        "Discrete variable"
+      ],
       "correct": 2,
-      "explanation": "Mean is sensitive to extreme values"
+      "explanation": "Qualitative variables are categorical, not numerical."
     },
     {
       "id": 51,
-      "question": "Which measure is not affected by outliers?",
-      "options": ["Mean", "Range", "Variance", "Median"],
-      "correct": 3,
-      "explanation": "Median is resistant to outliers"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The number of children in a family is an example of:",
+      "options": [
+        "Continuous variable",
+        "Discrete variable",
+        "Qualitative variable",
+        "Ordinal variable"
+      ],
+      "correct": 1,
+      "explanation": "Number of children is countable and discrete."
     },
     {
       "id": 52,
-      "question": "Skewness measures:",
-      "options": ["Spread of data", "Asymmetry of distribution", "Peakedness", "Central value"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The weight of a newborn baby is an example of:",
+      "options": [
+        "Discrete variable",
+        "Continuous variable",
+        "Qualitative variable",
+        "Nominal variable"
+      ],
       "correct": 1,
-      "explanation": "Skewness indicates lack of symmetry"
+      "explanation": "Weight can take any value within a range."
     },
     {
       "id": 53,
-      "question": "Kurtosis measures:",
-      "options": ["Asymmetry", "Spread", "Peakedness of distribution", "Central tendency"],
-      "correct": 2,
-      "explanation": "Kurtosis describes tail weight and peak sharpness"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Statistics is important for:",
+      "options": [
+        "Decision making",
+        "Predicting future trends",
+        "Comparing groups",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Statistics helps in all these areas."
     },
     {
       "id": 54,
-      "question": "A distribution with kurtosis > 3 is:",
-      "options": ["Mesokurtic", "Leptokurtic", "Platykurtic", "Normal"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main difference between primary and secondary data is:",
+      "options": [
+        "Accuracy",
+        "Source of collection",
+        "Cost",
+        "Time of collection"
+      ],
       "correct": 1,
-      "explanation": "Leptokurtic has heavier tails and sharper peak"
+      "explanation": "Primary data is collected by the investigator; secondary data is from other sources."
     },
     {
       "id": 55,
-      "question": "Normal distribution has kurtosis:",
-      "options": ["0", "1", "2", "3"],
-      "correct": 3,
-      "explanation": "Normal distribution has kurtosis = 3 (mesokurtic)"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A disadvantage of primary data is:",
+      "options": [
+        "It may be outdated",
+        "It is expensive and time-consuming",
+        "It may not suit the purpose",
+        "It is difficult to access"
+      ],
+      "correct": 1,
+      "explanation": "Primary data collection is often costly and takes time."
     },
     {
       "id": 56,
-      "question": "The mean of first 10 natural numbers is:",
-      "options": ["5", "5.5", "6", "4.5"],
-      "correct": 1,
-      "explanation": "Sum = 55, divided by 10 = 5.5"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A disadvantage of secondary data is:",
+      "options": [
+        "It is expensive",
+        "It takes too long to collect",
+        "It may not fit the research purpose",
+        "It requires special training"
+      ],
+      "correct": 2,
+      "explanation": "Secondary data may not exactly match the research needs."
     },
     {
       "id": 57,
-      "question": "Median of first 10 natural numbers is:",
-      "options": ["5", "5.5", "6", "4.5"],
-      "correct": 1,
-      "explanation": "Average of 5th and 6th: (5+6)/2 = 5.5"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The term 'statistics' in its plural sense was first used by:",
+      "options": [
+        "R.A. Fisher",
+        "Karl Pearson",
+        "Gottfried Achenwall",
+        "William Playfair"
+      ],
+      "correct": 2,
+      "explanation": "Gottfried Achenwall first used the term 'statistics'."
     },
     {
       "id": 58,
-      "question": "If mode = 25 and mean = 20, the distribution is:",
-      "options": ["Symmetric", "Positively skewed", "Negatively skewed", "Normal"],
-      "correct": 2,
-      "explanation": "Mean < Mode indicates negative skew"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The word 'statistics' is derived from the Latin word:",
+      "options": [
+        "Status",
+        "Statisticum",
+        "Statis",
+        "Statio"
+      ],
+      "correct": 0,
+      "explanation": "Statistics comes from the Latin word 'status' meaning state."
     },
     {
       "id": 59,
-      "question": "If mean > median, distribution is:",
-      "options": ["Symmetric", "Positively skewed", "Negatively skewed", "Bimodal"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The Italian word 'statista' means:",
+      "options": [
+        "Statistician",
+        "Statesman",
+        "Scientist",
+        "Mathematician"
+      ],
       "correct": 1,
-      "explanation": "Mean > Median indicates positive skew"
+      "explanation": "'Statista' means statesman in Italian."
     },
     {
       "id": 60,
-      "question": "The sum of deviations from mean is always:",
-      "options": ["Positive", "Negative", "Zero", "One"],
-      "correct": 2,
-      "explanation": "Σ(x - μ) = 0"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Statistics deals with:",
+      "options": [
+        "Certainty",
+        "Uncertainty",
+        "Absolute truth",
+        "Exact predictions"
+      ],
+      "correct": 1,
+      "explanation": "Statistics deals with uncertainty and probability."
     },
     {
       "id": 61,
-      "question": "For a frequency distribution, the mean is:",
-      "options": ["Σfx/Σf", "Σf/Σx", "Σfx × Σf", "Σx/n"],
-      "correct": 0,
-      "explanation": "Weighted average using frequencies as weights"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A complete enumeration of all items in a population is called:",
+      "options": [
+        "Sample",
+        "Census",
+        "Survey",
+        "Experiment"
+      ],
+      "correct": 1,
+      "explanation": "A census covers every member of the population."
     },
     {
       "id": 62,
-      "question": "In grouped data, the assumed mean method is used to:",
-      "options": ["Find exact mean", "Simplify calculations", "Find median", "Find mode"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A partial enumeration of items from a population is called:",
+      "options": [
+        "Census",
+        "Sample",
+        "Complete count",
+        "Full coverage"
+      ],
       "correct": 1,
-      "explanation": "Step deviation method simplifies computation"
+      "explanation": "A sample is a subset of the population."
     },
     {
       "id": 63,
-      "question": "The median of grouped data is found using:",
-      "options": ["Interpolation formula", "Direct observation", "Average of extremes", "Midpoint of modal class"],
-      "correct": 0,
-      "explanation": "Median = L + [(n/2 - cf)/f] × h"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Which of the following is NOT a method of data collection?",
+      "options": [
+        "Interview",
+        "Questionnaire",
+        "Observation",
+        "Hypothesis testing"
+      ],
+      "correct": 3,
+      "explanation": "Hypothesis testing is analysis, not collection."
     },
     {
       "id": 64,
-      "question": "The mode of grouped data is found using:",
-      "options": ["Modal class formula", "Average of all classes", "Median class", "Any class"],
-      "correct": 0,
-      "explanation": "Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main purpose of data collection is to:",
+      "options": [
+        "Store information",
+        "Answer research questions",
+        "Create charts",
+        "Calculate averages"
+      ],
+      "correct": 1,
+      "explanation": "Data collection aims to answer research questions."
     },
     {
       "id": 65,
-      "question": "If class intervals are unequal, for comparison we use:",
-      "options": ["Frequency", "Cumulative frequency", "Frequency density", "Relative frequency"],
-      "correct": 2,
-      "explanation": "Frequency density = frequency/class width"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Qualitative data can be measured on which scales?",
+      "options": [
+        "Nominal and ordinal",
+        "Interval and ratio",
+        "All scales",
+        "Only ratio"
+      ],
+      "correct": 0,
+      "explanation": "Qualitative data uses nominal or ordinal scales."
     },
     {
       "id": 66,
-      "question": "Relative frequency is:",
-      "options": ["Frequency/total", "Frequency × total", "Class width/frequency", "Cumulative frequency"],
-      "correct": 0,
-      "explanation": "Relative frequency = f/Σf"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Quantitative data can be measured on which scales?",
+      "options": [
+        "Nominal and ordinal",
+        "Interval and ratio",
+        "All scales",
+        "Only nominal"
+      ],
+      "correct": 1,
+      "explanation": "Quantitative data uses interval or ratio scales."
     },
     {
       "id": 67,
-      "question": "Cumulative frequency at a point is:",
-      "options": ["Sum of all frequencies", "Sum of frequencies up to that point", "Frequency at that point", "Total/2"],
-      "correct": 1,
-      "explanation": "Cumulative frequency adds frequencies progressively"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "In which scale of measurement is subtraction meaningful but division not?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 2,
+      "explanation": "In interval scale, subtraction is meaningful but ratios are not."
     },
     {
       "id": 68,
-      "question": "Less than ogive is plotted using:",
-      "options": ["Upper limits and cumulative frequencies", "Lower limits and cumulative frequencies", "Midpoints and frequencies", "Class marks"],
-      "correct": 0,
-      "explanation": "Less than ogive uses upper class boundaries"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "In which scale of measurement are all arithmetic operations meaningful?",
+      "options": [
+        "Nominal",
+        "Ordinal",
+        "Interval",
+        "Ratio"
+      ],
+      "correct": 3,
+      "explanation": "Ratio scale allows all arithmetic operations due to true zero."
     },
     {
       "id": 69,
-      "question": "More than ogive is plotted using:",
-      "options": ["Upper limits", "Lower limits", "Midpoints", "Any limits"],
-      "correct": 1,
-      "explanation": "More than ogive uses lower class boundaries"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main limitation of statistics is that:",
+      "options": [
+        "It deals only with aggregates",
+        "It is always accurate",
+        "It applies to individuals",
+        "It never makes mistakes"
+      ],
+      "correct": 0,
+      "explanation": "Statistics deals with groups, not individuals."
     },
     {
       "id": 70,
-      "question": "The point where ogives intersect gives:",
-      "options": ["Mean", "Median", "Mode", "Range"],
-      "correct": 1,
-      "explanation": "Intersection of less than and more than ogives gives median"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Statistics can be misused by:",
+      "options": [
+        "Presenting data honestly",
+        "Using appropriate methods",
+        "Omitting relevant data",
+        "Proper sampling"
+      ],
+      "correct": 2,
+      "explanation": "Omitting relevant data is a form of misuse."
     },
     {
       "id": 71,
-      "question": "In a symmetrical distribution, Q3 - Q2 = Q2 - Q1. This indicates:",
-      "options": ["No skewness", "Positive skew", "Negative skew", "Bimodal"],
-      "correct": 0,
-      "explanation": "Equal quartile deviations indicate symmetry"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A random variable is called continuous if it can take:",
+      "options": [
+        "Only integer values",
+        "Any value in an interval",
+        "Only two values",
+        "Countable values"
+      ],
+      "correct": 1,
+      "explanation": "Continuous variables can take any value within a range."
     },
     {
       "id": 72,
-      "question": "Bowley's coefficient of skewness is based on:",
-      "options": ["Mean and mode", "Mean and median", "Quartiles", "Moments"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "A random variable is called discrete if it can take:",
+      "options": [
+        "Only integer values",
+        "Any value in an interval",
+        "Only countable values",
+        "Infinite values"
+      ],
       "correct": 2,
-      "explanation": "Bowley's skewness = (Q3 + Q1 - 2Q2)/(Q3 - Q1)"
+      "explanation": "Discrete variables take countable values."
     },
     {
       "id": 73,
-      "question": "Karl Pearson's coefficient of skewness is:",
-      "options": ["(Mean - Mode)/SD", "(Mean - Median)/SD", "(Q3 - Q1)/2", "Variance/Mean"],
-      "correct": 0,
-      "explanation": "Pearson's skewness = 3(Mean - Median)/SD also works"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The method of data collection where the investigator asks questions face-to-face is called:",
+      "options": [
+        "Questionnaire",
+        "Interview",
+        "Observation",
+        "Experimentation"
+      ],
+      "correct": 1,
+      "explanation": "Interview involves face-to-face questioning."
     },
     {
       "id": 74,
-      "question": "For a distribution, if Q1 = 25, Q2 = 30, Q3 = 35, then IQR =",
-      "options": ["5", "10", "15", "20"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The method of data collection where respondents fill out forms themselves is called:",
+      "options": [
+        "Interview",
+        "Questionnaire",
+        "Observation",
+        "Experimentation"
+      ],
       "correct": 1,
-      "explanation": "IQR = Q3 - Q1 = 35 - 25 = 10"
+      "explanation": "Questionnaire is self-administered by respondents."
     },
     {
       "id": 75,
-      "question": "Quartile deviation is:",
-      "options": ["IQR/2", "IQR", "Q3 - Q1", "(Q3 - Q1)/4"],
-      "correct": 0,
-      "explanation": "Quartile deviation = (Q3 - Q1)/2"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main advantage of the interview method is:",
+      "options": [
+        "Low cost",
+        "Quick data collection",
+        "High response rate",
+        "Anonymity"
+      ],
+      "correct": 2,
+      "explanation": "Interviews typically have high response rates."
     },
     {
       "id": 76,
-      "question": "If Q1 = 20 and Q3 = 40, quartile deviation =",
-      "options": ["20", "10", "30", "5"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main advantage of the questionnaire method is:",
+      "options": [
+        "High response rate",
+        "Can cover large samples at low cost",
+        "Clarifies questions",
+        "Personal contact"
+      ],
       "correct": 1,
-      "explanation": "(40-20)/2 = 10"
+      "explanation": "Questionnaires can reach many people cheaply."
     },
     {
       "id": 77,
-      "question": "Coefficient of quartile deviation is:",
-      "options": ["(Q3 - Q1)/(Q3 + Q1)", "(Q3 + Q1)/(Q3 - Q1)", "Q3 - Q1", "(Q3 - Q1)/2"],
-      "correct": 0,
-      "explanation": "Relative measure based on quartiles"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Pilot testing of a questionnaire helps to:",
+      "options": [
+        "Increase cost",
+        "Identify problems in questions",
+        "Reduce sample size",
+        "Speed up data collection"
+      ],
+      "correct": 1,
+      "explanation": "Pilot testing identifies confusing questions."
     },
     {
       "id": 78,
-      "question": "If Q1 = 30 and Q3 = 50, coefficient of quartile deviation =",
-      "options": ["0.25", "0.5", "0.75", "1"],
-      "correct": 0,
-      "explanation": "(50-30)/(50+30) = 20/80 = 0.25"
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Open-ended questions in a questionnaire:",
+      "options": [
+        "Limit responses",
+        "Allow free responses",
+        "Are easy to analyze",
+        "Have predetermined answers"
+      ],
+      "correct": 1,
+      "explanation": "Open-ended questions allow respondents to answer freely."
     },
     {
       "id": 79,
-      "question": "The 5-number summary consists of:",
-      "options": ["Mean, SD, Min, Max, Range", "Min, Q1, Q2, Q3, Max", "Mean, Median, Mode, Range, SD", "Q1, Q2, Q3, IQR, Range"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "Closed-ended questions in a questionnaire:",
+      "options": [
+        "Allow free responses",
+        "Provide predetermined answers",
+        "Are difficult to analyze",
+        "Take more time"
+      ],
       "correct": 1,
-      "explanation": "Five-number summary: minimum, Q1, median, Q3, maximum"
+      "explanation": "Closed-ended questions have predetermined answer choices."
     },
     {
       "id": 80,
-      "question": "A box plot displays:",
-      "options": ["Mean and SD", "Five-number summary", "All data points", "Frequency distribution"],
+      "topic": "definition_introduction",
+      "topicName": "Definition and Introduction to Statistics",
+      "question": "The main disadvantage of the observation method is:",
+      "options": [
+        "It is cheap",
+        "It cannot study attitudes",
+        "It is objective",
+        "It records actual behavior"
+      ],
       "correct": 1,
-      "explanation": "Box plot shows min, Q1, median, Q3, max"
+      "explanation": "Observation cannot directly study attitudes and opinions."
     },
     {
       "id": 81,
-      "question": "Outliers in box plot are points beyond:",
-      "options": ["1.5 × IQR from quartiles", "2 × IQR", "3 × IQR", "Mean ± 2SD"],
-      "correct": 0,
-      "explanation": "Points beyond Q1 - 1.5IQR or Q3 + 1.5IQR are outliers"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The process of arranging data in rows and columns is called:",
+      "options": [
+        "Classification",
+        "Tabulation",
+        "Graphing",
+        "Interpretation"
+      ],
+      "correct": 1,
+      "explanation": "Tabulation arranges data in rows and columns."
     },
     {
       "id": 82,
-      "question": "If a distribution has two peaks, it is called:",
-      "options": ["Unimodal", "Bimodal", "Multimodal", "Skewed"],
-      "correct": 1,
-      "explanation": "Bimodal distribution has two modes"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A table number in a statistical table helps to:",
+      "options": [
+        "Identify the table",
+        "Decorate the table",
+        "Confuse the reader",
+        "Replace the title"
+      ],
+      "correct": 0,
+      "explanation": "Table numbers help identify and reference tables."
     },
     {
       "id": 83,
-      "question": "The mode of the data 2, 4, 5, 5, 7, 8, 8, 8, 9 is:",
-      "options": ["5", "8", "7", "9"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The title of a table should answer the questions:",
+      "options": [
+        "Who and why",
+        "What, where, and when",
+        "How and why",
+        "Where and who"
+      ],
       "correct": 1,
-      "explanation": "8 appears three times, more than any other"
+      "explanation": "A good title tells what, where, and when."
     },
     {
       "id": 84,
-      "question": "The range of 12, 15, 18, 20, 25 is:",
-      "options": ["13", "15", "18", "25"],
-      "correct": 0,
-      "explanation": "Range = 25 - 12 = 13"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Row headings in a table are called:",
+      "options": [
+        "Captions",
+        "Stubs",
+        "Headnotes",
+        "Footnotes"
+      ],
+      "correct": 1,
+      "explanation": "Stubs are row headings."
     },
     {
       "id": 85,
-      "question": "If each observation is doubled, the variance becomes:",
-      "options": ["Doubled", "Quadrupled", "Same", "Halved"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Column headings in a table are called:",
+      "options": [
+        "Stubs",
+        "Captions",
+        "Headnotes",
+        "Body"
+      ],
       "correct": 1,
-      "explanation": "Var(2X) = 4Var(X)"
+      "explanation": "Captions are column headings."
     },
     {
       "id": 86,
-      "question": "For a set of 10 observations, sum = 100. Mean =",
-      "options": ["10", "100", "20", "5"],
-      "correct": 0,
-      "explanation": "Mean = 100/10 = 10"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Explanatory notes below the title of a table are called:",
+      "options": [
+        "Footnotes",
+        "Headnotes",
+        "Captions",
+        "Stubs"
+      ],
+      "correct": 1,
+      "explanation": "Headnotes appear below the title."
     },
     {
       "id": 87,
-      "question": "If sum of squares of deviations from mean is 90 for 10 observations, variance =",
-      "options": ["9", "10", "90", "100"],
-      "correct": 0,
-      "explanation": "Variance = 90/10 = 9"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Explanatory notes at the bottom of a table are called:",
+      "options": [
+        "Headnotes",
+        "Footnotes",
+        "Captions",
+        "Stubs"
+      ],
+      "correct": 1,
+      "explanation": "Footnotes are at the bottom of the table."
     },
     {
       "id": 88,
-      "question": "Standard deviation for above =",
-      "options": ["3", "4.5", "9", "81"],
-      "correct": 0,
-      "explanation": "√9 = 3"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The source of data in a table should be indicated:",
+      "options": [
+        "In the title",
+        "In a footnote",
+        "In the caption",
+        "In the stub"
+      ],
+      "correct": 1,
+      "explanation": "The source is usually given in a footnote."
     },
     {
       "id": 89,
-      "question": "If two groups have same mean but different SD, the group with smaller SD is:",
-      "options": ["More variable", "Less variable", "Larger", "Smaller"],
-      "correct": 1,
-      "explanation": "Smaller SD means less dispersion, more consistent"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A frequency distribution shows:",
+      "options": [
+        "How often each value occurs",
+        "The total of all values",
+        "The average value",
+        "The middle value"
+      ],
+      "correct": 0,
+      "explanation": "Frequency distribution displays counts of each value or class."
     },
     {
       "id": 90,
-      "question": "Coefficient of variation allows comparison of:",
-      "options": ["Different units", "Same units only", "Only means", "Only variances"],
-      "correct": 0,
-      "explanation": "CV is unitless, allows comparing variability across different scales"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Class interval refers to:",
+      "options": [
+        "The number of classes",
+        "The width of each class",
+        "The midpoint of class",
+        "The frequency of class"
+      ],
+      "correct": 1,
+      "explanation": "Class interval is the range covered by each class."
     },
     {
       "id": 91,
-      "question": "If mean = 50 and SD = 5, CV =",
-      "options": ["10%", "20%", "50%", "5%"],
-      "correct": 0,
-      "explanation": "CV = (5/50) × 100% = 10%"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Class mark is the:",
+      "options": [
+        "Lower class limit",
+        "Upper class limit",
+        "Midpoint of class interval",
+        "Frequency of class"
+      ],
+      "correct": 2,
+      "explanation": "Class mark = (lower limit + upper limit)/2."
     },
     {
       "id": 92,
-      "question": "If one group has CV = 15% and another has CV = 20%, which is more consistent?",
-      "options": ["First group", "Second group", "Both same", "Cannot compare"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Class boundaries are used to:",
+      "options": [
+        "Eliminate gaps between classes",
+        "Make classes wider",
+        "Reduce number of classes",
+        "Increase frequencies"
+      ],
       "correct": 0,
-      "explanation": "Lower CV means less variability, more consistent"
+      "explanation": "Class boundaries close the gaps between classes."
     },
     {
       "id": 93,
-      "question": "The empirical relationship between mean, median, and mode for moderately skewed distribution is:",
-      "options": ["Mode = 3Median - 2Mean", "Mean = 3Median - 2Mode", "Median = (Mean + Mode)/2", "All of the above"],
-      "correct": 0,
-      "explanation": "Mode = 3Median - 2Mean"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Cumulative frequency is:",
+      "options": [
+        "Frequency of each class",
+        "Running total of frequencies",
+        "Average frequency",
+        "Total frequency divided by n"
+      ],
+      "correct": 1,
+      "explanation": "Cumulative frequency adds frequencies progressively."
     },
     {
       "id": 94,
-      "question": "If mean = 40 and median = 35, approximate mode =",
-      "options": ["25", "30", "35", "45"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Relative frequency is:",
+      "options": [
+        "Frequency/total",
+        "Frequency × total",
+        "Class width/frequency",
+        "Cumulative frequency"
+      ],
       "correct": 0,
-      "explanation": "Mode = 3×35 - 2×40 = 105 - 80 = 25"
+      "explanation": "Relative frequency = f/Σf."
     },
     {
       "id": 95,
-      "question": "Chebyshev's inequality states that at least 75% of data lies within:",
-      "options": ["1 SD of mean", "2 SD of mean", "3 SD of mean", "4 SD of mean"],
-      "correct": 1,
-      "explanation": "For k=2, at least 1 - 1/4 = 75% within 2 SD"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Sturges' rule for number of classes is:",
+      "options": [
+        "k = 1 + 3.322 log n",
+        "k = 2 + 2 log n",
+        "k = n/10",
+        "k = √n"
+      ],
+      "correct": 0,
+      "explanation": "Sturges' rule: k = 1 + 3.322 log₁₀ n."
     },
     {
       "id": 96,
-      "question": "According to Chebyshev, at least 89% of data lies within:",
-      "options": ["2 SD", "3 SD", "4 SD", "5 SD"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A histogram uses:",
+      "options": [
+        "Bars with gaps",
+        "Bars without gaps",
+        "Pie slices",
+        "Line segments"
+      ],
       "correct": 1,
-      "explanation": "1 - 1/k² = 0.89 → 1/k² = 0.11 → k² ≈ 9 → k=3"
+      "explanation": "Histogram bars touch each other for continuous data."
     },
     {
       "id": 97,
-      "question": "For normal distribution, approximately 68% of data lies within:",
-      "options": ["1 SD", "2 SD", "3 SD", "4 SD"],
-      "correct": 0,
-      "explanation": "Empirical rule: 68% within 1 SD"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A bar chart is suitable for:",
+      "options": [
+        "Continuous data",
+        "Discrete or categorical data",
+        "Time series",
+        "Cumulative frequencies"
+      ],
+      "correct": 1,
+      "explanation": "Bar charts represent discrete categories."
     },
     {
       "id": 98,
-      "question": "For normal distribution, approximately 95% of data lies within:",
-      "options": ["1 SD", "2 SD", "3 SD", "4 SD"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A pie chart shows:",
+      "options": [
+        "Trends over time",
+        "Proportions of a whole",
+        "Frequency distribution",
+        "Correlation"
+      ],
       "correct": 1,
-      "explanation": "95% within 2 SD"
+      "explanation": "Pie chart displays parts of a whole (percentages)."
     },
     {
       "id": 99,
-      "question": "For normal distribution, approximately 99.7% of data lies within:",
-      "options": ["1 SD", "2 SD", "3 SD", "4 SD"],
-      "correct": 2,
-      "explanation": "99.7% within 3 SD"
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Frequency polygon is drawn by joining:",
+      "options": [
+        "Top of bars",
+        "Class marks with frequencies",
+        "Cumulative frequencies",
+        "Midpoints of histogram bars"
+      ],
+      "correct": 1,
+      "explanation": "Points are class marks against frequencies."
     },
     {
       "id": 100,
-      "question": "Z-score is calculated as:",
-      "options": ["(x - μ)/σ", "(μ - x)/σ", "x/σ", "x - μ"],
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Ogive is a graph of:",
+      "options": [
+        "Frequency distribution",
+        "Cumulative frequency distribution",
+        "Relative frequency",
+        "Percentage distribution"
+      ],
+      "correct": 1,
+      "explanation": "Ogive shows cumulative frequencies."
+    },
+    {
+      "id": 101,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A simple bar chart represents:",
+      "options": [
+        "One variable",
+        "Two variables",
+        "Three variables",
+        "Multiple variables"
+      ],
       "correct": 0,
-      "explanation": "Z-score standardizes values: (x - mean)/SD"
+      "explanation": "Simple bar chart shows one variable."
+    },
+    {
+      "id": 102,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A multiple bar chart is used to:",
+      "options": [
+        "Compare two or more variables",
+        "Show one variable only",
+        "Display cumulative data",
+        "Show percentages"
+      ],
+      "correct": 0,
+      "explanation": "Multiple bar charts compare different variables or groups."
+    },
+    {
+      "id": 103,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A component bar chart shows:",
+      "options": [
+        "Total and its parts",
+        "Only totals",
+        "Only parts",
+        "Percentages only"
+      ],
+      "correct": 0,
+      "explanation": "Component bars are divided into segments showing parts."
+    },
+    {
+      "id": 104,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A pictogram uses:",
+      "options": [
+        "Bars",
+        "Pictures or symbols",
+        "Lines",
+        "Circles"
+      ],
+      "correct": 1,
+      "explanation": "Pictograms use pictures to represent data."
+    },
+    {
+      "id": 105,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A line graph is most suitable for showing:",
+      "options": [
+        "Categorical data",
+        "Time series data",
+        "Proportions",
+        "Frequency distribution"
+      ],
+      "correct": 1,
+      "explanation": "Line graphs show trends over time."
+    },
+    {
+      "id": 106,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The class with the highest frequency is called:",
+      "options": [
+        "Median class",
+        "Modal class",
+        "Mean class",
+        "Central class"
+      ],
+      "correct": 1,
+      "explanation": "Modal class has the highest frequency."
+    },
+    {
+      "id": 107,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "In a histogram, the area of each rectangle is proportional to:",
+      "options": [
+        "Class width",
+        "Frequency",
+        "Class mark",
+        "Cumulative frequency"
+      ],
+      "correct": 1,
+      "explanation": "Area of histogram bars is proportional to frequency."
+    },
+    {
+      "id": 108,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "For a frequency polygon, the midpoints are plotted against:",
+      "options": [
+        "Upper limits",
+        "Lower limits",
+        "Frequencies",
+        "Cumulative frequencies"
+      ],
+      "correct": 2,
+      "explanation": "Frequency polygon plots midpoints against frequencies."
+    },
+    {
+      "id": 109,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A 'less than' ogive is plotted using:",
+      "options": [
+        "Upper limits and cumulative frequencies",
+        "Lower limits and cumulative frequencies",
+        "Midpoints and frequencies",
+        "Class marks"
+      ],
+      "correct": 0,
+      "explanation": "'Less than' ogive uses upper class boundaries."
+    },
+    {
+      "id": 110,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A 'more than' ogive is plotted using:",
+      "options": [
+        "Upper limits",
+        "Lower limits",
+        "Midpoints",
+        "Any limits"
+      ],
+      "correct": 1,
+      "explanation": "'More than' ogive uses lower class boundaries."
+    },
+    {
+      "id": 111,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The point where two ogives intersect gives the:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "correct": 1,
+      "explanation": "Intersection of less than and more than ogives gives median."
+    },
+    {
+      "id": 112,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Frequency density is used when:",
+      "options": [
+        "Class intervals are equal",
+        "Class intervals are unequal",
+        "Data is ungrouped",
+        "Data is qualitative"
+      ],
+      "correct": 1,
+      "explanation": "Frequency density = frequency/class width for unequal intervals."
+    },
+    {
+      "id": 113,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The main purpose of data presentation is to:",
+      "options": [
+        "Hide data",
+        "Make data understandable",
+        "Complicate analysis",
+        "Increase data size"
+      ],
+      "correct": 1,
+      "explanation": "Presentation makes data easier to understand."
+    },
+    {
+      "id": 114,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A stem-and-leaf display preserves:",
+      "options": [
+        "Only the shape",
+        "Only the summary",
+        "Original data values",
+        "Only frequencies"
+      ],
+      "correct": 2,
+      "explanation": "Stem-and-leaf shows all individual data points."
+    },
+    {
+      "id": 115,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A frequency table with too many classes may:",
+      "options": [
+        "Simplify data",
+        "Hide patterns",
+        "Show too much detail",
+        "Be more accurate"
+      ],
+      "correct": 1,
+      "explanation": "Too many classes can obscure the overall pattern."
+    },
+    {
+      "id": 116,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A frequency table with too few classes may:",
+      "options": [
+        "Show too much detail",
+        "Lose important information",
+        "Be too complex",
+        "Be more accurate"
+      ],
+      "correct": 1,
+      "explanation": "Too few classes may hide important details."
+    },
+    {
+      "id": 117,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The range of a dataset is needed to determine:",
+      "options": [
+        "Number of classes",
+        "Class width",
+        "Both number of classes and class width",
+        "Neither"
+      ],
+      "correct": 2,
+      "explanation": "Range helps determine both number of classes and class width."
+    },
+    {
+      "id": 118,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "In a frequency table, the sum of all frequencies equals:",
+      "options": [
+        "Number of classes",
+        "Total number of observations",
+        "Class width",
+        "Range"
+      ],
+      "correct": 1,
+      "explanation": "Σf = total number of observations."
+    },
+    {
+      "id": 119,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The sum of relative frequencies always equals:",
+      "options": [
+        "0",
+        "1",
+        "100",
+        "n"
+      ],
+      "correct": 1,
+      "explanation": "Sum of relative frequencies = 1."
+    },
+    {
+      "id": 120,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The sum of percentage frequencies always equals:",
+      "options": [
+        "0",
+        "1",
+        "100",
+        "n"
+      ],
+      "correct": 2,
+      "explanation": "Sum of percentage frequencies = 100%."
+    },
+    {
+      "id": 121,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "In a pie chart, the angle of each sector is calculated as:",
+      "options": [
+        "(frequency/total) × 360°",
+        "(frequency/total) × 100°",
+        "(frequency/total) × 180°",
+        "(frequency/total) × 90°"
+      ],
+      "correct": 0,
+      "explanation": "Angle = (f/Σf) × 360°."
+    },
+    {
+      "id": 122,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A pie chart is best for showing:",
+      "options": [
+        "Trends over time",
+        "Composition of a whole",
+        "Relationships between variables",
+        "Frequency distributions"
+      ],
+      "correct": 1,
+      "explanation": "Pie charts show parts of a whole."
+    },
+    {
+      "id": 123,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The main disadvantage of a pie chart is:",
+      "options": [
+        "Hard to construct",
+        "Not suitable for many categories",
+        "Cannot show percentages",
+        "Requires special software"
+      ],
+      "correct": 1,
+      "explanation": "Pie charts become cluttered with too many categories."
+    },
+    {
+      "id": 124,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A bar chart with vertical bars is also called:",
+      "options": [
+        "Column chart",
+        "Line chart",
+        "Pie chart",
+        "Area chart"
+      ],
+      "correct": 0,
+      "explanation": "Vertical bar charts are often called column charts."
+    },
+    {
+      "id": 125,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "In a multiple bar chart, bars are:",
+      "options": [
+        "Stacked on top of each other",
+        "Placed side by side",
+        "Placed end to end",
+        "Overlapping"
+      ],
+      "correct": 1,
+      "explanation": "Multiple bars are grouped side by side."
+    },
+    {
+      "id": 126,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "In a component bar chart, bars are:",
+      "options": [
+        "Placed side by side",
+        "Divided into segments",
+        "Overlapping",
+        "Separate"
+      ],
+      "correct": 1,
+      "explanation": "Component bars are divided into segments."
+    },
+    {
+      "id": 127,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A pictogram is also called:",
+      "options": [
+        "Ideogram",
+        "Bar chart",
+        "Line graph",
+        "Pie chart"
+      ],
+      "correct": 0,
+      "explanation": "Pictograms are also known as ideograms."
+    },
+    {
+      "id": 128,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A frequency polygon is closed by:",
+      "options": [
+        "Connecting to the x-axis",
+        "Adding extra bars",
+        "Drawing a circle",
+        "Connecting to the y-axis"
+      ],
+      "correct": 0,
+      "explanation": "The ends are connected to the x-axis to close the polygon."
+    },
+    {
+      "id": 129,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "An ogive is also called:",
+      "options": [
+        "Frequency polygon",
+        "Cumulative frequency curve",
+        "Histogram",
+        "Bar chart"
+      ],
+      "correct": 1,
+      "explanation": "Ogive is a cumulative frequency curve."
+    },
+    {
+      "id": 130,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The ogive can be used to estimate:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "All measures"
+      ],
+      "correct": 1,
+      "explanation": "Ogive is used to find median graphically."
+    },
+    {
+      "id": 131,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "For a frequency table with open-ended classes, the best measure of central tendency is:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Geometric mean"
+      ],
+      "correct": 1,
+      "explanation": "Median can be used with open-ended classes."
+    },
+    {
+      "id": 132,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "When constructing a frequency table, classes should be:",
+      "options": [
+        "Overlapping",
+        "Mutually exclusive",
+        "Any width",
+        "Unequal"
+      ],
+      "correct": 1,
+      "explanation": "Classes should not overlap (mutually exclusive)."
+    },
+    {
+      "id": 133,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "Class boundaries are calculated as:",
+      "options": [
+        "(Upper limit + Lower limit)/2",
+        "Upper limit + 0.5",
+        "Lower limit - 0.5",
+        "Upper limit of one class and lower limit of next class"
+      ],
+      "correct": 3,
+      "explanation": "Class boundaries are the real limits between classes."
+    },
+    {
+      "id": 134,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The class mark is also called:",
+      "options": [
+        "Class midpoint",
+        "Class limit",
+        "Class boundary",
+        "Class frequency"
+      ],
+      "correct": 0,
+      "explanation": "Class mark is the midpoint of the class."
+    },
+    {
+      "id": 136,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The main purpose of tabulation is to:",
+      "options": [
+        "Make data complex",
+        "Simplify and summarize data",
+        "Hide information",
+        "Create confusion"
+      ],
+      "correct": 1,
+      "explanation": "Tabulation simplifies and summarizes data."
+    },
+    {
+      "id": 137,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A table showing frequency distribution of marks is an example of:",
+      "options": [
+        "Simple table",
+        "Complex table",
+        "Frequency table",
+        "Correlation table"
+      ],
+      "correct": 2,
+      "explanation": "This is a frequency table showing distribution."
+    },
+    {
+      "id": 138,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The number of observations falling in a particular class is called:",
+      "options": [
+        "Class mark",
+        "Frequency",
+        "Class width",
+        "Class boundary"
+      ],
+      "correct": 1,
+      "explanation": "Frequency is the count in each class."
+    },
+    {
+      "id": 139,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "When constructing a frequency polygon, the points are plotted at:",
+      "options": [
+        "Class limits",
+        "Class boundaries",
+        "Class marks",
+        "Class frequencies"
+      ],
+      "correct": 2,
+      "explanation": "Frequency polygon uses class marks."
+    },
+    {
+      "id": 140,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A frequency polygon is equivalent to the polygon formed by joining the midpoints of the tops of:",
+      "options": [
+        "Bar chart",
+        "Pie chart",
+        "Histogram",
+        "Ogive"
+      ],
+      "correct": 2,
+      "explanation": "Frequency polygon relates to histogram bars."
+    },
+    {
+      "id": 141,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "For data with unequal class intervals, which is more appropriate?",
+      "options": [
+        "Frequency polygon",
+        "Histogram with frequency density",
+        "Simple bar chart",
+        "Pie chart"
+      ],
+      "correct": 1,
+      "explanation": "Use frequency density for histograms with unequal intervals."
+    },
+    {
+      "id": 142,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A table showing only one characteristic of data is called:",
+      "options": [
+        "Simple table",
+        "Complex table",
+        "Manifold table",
+        "Correlation table"
+      ],
+      "correct": 0,
+      "explanation": "A simple table shows one characteristic."
+    },
+    {
+      "id": 143,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A table showing multiple characteristics of data is called:",
+      "options": [
+        "Simple table",
+        "Complex table",
+        "Frequency table",
+        "Tally table"
+      ],
+      "correct": 1,
+      "explanation": "Complex tables show multiple characteristics."
+    },
+    {
+      "id": 144,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The first step in constructing a frequency table is:",
+      "options": [
+        "Finding class width",
+        "Finding range",
+        "Finding number of classes",
+        "Finding class marks"
+      ],
+      "correct": 1,
+      "explanation": "First, find the range of the data."
+    },
+    {
+      "id": 145,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The number of classes should preferably be between:",
+      "options": [
+        "1-5",
+        "5-20",
+        "20-30",
+        "30-50"
+      ],
+      "correct": 1,
+      "explanation": "Generally, 5-20 classes are recommended."
+    },
+    {
+      "id": 146,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A table must always have:",
+      "options": [
+        "A title",
+        "Color",
+        "Pictures",
+        "Graphs"
+      ],
+      "correct": 0,
+      "explanation": "Every table must have a clear title."
+    },
+    {
+      "id": 147,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "The body of a table contains:",
+      "options": [
+        "Row headings",
+        "Column headings",
+        "Numerical data",
+        "Explanatory notes"
+      ],
+      "correct": 2,
+      "explanation": "The body contains the actual data."
+    },
+    {
+      "id": 148,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "In a statistical table, units of measurement should be:",
+      "options": [
+        "Omitted",
+        "Clearly indicated",
+        "In footnotes only",
+        "Not important"
+      ],
+      "correct": 1,
+      "explanation": "Units should be clearly shown."
+    },
+    {
+      "id": 149,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A chart using pictures to represent data is called:",
+      "options": [
+        "Bar chart",
+        "Pictogram",
+        "Pie chart",
+        "Line graph"
+      ],
+      "correct": 1,
+      "explanation": "Pictograms use pictures or symbols."
+    },
+    {
+      "id": 150,
+      "topic": "summarization_presentation",
+      "topicName": "Summarization and Presentation of Data",
+      "question": "A chart showing both total and parts is:",
+      "options": [
+        "Simple bar chart",
+        "Multiple bar chart",
+        "Component bar chart",
+        "Percentage bar chart"
+      ],
+      "correct": 2,
+      "explanation": "Component bar chart shows total and its parts."
+    },
+    {
+      "id": 151,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The arithmetic mean of 5, 10, 15, 20, 25 is:",
+      "options": [
+        "10",
+        "12",
+        "15",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Sum = 75, divided by 5 = 15."
+    },
+    {
+      "id": 152,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Median of 3, 7, 9, 12, 15 is:",
+      "options": [
+        "7",
+        "9",
+        "12",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "Middle value when arranged: 9."
+    },
+    {
+      "id": 153,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Mode of 2, 3, 3, 4, 5, 5, 5, 6 is:",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "explanation": "5 appears most frequently (3 times)."
+    },
+    {
+      "id": 154,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For a symmetrical distribution, mean, median, and mode are:",
+      "options": [
+        "Different",
+        "Equal",
+        "Mean > median",
+        "Mode > mean"
+      ],
+      "correct": 1,
+      "explanation": "In symmetrical distribution, all three are equal."
+    },
+    {
+      "id": 155,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For a positively skewed distribution:",
+      "options": [
+        "Mean > Median > Mode",
+        "Mode > Median > Mean",
+        "Mean = Median = Mode",
+        "Median > Mean > Mode"
+      ],
+      "correct": 0,
+      "explanation": "Positive skew has tail on right: mean > median > mode."
+    },
+    {
+      "id": 156,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The weighted mean is used when:",
+      "options": [
+        "All values equal",
+        "Values have different importance",
+        "Data is skewed",
+        "Sample is small"
+      ],
+      "correct": 1,
+      "explanation": "Weights reflect relative importance of values."
+    },
+    {
+      "id": 157,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Geometric mean is useful for:",
+      "options": [
+        "Growth rates",
+        "Normal distributions",
+        "Categorical data",
+        "Outliers"
+      ],
+      "correct": 0,
+      "explanation": "Geometric mean is used for rates of change and ratios."
+    },
+    {
+      "id": 158,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Harmonic mean is appropriate for:",
+      "options": [
+        "Averages of rates",
+        "Averages of prices",
+        "Averages of temperatures",
+        "All data types"
+      ],
+      "correct": 0,
+      "explanation": "Harmonic mean is used for rates like speed."
+    },
+    {
+      "id": 159,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If each value is increased by 5, the mean:",
+      "options": [
+        "Increases by 5",
+        "Decreases by 5",
+        "Remains same",
+        "Multiplied by 5"
+      ],
+      "correct": 0,
+      "explanation": "Adding constant to all values adds constant to mean."
+    },
+    {
+      "id": 160,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If each value is multiplied by 3, the mean:",
+      "options": [
+        "Increases by 3",
+        "Multiplied by 3",
+        "Remains same",
+        "Squared"
+      ],
+      "correct": 1,
+      "explanation": "Multiplying all values multiplies the mean."
+    },
+    {
+      "id": 161,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The sum of deviations from the mean is always:",
+      "options": [
+        "Positive",
+        "Negative",
+        "Zero",
+        "One"
+      ],
+      "correct": 2,
+      "explanation": "Σ(x - x̄) = 0."
+    },
+    {
+      "id": 162,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For a frequency distribution, the mean is:",
+      "options": [
+        "Σfx/Σf",
+        "Σf/Σx",
+        "Σfx × Σf",
+        "Σx/n"
+      ],
+      "correct": 0,
+      "explanation": "Weighted average using frequencies as weights."
+    },
+    {
+      "id": 163,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "In grouped data, the assumed mean method is used to:",
+      "options": [
+        "Find exact mean",
+        "Simplify calculations",
+        "Find median",
+        "Find mode"
+      ],
+      "correct": 1,
+      "explanation": "Step deviation method simplifies computation."
+    },
+    {
+      "id": 164,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of grouped data is found using:",
+      "options": [
+        "Interpolation formula",
+        "Direct observation",
+        "Average of extremes",
+        "Midpoint of modal class"
+      ],
+      "correct": 0,
+      "explanation": "Median = L + [(n/2 - cf)/f] × h."
+    },
+    {
+      "id": 165,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of grouped data is found using:",
+      "options": [
+        "Modal class formula",
+        "Average of all classes",
+        "Median class",
+        "Any class"
+      ],
+      "correct": 0,
+      "explanation": "Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h."
+    },
+    {
+      "id": 166,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of first 10 natural numbers is:",
+      "options": [
+        "5",
+        "5.5",
+        "6",
+        "4.5"
+      ],
+      "correct": 1,
+      "explanation": "Sum = 55, divided by 10 = 5.5."
+    },
+    {
+      "id": 167,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Median of first 10 natural numbers is:",
+      "options": [
+        "5",
+        "5.5",
+        "6",
+        "4.5"
+      ],
+      "correct": 1,
+      "explanation": "Average of 5th and 6th: (5+6)/2 = 5.5."
+    },
+    {
+      "id": 168,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If mode = 25 and mean = 20, the distribution is:",
+      "options": [
+        "Symmetric",
+        "Positively skewed",
+        "Negatively skewed",
+        "Normal"
+      ],
+      "correct": 2,
+      "explanation": "Mean < Mode indicates negative skew."
+    },
+    {
+      "id": 169,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If mean > median, distribution is:",
+      "options": [
+        "Symmetric",
+        "Positively skewed",
+        "Negatively skewed",
+        "Bimodal"
+      ],
+      "correct": 1,
+      "explanation": "Mean > Median indicates positive skew."
+    },
+    {
+      "id": 170,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The empirical relationship between mean, median, and mode is:",
+      "options": [
+        "Mode = 3Median - 2Mean",
+        "Mean = 3Median - 2Mode",
+        "Median = (Mean + Mode)/2",
+        "All of the above"
+      ],
+      "correct": 0,
+      "explanation": "Mode = 3Median - 2Mean."
+    },
+    {
+      "id": 171,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If mean = 40 and median = 35, approximate mode =",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "45"
+      ],
+      "correct": 0,
+      "explanation": "Mode = 3×35 - 2×40 = 105 - 80 = 25."
+    },
+    {
+      "id": 172,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Which measure is most affected by outliers?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "Interquartile range"
+      ],
+      "correct": 2,
+      "explanation": "Mean is sensitive to extreme values."
+    },
+    {
+      "id": 173,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Which measure is not affected by outliers?",
+      "options": [
+        "Mean",
+        "Range",
+        "Variance",
+        "Median"
+      ],
+      "correct": 3,
+      "explanation": "Median is resistant to outliers."
+    },
+    {
+      "id": 174,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The geometric mean of 4 and 16 is:",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "√(4×16) = √64 = 8."
+    },
+    {
+      "id": 175,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The harmonic mean of 4 and 16 is:",
+      "options": [
+        "6.4",
+        "8",
+        "10",
+        "12.8"
+      ],
+      "correct": 0,
+      "explanation": "2/(1/4 + 1/16) = 2/(4/16 + 1/16) = 2/(5/16) = 32/5 = 6.4."
+    },
+    {
+      "id": 176,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For any set of positive numbers, which inequality holds?",
+      "options": [
+        "AM ≥ GM ≥ HM",
+        "GM ≥ AM ≥ HM",
+        "HM ≥ GM ≥ AM",
+        "AM ≥ HM ≥ GM"
+      ],
+      "correct": 0,
+      "explanation": "Arithmetic Mean ≥ Geometric Mean ≥ Harmonic Mean."
+    },
+    {
+      "id": 177,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If AM = 10 and GM = 8, then HM is approximately:",
+      "options": [
+        "6.4",
+        "8",
+        "10",
+        "12.5"
+      ],
+      "correct": 0,
+      "explanation": "GM² = AM × HM, so HM = 64/10 = 6.4."
+    },
+    {
+      "id": 178,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of the data 12, 15, 18, 20, 22, 25 is:",
+      "options": [
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "correct": 1,
+      "explanation": "For even n, median = average of 3rd and 4th = (18+20)/2 = 19."
+    },
+    {
+      "id": 179,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of the data 2, 4, 6, 8, 10, 12 is:",
+      "options": [
+        "2",
+        "6",
+        "10",
+        "No mode"
+      ],
+      "correct": 3,
+      "explanation": "All values occur once, so no mode."
+    },
+    {
+      "id": 180,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of 10 numbers is 20. If one number 30 is removed, the new mean is:",
+      "options": [
+        "18.89",
+        "19",
+        "20",
+        "21.11"
+      ],
+      "correct": 0,
+      "explanation": "Sum = 200, remove 30, new sum = 170, n=9, mean = 18.89."
+    },
+    {
+      "id": 181,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If the mean of 5 observations is 15 and one observation 10 is replaced by 20, the new mean is:",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Old sum=75, new sum=75-10+20=85, new mean=85/5=17."
+    },
+    {
+      "id": 182,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The weighted mean of 10 at weight 3 and 20 at weight 2 is:",
+      "options": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correct": 0,
+      "explanation": "(10×3 + 20×2)/(3+2) = (30+40)/5 = 70/5 = 14."
+    },
+    {
+      "id": 183,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For a moderately skewed distribution, the relationship is:",
+      "options": [
+        "Mean - Mode = 3(Mean - Median)",
+        "Mean - Median = 3(Mean - Mode)",
+        "Median - Mode = 3(Mean - Median)",
+        "Mean - Mode = 3(Median - Mean)"
+      ],
+      "correct": 0,
+      "explanation": "Mean - Mode = 3(Mean - Median)."
+    },
+    {
+      "id": 184,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The harmonic mean of 2, 4, 8 is:",
+      "options": [
+        "3.43",
+        "4",
+        "4.67",
+        "5.33"
+      ],
+      "correct": 0,
+      "explanation": "3/(1/2 + 1/4 + 1/8) = 3/(0.5 + 0.25 + 0.125) = 3/0.875 = 3.43."
+    },
+    {
+      "id": 185,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The geometric mean of 2, 4, 8 is:",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 1,
+      "explanation": "(2×4×8)^(1/3) = (64)^(1/3) = 4."
+    },
+    {
+      "id": 186,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The arithmetic mean of 2, 4, 8 is:",
+      "options": [
+        "4",
+        "4.67",
+        "5",
+        "5.33"
+      ],
+      "correct": 1,
+      "explanation": "(2+4+8)/3 = 14/3 = 4.67."
+    },
+    {
+      "id": 187,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Which average is appropriate for averaging rates and speeds?",
+      "options": [
+        "Arithmetic mean",
+        "Geometric mean",
+        "Harmonic mean",
+        "Median"
+      ],
+      "correct": 2,
+      "explanation": "Harmonic mean is used for rates."
+    },
+    {
+      "id": 188,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "Which average is appropriate for averaging growth rates?",
+      "options": [
+        "Arithmetic mean",
+        "Geometric mean",
+        "Harmonic mean",
+        "Mode"
+      ],
+      "correct": 1,
+      "explanation": "Geometric mean is used for growth rates."
+    },
+    {
+      "id": 189,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If all values in a dataset are equal, then:",
+      "options": [
+        "AM = GM = HM",
+        "AM > GM > HM",
+        "AM < GM < HM",
+        "Cannot determine"
+      ],
+      "correct": 0,
+      "explanation": "When all values equal, all means are equal."
+    },
+    {
+      "id": 190,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of the data 2, 5, 8, 11, 14, 17 is:",
+      "options": [
+        "8",
+        "9.5",
+        "11",
+        "12.5"
+      ],
+      "correct": 1,
+      "explanation": "(8+11)/2 = 9.5."
+    },
+    {
+      "id": 191,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of a distribution is:",
+      "options": [
+        "The middle value",
+        "The most frequent value",
+        "The average value",
+        "The smallest value"
+      ],
+      "correct": 1,
+      "explanation": "Mode is the most frequent value."
+    },
+    {
+      "id": 192,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For a bimodal distribution, there are:",
+      "options": [
+        "One mode",
+        "Two modes",
+        "No mode",
+        "Infinite modes"
+      ],
+      "correct": 1,
+      "explanation": "Bimodal means two modes."
+    },
+    {
+      "id": 193,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of a distribution is 25. If each value is doubled, the new mean is:",
+      "options": [
+        "25",
+        "50",
+        "100",
+        "12.5"
+      ],
+      "correct": 1,
+      "explanation": "Doubling values doubles the mean."
+    },
+    {
+      "id": 194,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of 100 observations is 40. The sum of all observations is:",
+      "options": [
+        "400",
+        "4000",
+        "40",
+        "100"
+      ],
+      "correct": 1,
+      "explanation": "Sum = mean × n = 40 × 100 = 4000."
+    },
+    {
+      "id": 195,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of a distribution is 30. If 5 is added to each value, the new median is:",
+      "options": [
+        "30",
+        "35",
+        "25",
+        "150"
+      ],
+      "correct": 1,
+      "explanation": "Adding constant to all values adds constant to median."
+    },
+    {
+      "id": 196,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of a distribution is 20. If each value is multiplied by 2, the new mode is:",
+      "options": [
+        "20",
+        "40",
+        "10",
+        "22"
+      ],
+      "correct": 1,
+      "explanation": "Multiplying all values multiplies the mode."
+    },
+    {
+      "id": 197,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "For a symmetrical distribution, the values of mean, median, and mode are:",
+      "options": [
+        "Different",
+        "Same",
+        "Mean > median",
+        "Mode > mean"
+      ],
+      "correct": 1,
+      "explanation": "They are equal in symmetrical distributions."
+    },
+    {
+      "id": 198,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The sum of squares of deviations from the mean is:",
+      "options": [
+        "Minimum",
+        "Maximum",
+        "Zero",
+        "One"
+      ],
+      "correct": 0,
+      "explanation": "Sum of squared deviations is minimum at the mean."
+    },
+    {
+      "id": 199,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of 5 numbers is 18. If one number is excluded, the mean becomes 16. The excluded number is:",
+      "options": [
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "correct": 3,
+      "explanation": "Sum=90, new sum=64, excluded = 90-64=26."
+    },
+    {
+      "id": 200,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of the data 2, 3, 5, 7, 9, 11, 13 is:",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correct": 1,
+      "explanation": "4th value when arranged: 7."
+    },
+    {
+      "id": 201,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "A distribution has mean 50, median 45. The distribution is:",
+      "options": [
+        "Symmetric",
+        "Positively skewed",
+        "Negatively skewed",
+        "Normal"
+      ],
+      "correct": 1,
+      "explanation": "Mean > median indicates positive skew."
+    },
+    {
+      "id": 202,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The geometric mean cannot be calculated if any value is:",
+      "options": [
+        "Negative",
+        "Zero",
+        "Positive",
+        "Both A and B"
+      ],
+      "correct": 3,
+      "explanation": "GM requires all values positive and non-zero."
+    },
+    {
+      "id": 203,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The harmonic mean cannot be calculated if any value is:",
+      "options": [
+        "Negative",
+        "Zero",
+        "Positive",
+        "Both A and B"
+      ],
+      "correct": 1,
+      "explanation": "HM cannot have zero values."
+    },
+    {
+      "id": 204,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of 5, 7, 9, 11, 13 is:",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correct": 2,
+      "explanation": "Sum=45, n=5, mean=9."
+    },
+    {
+      "id": 205,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of 5, 7, 9, 11, 13 is:",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correct": 2,
+      "explanation": "Middle value is 9."
+    },
+    {
+      "id": 206,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of 5, 7, 7, 9, 11, 11, 11, 13 is:",
+      "options": [
+        "7",
+        "9",
+        "11",
+        "13"
+      ],
+      "correct": 2,
+      "explanation": "11 appears most frequently (3 times)."
+    },
+    {
+      "id": 207,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If the mean of a distribution is 20 and the coefficient of variation is 25%, the standard deviation is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct": 1,
+      "explanation": "CV = (SD/mean)×100, so SD = (25×20)/100 = 5."
+    },
+    {
+      "id": 208,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of the first 5 natural numbers is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 1,
+      "explanation": "1+2+3+4+5=15, mean=3."
+    },
+    {
+      "id": 209,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of first 5 natural numbers is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 1,
+      "explanation": "Middle value is 3."
+    },
+    {
+      "id": 210,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of 2, 4, 6, 8, 10 is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Sum=30, n=5, mean=6."
+    },
+    {
+      "id": 211,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of 2, 4, 6, 8, 10 is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Middle value is 6."
+    },
+    {
+      "id": 212,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of 2, 4, 6, 8, 10, 10, 12 is:",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "10 appears twice, others once."
+    },
+    {
+      "id": 213,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The geometric mean of 2 and 8 is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "16"
+      ],
+      "correct": 0,
+      "explanation": "√(2×8) = √16 = 4."
+    },
+    {
+      "id": 214,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The harmonic mean of 2 and 8 is:",
+      "options": [
+        "3.2",
+        "4",
+        "5",
+        "6.4"
+      ],
+      "correct": 0,
+      "explanation": "2/(1/2 + 1/8) = 2/(4/8 + 1/8) = 2/(5/8) = 16/5 = 3.2."
+    },
+    {
+      "id": 215,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If the mean of a distribution is 15 and mode is 12, the median approximately is:",
+      "options": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "correct": 1,
+      "explanation": "Mode = 3Median - 2Mean ⇒ 12 = 3Median - 30 ⇒ 3Median = 42 ⇒ Median = 14."
+    },
+    {
+      "id": 216,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The most stable average is:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Geometric mean"
+      ],
+      "correct": 0,
+      "explanation": "Mean is most stable and least affected by sampling fluctuations."
+    },
+    {
+      "id": 217,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The average which can be calculated for open-ended classes is:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Both B and C"
+      ],
+      "correct": 1,
+      "explanation": "Median can be calculated for open-ended classes."
+    },
+    {
+      "id": 218,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The average which can be determined graphically is:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "All of the above"
+      ],
+      "correct": 1,
+      "explanation": "Median can be found from ogive."
+    },
+    {
+      "id": 219,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The geometric mean of 3, 6, 12 is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "(3×6×12)^(1/3) = (216)^(1/3) = 6."
+    },
+    {
+      "id": 220,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The harmonic mean of 3, 6, 12 is:",
+      "options": [
+        "4.8",
+        "5.14",
+        "6",
+        "7.2"
+      ],
+      "correct": 1,
+      "explanation": "3/(1/3 + 1/6 + 1/12) = 3/(4/12 + 2/12 + 1/12) = 3/(7/12) = 36/7 = 5.14."
+    },
+    {
+      "id": 221,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If 2 is added to each observation, the coefficient of variation:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains same",
+        "Cannot say"
+      ],
+      "correct": 1,
+      "explanation": "Mean increases, SD unchanged, so CV decreases."
+    },
+    {
+      "id": 222,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If each observation is multiplied by 2, the coefficient of variation:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Remains same",
+        "Quadruples"
+      ],
+      "correct": 2,
+      "explanation": "Both mean and SD double, so CV unchanged."
+    },
+    {
+      "id": 223,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The sum of deviations of values from their mean is always:",
+      "options": [
+        "Zero",
+        "Positive",
+        "Negative",
+        "One"
+      ],
+      "correct": 0,
+      "explanation": "Σ(x - x̄) = 0."
+    },
+    {
+      "id": 224,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mean of 10 observations is 20. If one observation 20 is removed, the new mean is:",
+      "options": [
+        "20",
+        "19",
+        "21",
+        "18"
+      ],
+      "correct": 0,
+      "explanation": "Sum=200, remove 20, sum=180, n=9, mean=20."
+    },
+    {
+      "id": 225,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The median of 1, 3, 5, 7, 9, 11 is:",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 1,
+      "explanation": "(5+7)/2 = 6."
+    },
+    {
+      "id": 226,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The mode of 1, 2, 3, 4, 5, 5, 6, 7, 7, 7, 8 is:",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "7 appears three times, most frequent."
+    },
+    {
+      "id": 227,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "If the mean and median of a distribution are 25 and 30 respectively, the mode is:",
+      "options": [
+        "35",
+        "40",
+        "45",
+        "50"
+      ],
+      "correct": 1,
+      "explanation": "Mode = 3×30 - 2×25 = 90 - 50 = 40."
+    },
+    {
+      "id": 228,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The average most suitable for averaging ratios and percentages is:",
+      "options": [
+        "Arithmetic mean",
+        "Geometric mean",
+        "Harmonic mean",
+        "Median"
+      ],
+      "correct": 1,
+      "explanation": "Geometric mean is suitable for ratios and percentages."
+    },
+    {
+      "id": 229,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The average most suitable for averaging time and rates is:",
+      "options": [
+        "Arithmetic mean",
+        "Geometric mean",
+        "Harmonic mean",
+        "Median"
+      ],
+      "correct": 2,
+      "explanation": "Harmonic mean is suitable for rates."
+    },
+    {
+      "id": 230,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The sum of squares of deviations is minimum when taken from:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Any value"
+      ],
+      "correct": 0,
+      "explanation": "Sum of squared deviations is minimum at the mean."
+    },
+    {
+      "id": 231,
+      "topic": "measures_central_tendency",
+      "topicName": "Measures of Central Tendency",
+      "question": "The sum of absolute deviations is minimum when taken from:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Any value"
+      ],
+      "correct": 1,
+      "explanation": "Sum of absolute deviations is minimum at the median."
+    },
+    {
+      "id": 232,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Quartiles divide data into how many parts?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 2,
+      "explanation": "Quartiles divide data into 4 equal parts."
+    },
+    {
+      "id": 233,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The first quartile (Q₁) corresponds to:",
+      "options": [
+        "25th percentile",
+        "50th percentile",
+        "75th percentile",
+        "100th percentile"
+      ],
+      "correct": 0,
+      "explanation": "Q₁ is the 25th percentile."
+    },
+    {
+      "id": 234,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The median is the:",
+      "options": [
+        "25th percentile",
+        "50th percentile",
+        "75th percentile",
+        "100th percentile"
+      ],
+      "correct": 1,
+      "explanation": "Median is the 50th percentile."
+    },
+    {
+      "id": 235,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The third quartile (Q₃) corresponds to:",
+      "options": [
+        "25th percentile",
+        "50th percentile",
+        "75th percentile",
+        "100th percentile"
+      ],
+      "correct": 2,
+      "explanation": "Q₃ is the 75th percentile."
+    },
+    {
+      "id": 236,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Interquartile range (IQR) is:",
+      "options": [
+        "Q₃ - Q₁",
+        "Q₂ - Q₁",
+        "Q₃ - Q₂",
+        "Max - Min"
+      ],
+      "correct": 0,
+      "explanation": "IQR = Q₃ - Q₁, measures middle 50% spread."
+    },
+    {
+      "id": 237,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Deciles divide data into how many parts?",
+      "options": [
+        "4",
+        "5",
+        "10",
+        "100"
+      ],
+      "correct": 2,
+      "explanation": "Deciles divide into 10 equal parts."
+    },
+    {
+      "id": 238,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Percentiles divide data into how many parts?",
+      "options": [
+        "10",
+        "25",
+        "50",
+        "100"
+      ],
+      "correct": 3,
+      "explanation": "Percentiles divide into 100 equal parts."
+    },
+    {
+      "id": 239,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The 90th percentile means:",
+      "options": [
+        "90% of data is below this value",
+        "10% of data is below",
+        "90% of data is above",
+        "None of these"
+      ],
+      "correct": 0,
+      "explanation": "90th percentile has 90% of data below it."
+    },
+    {
+      "id": 240,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Range is defined as:",
+      "options": [
+        "Largest value - Smallest value",
+        "Average of extremes",
+        "Sum of all values",
+        "Middle value"
+      ],
+      "correct": 0,
+      "explanation": "Range = Maximum - Minimum."
+    },
+    {
+      "id": 241,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Variance measures:",
+      "options": [
+        "Central tendency",
+        "Spread around the mean",
+        "Shape of distribution",
+        "Peakedness"
+      ],
+      "correct": 1,
+      "explanation": "Variance measures average squared deviation from mean."
+    },
+    {
+      "id": 242,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Standard deviation is the:",
+      "options": [
+        "Square of variance",
+        "Square root of variance",
+        "Reciprocal of variance",
+        "Mean of squared deviations"
+      ],
+      "correct": 1,
+      "explanation": "Standard deviation = √variance."
+    },
+    {
+      "id": 243,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If all values are identical, variance is:",
+      "options": [
+        "1",
+        "0",
+        "Infinite",
+        "Undefined"
+      ],
+      "correct": 1,
+      "explanation": "No variation means variance = 0."
+    },
+    {
+      "id": 244,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Coefficient of variation is:",
+      "options": [
+        "Standard deviation/Mean × 100%",
+        "Mean/Standard deviation",
+        "Variance/Mean",
+        "Range/Mean"
+      ],
+      "correct": 0,
+      "explanation": "CV = (σ/μ) × 100% for relative variability."
+    },
+    {
+      "id": 245,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For data 2, 4, 6, 8, 10, the variance is:",
+      "options": [
+        "8",
+        "10",
+        "2.83",
+        "40"
+      ],
+      "correct": 0,
+      "explanation": "Mean=6, deviations squared: 16+4+0+4+16=40, variance=40/5=8."
+    },
+    {
+      "id": 246,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Standard deviation of 2, 4, 6, 8, 10 is:",
+      "options": [
+        "2.83",
+        "3.16",
+        "2",
+        "4"
+      ],
+      "correct": 0,
+      "explanation": "√8 ≈ 2.83."
+    },
+    {
+      "id": 247,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If variance is 16, standard deviation is:",
+      "options": [
+        "4",
+        "8",
+        "256",
+        "2"
+      ],
+      "correct": 0,
+      "explanation": "σ = √16 = 4."
+    },
+    {
+      "id": 248,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Adding a constant to all values:",
+      "options": [
+        "Changes variance",
+        "Doesn't change variance",
+        "Multiplies variance",
+        "Squares variance"
+      ],
+      "correct": 1,
+      "explanation": "Variance is unaffected by adding constant."
+    },
+    {
+      "id": 249,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Multiplying all values by constant k:",
+      "options": [
+        "Variance multiplied by k",
+        "Variance multiplied by k²",
+        "Variance unchanged",
+        "Variance divided by k"
+      ],
+      "correct": 1,
+      "explanation": "Var(kX) = k²Var(X)."
+    },
+    {
+      "id": 250,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Mean deviation is:",
+      "options": [
+        "Average of absolute deviations",
+        "Average of squared deviations",
+        "Square root of variance",
+        "Range/2"
+      ],
+      "correct": 0,
+      "explanation": "Mean deviation = Σ|x - μ|/n."
+    },
+    {
+      "id": 251,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Which measure is most affected by outliers?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "Interquartile range"
+      ],
+      "correct": 2,
+      "explanation": "Mean is sensitive to extreme values."
+    },
+    {
+      "id": 252,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Which measure is not affected by outliers?",
+      "options": [
+        "Mean",
+        "Range",
+        "Variance",
+        "Median"
+      ],
+      "correct": 3,
+      "explanation": "Median is resistant to outliers."
+    },
+    {
+      "id": 253,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The coefficient of variation allows comparison of:",
+      "options": [
+        "Different units",
+        "Same units only",
+        "Only means",
+        "Only variances"
+      ],
+      "correct": 0,
+      "explanation": "CV is unitless, allows comparing variability across different scales."
+    },
+    {
+      "id": 254,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If mean = 50 and SD = 5, CV =",
+      "options": [
+        "10%",
+        "20%",
+        "50%",
+        "5%"
+      ],
+      "correct": 0,
+      "explanation": "CV = (5/50) × 100% = 10%."
+    },
+    {
+      "id": 255,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If one group has CV = 15% and another has CV = 20%, which is more consistent?",
+      "options": [
+        "First group",
+        "Second group",
+        "Both same",
+        "Cannot compare"
+      ],
+      "correct": 0,
+      "explanation": "Lower CV means less variability, more consistent."
+    },
+    {
+      "id": 256,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Quartile deviation is:",
+      "options": [
+        "IQR/2",
+        "IQR",
+        "Q₃ - Q₁",
+        "(Q₃ - Q₁)/4"
+      ],
+      "correct": 0,
+      "explanation": "Quartile deviation = (Q₃ - Q₁)/2."
+    },
+    {
+      "id": 257,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If Q₁ = 20 and Q₃ = 40, quartile deviation =",
+      "options": [
+        "20",
+        "10",
+        "30",
+        "5"
+      ],
+      "correct": 1,
+      "explanation": "(40-20)/2 = 10."
+    },
+    {
+      "id": 258,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Coefficient of quartile deviation is:",
+      "options": [
+        "(Q₃ - Q₁)/(Q₃ + Q₁)",
+        "(Q₃ + Q₁)/(Q₃ - Q₁)",
+        "Q₃ - Q₁",
+        "(Q₃ - Q₁)/2"
+      ],
+      "correct": 0,
+      "explanation": "Relative measure based on quartiles."
+    },
+    {
+      "id": 259,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If Q₁ = 30 and Q₃ = 50, coefficient of quartile deviation =",
+      "options": [
+        "0.25",
+        "0.5",
+        "0.75",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "(50-30)/(50+30) = 20/80 = 0.25."
+    },
+    {
+      "id": 260,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The 5-number summary consists of:",
+      "options": [
+        "Mean, SD, Min, Max, Range",
+        "Min, Q₁, Q₂, Q₃, Max",
+        "Mean, Median, Mode, Range, SD",
+        "Q₁, Q₂, Q₃, IQR, Range"
+      ],
+      "correct": 1,
+      "explanation": "Five-number summary: minimum, Q₁, median, Q₃, maximum."
+    },
+    {
+      "id": 261,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "A box plot displays:",
+      "options": [
+        "Mean and SD",
+        "Five-number summary",
+        "All data points",
+        "Frequency distribution"
+      ],
+      "correct": 1,
+      "explanation": "Box plot shows min, Q₁, median, Q₃, max."
+    },
+    {
+      "id": 262,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Outliers in box plot are points beyond:",
+      "options": [
+        "1.5 × IQR from quartiles",
+        "2 × IQR",
+        "3 × IQR",
+        "Mean ± 2SD"
+      ],
+      "correct": 0,
+      "explanation": "Points beyond Q₁ - 1.5IQR or Q₃ + 1.5IQR are outliers."
+    },
+    {
+      "id": 263,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If a distribution has two peaks, it is called:",
+      "options": [
+        "Unimodal",
+        "Bimodal",
+        "Multimodal",
+        "Skewed"
+      ],
+      "correct": 1,
+      "explanation": "Bimodal distribution has two modes."
+    },
+    {
+      "id": 264,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The mode of the data 2, 4, 5, 5, 7, 8, 8, 8, 9 is:",
+      "options": [
+        "5",
+        "8",
+        "7",
+        "9"
+      ],
+      "correct": 1,
+      "explanation": "8 appears three times, more than any other."
+    },
+    {
+      "id": 265,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The range of 12, 15, 18, 20, 25 is:",
+      "options": [
+        "13",
+        "15",
+        "18",
+        "25"
+      ],
+      "correct": 0,
+      "explanation": "Range = 25 - 12 = 13."
+    },
+    {
+      "id": 266,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If each observation is doubled, the variance becomes:",
+      "options": [
+        "Doubled",
+        "Quadrupled",
+        "Same",
+        "Halved"
+      ],
+      "correct": 1,
+      "explanation": "Var(2X) = 4Var(X)."
+    },
+    {
+      "id": 267,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For a set of 10 observations, sum = 100. Mean =",
+      "options": [
+        "10",
+        "100",
+        "20",
+        "5"
+      ],
+      "correct": 0,
+      "explanation": "Mean = 100/10 = 10."
+    },
+    {
+      "id": 268,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If sum of squares of deviations from mean is 90 for 10 observations, variance =",
+      "options": [
+        "9",
+        "10",
+        "90",
+        "100"
+      ],
+      "correct": 0,
+      "explanation": "Variance = 90/10 = 9."
+    },
+    {
+      "id": 269,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Standard deviation for above =",
+      "options": [
+        "3",
+        "4.5",
+        "9",
+        "81"
+      ],
+      "correct": 0,
+      "explanation": "√9 = 3."
+    },
+    {
+      "id": 270,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If two groups have same mean but different SD, the group with smaller SD is:",
+      "options": [
+        "More variable",
+        "Less variable",
+        "Larger",
+        "Smaller"
+      ],
+      "correct": 1,
+      "explanation": "Smaller SD means less dispersion, more consistent."
+    },
+    {
+      "id": 271,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Chebyshev's inequality states that at least 75% of data lies within:",
+      "options": [
+        "1 SD of mean",
+        "2 SD of mean",
+        "3 SD of mean",
+        "4 SD of mean"
+      ],
+      "correct": 1,
+      "explanation": "For k=2, at least 1 - 1/4 = 75% within 2 SD."
+    },
+    {
+      "id": 272,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "According to Chebyshev, at least 89% of data lies within:",
+      "options": [
+        "2 SD",
+        "3 SD",
+        "4 SD",
+        "5 SD"
+      ],
+      "correct": 1,
+      "explanation": "1 - 1/k² = 0.89 → 1/k² = 0.11 → k² ≈ 9 → k=3."
+    },
+    {
+      "id": 273,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For normal distribution, approximately 68% of data lies within:",
+      "options": [
+        "1 SD",
+        "2 SD",
+        "3 SD",
+        "4 SD"
+      ],
+      "correct": 0,
+      "explanation": "Empirical rule: 68% within 1 SD."
+    },
+    {
+      "id": 274,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For normal distribution, approximately 95% of data lies within:",
+      "options": [
+        "1 SD",
+        "2 SD",
+        "3 SD",
+        "4 SD"
+      ],
+      "correct": 1,
+      "explanation": "95% within 2 SD."
+    },
+    {
+      "id": 275,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For normal distribution, approximately 99.7% of data lies within:",
+      "options": [
+        "1 SD",
+        "2 SD",
+        "3 SD",
+        "4 SD"
+      ],
+      "correct": 2,
+      "explanation": "99.7% within 3 SD."
+    },
+    {
+      "id": 276,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Z-score is calculated as:",
+      "options": [
+        "(x - μ)/σ",
+        "(μ - x)/σ",
+        "x/σ",
+        "x - μ"
+      ],
+      "correct": 0,
+      "explanation": "Z-score standardizes values: (x - mean)/SD."
+    },
+    {
+      "id": 277,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "A Z-score of 2 means the value is:",
+      "options": [
+        "2 SD above mean",
+        "2 SD below mean",
+        "2 times the mean",
+        "2 units from mean"
+      ],
+      "correct": 0,
+      "explanation": "Z = 2 means 2 standard deviations above the mean."
+    },
+    {
+      "id": 278,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "A Z-score of -1.5 means the value is:",
+      "options": [
+        "1.5 SD above mean",
+        "1.5 SD below mean",
+        "1.5 times mean",
+        "1.5 units below mean"
+      ],
+      "correct": 1,
+      "explanation": "Negative Z-score indicates below the mean."
+    },
+    {
+      "id": 279,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The mean of Z-scores is always:",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Depends on data"
+      ],
+      "correct": 0,
+      "explanation": "Z-scores have mean 0."
+    },
+    {
+      "id": 280,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The standard deviation of Z-scores is always:",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Depends on data"
+      ],
+      "correct": 1,
+      "explanation": "Z-scores have standard deviation 1."
+    },
+    {
+      "id": 281,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The range of a dataset is 20. If 5 is added to each value, the new range is:",
+      "options": [
+        "20",
+        "25",
+        "15",
+        "100"
+      ],
+      "correct": 0,
+      "explanation": "Range is unchanged by adding constant."
+    },
+    {
+      "id": 282,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If each value is multiplied by 3, the range becomes:",
+      "options": [
+        "Same",
+        "Tripled",
+        "Doubled",
+        "Halved"
+      ],
+      "correct": 1,
+      "explanation": "Range is multiplied by the same factor."
+    },
+    {
+      "id": 283,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The variance of a sample is calculated with denominator:",
+      "options": [
+        "n",
+        "n-1",
+        "n+1",
+        "√n"
+      ],
+      "correct": 1,
+      "explanation": "Sample variance uses n-1 for unbiased estimate."
+    },
+    {
+      "id": 284,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The variance of a population is calculated with denominator:",
+      "options": [
+        "n",
+        "n-1",
+        "n+1",
+        "√n"
+      ],
+      "correct": 0,
+      "explanation": "Population variance uses n."
+    },
+    {
+      "id": 285,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For grouped data, the formula for variance uses:",
+      "options": [
+        "Σfx² - (Σfx)²/Σf",
+        "Σfx - (Σf)²",
+        "Σf²x - Σfx",
+        "Σf(x - x̄)"
+      ],
+      "correct": 0,
+      "explanation": "Variance = [Σfx² - (Σfx)²/Σf]/Σf."
+    },
+    {
+      "id": 286,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The step deviation method uses d = (x - A)/c where c is:",
+      "options": [
+        "Class width",
+        "Class mark",
+        "Frequency",
+        "Mean"
+      ],
+      "correct": 0,
+      "explanation": "c is the class width in step deviation method."
+    },
+    {
+      "id": 287,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The coefficient of mean deviation is:",
+      "options": [
+        "MD/Mean",
+        "MD × Mean",
+        "Mean/MD",
+        "MD - Mean"
+      ],
+      "correct": 0,
+      "explanation": "Coefficient of MD = MD/Mean."
+    },
+    {
+      "id": 288,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The coefficient of standard deviation is:",
+      "options": [
+        "SD/Mean",
+        "Mean/SD",
+        "SD × Mean",
+        "SD - Mean"
+      ],
+      "correct": 0,
+      "explanation": "Coefficient of SD = SD/Mean."
+    },
+    {
+      "id": 289,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For comparing two series, the best measure is:",
+      "options": [
+        "Range",
+        "Standard deviation",
+        "Coefficient of variation",
+        "Quartile deviation"
+      ],
+      "correct": 2,
+      "explanation": "CV allows comparison across different units."
+    },
+    {
+      "id": 290,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If all values in a dataset are multiplied by 10, the coefficient of variation:",
+      "options": [
+        "Becomes 10 times",
+        "Becomes 1/10",
+        "Remains same",
+        "Becomes 100 times"
+      ],
+      "correct": 2,
+      "explanation": "CV = SD/mean, both multiplied by 10, so CV unchanged."
+    },
+    {
+      "id": 291,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The 10-90 percentile range is:",
+      "options": [
+        "P₉₀ - P₁₀",
+        "P₉₀ + P₁₀",
+        "P₉₀/P₁₀",
+        "(P₉₀ - P₁₀)/2"
+      ],
+      "correct": 0,
+      "explanation": "10-90 percentile range = P₉₀ - P₁₀."
+    },
+    {
+      "id": 292,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Median absolute deviation is calculated as:",
+      "options": [
+        "median(|x - median|)",
+        "mean(|x - mean|)",
+        "median(x) - mean(x)",
+        "|median - mean|"
+      ],
+      "correct": 0,
+      "explanation": "MAD = median of absolute deviations from median."
+    },
+    {
+      "id": 293,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For a positively skewed distribution, which is true?",
+      "options": [
+        "Q₃ - Q₂ > Q₂ - Q₁",
+        "Q₃ - Q₂ < Q₂ - Q₁",
+        "Q₃ - Q₂ = Q₂ - Q₁",
+        "Cannot determine"
+      ],
+      "correct": 0,
+      "explanation": "In positive skew, upper tail longer, so Q₃-Q₂ > Q₂-Q₁."
+    },
+    {
+      "id": 294,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For a negatively skewed distribution, which is true?",
+      "options": [
+        "Q₃ - Q₂ > Q₂ - Q₁",
+        "Q₃ - Q₂ < Q₂ - Q₁",
+        "Q₃ - Q₂ = Q₂ - Q₁",
+        "Cannot determine"
+      ],
+      "correct": 1,
+      "explanation": "In negative skew, lower tail longer, so Q₃-Q₂ < Q₂-Q₁."
+    },
+    {
+      "id": 295,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Bowley's coefficient of skewness is based on:",
+      "options": [
+        "Mean and mode",
+        "Mean and median",
+        "Quartiles",
+        "Moments"
+      ],
+      "correct": 2,
+      "explanation": "Bowley's skewness = (Q₃ + Q₁ - 2Q₂)/(Q₃ - Q₁)."
+    },
+    {
+      "id": 296,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "Karl Pearson's coefficient of skewness is:",
+      "options": [
+        "(Mean - Mode)/SD",
+        "(Mean - Median)/SD",
+        "(Q₃ - Q₁)/2",
+        "Variance/Mean"
+      ],
+      "correct": 0,
+      "explanation": "Pearson's skewness = 3(Mean - Median)/SD also works."
+    },
+    {
+      "id": 297,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "For a distribution, if Q₁ = 25, Q₂ = 30, Q₃ = 35, then IQR =",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correct": 1,
+      "explanation": "IQR = Q₃ - Q₁ = 35 - 25 = 10."
+    },
+    {
+      "id": 298,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The variance of a constant is:",
+      "options": [
+        "0",
+        "1",
+        "The constant itself",
+        "Undefined"
+      ],
+      "correct": 0,
+      "explanation": "Constant has no variation, variance = 0."
+    },
+    {
+      "id": 299,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The standard deviation of a constant is:",
+      "options": [
+        "0",
+        "1",
+        "The constant itself",
+        "Undefined"
+      ],
+      "correct": 0,
+      "explanation": "SD = √variance = 0."
+    },
+    {
+      "id": 300,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If the variance of a dataset is 25, the standard deviation is:",
+      "options": [
+        "5",
+        "25",
+        "625",
+        "12.5"
+      ],
+      "correct": 0,
+      "explanation": "SD = √25 = 5."
+    },
+    {
+      "id": 301,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If the standard deviation is 4, the variance is:",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "correct": 3,
+      "explanation": "Variance = SD² = 16."
+    },
+    {
+      "id": 302,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The mean deviation about the mean for 2, 4, 6, 8, 10 is:",
+      "options": [
+        "2.4",
+        "3.2",
+        "4",
+        "5"
+      ],
+      "correct": 0,
+      "explanation": "Mean=6, deviations: 4,2,0,2,4, sum=12, MD=12/5=2.4."
+    },
+    {
+      "id": 303,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The range of 3, 7, 9, 12, 15 is:",
+      "options": [
+        "12",
+        "9",
+        "15",
+        "3"
+      ],
+      "correct": 0,
+      "explanation": "Range = 15 - 3 = 12."
+    },
+    {
+      "id": 304,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The coefficient of range for above data is:",
+      "options": [
+        "0.67",
+        "0.75",
+        "0.5",
+        "0.33"
+      ],
+      "correct": 0,
+      "explanation": "(15-3)/(15+3) = 12/18 = 0.67."
+    },
+    {
+      "id": 305,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If Q₁ = 15 and Q₃ = 25, the quartile deviation is:",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correct": 0,
+      "explanation": "(25-15)/2 = 5."
+    },
+    {
+      "id": 306,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If mean = 100 and CV = 20%, SD =",
+      "options": [
+        "20",
+        "5",
+        "200",
+        "50"
+      ],
+      "correct": 0,
+      "explanation": "CV = (SD/100)×100 = 20 ⇒ SD = 20."
+    },
+    {
+      "id": 307,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If SD = 8 and CV = 25%, mean =",
+      "options": [
+        "32",
+        "2",
+        "16",
+        "64"
+      ],
+      "correct": 0,
+      "explanation": "CV = (8/mean)×100 = 25 ⇒ 8/mean = 0.25 ⇒ mean = 32."
+    },
+    {
+      "id": 308,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The interquartile range is a measure of:",
+      "options": [
+        "Central tendency",
+        "Dispersion",
+        "Skewness",
+        "Kurtosis"
+      ],
+      "correct": 1,
+      "explanation": "IQR measures dispersion of middle 50% of data."
+    },
+    {
+      "id": 309,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The most commonly used measure of dispersion is:",
+      "options": [
+        "Range",
+        "Mean deviation",
+        "Standard deviation",
+        "Quartile deviation"
+      ],
+      "correct": 2,
+      "explanation": "Standard deviation is most commonly used."
+    },
+    {
+      "id": 310,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The least reliable measure of dispersion is:",
+      "options": [
+        "Range",
+        "Standard deviation",
+        "Variance",
+        "Mean deviation"
+      ],
+      "correct": 0,
+      "explanation": "Range is least reliable as it's based on only two values."
+    },
+    {
+      "id": 311,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The variance of 5, 5, 5, 5, 5 is:",
+      "options": [
+        "0",
+        "5",
+        "25",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "All values equal, no variation, variance = 0."
+    },
+    {
+      "id": 312,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The standard deviation of 5, 5, 5, 5, 5 is:",
+      "options": [
+        "0",
+        "5",
+        "25",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "SD = √0 = 0."
+    },
+    {
+      "id": 313,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If a dataset has mean 50 and SD 5, then 68% of data lies between:",
+      "options": [
+        "45 and 55",
+        "40 and 60",
+        "35 and 65",
+        "0 and 100"
+      ],
+      "correct": 0,
+      "explanation": "68% within 1 SD: 50±5 = (45,55)."
+    },
+    {
+      "id": 314,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If a dataset has mean 50 and SD 5, then 95% of data lies between:",
+      "options": [
+        "45 and 55",
+        "40 and 60",
+        "35 and 65",
+        "0 and 100"
+      ],
+      "correct": 1,
+      "explanation": "95% within 2 SD: 50±10 = (40,60)."
+    },
+    {
+      "id": 315,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "If a dataset has mean 50 and SD 5, then 99.7% of data lies between:",
+      "options": [
+        "45 and 55",
+        "40 and 60",
+        "35 and 65",
+        "0 and 100"
+      ],
+      "correct": 2,
+      "explanation": "99.7% within 3 SD: 50±15 = (35,65)."
+    },
+    {
+      "id": 316,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The sum of squares of deviations from mean is called:",
+      "options": [
+        "Sum of squares",
+        "Variance",
+        "Standard deviation",
+        "Mean square"
+      ],
+      "correct": 0,
+      "explanation": "Sum of squares = Σ(x - x̄)²."
+    },
+    {
+      "id": 317,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The root mean square deviation from mean is:",
+      "options": [
+        "Standard deviation",
+        "Variance",
+        "Mean deviation",
+        "Range"
+      ],
+      "correct": 0,
+      "explanation": "RMS deviation = standard deviation."
+    },
+    {
+      "id": 318,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The mean square deviation from mean is:",
+      "options": [
+        "Variance",
+        "Standard deviation",
+        "Mean deviation",
+        "Range"
+      ],
+      "correct": 0,
+      "explanation": "Mean square deviation = variance."
+    },
+    {
+      "id": 319,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The sum of squares of deviations from mean is minimum when deviations are taken from:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Any value"
+      ],
+      "correct": 0,
+      "explanation": "Sum of squares is minimized at the mean."
+    },
+    {
+      "id": 320,
+      "topic": "measures_dispersion",
+      "topicName": "Measures of Partition and Dispersion",
+      "question": "The sum of absolute deviations from mean is minimum when deviations are taken from:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Any value"
+      ],
+      "correct": 1,
+      "explanation": "Sum of absolute deviations is minimized at the median."
     }
   ]
 }

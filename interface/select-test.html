@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus CBT - Select Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/core.css">
+  <link rel="stylesheet" href="../styles/component.css">
+  <link rel="stylesheet" href="../styles/pages.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../storage/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+</head>
+<body>
+  <div class="container">
+    <div class="select-test-panel">
+      <div class="panel-header">
+        <h2><i class="fas fa-pencil-alt"></i> Choose Test</h2>
+      </div>
+
+      <div id="messageContainer"></div>
+
+      <!-- Step 1: Course Selection -->
+      <div id="courseSelection" class="selection-step">
+        <div class="courses-grid" id="coursesGrid"></div>
+      </div>
+
+      <!-- Step 2: Test Configuration (hidden initially) -->
+      <div id="testConfig" class="selection-step" style="display: none;">
+        <button class="btn btn-secondary back-btn" onclick="TestConfig.backToCourses()">
+          <i class="fas fa-arrow-left"></i> Back to Courses
+        </button>
+
+        <div class="config-panel">
+          <h3 id="selectedCourseTitle"></h3>
+          
+          <div class="config-section">
+            <h4><i class="fas fa-tags"></i> Question Source</h4>
+            <div class="source-options">
+              <label class="radio-card">
+                <input type="radio" name="questionSource" value="mixed" checked onclick="TestConfig.toggleTopicSelection()">
+                <div class="radio-content">
+                  <i class="fas fa-random"></i>
+                  <span>Mixed Questions (All Topics)</span>
+                </div>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="questionSource" value="topics" onclick="TestConfig.toggleTopicSelection()">
+                <div class="radio-content">
+                  <i class="fas fa-list-ul"></i>
+                  <span>Select Specific Topics</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="config-section" id="topicsSelection" style="display: none;">
+            <h4><i class="fas fa-check-square"></i> Choose Topics</h4>
+            <div class="topics-grid" id="topicsGrid"></div>
+            <div class="selection-actions">
+              <button class="btn btn-small" onclick="TestConfig.selectAllTopics()">Select All</button>
+              <button class="btn btn-small" onclick="TestConfig.deselectAllTopics()">Deselect All</button>
+            </div>
+          </div>
+
+          <div class="config-section">
+            <h4><i class="fas fa-sort-amount-up"></i> Number of Questions</h4>
+            <div class="question-count-slider">
+              <input type="range" id="questionCount" min="20" max="60" value="20" step="5" oninput="TestConfig.updateCount()">
+              <div class="count-display">
+                <span id="countValue">20</span> questions
+              </div>
+            </div>
+            <div class="time-estimate">
+              <i class="fas fa-clock"></i>
+              <span>Estimated time: <span id="timeEstimate">10</span> minutes</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block start-test-btn" onclick="TestConfig.startTest()">
+            <i class="fas fa-play"></i> Start Test
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/utilities.js"></script>
+  <script src="../scripts/storage.js"></script>
+  <script src="../scripts/index.js"></script>
+  <script src="../scripts/test-config.js"></script>
+</body>
+</html>

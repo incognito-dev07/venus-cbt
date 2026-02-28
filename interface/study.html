@@ -3,11 +3,12 @@
 <head>
   <title>Venus CBT - Study Materials</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/core.css">
-  <link rel="stylesheet" href="styles/component.css">
-  <link rel="stylesheet" href="styles/pages.css">
-  <link rel="stylesheet" href="styles/responsive.css">
-  <link rel="stylesheet" href="styles/study.css">
+  <link rel="stylesheet" href="../styles/core.css">
+  <link rel="stylesheet" href="../styles/component.css">
+  <link rel="stylesheet" href="../styles/pages.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="stylesheet" href="../styles/study.css">
+  <link rel="icon" href="../storage/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 </head>
 <body>
@@ -21,7 +22,7 @@
       <div class="mobile-header">
         <div class="header-left">
           <i class="fas fa-book-open" style="color: var(--accent-primary);"></i>
-          <h2>Study</h2>
+          <h2>Study Space</h2>
         </div>
         <button class="header-icon" onclick="StudyManager.showBookmarks()">
           <i class="fas fa-bookmark"></i>
@@ -69,7 +70,7 @@
         </button>
         <div class="study-breadcrumb" id="studyBreadcrumb">
           <span id="breadcrumbSubject"></span> > 
-          <span id="breadcrumbTopic"></span> >
+          <span id="breadcrumbTopic"></span>
         </div>
         <div class="study-actions">
           <button class="action-btn" onclick="StudyManager.toggleBookmark()" id="studyBookmarkBtn">
@@ -101,9 +102,9 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="scripts/utilities.js"></script>
-  <script src="scripts/storage.js"></script>
-  <script src="scripts/study.js"></script>
-  <script src="scripts/index.js"></script>
+  <script src="../scripts/utilities.js"></script>
+  <script src="../scripts/storage.js"></script>
+  <script src="../scripts/study.js"></script>
+  <script src="../scripts/index.js"></script>
 </body>
 </html>

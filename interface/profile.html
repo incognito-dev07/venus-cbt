@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Venus CBT - Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/core.css">
+  <link rel="stylesheet" href="../styles/component.css">
+  <link rel="stylesheet" href="../styles/pages.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="icon" href="../storage/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-panel">
+      <h2><i class="fas fa-user-circle"></i> Your Profile</h2>
+      
+      <!-- Statistics Section -->
+      <div class="stats-section">
+        <h3><i class="fas fa-chart-bar"></i> Statistics</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value" id="totalTests">0</span>
+              <span class="stat-label">Tests Taken</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-percent"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value" id="avgScore">0%</span>
+              <span class="stat-label">Average Score</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value" id="bestCourse">N/A</span>
+              <span class="stat-label">Best Course</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value" id="bestScore">0%</span>
+              <span class="stat-label">Best Score</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value" id="totalStudyTime">0h</span>
+              <span class="stat-label">Study Time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topic Insights Section (Smaller Style) -->
+      <div class="insights-section">
+        <h3><i class="fas fa-chart-pie"></i> Topic Insights</h3>
+        <div class="insights-grid">
+          <div class="insight-card strongest">
+            <div class="insight-icon">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="insight-content">
+              <span class="insight-label">Best Performance</span>
+              <span class="insight-value" id="strongestTopic">-</span>
+              <span class="insight-score" id="strongestScore">0%</span>
+            </div>
+          </div>
+          
+          <div class="insight-card weakest">
+            <div class="insight-icon">
+              <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="insight-content">
+              <span class="insight-label">Review Required</span>
+              <span class="insight-value" id="weakestTopic">-</span>
+              <span class="insight-score" id="weakestScore">0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements Section -->
+      <div class="achievements-section">
+        <h3><i class="fas fa-medal"></i> Achievements</h3>
+        <div class="achievements-grid" id="achievementsGrid">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="history.html" class="btn btn-primary"><i class="fas fa-history"></i> View History</a>
+        <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../scripts/utilities.js"></script>
+  <script src="../scripts/storage.js"></script>
+  <script src="../scripts/index.js"></script>
+  <script src="../scripts/profile.js"></script>
+</body>
+</html>

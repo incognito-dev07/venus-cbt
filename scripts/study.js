@@ -13,28 +13,46 @@ const StudyManager = {
     this.setupSearch();
     this.updateBookmarkCount();
     this.setupEventDelegation();
+    this.setupBackButtonHandler();
+  },
+  
+  setupBackButtonHandler: function() {
+    // Handle browser back button
+    window.addEventListener('popstate', (event) => {
+      const studyView = document.getElementById('studyView');
+      const browseView = document.getElementById('browseView');
+      
+      if (studyView && studyView.style.display !== 'none') {
+        event.preventDefault();
+        this.backToBrowse();
+        
+        // Push state again to handle next back press
+        history.pushState({study: true}, '', window.location.pathname);
+      }
+    });
+    
+    // Initial push state
+    history.pushState({study: true}, '', window.location.pathname);
   },
   
   setupEventDelegation: function() {
-    // Use event delegation for subtopic items
+    // Use event delegation for topic items
     document.addEventListener('click', (e) => {
-      const subtopicItem = e.target.closest('.subtopic-item');
+      const topicItem = e.target.closest('.topic-item');
       
-      if (subtopicItem) {
+      if (topicItem) {
         e.preventDefault();
         e.stopPropagation();
         
-        const subjectId = subtopicItem.dataset.subject;
-        const topicId = subtopicItem.dataset.topic;
-        const subtopicId = subtopicItem.dataset.subtopic;
-        const subjectName = subtopicItem.dataset.subjectName;
-        const topicName = subtopicItem.dataset.topicName;
-        const subtopicName = subtopicItem.dataset.subtopicName;
+        const subjectId = topicItem.dataset.subject;
+        const topicId = topicItem.dataset.topic;
+        const subjectName = topicItem.dataset.subjectName;
+        const topicName = topicItem.dataset.topicName;
         
-        console.log('Subtopic clicked:', { subjectId, topicId, subtopicId });
+        console.log('Topic clicked:', { subjectId, topicId });
         
-        if (subjectId && topicId && subtopicId) {
-          this.loadTopic(subjectId, topicId, subtopicId, subjectName, topicName, subtopicName);
+        if (subjectId && topicId) {
+          this.loadTopic(subjectId, topicId, subjectName, topicName);
         }
       }
     });
@@ -88,31 +106,15 @@ const StudyManager = {
         const topic = subject.topics[topicId];
         
         html += `
-          <div class="topic-header" onclick="StudyManager.toggleTopic('${subjectId}', '${topicId}', event)">
-            <span><i class="fas fa-folder"></i> ${this.escapeHtml(topic.name)}</span>
-            <i class="fas fa-chevron-right topic-arrow" id="topic-arrow-${subjectId}-${topicId}"></i>
-          </div>
-
-          <div class="subtopics-wrapper" id="subtopics-${subjectId}-${topicId}" style="display: none;">`;
-        
-        for (const subtopicId in topic.subtopics) {
-          const subtopic = topic.subtopics[subtopicId];
-          
-          html += `
-            <div class="subtopic-item" 
-                 data-subject="${subjectId}" 
-                 data-topic="${topicId}" 
-                 data-subtopic="${subtopicId}"
-                 data-subject-name="${this.escapeHtml(subject.name)}"
-                 data-topic-name="${this.escapeHtml(topic.name)}"
-                 data-subtopic-name="${this.escapeHtml(subtopic.name)}">
-              <i class="fas fa-file-alt"></i>
-              <span>${this.escapeHtml(subtopic.name)}</span>
-              <i class="fas fa-arrow-right"></i>
-            </div>`;
-        }
-        
-        html += `</div>`;
+          <div class="topic-item" 
+               data-subject="${subjectId}" 
+               data-topic="${topicId}"
+               data-subject-name="${this.escapeHtml(subject.name)}"
+               data-topic-name="${this.escapeHtml(topic.name)}">
+            <i class="fas fa-file-alt"></i>
+            <span>${this.escapeHtml(topic.name)}</span>
+            <i class="fas fa-arrow-right"></i>
+          </div>`;
       }
       
       html += `</div></div>`;
@@ -138,26 +140,8 @@ const StudyManager = {
     }
   },
   
-  toggleTopic: function(subjectId, topicId, event) {
-    if (event) event.stopPropagation();
-    console.log('Toggling topic:', subjectId, topicId);
-    
-    const subtopicsDiv = document.getElementById(`subtopics-${subjectId}-${topicId}`);
-    const topicHeader = event?.currentTarget;
-    
-    if (!subtopicsDiv) return;
-    
-    if (subtopicsDiv.style.display === 'none' || subtopicsDiv.style.display === '') {
-      subtopicsDiv.style.display = 'block';
-      if (topicHeader) topicHeader.classList.add('expanded');
-    } else {
-      subtopicsDiv.style.display = 'none';
-      if (topicHeader) topicHeader.classList.remove('expanded');
-    }
-  },
-  
-  loadTopic: function(subjectId, topicId, subtopicId, subjectName, topicName, subtopicName) {
-    console.log('Loading topic:', { subjectId, topicId, subtopicId });
+  loadTopic: function(subjectId, topicId, subjectName, topicName) {
+    console.log('Loading topic:', { subjectId, topicId });
     
     if (!this.notes) {
       console.error('No study notes available');
@@ -176,18 +160,11 @@ const StudyManager = {
       return;
     }
     
-    const subtopic = topic.subtopics[subtopicId];
-    if (!subtopic) {
-      console.error('Subtopic not found:', subtopicId);
-      return;
-    }
-    
     this.currentTopic = {
-      subjectId, topicId, subtopicId,
+      subjectId, topicId,
       subjectName: subjectName || subject.name,
       topicName: topicName || topic.name,
-      subtopicName: subtopicName || subtopic.name,
-      content: subtopic.content
+      content: topic.content
     };
     
     this.addToRecent(this.currentTopic);
@@ -211,8 +188,7 @@ const StudyManager = {
     if (studyContent) {
       studyContent.innerHTML = `
         <div class="mobile-content">
-          <h1>${this.escapeHtml(this.currentTopic.subtopicName)}</h1>
-          ${subtopic.content}
+          ${topic.content}
         </div>
       `;
     }
@@ -269,19 +245,13 @@ const StudyManager = {
       
       for (const topicId in subject.topics) {
         const topic = subject.topics[topicId];
-        if (!topic || !topic.subtopics) continue;
         
-        for (const subtopicId in topic.subtopics) {
-          const subtopic = topic.subtopics[subtopicId];
-          
-          if (subtopic.name.toLowerCase().includes(searchTerm)) {
-            results.push({
-              subjectId, topicId, subtopicId,
-              subjectName: subject.name,
-              topicName: topic.name,
-              subtopicName: subtopic.name
-            });
-          }
+        if (topic.name.toLowerCase().includes(searchTerm)) {
+          results.push({
+            subjectId, topicId,
+            subjectName: subject.name,
+            topicName: topic.name
+          });
         }
       }
     }
@@ -301,10 +271,9 @@ const StudyManager = {
     let html = '';
     results.forEach(result => {
       html += `
-        <div class="search-result-item" onclick="StudyManager.loadTopic('${result.subjectId}', '${result.topicId}', '${result.subtopicId}', '${this.escapeHtml(result.subjectName)}', '${this.escapeHtml(result.topicName)}', '${this.escapeHtml(result.subtopicName)}')">
+        <div class="search-result-item" onclick="StudyManager.loadTopic('${result.subjectId}', '${result.topicId}', '${this.escapeHtml(result.subjectName)}', '${this.escapeHtml(result.topicName)}')">
           <div class="subject">${this.escapeHtml(result.subjectName)}</div>
-          <div class="title">${this.escapeHtml(result.subtopicName)}</div>
-          <div class="path">${this.escapeHtml(result.topicName)}</div>
+          <div class="title">${this.escapeHtml(result.topicName)}</div>
         </div>
       `;
     });
@@ -325,15 +294,13 @@ const StudyManager = {
     
     const exists = this.bookmarks.some(b => 
       b.subjectId === this.currentTopic.subjectId &&
-      b.topicId === this.currentTopic.topicId &&
-      b.subtopicId === this.currentTopic.subtopicId
+      b.topicId === this.currentTopic.topicId
     );
     
     if (exists) {
       this.bookmarks = this.bookmarks.filter(b => 
         !(b.subjectId === this.currentTopic.subjectId &&
-          b.topicId === this.currentTopic.topicId &&
-          b.subtopicId === this.currentTopic.subtopicId)
+          b.topicId === this.currentTopic.topicId)
       );
     } else {
       this.bookmarks.push({
@@ -353,8 +320,7 @@ const StudyManager = {
     
     const exists = this.bookmarks.some(b => 
       b.subjectId === this.currentTopic.subjectId &&
-      b.topicId === this.currentTopic.topicId &&
-      b.subtopicId === this.currentTopic.subtopicId
+      b.topicId === this.currentTopic.topicId
     );
     
     btn.innerHTML = exists ? '<i class="fas fa-bookmark"></i>' : '<i class="far fa-bookmark"></i>';
@@ -409,9 +375,9 @@ const StudyManager = {
     this.bookmarks.sort((a, b) => new Date(b.bookmarkedAt) - new Date(a.bookmarkedAt)).forEach((bookmark, index) => {
       html += `
         <div class="bookmark-item">
-          <div class="bookmark-info" onclick="StudyManager.loadTopic('${bookmark.subjectId}', '${bookmark.topicId}', '${bookmark.subtopicId}', '${this.escapeHtml(bookmark.subjectName)}', '${this.escapeHtml(bookmark.topicName)}', '${this.escapeHtml(bookmark.subtopicName)}'); document.querySelectorAll('.modal-overlay, .bookmarks-modal').forEach(el => el.remove());">
+          <div class="bookmark-info" onclick="StudyManager.loadTopic('${bookmark.subjectId}', '${bookmark.topicId}', '${this.escapeHtml(bookmark.subjectName)}', '${this.escapeHtml(bookmark.topicName)}'); document.querySelectorAll('.modal-overlay, .bookmarks-modal').forEach(el => el.remove());">
             <div class="bookmark-subject">${this.escapeHtml(bookmark.subjectName)}</div>
-            <div class="bookmark-title">${this.escapeHtml(bookmark.topicName)} > ${this.escapeHtml(bookmark.subtopicName)}</div>
+            <div class="bookmark-title">${this.escapeHtml(bookmark.topicName)}</div>
           </div>
           <button class="action-btn" onclick="event.stopPropagation(); StudyManager.removeBookmark(${index});">
             <i class="fas fa-trash"></i>
@@ -447,8 +413,7 @@ const StudyManager = {
     // Remove if already exists
     this.recentTopics = this.recentTopics.filter(t => 
       !(t.subjectId === topic.subjectId && 
-        t.topicId === topic.topicId && 
-        t.subtopicId === topic.subtopicId)
+        t.topicId === topic.topicId)
     );
     
     // Add to beginning
@@ -498,9 +463,9 @@ const StudyManager = {
     let html = '';
     this.recentTopics.forEach(topic => {
       html += `
-        <div class="recent-item" onclick="StudyManager.loadTopic('${topic.subjectId}', '${topic.topicId}', '${topic.subtopicId}', '${this.escapeHtml(topic.subjectName)}', '${this.escapeHtml(topic.topicName)}', '${this.escapeHtml(topic.subtopicName)}')">
+        <div class="recent-item" onclick="StudyManager.loadTopic('${topic.subjectId}', '${topic.topicId}', '${this.escapeHtml(topic.subjectName)}', '${this.escapeHtml(topic.topicName)}')">
           <div class="subject">${this.escapeHtml(topic.subjectName)}</div>
-          <div class="topic">${this.escapeHtml(topic.topicName)} > ${this.escapeHtml(topic.subtopicName)}</div>
+          <div class="topic">${this.escapeHtml(topic.topicName)}</div>
         </div>
       `;
     });
@@ -517,7 +482,7 @@ const StudyManager = {
       return;
     }
     
-    const filename = `${this.currentTopic.subjectName}_${this.currentTopic.subtopicName}.pdf`.replace(/\s+/g, '_');
+    const filename = `${this.currentTopic.subjectName}_${this.currentTopic.topicName}.pdf`.replace(/\s+/g, '_');
     
     html2pdf().from(element).set({
       margin: 0.5,
@@ -533,12 +498,12 @@ const StudyManager = {
     
     if (navigator.share) {
       navigator.share({
-        title: this.currentTopic.subtopicName,
-        text: `Studying ${this.currentTopic.subtopicName} from ${this.currentTopic.subjectName}`,
+        title: this.currentTopic.topicName,
+        text: `Studying ${this.currentTopic.topicName} from ${this.currentTopic.subjectName}`,
         url: window.location.href
       }).catch(() => {});
     } else {
-      navigator.clipboard.writeText(this.currentTopic.subtopicName);
+      navigator.clipboard.writeText(this.currentTopic.topicName);
       alert('Topic name copied to clipboard!');
     }
   },

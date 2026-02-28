@@ -3,10 +3,33 @@ const App = {
     init: function() {
         this.loadNavbar();
         this.loadPageData();
+        // Clear any cached data that should come from files
+        this.clearFileCaches();
+    },
+
+    clearFileCaches: function() {
+        // Clear any localStorage items that might conflict with file data
+        // But preserve user data (settings, bookmarks, recent, history)
+        const preserve = [
+            'venus_settings',
+            'venus_tests',
+            'venus_study_bookmarks',
+            'venus_study_recent'
+        ];
+        
+        const keysToRemove = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('venus_') && !preserve.includes(key)) {
+                keysToRemove.push(key);
+            }
+        }
+        
+        keysToRemove.forEach(key => localStorage.removeItem(key));
     },
 
     loadNavbar: function() {
-        // Try multiple paths for navbar
+        // Since all HTML files are in /interface/, navbar is in the same folder
         const possiblePaths = [
             'navbar.html',
             '/navbar.html',
@@ -119,8 +142,10 @@ const App = {
     loadPageData: function() {
         const page = window.location.pathname.split('/').pop() || 'index.html';
         
-        if (page === 'user.html') {
-            this.loadUserPage();
+        if (page === 'profile.html') {
+            this.loadProfilePage();
+        } else if (page === 'settings.html') {
+            this.loadSettingsPage();
         } else if (page === 'history.html') {
             this.loadHistoryPage();
         } else if (page === 'study.html') {
@@ -128,7 +153,7 @@ const App = {
         } else if (page === 'select-test.html') {
             this.loadSelectTestPage();
         } else if (page === 'take-test.html') {
-            this.loadTakeTestPage();
+            console.log('Take test page - waiting for TestManager to initialize');
         } else if (page === 'submit-test.html') {
             this.loadSubmitTestPage();
         } else if (page === 'index.html' || page === '') {
@@ -136,10 +161,18 @@ const App = {
         }
     },
 
-    loadUserPage: function() {
+    loadProfilePage: function() {
         setTimeout(() => {
-            if (typeof UserManager !== 'undefined') {
-                UserManager.init();
+            if (typeof ProfileManager !== 'undefined') {
+                ProfileManager.init();
+            }
+        }, 100);
+    },
+
+    loadSettingsPage: function() {
+        setTimeout(() => {
+            if (typeof SettingsManager !== 'undefined') {
+                SettingsManager.init();
             }
         }, 100);
     },
@@ -160,10 +193,13 @@ const App = {
             container.innerHTML = '<div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--text-secondary);"><i class="fas fa-spinner fa-spin"></i> Loading study materials...</div>';
         }
         
+        // Add cache-busting parameter to always get fresh files
+        const cacheBuster = `?t=${Date.now()}`;
+        
         // Load all study material files
         const subjects = ['MTS101', 'PHY101', 'STA111', 'CSC101', 'GNS103'];
         const promises = subjects.map(subjectId => 
-            fetch(`storage/materials/${this.getMaterialFileName(subjectId)}`)
+            fetch(`../storage/materials/${this.getMaterialFileName(subjectId)}${cacheBuster}`)
                 .then(response => {
                     if (!response.ok) throw new Error(`Failed to load ${subjectId}`);
                     return response.json();
@@ -213,7 +249,10 @@ const App = {
     },
 
     loadSelectTestPage: function() {
-        fetch('storage/courses.json')
+        // Add cache-busting parameter
+        const cacheBuster = `?t=${Date.now()}`;
+        
+        fetch(`../storage/courses.json${cacheBuster}`)
             .then(response => response.json())
             .then(courses => {
                 window.coursesData = courses;
@@ -238,74 +277,13 @@ const App = {
                     <h3>${this.escapeHtml(course.name)}</h3>
                     <div class="course-code">${this.escapeHtml(course.id)}</div>
                     <p class="course-description">${this.escapeHtml(course.description)}</p>
-                    <div class="course-meta">
-                        <span><i class="fas fa-question-circle"></i> ${course.question_count} Questions</span>
-                        <span><i class="fas fa-clock"></i> ${Math.floor(course.time_limit / 60)} min</span>
-                    </div>
-                    <a href="take-test.html?course=${course.id}" class="btn btn-primary btn-block">
-                        <i class="fas fa-play"></i> Start Test
-                    </a>
+                    <button class="btn btn-primary select-course-btn" onclick="TestConfig.selectCourse('${course.id}')">
+                        <i class="fas fa-check-circle"></i> Select Course
+                    </button>
                 </div>
             `;
         });
         container.innerHTML = html;
-    },
-
-    loadTakeTestPage: function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const courseId = urlParams.get('course');
-        
-        if (!courseId) {
-            window.location.href = 'select-test.html';
-            return;
-        }
-
-        Promise.all([
-            fetch('storage/courses.json').then(r => r.json()),
-            this.loadQuestions(courseId)
-        ]).then(([courses, questions]) => {
-            const course = courses.find(c => c.id === courseId);
-            if (!course || !questions || questions.length === 0) {
-                setTimeout(() => {
-                    window.location.href = 'select-test.html';
-                }, 2000);
-                return;
-            }
-
-            const shuffled = [...questions].sort(() => Math.random() - 0.5);
-            const testQuestions = shuffled.slice(0, 20);
-
-            window.testData = {
-                course: course,
-                questions: testQuestions,
-                timeLimit: course.time_limit
-            };
-
-            setTimeout(() => {
-                if (typeof TestManager !== 'undefined') {
-                    TestManager.init(window.testData);
-                }
-            }, 100);
-        }).catch(error => {
-            console.error('Error loading test:', error);
-        });
-    },
-
-    loadQuestions: function(courseId) {
-        const files = {
-            'MTS101': 'storage/questions/mathematics.json',
-            'PHY101': 'storage/questions/physics.json',
-            'STA111': 'storage/questions/statistics.json',
-            'CSC101': 'storage/questions/computer.json',
-            'GNS103': 'storage/questions/literacy.json'
-        };
-
-        const file = files[courseId];
-        if (!file) return Promise.resolve([]);
-
-        return fetch(file)
-            .then(r => r.json())
-            .then(data => data[courseId] || []);
     },
 
     loadSubmitTestPage: function() {

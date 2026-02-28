@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "*.html",
+      "src": "interface/*.html",
       "use": "@vercel/static"
     },
     {
@@ -20,7 +20,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/interface/$1"
     }
   ]
 }

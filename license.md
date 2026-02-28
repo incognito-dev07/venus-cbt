@@ -1,31 +1,37 @@
 📁 project-root/
-├── 📄 index.html               
-├── 📄 study.html              
-├── 📄 select-test.html           
-├── 📄 take-test.html             
-├── 📄 submit-test.html            
-├── 📄 history.html             
-├── 📄 user.html         
-├── 📄 navbar.html         
+│
+├── 📁 interface/
+│   ├── 📄 index.html
+│   ├── 📄 study.html
+│   ├── 📄 select-test.html
+│   ├── 📄 take-test.html
+│   ├── 📄 submit-test.html
+│   ├── 📄 history.html
+│   ├── 📄 profile.html
+│   ├── 📄 settings.html
+│   └── 📄 navbar.html
 │
 ├── 📁 scripts/
-│   ├── 📄 index.js               
-│   ├── 📄 storage.js             
-│   ├── 📄 utilities.js           
-│   ├── 📄 study.js                 
-│   ├── 📄 test.js                
-│   ├── 📄 history.js             
-│   └── 📄 user.js              
+│   ├── 📄 index.js
+│   ├── 📄 storage.js
+│   ├── 📄 utilities.js
+│   ├── 📄 study.js
+│   ├── 📄 test-config.js
+│   ├── 📄 test.js
+│   ├── 📄 history.js
+│   ├── 📄 profile.js
+│   └── 📄 settings.js
 │
 ├── 📁 styles/
-│   ├── 📄 core.css                 
-│   ├── 📄 component.css            
-│   ├── 📄 pages.css                  
-│   ├── 📄 responsive.css         
-│   └── 📄 study.css              
+│   ├── 📄 core.css
+│   ├── 📄 component.css
+│   ├── 📄 pages.css
+│   ├── 📄 responsive.css
+│   └── 📄 study.css
 │
 ├── 📁 storage/
 │   ├── 📄 courses.json
+│   ├── 📄 icon.png
 │   │
 │   ├── 📁 questions/
 │   │   ├── 📄 mathematics.json
@@ -41,4 +47,5 @@
 │       ├── 📄 computer.json
 │       └── 📄 literacy.json
 │
+├── 📄 license.md
 └── 📄 vercel.json

@@ -26,10 +26,11 @@
 .theme-toggle {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
   padding: 0.75rem 1rem;
   background: var(--bg-tertiary);
   border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .theme-toggle .theme-label {
@@ -38,20 +39,51 @@
   gap: 0.5rem;
   color: var(--text-primary);
   font-size: 0.95rem;
-  min-width: 100px;
 }
 
 .theme-toggle .theme-label i {
   color: var(--accent-primary);
   font-size: 1rem;
+  width: 20px;
 }
 
-.switch {
+/* Switch container */
+.theme-toggle .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 24px;
   flex-shrink: 0;
+  margin-right: 4.5rem;
+}
+
+/* Right side container for switch + status */
+.theme-toggle .theme-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle .theme-status {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 45px;
+}
+
+.theme-toggle .theme-on.active {
+  color: var(--accent-primary);
+}
+
+.theme-toggle .theme-off.active {
+  color: var(--accent-primary);
+}
+
+.theme-toggle .theme-separator {
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .switch input {
@@ -93,31 +125,9 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-.theme-status {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-left: 0.5rem;
-}
-
 .theme-on,
 .theme-off {
   transition: color 0.3s ease;
-}
-
-.theme-on.active {
-  color: var(--accent-primary);
-}
-
-.theme-off.active {
-  color: var(--accent-primary);
-}
-
-.theme-separator {
-  color: var(--text-secondary);
-  font-weight: 500;
 }
 
 /* Courses Grid */
@@ -129,9 +139,9 @@ input:checked+.slider:before {
 
 .course-card {
   background: var(--bg-tertiary);
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 1.5rem;
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--border-color);
   transition: all 0.2s ease;
   box-shadow: 0 4px 7px var(--shadow-color);
   display: flex;
@@ -141,8 +151,8 @@ input:checked+.slider:before {
 
 .course-card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 8px 20px rgba(157, 78, 221, 0.15);
+  border: 1px solid var(--accent-primary);
+  box-shadow: 0 5px 10px rgba(157, 78, 221, 0.15);
 }
 
 .course-icon {
@@ -268,6 +278,7 @@ input:checked+.slider:before {
 .stat-card:hover {
   transform: translateY(-2px);
   border-color: var(--accent-primary);
+  box-shadow: 0 3px 7px rgba(157, 78, 221, 0.15);
 }
 
 .stat-icon {
@@ -304,4 +315,346 @@ input:checked+.slider:before {
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Add these new styles to the existing component.css */
+
+/* Profile Page Styles */
+.profile-panel {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Insights Section */
+.insights-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+}
+
+.insights-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.insight-card {
+  background: var(--bg-secondary);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.insight-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 3px 7px rgba(157, 78, 221, 0.15);
+}
+
+.insight-card.strongest .insight-icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-success);
+}
+
+.insight-card.weakest .insight-icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--accent-danger);
+}
+
+.insight-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.insight-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.insight-score {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.insight-card.strongest .insight-score {
+  color: var(--accent-success);
+}
+
+.insight-card.weakest .insight-score {
+  color: var(--accent-danger);
+}
+
+/* Achievements Section */
+.achievements-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+}
+
+.achievements-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.achievement-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 3px 7px rgba(157, 78, 221, 0.15);
+}
+
+.achievement-card.bronze {
+  border-left: 4px solid #cd7f32;
+}
+
+.achievement-card.silver {
+  border-left: 4px solid #c0c0c0;
+}
+
+.achievement-card.gold {
+  border-left: 4px solid #ffd700;
+}
+
+.achievement-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(157, 78, 221, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+}
+
+.achievement-info {
+  flex: 1;
+}
+
+.achievement-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.achievement-info p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.achievement-tier {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.achievement-tier.bronze {
+  color: #cd7f32;
+  border-color: #cd7f32;
+}
+
+.achievement-tier.silver {
+  color: #c0c0c0;
+  border-color: #c0c0c0;
+}
+
+.achievement-tier.gold {
+  color: #ffd700;
+  border-color: #ffd700;
+}
+
+.empty-achievements {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.empty-achievements i {
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+/* Settings Page Additions */
+.setting-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  min-width: 150px;
+}
+
+.setting-label i {
+  color: var(--accent-primary);
+  font-size: 1rem;
+  width: 20px;
+}
+
+.settings-select {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  min-width: 150px;
+}
+
+.settings-select:hover {
+  border-color: var(--accent-primary);
+}
+
+.settings-select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.15);
+}
+
+.font-size-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.font-size-value {
+  min-width: 70px;
+  text-align: center;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.font-size-controls .btn {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.font-size-controls .btn:hover {
+  border-color: var(--accent-primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .theme-toggle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .setting-label {
+    min-width: auto;
+  }
+  
+  .settings-select {
+    width: 100%;
+  }
+  
+  .font-size-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .insight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .achievement-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .achievement-icon {
+    margin-bottom: 0.5rem;
+  }
 }

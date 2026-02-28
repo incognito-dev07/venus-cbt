@@ -7,20 +7,196 @@ const TestManager = {
     timeRemaining: 0,
     timerInterval: null,
     startTime: null,
+    config: null,
     
-    init: function(data) {
-        this.course = data.course;
-        this.questions = data.questions;
-        this.timeRemaining = data.timeLimit;
-        this.startTime = Date.now();
+    init: function() {
+        console.log('TestManager initializing...');
         
-        this.answers = new Array(this.questions.length).fill(null);
-        this.flagged = new Array(this.questions.length).fill(false);
+        // Load test configuration from localStorage (only config, not questions)
+        const configStr = localStorage.getItem('venus_test_config');
+        if (!configStr) {
+            console.error('No test config found, redirecting to select-test');
+            window.location.href = 'select-test.html';
+            return;
+        }
         
-        this.setupEventListeners();
-        this.renderQuestion();
-        this.renderNavigator();
-        this.startTimer();
+        try {
+            this.config = JSON.parse(configStr);
+            this.course = this.config.course;
+            this.timeRemaining = this.config.timeLimit;
+            this.startTime = Date.now();
+            
+            // Load questions from file
+            this.loadQuestionsFromFile();
+        } catch (e) {
+            console.error('Error parsing test config:', e);
+            window.location.href = 'select-test.html';
+        }
+    },
+    
+    loadQuestionsFromFile: function() {
+        console.log('Loading questions from file for course:', this.course.id);
+        
+        // Map course ID to filename
+        const filename = this.getQuestionFileName(this.course.id);
+        const filePath = `../storage/questions/${filename}`;
+        
+        console.log('Fetching from:', filePath);
+        
+        // Fetch from file with cache busting
+        fetch(`${filePath}?t=${Date.now()}`)
+            .then(response => {
+                console.log('Response status:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Raw data loaded:', data);
+                
+                // Extract questions based on file structure
+                let allQuestions = [];
+                
+                // Check the structure of your JSON files
+                if (Array.isArray(data)) {
+                    // If file is directly an array of questions
+                    allQuestions = data;
+                    console.log('File is direct array of questions');
+                } else if (data.questions && Array.isArray(data.questions)) {
+                    // If file has { "questions": [...] } structure
+                    allQuestions = data.questions;
+                    console.log('File has questions property');
+                } else if (data[this.course.id] && Array.isArray(data[this.course.id])) {
+                    // If file has { "MTS101": [...] } structure
+                    allQuestions = data[this.course.id];
+                    console.log(`File has course ID ${this.course.id} property`);
+                } else {
+                    // Try to find any array in the object
+                    for (let key in data) {
+                        if (Array.isArray(data[key])) {
+                            allQuestions = data[key];
+                            console.log(`Found questions array under key: ${key}`);
+                            break;
+                        }
+                    }
+                }
+                
+                console.log(`Total questions found: ${allQuestions.length}`);
+                
+                if (allQuestions.length === 0) {
+                    throw new Error('No questions found in file');
+                }
+                
+                // Log first question to see structure
+                console.log('Sample question:', allQuestions[0]);
+                
+                // Filter by topics if needed
+                let availableQuestions = allQuestions;
+                if (this.config.source === 'topics' && this.config.topics && this.config.topics.length > 0) {
+                    console.log('Filtering by topics:', this.config.topics);
+                    availableQuestions = allQuestions.filter(q => {
+                        // Check various possible topic field names
+                        const questionTopic = q.topic || q.topicId || q.topic_name || q.subject || '';
+                        return this.config.topics.includes(questionTopic);
+                    });
+                    console.log(`Filtered to ${availableQuestions.length} questions`);
+                }
+                
+                if (availableQuestions.length === 0) {
+                    throw new Error('No questions available for selected topics');
+                }
+                
+                // Shuffle and select required number
+                const shuffled = this.shuffleArray([...availableQuestions]);
+                this.questions = shuffled.slice(0, this.config.questionCount);
+                
+                console.log(`Selected ${this.questions.length} questions for test`);
+                
+                if (this.questions.length === 0) {
+                    throw new Error('No questions selected');
+                }
+                
+                // Format questions consistently
+                this.formatQuestions();
+                
+                // Initialize answers array
+                this.answers = new Array(this.questions.length).fill(null);
+                this.flagged = new Array(this.questions.length).fill(false);
+                
+                // Setup and render
+                this.setupEventListeners();
+                this.renderQuestion();
+                this.renderNavigator();
+                this.startTimer();
+                
+            })
+            .catch(error => {
+                console.error('Error loading questions:', error);
+                Utils.showMessage('Failed to load questions: ' + error.message, 'error');
+                
+                // Redirect back after showing error
+                setTimeout(() => {
+                    window.location.href = 'select-test.html';
+                }, 2000);
+            });
+    },
+    
+    formatQuestions: function() {
+        // Ensure all questions have the expected format
+        this.questions = this.questions.map((q, index) => {
+            // Handle options
+            let options = [];
+            if (Array.isArray(q.options)) {
+                options = q.options;
+            } else if (Array.isArray(q.choices)) {
+                options = q.choices;
+            } else if (q.option1) {
+                options = [q.option1, q.option2, q.option3, q.option4].filter(opt => opt);
+            } else {
+                options = ['Option A', 'Option B', 'Option C', 'Option D'];
+            }
+            
+            // Handle correct answer
+            let correct = 0;
+            if (typeof q.correct === 'number') {
+                correct = q.correct;
+            } else if (typeof q.answer === 'number') {
+                correct = q.answer;
+            } else if (typeof q.correct === 'string') {
+                // Convert A, B, C, D to 0, 1, 2, 3
+                const letterMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3, 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
+                correct = letterMap[q.correct] || 0;
+            }
+            
+            return {
+                id: index,
+                question: q.question || q.text || 'Question not available',
+                options: options,
+                correct: correct,
+                topic: q.topic || q.topicId || 'general',
+                explanation: q.explanation || q.exp || ''
+            };
+        });
+    },
+    
+    getQuestionFileName: function(courseId) {
+        const files = {
+            'MTS101': 'mathematics.json',
+            'PHY101': 'physics.json',
+            'STA111': 'statistics.json',
+            'CSC101': 'computer.json',
+            'GNS103': 'literacy.json'
+        };
+        return files[courseId] || courseId.toLowerCase() + '.json';
+    },
+    
+    shuffleArray: function(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     },
     
     setupEventListeners: function() {
@@ -53,6 +229,8 @@ const TestManager = {
     },
     
     renderQuestion: function() {
+        if (!this.questions || this.questions.length === 0) return;
+        
         const question = this.questions[this.currentIndex];
         
         const questionNumber = document.getElementById('questionNumber');
@@ -63,13 +241,15 @@ const TestManager = {
         if (questionText) questionText.textContent = question.question;
         
         if (optionsContainer) {
+            const options = question.options || [];
             let optionsHtml = '';
-            question.options.forEach((option, index) => {
+            options.forEach((option, index) => {
                 const isSelected = this.answers[this.currentIndex] === index;
+                const optionText = option || `Option ${String.fromCharCode(65 + index)}`;
                 optionsHtml += `
                     <div class="option-card ${isSelected ? 'selected' : ''}" data-option-index="${index}">
                         <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-                        <div class="option-text">${option}</div>
+                        <div class="option-text">${optionText}</div>
                     </div>
                 `;
             });
@@ -199,19 +379,32 @@ const TestManager = {
             timeTaken: timeTaken,
             date: new Date().toISOString(),
             answers: this.answers,
-            questions: this.questions
+            questions: this.questions,
+            config: {
+                source: this.config.source,
+                topics: this.config.topics,
+                questionCount: this.config.questionCount
+            }
         };
         
+        // Save to localStorage (only results, not questions)
         StorageManager.saveTest(testResult);
         
+        // Store current result for display
         localStorage.setItem('venus_current_result', JSON.stringify(testResult));
+        
+        // Clean up
+        localStorage.removeItem('venus_test_config');
+        
+        // Redirect to results page
         window.location.href = 'submit-test.html';
     },
     
     calculateScore: function() {
         let score = 0;
         this.questions.forEach((q, index) => {
-            if (this.answers[index] === q.correct) {
+            const userAnswer = this.answers[index];
+            if (userAnswer === q.correct) {
                 score++;
             }
         });
@@ -221,6 +414,7 @@ const TestManager = {
     confirmExit: function() {
         if (confirm('Exit test? Your progress will be lost.')) {
             clearInterval(this.timerInterval);
+            localStorage.removeItem('venus_test_config');
             window.location.href = 'select-test.html';
         }
     },
@@ -283,6 +477,7 @@ const TestManager = {
         result.questions.forEach((q, index) => {
             const userAnswer = result.answers[index];
             const isCorrect = userAnswer === q.correct;
+            const options = q.options || [];
             
             html += `
                 <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
@@ -294,13 +489,13 @@ const TestManager = {
                         <div class="user-answer">
                             <span class="label">Your answer:</span>
                             <span class="value ${isCorrect ? 'text-success' : 'text-danger'}">
-                                ${userAnswer !== null && q.options[userAnswer] ? q.options[userAnswer] : 'Not answered'}
+                                ${userAnswer !== null && options[userAnswer] ? options[userAnswer] : 'Not answered'}
                             </span>
                         </div>
                         ${!isCorrect ? `
                             <div class="correct-answer">
                                 <span class="label">Correct answer:</span>
-                                <span class="value text-success">${q.options[q.correct]}</span>
+                                <span class="value text-success">${options[q.correct]}</span>
                             </div>
                         ` : ''}
                         <div class="explanation">
@@ -316,3 +511,11 @@ const TestManager = {
         container.innerHTML = html;
     }
 };
+
+// Initialize ONLY when on take-test.html
+if (window.location.pathname.includes('take-test.html')) {
+    console.log('Take test page detected, initializing TestManager');
+    document.addEventListener('DOMContentLoaded', () => {
+        TestManager.init();
+    });
+}

@@ -1,42 +1,75 @@
 [
   {
-    "id": "STA111",
-    "name": "Descriptive Statistics",
-    "description": "Mean, Median, Probability, and Distributions",
-    "icon": "fa-chart-bar",
-    "question_count": 20,
-    "time_limit": 900
-  },
-  {
-    "id": "GNS103",
-    "name": "Information Literacy",
-    "description": "Grammar, Comprehension, and Communication",
-    "icon": "fa-book",
-    "question_count": 20,
-    "time_limit": 600
+    "id": "MTS101",
+    "name": "Introductory Mathematics",
+    "description": "Sets, Induction, Sequences, Quadratics, Binomial Theorem, Trigonometry",
+    "icon": "fa-calculator",
+    "time_per_question": 30,
+    "topics": [
+      "set_theory",
+      "real_number_system",
+      "sequence_series",
+      "quadratic_equations",
+      "binomial_theorem",
+      "trigonometry"
+    ]
   },
   {
     "id": "PHY101",
     "name": "General Physics",
-    "description": "Mechanics, Heat, and Optics basics",
+    "description": "Fundamentals, Vectors, Kinematics, Rotational Dynamics, Gravitation",
     "icon": "fa-flask",
-    "question_count": 20,
-    "time_limit": 900
+    "time_per_question": 30,
+    "topics": [
+      "quantities_units_dimensions",
+      "vectors",
+      "kinematics",
+      "work_energy_power",
+      "rotational_dynamics",
+      "universal_gravitation"
+    ]
   },
   {
-    "id": "MTS101",
-    "name": "Introductory Mathematics",
-    "description": "Algebra, Calculus, and Trigonometry fundamentals",
-    "icon": "fa-calculator",
-    "question_count": 20,
-    "time_limit": 900
+    "id": "STA111",
+    "name": "Descriptive Statistics",
+    "description": "Data Presentation, Measures of Central Tendency, and Dispersion",
+    "icon": "fa-chart-bar",
+    "time_per_question": 30,
+    "topics": [
+      "definition_introduction",
+      "summarization_presentation",
+      "measures_central_tendency",
+      "measures_dispersion"
+    ]
   },
   {
     "id": "CSC101",
     "name": "Computing Science",
-    "description": "Programming basics and hardware fundamentals",
+    "description": "Computer Basics, Binary, Problem Solving, OS, Programming",
     "icon": "fa-laptop-code",
-    "question_count": 20,
-    "time_limit": 600
+    "time_per_question": 30,
+    "topics": [
+      "universal_machine",
+      "computer_anatomy",
+      "operating_systems",
+      "bits_arithmetic",
+      "problem_solving",
+      "programming_languages"
+    ]
+  },
+  {
+    "id": "GNS103",
+    "name": "Information Literacy",
+    "description": "Library Concepts, Information Literacy Skills, Academic Writing",
+    "icon": "fa-book",
+    "time_per_question": 30,
+    "topics": [
+      "library_concepts",
+      "library_organization",
+      "reference_sources",
+      "serials",
+      "information_literacy_skills",
+      "report_writing"
+    ]
   }
 ]
