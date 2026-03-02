@@ -55,7 +55,6 @@ body {
   padding-top: 110px;
 }
 
-/* Navbar Styles */
 .navbar {
   background: var(--bg-secondary);
   padding: 1rem 0;
@@ -129,7 +128,6 @@ body {
   color: var(--accent-danger) !important;
 }
 
-/* Icon Bar */
 .icon-bar {
   position: fixed;
   top: 60px; left: 0; right: 0;
@@ -168,7 +166,6 @@ body {
   color: var(--accent-primary);
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -259,14 +256,12 @@ body {
   color: var(--accent-danger);
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
 
-/* Hero Section */
 .hero {
   background: var(--bg-secondary);
   padding: 3rem 2rem;
@@ -322,7 +317,6 @@ body {
   border-bottom: 0.5px solid var(--accent-primary);
 }
 
-/* Features */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -372,7 +366,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Form Elements */
 .form-box,
 .settings-panel,
 .select-test-panel,
@@ -427,7 +420,6 @@ h2 i {
   gap: 0.5rem;
 }
 
-/* Form Groups */
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -499,7 +491,6 @@ textarea:focus {
   border-color: var(--accent-primary);
 }
 
-/* Buttons */
 .btn {
   padding: 0.3rem 0.5rem;
   border: none;
@@ -560,7 +551,6 @@ textarea:focus {
   font-size: 0.8rem;
 }
 
-/* Messages */
 .error,
 .success {
   padding: 1rem;
@@ -614,7 +604,6 @@ textarea:focus {
   }
 }
 
-/* Button Group */
 .btn-group {
   display: flex;
   gap: 1rem;
@@ -623,7 +612,6 @@ textarea:focus {
   margin-top: 2rem;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   margin-top: 3rem;
@@ -631,7 +619,6 @@ textarea:focus {
   font-size: 0.9rem;
 }
 
-/* Table Responsive */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -653,7 +640,6 @@ textarea:focus {
   border-radius: 4px;
 }
 
-/* Empty State */
 .empty-state {
   text-align: center;
   padding: 3rem;

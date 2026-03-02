@@ -17,7 +17,6 @@ const StudyManager = {
   },
   
   setupBackButtonHandler: function() {
-    // Handle browser back button
     window.addEventListener('popstate', (event) => {
       const studyView = document.getElementById('studyView');
       const browseView = document.getElementById('browseView');
@@ -26,17 +25,14 @@ const StudyManager = {
         event.preventDefault();
         this.backToBrowse();
         
-        // Push state again to handle next back press
         history.pushState({study: true}, '', window.location.pathname);
       }
     });
     
-    // Initial push state
     history.pushState({study: true}, '', window.location.pathname);
   },
   
   setupEventDelegation: function() {
-    // Use event delegation for topic items
     document.addEventListener('click', (e) => {
       const topicItem = e.target.closest('.topic-item');
       
@@ -57,7 +53,6 @@ const StudyManager = {
       }
     });
     
-    // Close search when clicking outside
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.search-container')) {
         this.hideSearchResults();
@@ -169,21 +164,18 @@ const StudyManager = {
     
     this.addToRecent(this.currentTopic);
     
-    // Switch views
     const browseView = document.getElementById('browseView');
     const studyView = document.getElementById('studyView');
     
     if (browseView) browseView.style.display = 'none';
     if (studyView) studyView.style.display = 'flex';
     
-    // Update breadcrumb
     const breadcrumbSubject = document.getElementById('breadcrumbSubject');
     const breadcrumbTopic = document.getElementById('breadcrumbTopic');
     
     if (breadcrumbSubject) breadcrumbSubject.textContent = this.currentTopic.subjectName;
     if (breadcrumbTopic) breadcrumbTopic.textContent = this.currentTopic.topicName;
     
-    // Load content
     const studyContent = document.getElementById('studyContent');
     if (studyContent) {
       studyContent.innerHTML = `
@@ -397,7 +389,6 @@ const StudyManager = {
     this.updateBookmarkCount();
     this.updateBookmarkButton();
     
-    // Refresh modal
     const modal = document.querySelector('.bookmarks-modal');
     const overlay = document.querySelector('.modal-overlay');
     if (modal && overlay) {
@@ -410,16 +401,13 @@ const StudyManager = {
   addToRecent: function(topic) {
     if (!topic) return;
     
-    // Remove if already exists
     this.recentTopics = this.recentTopics.filter(t => 
       !(t.subjectId === topic.subjectId && 
         t.topicId === topic.topicId)
     );
     
-    // Add to beginning
     this.recentTopics.unshift(topic);
     
-    // Keep only last 2
     if (this.recentTopics.length > 2) {
       this.recentTopics.pop();
     }
@@ -526,5 +514,4 @@ const StudyManager = {
   }
 };
 
-// Make StudyManager globally available
 window.StudyManager = StudyManager;

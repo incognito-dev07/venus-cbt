@@ -12,13 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 </head>
 <body>
-  <!-- Mobile Study App -->
   <div class="study-app" id="studyApp">
-    
-    <!-- BROWSE VIEW -->
     <div class="browse-view" id="browseView">
       
-      <!-- Header -->
       <div class="mobile-header">
         <div class="header-left">
           <i class="fas fa-book-open" style="color: var(--accent-primary);"></i>
@@ -30,24 +26,21 @@
         </button>
       </div>
 
-      <!-- Search Bar -->
       <div class="search-container">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="mobileSearch" placeholder="Search topics, keywords..." autocomplete="off">
+          <input type="text" id="mobileSearch" placeholder="Search topics..." autocomplete="off">
         </div>
         <div class="search-results" id="mobileSearchResults" style="display: none;"></div>
       </div>
 
-      <!-- Subjects Accordion -->
       <div class="subjects-accordion" id="subjectsAccordion">
-        <!-- Will be populated by JavaScript -->
+        <!-- JavaScript will fill this -->
         <div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
           <i class="fas fa-spinner fa-spin"></i> Loading study materials...
         </div>
       </div>
 
-      <!-- Recent Section -->
       <div class="recent-section" id="recentSection">
         <div class="recent-header">
           <h4><i class="fas fa-clock"></i> Recent Topics</h4>
@@ -61,7 +54,6 @@
       </div>
     </div>
 
-    <!-- STUDY VIEW -->
     <div class="study-view" id="studyView" style="display: none;">
       
       <div class="study-header">

@@ -151,8 +151,8 @@
         "20",
         "21"
       ],
-      "correct": 2,
-      "explanation": "Let M = married teachers. There are 6 couples meaning 12 teachers are married to each other. Married women = 15, so married men whose wives are in school = 6, so additional married men whose wives are not in school = 0. Total married = 12 (couples) + (15-6)=9 married women whose spouses are not in school = 21 married teachers. Unmarried = 38 - 21 = 17. Teachers with spouses not in school = 9 women + 0 men = 9. Teachers neither married nor with spouses not in school = 17."
+      "correct": 0,
+      "explanation": "Let M = married teachers. There are 6 couples meaning 12 teachers are married to each other. Married women = 15, so married men whose wives are in school = 6, so additional married men whose wives are not in school = 0. Total married = 12 (couples) + (15-6)=9 married women whose spouses are not in school = 21 married teachers. Unmarried = 38 - 21 = 17."
     },
     {
       "id": 12,
@@ -3187,10 +3187,10 @@
           "4",
           "15",
           "19",
-          "55"
+          "33"
       ],
-      "correct": 1,
-      "explanation": "With 3 and 19 as first and last, total terms = 5. a = 3, l = 19 = a + 4d ⇒ 19 = 3 + 4d ⇒ d = 4. Terms: 3, 7, 11, 15, 19. The three means are 7, 11, 15. Sum = 33. Not in options. Maybe they mean sum of first 4 terms? 3+7+11+15 = 36. Not matching. Possibly answer 33 but not in options."
+      "correct": 3,
+      "explanation": "With 3 and 19 as first and last, total terms = 5. a = 3, l = 19 = a + 4d ⇒ 19 = 3 + 4d ⇒ d = 4. Terms: 3, 7, 11, 15, 19. The three means are 7, 11, 15. Sum = 33."
     },
     {
       "id": 229,
@@ -3218,7 +3218,7 @@
           "25/4, 5"
       ],
       "correct": 3,
-      "explanation": "First three: 7½, a, b in AP ⇒ 2a = 15/2 + b ⇒ 4a = 15 + 2b. Last three: a, b, 4 in GP ⇒ b² = 4a. From b² = 4a ⇒ a = b²/4. Substitute: 4(b²/4) = 15 + 2b ⇒ b² = 15 + 2b ⇒ b² - 2b - 15 = 0 ⇒ (b-5)(b+3) = 0 ⇒ b = 5 or b = -3. If b = 5, a = 25/4. If b = -3, a = 9/4. Check AP: for b=5, 2a = 15/2 + 5 = 15/2 + 10/2 = 25/2 ⇒ a = 25/4, works. For b=-3, 2a = 15/2 - 3 = 15/2 - 6/2 = 9/2 ⇒ a = 9/4, also works. Both are valid. But options give 25/4,5."
+      "explanation": "First three: 7½, a, b in AP ⇒ 2a = 15/2 + b ⇒ 4a = 15 + 2b. Last three: a, b, 4 in GP ⇒ b² = 4a. From b² = 4a ⇒ a = b²/4. Substitute: 4(b²/4) = 15 + 2b ⇒ b² = 15 + 2b ⇒ b² - 2b - 15 = 0 ⇒ (b-5)(b+3) = 0 ⇒ b = 5 or b = -3. If b = 5, a = 25/4. If b = -3, a = 9/4."
     },
     {
       "id": 231,
@@ -3252,7 +3252,7 @@
       "id": 233,
       "topic": "sequence_series",
       "topicName": "Real Sequence and Series",
-      "question": "The sixth and thirteenth terms of an arithmetic progression are 0 and 14 respectively. Find the sum of the first twenty terms.",
+      "question": "The sixth and thirteenth terms of an arithmetic progression are 0 and 14 respectively. Find the sum of the first ten terms.",
       "options": [
           "0",
           "14",
@@ -3260,7 +3260,7 @@
           "-10"
       ],
       "correct": 2,
-      "explanation": "a₆ = a + 5d = 0, a₁₃ = a + 12d = 14. Subtract: 7d = 14 ⇒ d = 2. Then a + 10 = 0 ⇒ a = -10. S₂₀ = 20/2[2(-10) + 19·2] = 10[-20 + 38] = 10×18 = 180. Not in options. If a₁₃ = 14, then a + 12d = 14, with d=2 gives a + 24 = 14 ⇒ a = -10. S₂₀ = 10(-20 + 38) = 180. None match. Options may be for different n."
+      "explanation": "a₆ = a + 5d = 0, a₁₃ = a + 12d = 14. Subtract: 7d = 14 ⇒ d = 2. Then a + 10 = 0 ⇒ a = -10. S₂₀ = 10/2[2(-10) + 9(2)] = 5[-20 + 18] = 10×(-2) = -20."
     },
     {
       "id": 234,
@@ -3422,13 +3422,13 @@
       "topicName": "Real Sequence and Series",
       "question": "Find the first term of the exponential function whose common ratio is 1/3 and whose second and last terms are 2/27 and 2/729.",
       "options": [
-          "2/3",
+          "2/9",
           "3/2",
           "-2/3",
           "-1/3"
       ],
       "correct": 0,
-      "explanation": "GP with r = 1/3. a₂ = ar = a/3 = 2/27 ⇒ a = 2/9. Not matching options. Last term aₙ = arⁿ⁻¹ = (2/9)(1/3)ⁿ⁻¹ = 2/729 ⇒ (1/3)ⁿ⁻¹ = (2/729)/(2/9) = (2/729)×(9/2) = 9/729 = 1/81 = (1/3)⁴ ⇒ n-1 = 4 ⇒ n=5. So a = 2/9. Not in options. Possibly they meant a = 2/3?"
+      "explanation": "GP with r = 1/3. a₂ = ar = a/3 = 2/27 ⇒ a = 2/9. "
     },
     {
       "id": 246,
@@ -4265,10 +4265,10 @@
         "81/25",
         "9/5",
         "3/81",
-        "625"
+        "625/81"
       ],
       "correct": 3,
-      "explanation": "3x² + 5x = 0 ⇒ x(3x+5)=0 ⇒ α=0, β=-5/3. α⁴ + β⁴ = 0 + (625/81) = 625/81. Not in options. Maybe equation is 3x² + 5x - ? Wait, if α and β are roots, then α+β = -5/3, αβ = 0. Then α²+β² = (α+β)² - 2αβ = 25/9. α⁴+β⁴ = (α²+β²)² - 2(αβ)² = (25/9)² - 0 = 625/81."
+      "explanation": "3x² + 5x = 0 ⇒ x(3x+5)=0 ⇒ α=0, β=-5/3. α⁴ + β⁴ = 0 + (625/81) = 625/81."
     },
     {
       "id": 306,
@@ -4727,10 +4727,10 @@
         "3",
         "-1",
         "1",
-        "-3"
+        "2"
       ],
-      "correct": 2,
-      "explanation": "Let u = 3ʸ. Then u² - 6u - 27 = 0 ⇒ (u-9)(u+3)=0 ⇒ u=9 or u=-3. 3ʸ=9 ⇒ y=2. Not in options. 3ʸ= -3 impossible. If equation was 3²ʸ - 6·3ʸ + 9 = 0? Then (3ʸ-3)²=0 ⇒ 3ʸ=3 ⇒ y=1. So likely intended: 3²ʸ - 6·3ʸ + 9 = 0 ⇒ (3ʸ-3)²=0 ⇒ y=1."
+      "correct": 3,
+      "explanation": "Let u = 3ʸ. Then u² - 6u - 27 = 0 ⇒ (u-9)(u+3)=0 ⇒ u=9 or u=-3. 3ʸ=9 ⇒ y=2. "
     },
     {
       "id": 339,
@@ -5517,20 +5517,6 @@
       "explanation": "P(2) = 16 - 4k + 10 - 6 = 20 - 4k = 0 ⇒ 4k = 20 ⇒ k = 5."
     },
     {
-      "id": 395,
-      "topic": "quadratic_equations",
-      "topicName": "Theory of Quadratic Equations",
-      "question": "If x + 2 is a factor of x³ + ax² + bx + 6 and leaves remainder 3 when divided by x - 3, then a + b =",
-      "options": [
-        "-1",
-        "1",
-        "2",
-        "-2"
-      ],
-      "correct": 0,
-      "explanation": "P(-2) = -8 + 4a - 2b + 6 = 4a - 2b - 2 = 0 ⇒ 2a - b = 1. P(3) = 27 + 9a + 3b + 6 = 9a + 3b + 33 = 3 ⇒ 9a + 3b = -30 ⇒ 3a + b = -10. Adding: (2a - b) + (3a + b) = 1 - 10 ⇒ 5a = -9 ⇒ a = -9/5, then b = 2a - 1 = -18/5 - 1 = -23/5. Sum a+b = -32/5 = -6.4. Not in options."
-    },
-    {
       "id": 396,
       "topic": "quadratic_equations",
       "topicName": "Theory of Quadratic Equations",
@@ -5580,11 +5566,11 @@
       "options": [
         "-3",
         "3",
-        "-2",
+        "-2.5",
         "2"
       ],
       "correct": 0,
-      "explanation": "P(2) = 8 + 4p - 4 + 6 = 4p + 10 = 0 ⇒ 4p = -10 ⇒ p = -2.5. Not in options. If constant term was different. If P(2)=8+4p-4+6=4p+10=0 ⇒ p=-2.5. Options have -3,3,-2,2. None match."
+      "explanation": "P(2) = 8 + 4p - 4 + 6 = 4p + 10 = 0 ⇒ 4p = -10 ⇒ p = -2.5. "
     },
     {
       "id": 400,
@@ -6413,20 +6399,6 @@
       "explanation": "C(15,7) = 6435."
     },
     {
-      "id": 459,
-      "topic": "binomial_theorem",
-      "topicName": "Binomial Theorem and Expansion",
-      "question": "If C(2n, 3) = 11 C(n, 2), then n =",
-      "options": [
-          "5",
-          "6",
-          "7",
-          "8"
-      ],
-      "correct": 1,
-      "explanation": "C(2n,3) = (2n)(2n-1)(2n-2)/6, C(n,2)=n(n-1)/2. Equation: (2n)(2n-1)(2n-2)/6 = 11·n(n-1)/2 ⇒ Multiply 6: (2n)(2n-1)(2n-2) = 33n(n-1) ⇒ 2n(2n-1)·2(n-1) = 33n(n-1) ⇒ 4n(2n-1)(n-1) = 33n(n-1) ⇒ If n≠0,1, divide n(n-1): 4(2n-1) = 33 ⇒ 8n-4 = 33 ⇒ 8n = 37 ⇒ n = 37/8 not integer. So maybe different."
-    },
-    {
       "id": 460,
       "topic": "binomial_theorem",
       "topicName": "Binomial Theorem and Expansion",
@@ -6581,34 +6553,6 @@
       "explanation": "General term: C(5,r) (x²)ʳ (k/x)⁵⁻ʳ = C(5,r) k⁵⁻ʳ x²ʳ⁻⁵⁺ʳ = C(5,r) k⁵⁻ʳ x³ʳ⁻⁵. For x¹, 3r-5=1 ⇒ 3r=6 ⇒ r=2. Coefficient = C(5,2) k³ = 10k³ = 270 ⇒ k³ = 27 ⇒ k=3."
     },
     {
-      "id": 471,
-      "topic": "binomial_theorem",
-      "topicName": "Binomial Theorem and Expansion",
-      "question": "The coefficient of x⁵ in (1 - 2x + 3x²)⁴ is:",
-      "options": [
-          "24",
-          "-24",
-          "48",
-          "-48"
-      ],
-      "correct": 0,
-      "explanation": "We need terms that give x⁵. Possibilities: (x²)²(x)¹ from factors: choose 2 factors give x², 1 factor give x, 1 factor give constant. Number of ways: 4!/(2!1!1!) = 12. Coefficient from x²: 3, from x: -2, constant: 1. So 12 × 3² × (-2) = 12 × 9 × (-2) = -216. Also (x²)¹(x)³: choose 1 factor x², 3 factors x: 4!/(1!3!) = 4. Coefficient: 3 × (-2)³ = 3 × (-8) = -24, times 4 = -96. Also (x)⁵: need 5 factors x, but only 4 factors, impossible. So total = -216 -96 = -312. Not in options."
-    },
-    {
-      "id": 472,
-      "topic": "binomial_theorem",
-      "topicName": "Binomial Theorem and Expansion",
-      "question": "The number of irrational terms in the expansion of (3¹/⁵ + 7¹/³)¹⁰⁰ is:",
-      "options": [
-          "95",
-          "96",
-          "97",
-          "98"
-      ],
-      "correct": 2,
-      "explanation": "General term: C(100,r) 3^(r/5) 7^((100-r)/3). For term to be rational, r/5 and (100-r)/3 must be integers. Let r=5a, 100-r=3b ⇒ 5a+3b=100. Find integer solutions a,b≥0. 3b=100-5a ⇒ 100-5a divisible by 3. 100 mod3=1, so 5a mod3 = 1. 5 mod3=2, so 2a mod3=1 ⇒ a mod3=2. a=2,5,8,... up to 20? 5a≤100 ⇒ a≤20. a=2,5,8,11,14,17,20 → 7 solutions. So 7 rational terms, total 101 terms, so irrational = 101-7=94? Not in options. If a=2 gives r=10, 100-10=90 divisible by 3. a=5: r=25, 75 divisible by 3. a=8: r=40, 60 divisible by 3. a=11: r=55, 45 divisible by 3. a=14: r=70, 30 divisible by 3. a=17: r=85, 15 divisible by 3. a=20: r=100, 0 divisible by 3. So 7 rational. 101-7=94. Options have 95,96,97,98. So maybe 94? Not matching."
-    },
-    {
       "id": 473,
       "topic": "binomial_theorem",
       "topicName": "Binomial Theorem and Expansion",
@@ -6621,20 +6565,6 @@
       ],
       "correct": 0,
       "explanation": "C(11,5) = 462."
-    },
-    {
-      "id": 474,
-      "topic": "binomial_theorem",
-      "topicName": "Binomial Theorem and Expansion",
-      "question": "If C(15, r-1) : C(15, r) = 2 : 3, then r =",
-      "options": [
-          "6",
-          "7",
-          "8",
-          "9"
-      ],
-      "correct": 1,
-      "explanation": "C(15,r-1)/C(15,r) = r/(16-r) = 2/3 ⇒ 3r = 32 - 2r ⇒ 5r = 32 ⇒ r = 6.4 not integer. If ratio 3:2 then r/(16-r)=3/2 ⇒ 2r=48-3r ⇒ 5r=48 ⇒ r=9.6. So maybe different."
     },
     {
       "id": 475,
@@ -6887,20 +6817,6 @@
       ],
       "correct": 0,
       "explanation": "(1.03)⁻² = (1+0.03)⁻² = 1 - 2(0.03) + 3(0.03)² - 4(0.03)³ + ... = 1 - 0.06 + 0.0027 - 0.000108 + ... = 0.942592 ≈ 0.9426."
-    },
-    {
-      "id": 493,
-      "topic": "binomial_theorem",
-      "topicName": "Binomial Theorem and Expansion",
-      "question": "If C(2n, 3) : C(n, 2) = 11 : 1, then n =",
-      "options": [
-          "5",
-          "6",
-          "7",
-          "8"
-      ],
-      "correct": 2,
-      "explanation": "C(2n,3)/C(n,2) = [2n(2n-1)(2n-2)/6] / [n(n-1)/2] = [2n(2n-1)(2n-2)/6] × [2/(n(n-1))] = [4(2n-1)(2n-2)]/[6(n-1)] = [4(2n-1)×2(n-1)]/[6(n-1)] = 8(2n-1)/6 = 4(2n-1)/3 = 11 ⇒ 4(2n-1)=33 ⇒ 8n-4=33 ⇒ 8n=37 ⇒ n=4.625. Not integer. If ratio 11:2? Then 4(2n-1)/3 = 11/2 ⇒ 8(2n-1)=33 ⇒ 16n-8=33 ⇒ 16n=41 ⇒ n=2.56. No."
     },
     {
       "id": 494,
@@ -8343,20 +8259,6 @@
       ],
       "correct": 0,
       "explanation": "Let u = sin θ. 2u² - u - 1 = 0 ⇒ (2u+1)(u-1)=0 ⇒ u=1 or u=-1/2. sin θ=1 ⇒ θ=π/2. sin θ=-1/2 ⇒ θ=7π/6, 11π/6."
-    },
-    {
-      "id": 598,
-      "topic": "trigonometry",
-      "topicName": "Circular Measure and Trigonometric Functions",
-      "question": "Solve 2 cos²θ + 3 sin θ = 0 for 0 ≤ θ < 2π.",
-      "options": [
-          "π/6, 5π/6",
-          "7π/6, 11π/6",
-          "π/2, 3π/2",
-          "0, π"
-      ],
-      "correct": 1,
-      "explanation": "2(1 - sin²θ) + 3 sin θ = 0 ⇒ 2 - 2 sin²θ + 3 sin θ = 0 ⇒ 2 sin²θ - 3 sin θ - 2 = 0 ⇒ (2 sin θ + 1)(sin θ - 2)=0 ⇒ sin θ = -1/2 or sin θ = 2 (impossible). sin θ = -1/2 ⇒ θ = 7π/6, 11π/6."
     },
     {
       "id": 599,

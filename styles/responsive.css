@@ -1,24 +1,9 @@
-/* Media Queries */
 @media (max-width: 768px) {
-  body {
-    padding-top: 100px;
-  }
-
-  .navbar {
-    padding: 0.5rem 0;
-  }
-
-  .nav-container {
-    padding: 0 1rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex !important;
-  }
+  body { padding-top: 100px; }
+  .navbar { padding: 0.5rem 0; }
+  .nav-container { padding: 0 1rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex !important; }
 
   .icon-bar {
     top: 50px;
@@ -39,22 +24,15 @@
     min-width: 40px;
   }
 
-  .logo {
-    font-size: 1.2rem;
-  }
+  .logo { font-size: 1.2rem; }
 
   .container {
     padding: 0 1rem;
     margin: 1.2rem auto;
   }
 
-  .hero {
-    padding: 2rem 1rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+  .hero { padding: 2rem 1rem; }
+  .hero p { font-size: 1rem; }
 
   .form-box,
   .settings-panel,
@@ -63,13 +41,9 @@
     padding: 1rem;
   }
   
-  .select-test-panel{
-    padding: 1rem;
-  }
+  .select-test-panel{ padding: 1rem; }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+  h2 { font-size: 1.5rem; }
 
   .features {
     grid-template-columns: 1fr;
@@ -77,85 +51,45 @@
     padding: 1rem 0.5rem 2rem;
   }
 
-  .feature {
-    padding: 1.5rem;
-  }
-
-  .feature i {
-    font-size: 2rem;
-  }
-
-  .feature h3 {
-    font-size: 1.1rem;
-  }
-
-  .btn-group {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .menu-dropdown {
-    right: 0.7rem;
-  }
+  .feature { padding: 1.5rem; }
+  .feature i { font-size: 2rem; }
+  .feature h3 { font-size: 1.1rem; }
+  .btn-group { flex-direction: column; }
+  .btn { width: 100%; }
+  .menu-dropdown { right: 0.7rem; }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.75rem;
   }
 
-  .stat-card {
-    padding: 1rem;
-  }
+  .stat-card { padding: 1rem; }
 
   .stat-icon {
     width: 40px;
     height: 40px;
   }
 
-  .stat-icon i {
-    font-size: 1.4rem;
-  }
-
-  .stat-value {
-    font-size: 1.4rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
-  }
+  .stat-icon i { font-size: 1.4rem; }
+  .stat-value { font-size: 1.4rem; }
+  .stat-label { font-size: 0.8rem; }
 
   .courses-grid {
     grid-template-columns: 1fr !important;
     gap: 1rem;
   }
 
-  .course-card {
-    padding: 1.25rem;
-  }
+  .course-card { padding: 1.25rem; }
 
   .course-icon {
     width: 60px;
     height: 60px;
   }
 
-  .course-icon i {
-    font-size: 1.8rem;
-  }
-
-  .course-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .course-code {
-    font-size: 0.85rem;
-  }
-
-  .course-description {
-    font-size: 0.85rem;
-  }
+  .course-icon i { font-size: 1.8rem; }
+  .course-card h3 { font-size: 1.1rem; }
+  .course-code { font-size: 0.85rem; }
+  .course-description { font-size: 0.85rem; }
 
   .course-meta {
     flex-direction: row;
@@ -163,9 +97,7 @@
     padding: 0.5rem;
   }
 
-  .course-meta span {
-    font-size: 0.8rem;
-  }
+  .course-meta span { font-size: 0.8rem; }
 
   .history-header {
     flex-direction: column;
@@ -173,22 +105,15 @@
     align-items: flex-start;
   }
 
-  .history-header .btn {
-    width: 100%;
-  }
+  .history-header .btn { width: 100%; }
 
   .test-summary {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
-  .review-item {
-    padding: 0.75rem;
-  }
-
-  .review-question {
-    font-size: 0.9rem;
-  }
+  .review-item { padding: 0.75rem; }
+  .review-question { font-size: 0.9rem; }
 
   .user-answer,
   .correct-answer {
@@ -196,9 +121,7 @@
     gap: 0.25rem;
   }
 
-  .label {
-    min-width: auto;
-  }
+  .label { min-width: auto; }
 
   .test-item-body {
     flex-direction: column;
@@ -206,9 +129,7 @@
     gap: 0.5rem;
   }
 
-  .result-card {
-    padding: 1.5rem;
-  }
+  .result-card { padding: 1.5rem; }
 
   .result-header {
     flex-direction: column;
@@ -227,44 +148,30 @@
     flex-wrap: wrap;
   }
 
-  .score {
-    font-size: 2rem;
-  }
+  .score { font-size: 2rem; }
 
   .result-stats {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 
-  .result-actions {
-    flex-direction: column;
-  }
+  .result-actions { flex-direction: column; }
 
   .result-actions .btn {
     width: 100%;
     min-width: auto;
   }
 
-  .test-container {
-    margin: 0.5rem auto;
-  }
-
-  .timer-bar {
-    padding: 0.5rem 1rem;
-  }
+  .test-container { margin: 0.5rem auto; }
+  .timer-bar { padding: 0.5rem 1rem; }
 
   .exit-test-btn {
     padding: 0.3rem 1rem;
     font-size: 1rem;
   }
 
-  .options-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .navigation-buttons {
-    flex-direction: row;
-  }
+  .options-grid { grid-template-columns: 1fr; }
+  .navigation-buttons { flex-direction: row; }
 
   .nav-btn {
     flex: 1;
@@ -277,9 +184,7 @@
     align-items: flex-start;
   }
 
-  .legend-compact {
-    flex-wrap: wrap;
-  }
+  .legend-compact { flex-wrap: wrap; }
 
   .nav-item-bottom {
     width: 28px;
@@ -292,9 +197,7 @@
     gap: 0.5rem;
   }
 
-  .question-number {
-    font-size: 1rem;
-  }
+  .question-number { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
@@ -315,9 +218,7 @@
     height: 44px;
   }
 
-  .stat-content {
-    text-align: left;
-  }
+  .stat-content { text-align: left; }
 
   .course-meta {
     flex-direction: column;
@@ -333,29 +234,18 @@
     height: 60px;
   }
 
-  .result-icon i {
-    font-size: 2rem;
-  }
-
-  .score {
-    font-size: 1.8rem;
-  }
-
-  .score-detail {
-    font-size: 0.9rem;
-  }
+  .result-icon i { font-size: 2rem; }
+  .score { font-size: 1.8rem; }
+  .score-detail { font-size: 0.9rem; }
 
   .stat-item i {
     font-size: 1.5rem;
     width: 35px;
   }
 
-  .stat-value {
-    font-size: 1.1rem;
-  }
+  .stat-value { font-size: 1.1rem; }
 }
 
-/* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
   .option-card:hover,
   .btn:hover,
@@ -385,9 +275,7 @@
     min-width: 32px;
   }
 
-  .course-card .btn {
-    min-height: 35px;
-  }
+  .course-card .btn { min-height: 35px; }
 
   input,
   select,

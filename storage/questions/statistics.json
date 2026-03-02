@@ -3739,20 +3739,6 @@
       "explanation": "Variance = 90/10 = 9."
     },
     {
-      "id": 269,
-      "topic": "measures_dispersion",
-      "topicName": "Measures of Partition and Dispersion",
-      "question": "Standard deviation for above =",
-      "options": [
-        "3",
-        "4.5",
-        "9",
-        "81"
-      ],
-      "correct": 0,
-      "explanation": "√9 = 3."
-    },
-    {
       "id": 270,
       "topic": "measures_dispersion",
       "topicName": "Measures of Partition and Dispersion",
@@ -4232,7 +4218,7 @@
       "id": 304,
       "topic": "measures_dispersion",
       "topicName": "Measures of Partition and Dispersion",
-      "question": "The coefficient of range for above data is:",
+      "question": "The coefficient of range for 3, 7, 9, 12, 15 is:",
       "options": [
         "0.67",
         "0.75",
